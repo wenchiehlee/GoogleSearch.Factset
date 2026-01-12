@@ -1,64 +1,48 @@
 ================================================================================
 QUARANTINE REPORT
-Generated: 2026-01-11 19:13:46
+Generated: 2026-01-12 19:30:10
 Quality threshold: <= 7.4
 ================================================================================
 
-Total old files found: 6
+Total old files found: 4
 
 
 Stock: 2303 (聯電)
-  Old files: 2
-
-  File: 2303_聯電_factset_8fab904b.md
-    Date: 2025/10/30
-    Age: 73 days
-    Quality: 7.2
-    Reasons: low_quality
-
-  File: 2303_聯電_factset_e6cd3efe.md
-    Date: 2025/11/03
-    Age: 69 days
-    Quality: 7.2
-    Reasons: low_quality
-
-
-Stock: 2330 (台積電)
   Old files: 1
 
-  File: 2330_台積電_factset_842fc053.md
-    Date: 2025/10/17
-    Age: 86 days
-    Quality: 7.5
-    Reasons: inflated_quality
-
-
-Stock: 2382 (廣達)
-  Old files: 1
-
-  File: 2382_廣達_factset_9ba3bfe3.md
-    Date: 2025/08/13
-    Age: 151 days
-    Quality: 7.2
-    Reasons: low_quality
-
-
-Stock: 2454 (聯發科)
-  Old files: 1
-
-  File: 2454_聯發科_factset_6122fef4.md
-    Date: 2025/11/01
-    Age: 71 days
-    Quality: 7.2
-    Reasons: low_quality
-
-
-Stock: 3711 (日月光投控)
-  Old files: 1
-
-  File: 3711_日月光投控_factset_6fa28413.md
+  File: 2303_聯電_factset_f3035425.md
     Date: 2025/08/04
-    Age: 160 days
+    Age: 161 days
+    Quality: 7.2
+    Reasons: low_quality
+
+
+Stock: 2308 (台達電)
+  Old files: 1
+
+  File: 2308_台達電_factset_bbf51a11.md
+    Date: 2025/10/28
+    Age: 76 days
+    Quality: 7.0
+    Reasons: low_quality
+
+
+Stock: 3034 (聯詠)
+  Old files: 1
+
+  File: 3034_聯詠_factset_ef5a3a3f.md
+    Date: 2025/05/13
+    Age: 244 days
+    Quality: 7.2
+    Reasons: low_quality
+
+
+Stock: 6669 (緯穎)
+  Old files: 1
+
+  File: 6669_緯穎_factset_6997110d.md
+    Date: 2025/08/18
+    Age: 147 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -66,9 +50,8 @@ Stock: 3711 (日月光投控)
 ================================================================================
 SUMMARY
 ================================================================================
-Total stocks affected: 5
-Total files to quarantine: 6
-Average age: 101.7 days
-Low quality files: 5
-Inflated quality scores (high score, no data): 1
-Oldest file: 3711_日月光投控_factset_6fa28413.md (160 days)
+Total stocks affected: 4
+Total files to quarantine: 4
+Average age: 157.0 days
+Low quality files: 4
+Oldest file: 3034_聯詠_factset_ef5a3a3f.md (244 days)
