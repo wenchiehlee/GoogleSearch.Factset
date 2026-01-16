@@ -1,10 +1,10 @@
 ================================================================================
 QUARANTINE REPORT
-Generated: 2026-01-15 19:20:13
+Generated: 2026-01-16 19:34:07
 Quality threshold: <= 7.4
 ================================================================================
 
-Total old files found: 1
+Total old files found: 2
 
 
 Stock: 2454 (聯發科)
@@ -12,7 +12,17 @@ Stock: 2454 (聯發科)
 
   File: 2454_聯發科_factset_6122fef4.md
     Date: 2025/11/01
-    Age: 75 days
+    Age: 76 days
+    Quality: 7.2
+    Reasons: low_quality
+
+
+Stock: 3034 (聯詠)
+  Old files: 1
+
+  File: 3034_聯詠_factset_a246364d.md
+    Date: 2025/08/06
+    Age: 163 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -20,8 +30,8 @@ Stock: 2454 (聯發科)
 ================================================================================
 SUMMARY
 ================================================================================
-Total stocks affected: 1
-Total files to quarantine: 1
-Average age: 75.0 days
-Low quality files: 1
-Oldest file: 2454_聯發科_factset_6122fef4.md (75 days)
+Total stocks affected: 2
+Total files to quarantine: 2
+Average age: 119.5 days
+Low quality files: 2
+Oldest file: 3034_聯詠_factset_a246364d.md (163 days)
