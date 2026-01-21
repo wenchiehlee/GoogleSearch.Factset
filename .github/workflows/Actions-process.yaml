@@ -80,10 +80,10 @@ jobs:
         python process_group/process_cli.py stats
         
     - name: Run scheduled processing (automatic)
-      if: github.event_name == 'schedule'
+      if: github.event_name == 'schedule' || github.event_name == 'workflow_run'
       run: |
-        echo "🚀 Running scheduled processing at $(date)"
-        python process_group/process_cli.py process
+        echo "🚀 Running processing (Event: ${{ github.event_name }}) at $(date)"
+        python process_group/process_cli.py process --no-upload
         
     - name: Run manual processing (workflow_dispatch)
       if: github.event_name == 'workflow_dispatch'
