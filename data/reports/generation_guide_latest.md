@@ -1,16 +1,16 @@
 
 # FactSet Pipeline v3.6.1 - CSV 報告使用指南
-生成時間: 2025-12-31 17:24:23
-時間戳: 20251231_172423
+生成時間: 2026-01-21 13:25:40
+時間戳: 20260121_132540
 
 ## 📁 生成的檔案清單
 
 ### 主要報告檔案
-- portfolio: `portfolio_summary_20251231_172423.csv`
-- detailed: `detailed_report_20251231_172423.csv`
-- keyword: `query_pattern_summary_20251231_172423.csv`
-- watchlist: `watchlist_summary_20251231_172423.csv`
-- validation: `validation_summary_20251231_172423.csv`
+- portfolio: `portfolio_summary_20260121_132540.csv`
+- detailed: `detailed_report_20260121_132540.csv`
+- keyword: `factset_query_pattern_summary_latest.csv`
+- watchlist: `watchlist_summary_latest.csv`
+- validation: `validation_summary_latest.csv`
 
 
 ### 最新版本檔案 (無時間戳)
