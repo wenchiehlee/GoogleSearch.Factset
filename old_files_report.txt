@@ -1,28 +1,70 @@
 ================================================================================
 QUARANTINE REPORT
-Generated: 2026-01-20 19:28:15
+Generated: 2026-01-22 19:14:55
 Quality threshold: <= 7.4
 ================================================================================
 
-Total old files found: 4
+Total old files found: 9
 
 
 Stock: 2303 (聯電)
   Old files: 1
 
-  File: 2303_聯電_factset_e6cd3efe.md
-    Date: 2025/11/03
-    Age: 78 days
+  File: 2303_聯電_factset_f3035425.md
+    Date: 2025/08/04
+    Age: 171 days
     Quality: 7.2
     Reasons: low_quality
 
 
-Stock: 2317 (鴻海)
+Stock: 2308 (台達電)
+  Old files: 2
+
+  File: 2308_台達電_factset_331259b9.md
+    Date: 2025/08/01
+    Age: 174 days
+    Quality: 7.2
+    Reasons: low_quality
+
+  File: 2308_台達電_factset_b762698f.md
+    Date: 2025/09/19
+    Age: 125 days
+    Quality: 7.0
+    Reasons: low_quality
+
+
+Stock: 2330 (台積電)
   Old files: 1
 
-  File: 2317_鴻海_factset_33a87a34.md
+  File: 2330_台積電_factset_03a614d1.md
+    Date: 2026/01/16
+    Age: 6 days
+    Quality: 7.5
+    Reasons: inflated_quality
+
+
+Stock: 2454 (聯發科)
+  Old files: 2
+
+  File: 2454_聯發科_factset_b8eee1b6.md
+    Date: 2025/07/30
+    Age: 176 days
+    Quality: 7.2
+    Reasons: low_quality
+
+  File: 2454_聯發科_factset_c9a4f151.md
     Date: 2025/08/18
-    Age: 155 days
+    Age: 157 days
+    Quality: 7.2
+    Reasons: low_quality
+
+
+Stock: 3034 (聯詠)
+  Old files: 1
+
+  File: 3034_聯詠_factset_a246364d.md
+    Date: 2025/08/06
+    Age: 169 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -30,9 +72,9 @@ Stock: 2317 (鴻海)
 Stock: 3711 (日月光投控)
   Old files: 1
 
-  File: 3711_日月光投控_factset_6fa28413.md
-    Date: 2025/08/04
-    Age: 169 days
+  File: 3711_日月光投控_factset_121e315f.md
+    Date: 2026/01/07
+    Age: 15 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -40,9 +82,9 @@ Stock: 3711 (日月光投控)
 Stock: 6669 (緯穎)
   Old files: 1
 
-  File: 6669_緯穎_factset_6997110d.md
-    Date: 2025/08/18
-    Age: 155 days
+  File: 6669_緯穎_factset_b061c9f0.md
+    Date: 2025/11/10
+    Age: 73 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -50,8 +92,9 @@ Stock: 6669 (緯穎)
 ================================================================================
 SUMMARY
 ================================================================================
-Total stocks affected: 4
-Total files to quarantine: 4
-Average age: 139.2 days
-Low quality files: 4
-Oldest file: 3711_日月光投控_factset_6fa28413.md (169 days)
+Total stocks affected: 7
+Total files to quarantine: 9
+Average age: 118.4 days
+Low quality files: 8
+Inflated quality scores (high score, no data): 1
+Oldest file: 2454_聯發科_factset_b8eee1b6.md (176 days)
