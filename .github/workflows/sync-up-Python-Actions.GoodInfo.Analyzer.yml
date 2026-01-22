@@ -7,7 +7,7 @@ on:
      branches:
        - main
      paths:
-       - data/reports/factset_portfolio_summary_latest.csv              # 僅在此檔案變更時觸發
+       - data/reports/factset_detailed_report_latest.csv             # 僅在此檔案變更時觸發
 
 jobs:
   sync-backup-workflow:
