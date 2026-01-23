@@ -224,6 +224,25 @@ class SearchEngine:
         
         # Remove any YAML frontmatter to avoid confusion
         actual_content = self._get_content_without_yaml(content)
+
+        # Priority 0: structured meta tags / JSON-LD (most reliable)
+        meta_patterns = [
+            r'property=["\']article:published_time["\']\s+content=["\'](\d{4})/(\d{1,2})/(\d{1,2})',
+            r'property=["\']article:published_time["\']\s+content=["\'](\d{4})-(\d{1,2})-(\d{1,2})',
+            r'name=["\']pubdate["\']\s+content=["\'](\d{4})-(\d{1,2})-(\d{1,2})',
+            r'"datePublished"\s*:\s*["\'](\d{4})-(\d{1,2})-(\d{1,2})',
+            r'"datePublished"\s*:\s*["\'](\d{4})/(\d{1,2})/(\d{1,2})',
+            r'"datePublished"\s*:\s*["\'](\d{4})年(\d{1,2})月(\d{1,2})日',
+        ]
+
+        for pattern in meta_patterns:
+            meta_match = re.search(pattern, actual_content, re.IGNORECASE)
+            if meta_match and len(meta_match.groups()) >= 3:
+                year, month, day = meta_match.group(1), meta_match.group(2), meta_match.group(3)
+                if self._validate_date_components(year, month, day):
+                    date_str = f"{year}/{int(month):02d}/{int(day):02d}"
+                    print(f"📅 Extracted md_date from meta: {date_str}")
+                    return date_str
         
         found_dates = []
         

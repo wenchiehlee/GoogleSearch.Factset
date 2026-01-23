@@ -4,7 +4,7 @@ title: 鉅亨速報- Factset 最新調查：日月光投控(3711-TW)EPS預估下
 quality_score: 9.7
 company: 日月光投控
 stock_code: 3711
-md_date: 2026/01/10
+md_date: 2025/08/04
 extracted_date: 2026-01-10T19:06:21.449948
 search_query: 'site:cnyes.com "FactSet" "3711" "EPS" "預估"'
 result_index: 2

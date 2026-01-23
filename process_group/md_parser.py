@@ -29,7 +29,7 @@ class MDParser:
     def __init__(self):
         """初始化 MD 解析器 - v3.6.1 增強版"""
         
-        self.version = "3.6.1-modified"
+        self.version = "3.6.2-md-date-migrate"
         
         # 增強的 metadata 模式 - 支援查詢模式提取
         self.metadata_patterns = {
@@ -251,12 +251,16 @@ class MDParser:
             # 重新計算 quality_score (使用當前版本的邏輯)
             new_quality_score = self._recalculate_quality_score(content)
 
+            # 重新提取 md_date (優先 meta/JSON-LD/time)
+            new_md_date = self._extract_md_date_from_meta(content)
+
             # 更新 frontmatter
             updated = self._update_md_frontmatter(
                 file_path,
                 content,
                 yaml_data,
-                new_quality_score
+                new_quality_score,
+                new_md_date
             )
 
             if updated:
@@ -314,7 +318,7 @@ class MDParser:
             traceback.print_exc()
             return 0.0
 
-    def _update_md_frontmatter(self, file_path: str, content: str, yaml_data: Dict, new_quality_score: float) -> bool:
+    def _update_md_frontmatter(self, file_path: str, content: str, yaml_data: Dict, new_quality_score: float, new_md_date: Optional[str] = None) -> bool:
         """更新 MD 檔案的 YAML frontmatter"""
         try:
             # 找到 YAML frontmatter 的範圍
@@ -337,6 +341,18 @@ class MDParser:
                 f'quality_score: {new_quality_score}',
                 updated_yaml
             )
+
+            # Update md_date if a reliable meta date is available
+            if new_md_date:
+                if re.search(r'^md_date:\s*.*$', updated_yaml, re.M):
+                    updated_yaml = re.sub(
+                        r'^md_date:\s*[^\n]*',
+                        f'md_date: {new_md_date}',
+                        updated_yaml,
+                        flags=re.M
+                    )
+                else:
+                    updated_yaml += f'\nmd_date: {new_md_date}'
 
             # Fix malformed search_query if present
             search_query = yaml_data.get('search_query', '')
@@ -1204,6 +1220,27 @@ class MDParser:
             best_date = found_dates[0]
             return best_date['date']
         
+        return None
+
+    def _extract_md_date_from_meta(self, content: str) -> Optional[str]:
+        """Extract md_date from structured meta/JSON-LD/time tags (preferred)"""
+        actual_content = self._get_content_without_yaml(content)
+
+        meta_patterns = [
+            r'property=["\']article:published_time["\']\s+content=["\'](\d{4})/(\d{1,2})/(\d{1,2})',
+            r'property=["\']article:published_time["\']\s+content=["\'](\d{4})-(\d{1,2})-(\d{1,2})',
+            r'"datePublished"\s*:\s*["\'](\d{4})-(\d{1,2})-(\d{1,2})',
+            r'"datePublished"\s*:\s*["\'](\d{4})/(\d{1,2})/(\d{1,2})',
+            r'<time[^>]*dateTime=["\'](\d{4})-(\d{1,2})-(\d{1,2})',
+        ]
+
+        for pattern in meta_patterns:
+            match = re.search(pattern, actual_content, re.IGNORECASE)
+            if match and len(match.groups()) >= 3:
+                year, month, day = match.group(1), match.group(2), match.group(3)
+                if self._validate_date(year, month, day):
+                    return f"{year}/{int(month):02d}/{int(day):02d}"
+
         return None
 
     def _get_content_without_yaml(self, content: str) -> str:
