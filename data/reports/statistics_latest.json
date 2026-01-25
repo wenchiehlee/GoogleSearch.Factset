@@ -1,7 +1,7 @@
 {
   "version": "3.6.1-updated-for-md-date",
   "report_type": "comprehensive_with_md_date_priority",
-  "timestamp": "2026-01-24T19:23:31.409885",
+  "timestamp": "2026-01-25T19:23:20.262897",
   "total_companies": 89,
   "companies_with_data": 89,
   "success_rate": 100.0,
@@ -25,7 +25,7 @@
     "filtered_out": 0
   },
   "quality_analysis": {
-    "average_quality_score": 9.4,
+    "average_quality_score": 9.3,
     "highest_quality_score": 10.0,
     "lowest_quality_score": 7.7,
     "files_with_quality_1_or_less": 0,
