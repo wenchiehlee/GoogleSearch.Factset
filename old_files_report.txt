@@ -1,18 +1,18 @@
 ================================================================================
 QUARANTINE REPORT
-Generated: 2026-01-27 19:33:31
+Generated: 2026-01-28 20:04:36
 Quality threshold: <= 7.4
 ================================================================================
 
 Total old files found: 1
 
 
-Stock: 3034 (聯詠)
+Stock: 6669 (緯穎)
   Old files: 1
 
-  File: 3034_聯詠_factset_a246364d.md
-    Date: 2025/08/06
-    Age: 174 days
+  File: 6669_緯穎_factset_b061c9f0.md
+    Date: 2025/11/10
+    Age: 79 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -22,6 +22,6 @@ SUMMARY
 ================================================================================
 Total stocks affected: 1
 Total files to quarantine: 1
-Average age: 174.0 days
+Average age: 79.0 days
 Low quality files: 1
-Oldest file: 3034_聯詠_factset_a246364d.md (174 days)
+Oldest file: 6669_緯穎_factset_b061c9f0.md (79 days)
