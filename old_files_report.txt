@@ -1,54 +1,60 @@
 ================================================================================
 QUARANTINE REPORT
-Generated: 2026-02-09 20:08:19
+Generated: 2026-02-10 21:12:45
 Quality threshold: <= 7.4
 ================================================================================
 
-Total old files found: 5
+Total old files found: 6
 
 
-Stock: 2317 (鴻海)
+Stock: 2308 (台達電)
   Old files: 2
 
-  File: 2317_鴻海_factset_4739ab73.md
+  File: 2308_台達電_factset_f6e2327f.md
+    Date: 2025/05/02
+    Age: 284 days
+    Quality: 7.0
+    Reasons: low_quality
+
+  File: 2308_台達電_factset_331259b9.md
+    Date: 2025/08/01
+    Age: 193 days
+    Quality: 7.2
+    Reasons: low_quality
+
+
+Stock: 2454 (聯發科)
+  Old files: 1
+
+  File: 2454_聯發科_factset_a655dd4c.md
     Date: 2025/08/18
-    Age: 175 days
-    Quality: 7.2
-    Reasons: low_quality
-
-  File: 2317_鴻海_factset_46cef980.md
-    Date: 2025/10/08
-    Age: 124 days
+    Age: 176 days
     Quality: 7.2
     Reasons: low_quality
 
 
-Stock: 2382 (廣達)
+Stock: 3711 (日月光投控)
   Old files: 1
 
-  File: 2382_廣達_factset_ec7ac292.md
-    Date: 2025/05/15
-    Age: 270 days
-    Quality: 7.2
-    Reasons: low_quality
-
-
-Stock: 3034 (聯詠)
-  Old files: 1
-
-  File: 3034_聯詠_factset_a246364d.md
-    Date: 2025/08/06
-    Age: 187 days
+  File: 3711_日月光投控_factset_0895f12e.md
+    Date: 2026/01/07
+    Age: 34 days
     Quality: 7.2
     Reasons: low_quality
 
 
 Stock: 6669 (緯穎)
-  Old files: 1
+  Old files: 2
 
   File: 6669_緯穎_factset_075658b7.md
     Date: 2025/08/18
-    Age: 175 days
+    Age: 176 days
+    Quality: 7.2
+    Reasons: low_quality
+
+  File: 6669_緯穎_factset_7057ff4f.md
+    Date: 2025/10/24
+    Age: 109 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -57,7 +63,7 @@ Stock: 6669 (緯穎)
 SUMMARY
 ================================================================================
 Total stocks affected: 4
-Total files to quarantine: 5
-Average age: 186.2 days
-Low quality files: 5
-Oldest file: 2382_廣達_factset_ec7ac292.md (270 days)
+Total files to quarantine: 6
+Average age: 162.0 days
+Low quality files: 6
+Oldest file: 2308_台達電_factset_f6e2327f.md (284 days)
