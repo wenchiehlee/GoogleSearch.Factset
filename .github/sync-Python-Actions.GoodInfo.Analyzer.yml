@@ -1,7 +1,7 @@
-#.github/sync.yml
+#.github/sync-Python-Actions.GoodInfo.Analyzer.yml
 group:
-  # 1st group for sync-up
   - files:
+      # No. 51: FactSet detailed report
       - source: data/reports/factset_detailed_report_latest.csv
         dest:   data/stage1_raw/factset_detailed_report_latest.csv
     repos: |
