@@ -1,28 +1,28 @@
 ================================================================================
 QUARANTINE REPORT
-Generated: 2026-02-11 20:11:15
+Generated: 2026-02-12 20:29:51
 Quality threshold: <= 7.4
 ================================================================================
 
-Total old files found: 4
+Total old files found: 3
 
 
-Stock: 2317 (鴻海)
+Stock: 2330 (台積電)
   Old files: 1
 
-  File: 2317_鴻海_factset_46cef980.md
-    Date: 2025/10/08
-    Age: 126 days
-    Quality: 7.2
-    Reasons: low_quality
+  File: 2330_台積電_factset_ebc33ea6.md
+    Date: 2025/10/17
+    Age: 118 days
+    Quality: 7.5
+    Reasons: inflated_quality
 
 
-Stock: 2382 (廣達)
+Stock: 2454 (聯發科)
   Old files: 1
 
-  File: 2382_廣達_factset_ec7ac292.md
-    Date: 2025/05/15
-    Age: 272 days
+  File: 2454_聯發科_factset_a655dd4c.md
+    Date: 2025/08/18
+    Age: 178 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -30,19 +30,9 @@ Stock: 2382 (廣達)
 Stock: 3711 (日月光投控)
   Old files: 1
 
-  File: 3711_日月光投控_factset_0895f12e.md
-    Date: 2026/01/07
-    Age: 35 days
-    Quality: 7.2
-    Reasons: low_quality
-
-
-Stock: 6669 (緯穎)
-  Old files: 1
-
-  File: 6669_緯穎_factset_7057ff4f.md
-    Date: 2025/10/24
-    Age: 110 days
+  File: 3711_日月光投控_factset_1a462ce0.md
+    Date: 2025/08/04
+    Age: 192 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -50,8 +40,9 @@ Stock: 6669 (緯穎)
 ================================================================================
 SUMMARY
 ================================================================================
-Total stocks affected: 4
-Total files to quarantine: 4
-Average age: 135.8 days
-Low quality files: 4
-Oldest file: 2382_廣達_factset_ec7ac292.md (272 days)
+Total stocks affected: 3
+Total files to quarantine: 3
+Average age: 162.7 days
+Low quality files: 2
+Inflated quality scores (high score, no data): 1
+Oldest file: 3711_日月光投控_factset_1a462ce0.md (192 days)
