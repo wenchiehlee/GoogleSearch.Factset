@@ -1,68 +1,7 @@
 ================================================================================
 QUARANTINE REPORT
-Generated: 2026-02-20 19:38:10
+Generated: 2026-02-21 18:53:48
 Quality threshold: <= 7.4
 ================================================================================
 
-Total old files found: 5
-
-
-Stock: 2308 (台達電)
-  Old files: 1
-
-  File: 2308_台達電_factset_331259b9.md
-    Date: 2025/08/01
-    Age: 203 days
-    Quality: 7.2
-    Reasons: low_quality
-
-
-Stock: 2317 (鴻海)
-  Old files: 1
-
-  File: 2317_鴻海_factset_4739ab73.md
-    Date: 2025/08/18
-    Age: 186 days
-    Quality: 7.2
-    Reasons: low_quality
-
-
-Stock: 2330 (台積電)
-  Old files: 1
-
-  File: 2330_台積電_factset_897006ba.md
-    Date: 2026/01/16
-    Age: 35 days
-    Quality: 7.5
-    Reasons: inflated_quality
-
-
-Stock: 2454 (聯發科)
-  Old files: 1
-
-  File: 2454_聯發科_factset_8797d9ed.md
-    Date: 2025/08/04
-    Age: 200 days
-    Quality: 7.2
-    Reasons: low_quality
-
-
-Stock: 3034 (聯詠)
-  Old files: 1
-
-  File: 3034_聯詠_factset_ef5a3a3f.md
-    Date: 2025/05/13
-    Age: 283 days
-    Quality: 7.2
-    Reasons: low_quality
-
-
-================================================================================
-SUMMARY
-================================================================================
-Total stocks affected: 5
-Total files to quarantine: 5
-Average age: 181.4 days
-Low quality files: 4
-Inflated quality scores (high score, no data): 1
-Oldest file: 3034_聯詠_factset_ef5a3a3f.md (283 days)
+No old files found!
