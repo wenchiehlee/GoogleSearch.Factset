@@ -1,10 +1,10 @@
 ================================================================================
 QUARANTINE REPORT
-Generated: 2026-02-25 20:26:27
+Generated: 2026-02-26 19:54:48
 Quality threshold: <= 7.4
 ================================================================================
 
-Total old files found: 4
+Total old files found: 6
 
 
 Stock: 2317 (鴻海)
@@ -12,17 +12,33 @@ Stock: 2317 (鴻海)
 
   File: 2317_鴻海_factset_dad678fd.md
     Date: 2025/11/13
-    Age: 104 days
+    Age: 105 days
     Quality: 7.2
     Reasons: low_quality
 
 
-Stock: 2382 (廣達)
+Stock: 2330 (台積電)
   Old files: 1
 
-  File: 2382_廣達_factset_9ba3bfe3.md
-    Date: 2025/08/13
-    Age: 196 days
+  File: 2330_台積電_factset_897006ba.md
+    Date: 2026/01/16
+    Age: 41 days
+    Quality: 7.5
+    Reasons: inflated_quality
+
+
+Stock: 2382 (廣達)
+  Old files: 2
+
+  File: 2382_廣達_factset_ec7ac292.md
+    Date: 2025/05/15
+    Age: 287 days
+    Quality: 7.2
+    Reasons: low_quality
+
+  File: 2382_廣達_factset_5e612364.md
+    Date: 2025/11/13
+    Age: 105 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -32,7 +48,7 @@ Stock: 3034 (聯詠)
 
   File: 3034_聯詠_factset_05fc7f40.md
     Date: 2025/08/06
-    Age: 203 days
+    Age: 204 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -40,9 +56,9 @@ Stock: 3034 (聯詠)
 Stock: 3711 (日月光投控)
   Old files: 1
 
-  File: 3711_日月光投控_factset_1a462ce0.md
-    Date: 2025/08/04
-    Age: 205 days
+  File: 3711_日月光投控_factset_0895f12e.md
+    Date: 2026/01/07
+    Age: 50 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -50,8 +66,9 @@ Stock: 3711 (日月光投控)
 ================================================================================
 SUMMARY
 ================================================================================
-Total stocks affected: 4
-Total files to quarantine: 4
-Average age: 177.0 days
-Low quality files: 4
-Oldest file: 3711_日月光投控_factset_1a462ce0.md (205 days)
+Total stocks affected: 5
+Total files to quarantine: 6
+Average age: 132.0 days
+Low quality files: 5
+Inflated quality scores (high score, no data): 1
+Oldest file: 2382_廣達_factset_ec7ac292.md (287 days)
