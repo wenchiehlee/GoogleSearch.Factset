@@ -1,37 +1,37 @@
 {
   "version": "3.6.1-updated-for-md-date",
   "report_type": "comprehensive_with_md_date_priority",
-  "timestamp": "2026-03-02T19:57:20.125586",
-  "total_companies": 124,
-  "companies_with_data": 124,
+  "timestamp": "2026-03-03T19:45:53.642970",
+  "total_companies": 129,
+  "companies_with_data": 129,
   "success_rate": 100.0,
   "md_date_source_analysis": {
-    "total_files_processed": 124,
-    "md_date_from_search_group": 124,
+    "total_files_processed": 129,
+    "md_date_from_search_group": 129,
     "content_date_from_process_group": 0,
     "no_date_available": 0,
     "search_group_coverage_rate": 100.0,
     "total_date_coverage_rate": 100.0,
     "priority_system": "md_date (Search Group) > content_date (Process Group) > empty",
-    "improvement_note": "Search Group \u63d0\u4f9b\u4e86 124 \u500b\u6a94\u6848\u7684 md_date\uff0cProcess Group \u63d0\u4f9b\u4e86 0 \u500b fallback \u65e5\u671f"
+    "improvement_note": "Search Group \u63d0\u4f9b\u4e86 129 \u500b\u6a94\u6848\u7684 md_date\uff0cProcess Group \u63d0\u4f9b\u4e86 0 \u500b fallback \u65e5\u671f"
   },
   "validation_statistics": {
-    "validation_passed": 124,
+    "validation_passed": 129,
     "validation_failed": 0,
     "validation_disabled": 0,
     "validation_success_rate": 100.0,
-    "companies_included_in_report": 124,
+    "companies_included_in_report": 129,
     "inclusion_rate": 100.0,
     "filtered_out": 0
   },
   "quality_analysis": {
-    "average_quality_score": 9.5,
+    "average_quality_score": 9.4,
     "highest_quality_score": 10.0,
-    "lowest_quality_score": 7.7,
+    "lowest_quality_score": 7.2,
     "files_with_quality_1_or_less": 0,
     "quality_distribution": {
-      "excellent_9_10": 101,
-      "good_7_8": 23,
+      "excellent_9_10": 103,
+      "good_7_8": 26,
       "fair_5_6": 0,
       "poor_3_4": 0,
       "very_poor_1_2": 0,
@@ -39,7 +39,7 @@
     }
   },
   "watchlist_statistics": {
-    "watchlist_companies_in_data": 124,
+    "watchlist_companies_in_data": 129,
     "watchlist_coverage_in_data": 100.0
   }
 }
