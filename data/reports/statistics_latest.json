@@ -1,36 +1,36 @@
 {
   "version": "3.6.1-updated-for-md-date",
   "report_type": "comprehensive_with_md_date_priority",
-  "timestamp": "2026-03-08T19:26:29.282465",
-  "total_companies": 126,
-  "companies_with_data": 126,
+  "timestamp": "2026-03-09T19:57:36.154675",
+  "total_companies": 132,
+  "companies_with_data": 132,
   "success_rate": 100.0,
   "md_date_source_analysis": {
-    "total_files_processed": 126,
-    "md_date_from_search_group": 126,
+    "total_files_processed": 132,
+    "md_date_from_search_group": 132,
     "content_date_from_process_group": 0,
     "no_date_available": 0,
     "search_group_coverage_rate": 100.0,
     "total_date_coverage_rate": 100.0,
     "priority_system": "md_date (Search Group) > content_date (Process Group) > empty",
-    "improvement_note": "Search Group \u63d0\u4f9b\u4e86 126 \u500b\u6a94\u6848\u7684 md_date\uff0cProcess Group \u63d0\u4f9b\u4e86 0 \u500b fallback \u65e5\u671f"
+    "improvement_note": "Search Group \u63d0\u4f9b\u4e86 132 \u500b\u6a94\u6848\u7684 md_date\uff0cProcess Group \u63d0\u4f9b\u4e86 0 \u500b fallback \u65e5\u671f"
   },
   "validation_statistics": {
-    "validation_passed": 126,
+    "validation_passed": 132,
     "validation_failed": 0,
     "validation_disabled": 0,
     "validation_success_rate": 100.0,
-    "companies_included_in_report": 126,
+    "companies_included_in_report": 132,
     "inclusion_rate": 100.0,
     "filtered_out": 0
   },
   "quality_analysis": {
-    "average_quality_score": 9.4,
+    "average_quality_score": 9.5,
     "highest_quality_score": 10.0,
     "lowest_quality_score": 7.7,
     "files_with_quality_1_or_less": 0,
     "quality_distribution": {
-      "excellent_9_10": 103,
+      "excellent_9_10": 109,
       "good_7_8": 23,
       "fair_5_6": 0,
       "poor_3_4": 0,
@@ -39,7 +39,7 @@
     }
   },
   "watchlist_statistics": {
-    "watchlist_companies_in_data": 126,
+    "watchlist_companies_in_data": 132,
     "watchlist_coverage_in_data": 100.0
   }
 }
