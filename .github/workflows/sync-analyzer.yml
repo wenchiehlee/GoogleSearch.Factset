@@ -1,4 +1,5 @@
-name: Sync-Python-Actions.GoodInfo.Analyzer
+name: Sync to Analyzer
+
 on:
   workflow_dispatch:
   schedule:
@@ -8,6 +9,10 @@ on:
        - main
      paths:
        - data/reports/raw_factset_detailed_report.csv             # 僅在此檔案變更時觸發
+
+concurrency:
+  group: sync-analyzer
+  cancel-in-progress: false
 
 jobs:
   sync-backup-workflow:
