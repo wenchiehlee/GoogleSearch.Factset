@@ -909,7 +909,7 @@ class ReportGenerator:
 
         # Detailed Report
         if detailed_df is not None:
-            detailed_latest = os.path.join(self.output_dir, "factset_detailed_report_latest.csv")
+            detailed_latest = os.path.join(self.output_dir, "raw_factset_detailed_report.csv")
             _write_csv(detailed_df, detailed_latest)
             saved_files['factset_detailed_report_latest'] = detailed_latest
 

@@ -2,7 +2,7 @@
 group:
   - files:
       # No. 51: FactSet detailed report
-      - source: data/reports/factset_detailed_report_latest.csv
-        dest:   data/stage1_raw/factset_detailed_report_latest.csv
+      - source: data/reports/raw_factset_detailed_report.csv
+        dest:   data/stage1_raw/raw_factset_detailed_report.csv
     repos: |
         wenchiehlee-investment/Python-Actions.GoodInfo.Analyzer

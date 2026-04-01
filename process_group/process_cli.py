@@ -742,7 +742,7 @@ class ProcessCLI:
 
         輕量級處理:
         - 掃描和解析 MD 檔案
-        - 生成 factset_detailed_report_latest.csv
+        - 生成 raw_factset_detailed_report.csv
         - 不上傳、不生成其他報告
         - 用於 Quarantine workflow 的偵測來源
         """
@@ -799,7 +799,7 @@ class ProcessCLI:
             print(f"✅ 詳細報告: {len(detailed_report)} 筆記錄")
 
             # 4. 僅儲存詳細報告 CSV
-            output_path = os.path.join(self.report_generator.output_dir, 'factset_detailed_report_latest.csv')
+            output_path = os.path.join(self.report_generator.output_dir, 'raw_factset_detailed_report.csv')
             detailed_report.to_csv(output_path, index=False, encoding='utf-8-sig')
             print(f"💾 已儲存: {output_path}")
 

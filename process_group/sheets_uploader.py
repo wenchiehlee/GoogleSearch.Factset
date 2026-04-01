@@ -197,7 +197,7 @@ class SheetsUploader:
             
             # 2. 詳細報告 CSV
             detailed_path = os.path.join(self.validation_settings['csv_output_dir'], f'detailed_report_{timestamp}.csv')
-            detailed_latest = os.path.join(self.validation_settings['csv_output_dir'], 'factset_detailed_report_latest.csv')
+            detailed_latest = os.path.join(self.validation_settings['csv_output_dir'], 'raw_factset_detailed_report.csv')
             
             detailed_df_clean = detailed_df.fillna('')
             detailed_df_clean.to_csv(detailed_path, index=False, encoding='utf-8-sig')
@@ -470,7 +470,7 @@ class SheetsUploader:
 
 ### 最新版本檔案 (無時間戳)
 - `factset_portfolio_summary_latest.csv` - 投資組合摘要
-- `factset_detailed_report_latest.csv` - 詳細報告
+- `raw_factset_detailed_report.csv` - 詳細報告
 - `factset_query_pattern_summary_latest.csv` - 查詢模式統計 (如有)
 - `watchlist_summary_latest.csv` - 觀察名單統計 (如有)
 - `validation_summary_latest.csv` - 驗證摘要

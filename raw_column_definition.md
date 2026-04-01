@@ -11,9 +11,9 @@ destination: https://raw.githubusercontent.com/wenchiehlee-investment/Python-Act
 
 ---
 
-## factset_detailed_report_latest.csv (FactSet Analyst Consensus Summary)
+## raw_factset_detailed_report.csv (FactSet Analyst Consensus Summary)
 **No:** 51
-**Source:** `data/reports/factset_detailed_report_latest.csv`
+**Source:** `data/reports/raw_factset_detailed_report.csv`
 **Data Source:** FactSet via GoogleSearch.Factset pipeline
 **Update Frequency:** Daily automated updates
 **Extraction Strategy:** Pre-aggregated summary data from FactSet analyst consensus reports
