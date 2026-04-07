@@ -1,6 +1,6 @@
 ---
 source: https://raw.githubusercontent.com/wenchiehlee/GoogleSearch.Factset/refs/heads/main/raw_column_definition.md
-destination: https://raw.githubusercontent.com/wenchiehlee-investment/Python-Actions.GoodInfo.Analyzer/refs/heads/main/raw_column_definition.md
+destination: https://raw.githubusercontent.com/wenchiehlee-investment/Python-Actions.GoodInfo.Analyzer/refs/heads/main/definitions/raw_column_definition_Factset.md
 ---
 
 ## raw_factset_detailed_report.csv (FactSet Analyst Consensus Summary)
