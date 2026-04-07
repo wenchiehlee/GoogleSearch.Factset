@@ -4,5 +4,8 @@ group:
       # No. 51: FactSet detailed report
       - source: data/reports/raw_factset_detailed_report.csv
         dest:   data/stage1_raw/raw_factset_detailed_report.csv
+      # No. 51: FactSet metadata definition
+      - source: raw_column_definition.md
+        dest:   definitions/raw_column_definition_Factset.md
     repos: |
         wenchiehlee-investment/Python-Actions.GoodInfo.Analyzer

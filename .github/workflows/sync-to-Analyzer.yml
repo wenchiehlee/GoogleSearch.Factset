@@ -8,7 +8,8 @@ on:
      branches:
        - main
      paths:
-       - data/reports/raw_factset_detailed_report.csv             # 僅在此檔案變更時觸發
+       - data/reports/raw_factset_detailed_report.csv
+       - raw_column_definition.md
 
 concurrency:
   group: sync-analyzer
@@ -25,7 +26,7 @@ jobs:
         uses: BetaHuhn/repo-file-sync-action@latest
         with:
           GH_PAT: ${{ secrets.REPO_FILE_SYNC_WENCHIEHLEE_INVESTMENT }}
-          CONFIG_PATH: .github/sync-Python-Actions.GoodInfo.Analyzer.yml
+          CONFIG_PATH: .github/sync-to-Analyzer.yml
           COMMIT_EACH_FILE: false
           PR_LABELS: "automated-sync"
           # Uncomment to skip Pull Request and push directly
