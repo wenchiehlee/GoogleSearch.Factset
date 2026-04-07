@@ -3,34 +3,12 @@ source: https://raw.githubusercontent.com/wenchiehlee/GoogleSearch.Factset/refs/
 destination: https://raw.githubusercontent.com/wenchiehlee-investment/Python-Actions.GoodInfo.Analyzer/refs/heads/main/raw_column_definition.md
 ---
 
-# Raw CSV Column Definitions - GoogleSearch.Factset v1.0.0
-## FactSet Analyst Consensus Data
-
-### Version History:
-- **v1.0.0** (2026-01-29): Initial column definitions for FactSet analyst consensus reports
-
----
-
 ## raw_factset_detailed_report.csv (FactSet Analyst Consensus Summary)
 **No:** 51
-**Source:** `data/reports/raw_factset_detailed_report.csv`
+**Source:** `data/stage1_raw/raw_factset_detailed_report.csv`
 **Data Source:** FactSet via GoogleSearch.Factset pipeline
 **Update Frequency:** Daily automated updates
 **Extraction Strategy:** Pre-aggregated summary data from FactSet analyst consensus reports
-
-### Data Characteristics:
-- **Coverage:** Portfolio stocks with available FactSet analyst coverage
-- **Analyst Consensus:** EPS estimates and target prices from multiple analysts
-- **Multi-year Projections:** N/N+1/N+2/N+3 year EPS & Revenue forecasts (typically 3-4 years)
-- **Quality Scoring:** Automated quality assessment based on data completeness and analyst coverage
-- **Markdown Integration:** Links to detailed analyst reports stored in GitHub
-
-- **Dynamic Year Notation:** Column names use actual calendar years extracted from the report header (Dynamic Year Detection)
-  - **3-Year Window:** Typically 2025-2027 (for 2025 reports) or 2026-2028 (for 2026 reports).
-  - **4-Year Window:** Some reports provide a full 2025-2028 range.
-  - **Logic:** The system automatically maps data to the correct calendar year columns (2025, 2026, 2027, 2028) based on report headers.
-
-  - N year always matches the year in MD日期
 
 ### Column Definitions:
 
@@ -78,9 +56,3 @@ destination: https://raw.githubusercontent.com/wenchiehlee-investment/Python-Act
 | `MD File` | string | URL to detailed analyst report markdown | GitHub | Full URL to raw markdown file |
 | `搜尋日期` | datetime | When data was searched/fetched | Metadata | Format: `YYYY-MM-DD HH:MM:SS` |
 | `處理日期` | datetime | When data was processed/aggregated | Metadata | Format: `YYYY-MM-DD HH:MM:SS` |
-
-### Quality Status Interpretation:
-- **🟢 優秀 (Excellent):** Score ≥ 9.0 - Comprehensive analyst coverage with complete data
-- **🟡 良好 (Good):** Score 7.0-8.9 - Solid coverage with most data available
-- **🟠 普通 (Fair):** Score 5.0-6.9 - Limited coverage or partial data
-- **🔴 不足 (Insufficient):** Score < 5.0 - Minimal coverage or incomplete data
