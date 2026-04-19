@@ -1,6 +1,6 @@
 ================================================================================
 QUARANTINE REPORT
-Generated: 2026-04-18 19:50:05
+Generated: 2026-04-19 19:32:09
 Quality threshold: <= 7.4
 ================================================================================
 
@@ -12,29 +12,29 @@ Stock: 2303 (聯電)
 
   File: 2303_聯電_factset_ac878974.md
     Date: 2025/11/03
-    Age: 166 days
-    Quality: 9.7
-    Reasons: inflated_quality
+    Age: 167 days
+    Quality: 7.2
+    Reasons: low_quality
 
   File: 2303_聯電_factset_f33ccac7.md
     Date: 2026/02/07
-    Age: 70 days
-    Quality: 9.7
-    Reasons: inflated_quality
+    Age: 71 days
+    Quality: 7.2
+    Reasons: low_quality
 
 
 Stock: 2308 (台達電)
   Old files: 2
 
-  File: 2308_台達電_factset_7c22c6fe.md
-    Date: 2026/02/27
-    Age: 50 days
+  File: 2308_台達電_factset_72bc68b8.md
+    Date: 2025/10/24
+    Age: 177 days
     Quality: 9.5
     Reasons: inflated_quality
 
   File: 2308_台達電_factset_00adb717.md
     Date: 2026/02/27
-    Age: 50 days
+    Age: 51 days
     Quality: 9.5
     Reasons: inflated_quality
 
@@ -42,17 +42,17 @@ Stock: 2308 (台達電)
 Stock: 2317 (鴻海)
   Old files: 2
 
-  File: 2317_鴻海_factset_54256261.md
-    Date: 2025/08/08
-    Age: 253 days
+  File: 2317_鴻海_factset_28a18d43.md
+    Date: 2025/11/13
+    Age: 157 days
     Quality: 9.7
     Reasons: inflated_quality
 
-  File: 2317_鴻海_factset_28a18d43.md
+  File: 2317_鴻海_factset_dad678fd.md
     Date: 2025/11/13
-    Age: 156 days
-    Quality: 7.2
-    Reasons: low_quality
+    Age: 157 days
+    Quality: 9.7
+    Reasons: inflated_quality
 
 
 Stock: 2330 (台積電)
@@ -60,13 +60,13 @@ Stock: 2330 (台積電)
 
   File: 2330_台積電_factset_6ad8fa9c.md
     Date: 2026/01/16
-    Age: 92 days
+    Age: 93 days
     Quality: 10.0
     Reasons: inflated_quality
 
-  File: 2330_台積電_factset_9da766f7.md
+  File: 2330_台積電_factset_80f248cc.md
     Date: 2026/04/16
-    Age: 2 days
+    Age: 3 days
     Quality: 10.0
     Reasons: inflated_quality
 
@@ -76,13 +76,13 @@ Stock: 2382 (廣達)
 
   File: 2382_廣達_factset_9ba3bfe3.md
     Date: 2025/08/13
-    Age: 248 days
+    Age: 249 days
     Quality: 7.2
     Reasons: low_quality
 
   File: 2382_廣達_factset_5e612364.md
     Date: 2025/11/13
-    Age: 156 days
+    Age: 157 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -92,15 +92,15 @@ Stock: 2454 (聯發科)
 
   File: 2454_聯發科_factset_34adf665.md
     Date: 2025/11/01
-    Age: 168 days
-    Quality: 7.2
-    Reasons: low_quality
-
-  File: 2454_聯發科_factset_cd1f32b5.md
-    Date: 2026/04/17
-    Age: 1 days
+    Age: 169 days
     Quality: 9.7
     Reasons: inflated_quality
+
+  File: 2454_聯發科_factset_859bd807.md
+    Date: 2026/04/02
+    Age: 17 days
+    Quality: 7.2
+    Reasons: low_quality
 
 
 Stock: 3034 (聯詠)
@@ -108,7 +108,7 @@ Stock: 3034 (聯詠)
 
   File: 3034_聯詠_factset_05fc7f40.md
     Date: 2025/08/06
-    Age: 255 days
+    Age: 256 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -118,13 +118,13 @@ Stock: 3711 (日月光投控)
 
   File: 3711_日月光投控_factset_f636e77f.md
     Date: 2026/02/09
-    Age: 68 days
-    Quality: 7.2
-    Reasons: low_quality
+    Age: 69 days
+    Quality: 9.7
+    Reasons: inflated_quality
 
   File: 3711_日月光投控_factset_7ecbb728.md
     Date: 2026/04/14
-    Age: 4 days
+    Age: 5 days
     Quality: 9.7
     Reasons: inflated_quality
 
@@ -134,15 +134,15 @@ Stock: 6669 (緯穎)
 
   File: 6669_緯穎_factset_b061c9f0.md
     Date: 2025/11/10
-    Age: 159 days
+    Age: 160 days
     Quality: 9.7
     Reasons: inflated_quality
 
   File: 6669_緯穎_factset_d7b15333.md
     Date: 2026/03/04
-    Age: 45 days
-    Quality: 7.2
-    Reasons: low_quality
+    Age: 46 days
+    Quality: 9.7
+    Reasons: inflated_quality
 
 
 ================================================================================
@@ -150,7 +150,7 @@ SUMMARY
 ================================================================================
 Total stocks affected: 9
 Total files to quarantine: 17
-Average age: 114.3 days
-Low quality files: 7
-Inflated quality scores (high score, no data): 10
-Oldest file: 3034_聯詠_factset_05fc7f40.md (255 days)
+Average age: 117.9 days
+Low quality files: 6
+Inflated quality scores (high score, no data): 11
+Oldest file: 3034_聯詠_factset_05fc7f40.md (256 days)
