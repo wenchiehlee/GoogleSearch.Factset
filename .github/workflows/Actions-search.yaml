@@ -16,7 +16,7 @@ on:
       min_quality:
         description: "Minimum quality threshold"
         required: false
-        default: "7"
+        default: "6"
         type: string
       specific_companies:
         description: "Specific companies to search (comma-separated, leave empty for all)"
@@ -27,7 +27,7 @@ on:
 env:
   SEARCH_RATE_LIMIT_PER_SECOND: "1.0"
   SEARCH_DAILY_QUOTA: "500"
-  MIN_QUALITY_THRESHOLD: "7"
+  MIN_QUALITY_THRESHOLD: "6"
   LOG_LEVEL: "INFO"
 
 jobs:
@@ -134,7 +134,7 @@ jobs:
         echo "Starting daily Taiwan financial data search (Batch ${{ matrix.batch }}/4)..."
         
         COMPANY_COUNT="${{ github.event.inputs.company_count || '2' }}"
-        MIN_QUALITY="${{ github.event.inputs.min_quality || '7' }}"
+        MIN_QUALITY="${{ github.event.inputs.min_quality || '6' }}"
         SPECIFIC_COMPANIES="${{ github.event.inputs.specific_companies }}"
         
         echo "Search Parameters:"
@@ -327,7 +327,7 @@ jobs:
         echo "Summary:"
         echo "  - Search time: $(TZ='Asia/Taipei' date '+%Y-%m-%d %H:%M %Z')"
         echo "  - Files generated: $(find data/md -name "*.md" 2>/dev/null | wc -l)"
-        echo "  - Quality threshold: ${{ github.event.inputs.min_quality || '7' }}"
+        echo "  - Quality threshold: ${{ github.event.inputs.min_quality || '6' }}"
         echo "  - Count per company: ${{ github.event.inputs.company_count || '2' }}"
         echo ""
         echo "Next scheduled run: Tomorrow at 2:30 AM Taiwan time"
