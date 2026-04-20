@@ -14,6 +14,7 @@ from datetime import datetime
 from typing import Dict, Any, List, Optional, Tuple
 import statistics
 import json
+import html
 try:
     from quality_analyzer_simplified import QualityAnalyzerSimplified
 except ImportError:
@@ -102,6 +103,32 @@ class MDParser:
 
         print(f"MDParser v{self.version} 初始化完成")
         print(f"觀察名單驗證: {'啟用' if self.validation_enabled else '停用'} ({len(self.watch_list_mapping)} 家公司)")
+
+    def _clean_html_for_extraction(self, content: str) -> str:
+        """為數據提取而進行的內容清理 - 移除 HTML 標籤與處理轉義字元"""
+        # 1. 解碼 HTML 實體 (如 &amp; &lt;)
+        text = html.unescape(content)
+        
+        # 2. 移除所有 <script> 和 <style> 標籤及其內容 (雜訊核心)
+        text = re.sub(r'<(script|style).*?>.*?</\1>', ' ', text, flags=re.DOTALL | re.IGNORECASE)
+        
+        # 3. 處理 JSON/網頁轉義字元 (例如 \" 轉為 ", \\u0026 轉為 &)
+        text = text.replace('\\"', '"').replace('\\n', ' ').replace('\\r', ' ')
+        
+        # 4. 移除所有其餘 HTML 標籤，但保留標籤內的文字
+        text = re.sub(r'<[^>]+>', ' ', text)
+        
+        # 5. 處理特定的 Unicode 轉義 (針對 JSON 資料)
+        try:
+            # 嘗試處理常用的 Unicode 轉義
+            text = text.encode('utf-8').decode('unicode-escape')
+        except:
+            pass # 如果失敗則保留原樣
+            
+        # 6. 壓縮連續空白
+        text = ' '.join(text.split())
+        
+        return text
 
     def _load_watch_list_mapping_enhanced(self) -> Dict[str, str]:
         """v3.6.1 增強的觀察名單載入"""
@@ -433,16 +460,20 @@ class MDParser:
             # 核心驗證：對照觀察名單 (增強版)
             validation_result = self._validate_against_watch_list_enhanced(company_code, company_name)
 
+            # --- 強效內容清理 (針對數據提取) ---
+            # 我們建立一個 cleaned_text 用於數據提取，避免 HTML 標籤干擾
+            cleaned_text = self._clean_html_for_extraction(content)
+
             # 原有功能：日期提取
-            content_date = self._extract_content_date_bulletproof(content)
+            content_date = self._extract_content_date_bulletproof(cleaned_text)
             extraction_status = "content_extraction" if content_date else "no_date_found"
 
             # 原有功能：EPS 等資料提取
-            eps_data = self._extract_eps_data(content)
+            eps_data = self._extract_eps_data(cleaned_text)
             eps_stats = self._calculate_eps_statistics(eps_data)
-            revenue_stats = self._calculate_revenue_statistics(content)
-            target_price = self._extract_target_price(content)
-            analyst_count = self._extract_analyst_count(content)
+            revenue_stats = self._calculate_revenue_statistics(cleaned_text)
+            target_price = self._extract_target_price(cleaned_text)
+            analyst_count = self._extract_analyst_count(cleaned_text)
 
             # FIXED: 不再重新計算品質評分，直接使用從 YAML 讀取的值
             # Process Group 應該只讀取 Search Group 寫入的 quality_score，保持兩階段架構分離
