@@ -4,12 +4,12 @@ Quarantine MD Files Script
 Moves problematic MD files to quarantine directory
 
 DEFAULT BEHAVIOR (no flags):
-  - CSV-based detection: Uses factset_detailed_report_latest.csv
+  - CSV-based detection: Uses raw_factset_detailed_report.csv
   - Checks ONLY: quality_score >= 7.6 AND missing revenue/EPS data (truly inflated)
   - Does NOT check: age, low quality (unless --days or --max-quality added)
 
 Detection Methods:
-  1. CSV-based (RECOMMENDED, default): Fast, uses factset_detailed_report_latest.csv
+  1. CSV-based (RECOMMENDED, default): Fast, uses raw_factset_detailed_report.csv
      - Criteria: quality_score >= 7.6 AND missing revenue/EPS data
      - Files with high quality AND actual data are NOT flagged (legitimate)
   2. File-based (--no-csv): Direct MD file parsing
@@ -315,7 +315,7 @@ class OldFileQuarantiner:
             reasons.append("low_quality")
         return reasons
 
-    def scan_from_csv(self, csv_path: str = 'data/reports/factset_detailed_report_latest.csv') -> List[Dict]:
+    def scan_from_csv(self, csv_path: str = 'data/reports/raw_factset_detailed_report.csv') -> List[Dict]:
         """
         CSV-based detection (RECOMMENDED): Much faster and more reliable
 
@@ -692,7 +692,7 @@ DEFAULT BEHAVIOR (no flags):
 
   What it checks:
   - Inflated quality scores (score >= 7.5 BUT missing revenue OR missing EPS)
-  - Source: data/reports/factset_detailed_report_latest.csv
+  - Source: data/reports/raw_factset_detailed_report.csv
   - Files with high quality AND both revenue+EPS are skipped (legitimate)
 
   What it does NOT check (unless explicitly added):
@@ -708,7 +708,7 @@ Examples:
   python quarantine_files.py --days 180 --quarantine  # Age + quality + move
 
 CSV-based detection (DEFAULT):
-  - Uses: data/reports/factset_detailed_report_latest.csv
+  - Uses: data/reports/raw_factset_detailed_report.csv
   - Checks: quality_score >= 7.5 AND (missing revenue OR missing EPS)
   - Skips: Files with high quality AND both revenue+EPS (legitimate)
   - Fast, reliable, uses already-processed data
