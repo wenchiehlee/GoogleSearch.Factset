@@ -1,18 +1,18 @@
 {
   "version": "3.6.1-modified",
-  "timestamp": "2026-04-27T20:16:47.430274",
+  "timestamp": "2026-04-28T20:32:23.377939",
   "results": {
     "md_scanner": {
       "status": "success",
-      "message": "\u627e\u5230 118 \u500b MD \u6a94\u6848",
-      "files_count": 118
+      "message": "\u627e\u5230 128 \u500b MD \u6a94\u6848",
+      "files_count": 128
     },
     "md_parser": {
       "status": "success",
       "message": "MD Parser v3.6.2-md-date-migrate \u904b\u884c\u6b63\u5e38",
-      "test_file": "6669_\u7def\u7a4e_factset_d7b15333.md",
+      "test_file": "9914_\u7f8e\u5229\u9054_factset_41c9088f.md",
       "content_date_extracted": true,
-      "quality_score": 9.7,
+      "quality_score": 8.9,
       "enhanced_scoring": false
     },
     "keyword_analyzer": {
@@ -21,8 +21,8 @@
     },
     "watchlist_analyzer": {
       "status": "success",
-      "message": "WatchlistAnalyzer v3.6.1 \u5df2\u8f09\u5165\uff0c\u89c0\u5bdf\u540d\u55ae: 126 \u5bb6\u516c\u53f8",
-      "watchlist_size": 126
+      "message": "WatchlistAnalyzer v3.6.1 \u5df2\u8f09\u5165\uff0c\u89c0\u5bdf\u540d\u55ae: 128 \u5bb6\u516c\u53f8",
+      "watchlist_size": 128
     },
     "report_generator": {
       "status": "success",
