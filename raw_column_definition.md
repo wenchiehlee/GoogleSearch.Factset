@@ -56,3 +56,5 @@ destination: https://raw.githubusercontent.com/wenchiehlee-investment/Python-Act
 | `MD File` | string | URL to detailed analyst report markdown | GitHub | Full URL to raw markdown file |
 | `搜尋日期` | datetime | When data was searched/fetched | Metadata | Format: `YYYY-MM-DD HH:MM:SS` |
 | `處理日期` | datetime | When data was processed/aggregated | Metadata | Format: `YYYY-MM-DD HH:MM:SS` |
+| `download_timestamp` | datetime | Source data retrieval timestamp | System | Format: `YYYY-MM-DD HH:MM:SS` |
+| `process_timestamp` | datetime | CSV generation timestamp | System | Format: `YYYY-MM-DD HH:MM:SS` |
