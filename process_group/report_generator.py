@@ -51,7 +51,8 @@ class ReportGenerator:
             '2026營收最高值', '2026營收最低值', '2026營收平均值', '2026營收中位數',
             '2027營收最高值', '2027營收最低值', '2027營收平均值', '2027營收中位數',
             '2028營收最高值', '2028營收最低值', '2028營收平均值', '2028營收中位數',
-            '品質評分', '狀態', '驗證狀態', 'MD File', '搜尋日期', '處理日期'
+            '品質評分', '狀態', '驗證狀態', 'MD File', '搜尋日期', '處理日期',
+            'download_timestamp', 'process_timestamp'
         ]
 
         # 關鍵字報告欄位 (10 欄位) - 保留傳統關鍵字分析用
@@ -397,7 +398,9 @@ class ReportGenerator:
                     '驗證狀態': validation_status,
                     'MD File': md_file_url,
                     '搜尋日期': search_datetime,
-                    '處理日期': self._get_taipei_time()
+                    '處理日期': self._get_taipei_time(),
+                    'download_timestamp': self._get_taipei_time(),
+                    'process_timestamp': self._get_taipei_time()
                 }
                 
                 detailed_rows.append(detailed_row)
