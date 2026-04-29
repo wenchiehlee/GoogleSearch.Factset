@@ -1,6 +1,6 @@
 {
   "version": "3.6.1-modified",
-  "timestamp": "2026-04-28T20:32:23.377939",
+  "timestamp": "2026-04-29T13:26:19.372764",
   "results": {
     "md_scanner": {
       "status": "success",
@@ -10,7 +10,7 @@
     "md_parser": {
       "status": "success",
       "message": "MD Parser v3.6.2-md-date-migrate \u904b\u884c\u6b63\u5e38",
-      "test_file": "9914_\u7f8e\u5229\u9054_factset_41c9088f.md",
+      "test_file": "9914_\u7f8e\u5229\u9054_factset_50c4992e.md",
       "content_date_extracted": true,
       "quality_score": 8.9,
       "enhanced_scoring": false
