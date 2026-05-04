@@ -1,24 +1,18 @@
 ================================================================================
 QUARANTINE REPORT
-Generated: 2026-05-03 20:02:52
+Generated: 2026-05-04 20:35:33
 Quality threshold: <= 7.4
 ================================================================================
 
-Total old files found: 38
+Total old files found: 24
 
 
 Stock: 2301 (光寶科)
-  Old files: 2
-
-  File: 2301_光寶科_factset_e45934ba.md
-    Date: 2025/09/19
-    Age: 226 days
-    Quality: 6.5
-    Reasons: low_quality
+  Old files: 1
 
   File: 2301_光寶科_factset_77c791fa.md
     Date: 2025/10/24
-    Age: 191 days
+    Age: 192 days
     Quality: 6.5
     Reasons: low_quality
 
@@ -28,35 +22,19 @@ Stock: 2308 (台達電)
 
   File: 2308_台達電_factset_7c22c6fe.md
     Date: 2026/02/27
-    Age: 65 days
+    Age: 66 days
     Quality: 7.0
     Reasons: low_quality
 
 
 Stock: 2317 (鴻海)
-  Old files: 2
-
-  File: 2317_鴻海_factset_54256261.md
-    Date: 2025/08/08
-    Age: 268 days
-    Quality: 7.2
-    Reasons: low_quality
-
-  File: 2317_鴻海_factset_28a18d43.md
-    Date: 2025/11/13
-    Age: 171 days
-    Quality: 7.2
-    Reasons: low_quality
-
-
-Stock: 2330 (台積電)
   Old files: 1
 
-  File: 2330_台積電_factset_6ad8fa9c.md
-    Date: 2026/01/16
-    Age: 107 days
-    Quality: 7.5
-    Reasons: inflated_quality
+  File: 2317_鴻海_factset_8a64b7f4.md
+    Date: 2026/03/17
+    Age: 48 days
+    Quality: 7.2
+    Reasons: low_quality
 
 
 Stock: 2337 (旺宏)
@@ -64,17 +42,7 @@ Stock: 2337 (旺宏)
 
   File: 2337_旺宏_factset_15dcacc2.md
     Date: 2026/04/01
-    Age: 32 days
-    Quality: 6.0
-    Reasons: low_quality
-
-
-Stock: 2344 (華邦電)
-  Old files: 1
-
-  File: 2344_華邦電_factset_61946a3a.md
-    Date: 2026/04/23
-    Age: 10 days
+    Age: 33 days
     Quality: 6.0
     Reasons: low_quality
 
@@ -84,24 +52,40 @@ Stock: 2345 (智邦)
 
   File: 2345_智邦_factset_19e0620b.md
     Date: 2025/11/17
-    Age: 167 days
+    Age: 168 days
     Quality: 6.5
     Reasons: low_quality
 
   File: 2345_智邦_factset_aadfbb89.md
     Date: 2026/02/10
-    Age: 82 days
+    Age: 83 days
     Quality: 6.5
     Reasons: low_quality
 
 
-Stock: 2360 (致茂)
+Stock: 2356 (英業達)
   Old files: 1
 
-  File: 2360_致茂_factset_c3e5e44e.md
-    Date: 2026/04/29
-    Age: 4 days
-    Quality: 6.7
+  File: 2356_英業達_factset_092c6349.md
+    Date: 2026/03/30
+    Age: 35 days
+    Quality: 6.5
+    Reasons: low_quality
+
+
+Stock: 2357 (華碩)
+  Old files: 2
+
+  File: 2357_華碩_factset_bdbec441.md
+    Date: 2026/01/07
+    Age: 117 days
+    Quality: 6.9
+    Reasons: low_quality
+
+  File: 2357_華碩_factset_e39be586.md
+    Date: 2026/01/29
+    Age: 95 days
+    Quality: 6.9
     Reasons: low_quality
 
 
@@ -110,138 +94,48 @@ Stock: 2376 (技嘉)
 
   File: 2376_技嘉_factset_25d7f9a5.md
     Date: 2026/01/23
-    Age: 100 days
+    Age: 101 days
     Quality: 6.5
     Reasons: low_quality
 
 
-Stock: 2382 (廣達)
-  Old files: 2
-
-  File: 2382_廣達_factset_5e612364.md
-    Date: 2025/11/13
-    Age: 171 days
-    Quality: 7.2
-    Reasons: low_quality
-
-  File: 2382_廣達_factset_b1f14faa.md
-    Date: 2026/04/09
-    Age: 24 days
-    Quality: 7.2
-    Reasons: low_quality
-
-
 Stock: 2383 (台光電)
-  Old files: 2
-
-  File: 2383_台光電_factset_4be95903.md
-    Date: 2025/10/31
-    Age: 184 days
-    Quality: 6.9
-    Reasons: low_quality
+  Old files: 1
 
   File: 2383_台光電_factset_7f4b06b8.md
     Date: 2026/03/23
-    Age: 41 days
+    Age: 42 days
     Quality: 6.9
     Reasons: low_quality
 
 
 Stock: 2395 (研華)
-  Old files: 2
-
-  File: 2395_研華_factset_f739ecbd.md
-    Date: 2025/11/07
-    Age: 177 days
-    Quality: 6.9
-    Reasons: low_quality
+  Old files: 1
 
   File: 2395_研華_factset_d02dff4f.md
     Date: 2026/01/23
-    Age: 100 days
+    Age: 101 days
     Quality: 6.9
     Reasons: low_quality
 
 
-Stock: 2408 (南亞科)
+Stock: 2454 (聯發科)
   Old files: 1
 
-  File: 2408_南亞科_factset_266af1ae.md
-    Date: 2026/04/14
-    Age: 19 days
-    Quality: 6.7
-    Reasons: low_quality
-
-
-Stock: 2449 (京元電子)
-  Old files: 1
-
-  File: 2449_京元電子_factset_ab0ee82f.md
-    Date: 2026/04/06
-    Age: 27 days
-    Quality: 6.9
-    Reasons: low_quality
-
-
-Stock: 2881 (富邦金)
-  Old files: 2
-
-  File: 2881_富邦金_factset_009c8a7c.md
-    Date: 2026/03/26
-    Age: 38 days
-    Quality: 6.5
-    Reasons: low_quality
-
-  File: 2881_富邦金_factset_cad4ac81.md
-    Date: 2026/04/16
-    Age: 17 days
-    Quality: 6.5
-    Reasons: low_quality
-
-
-Stock: 2882 (國泰金)
-  Old files: 1
-
-  File: 2882_國泰金_factset_4055e04a.md
-    Date: 2026/04/27
-    Age: 6 days
-    Quality: 6.5
-    Reasons: low_quality
-
-
-Stock: 2891 (中信金)
-  Old files: 2
-
-  File: 2891_中信金_factset_ed57f35a.md
-    Date: 2026/01/24
-    Age: 99 days
-    Quality: 6.5
-    Reasons: low_quality
-
-  File: 2891_中信金_factset_e8425625.md
-    Date: 2026/03/12
-    Age: 52 days
-    Quality: 6.5
+  File: 2454_聯發科_factset_35cf3a16.md
+    Date: 2026/05/04
+    Age: 0 days
+    Quality: 7.0
     Reasons: low_quality
 
 
 Stock: 3034 (聯詠)
   Old files: 1
 
-  File: 3034_聯詠_factset_668b26fd.md
-    Date: 2026/02/07
-    Age: 85 days
-    Quality: 6.0
-    Reasons: low_quality
-
-
-Stock: 3035 (智原)
-  Old files: 1
-
-  File: 3035_智原_factset_7bfececb.md
-    Date: 2026/04/10
-    Age: 23 days
-    Quality: 6.0
+  File: 3034_聯詠_factset_430c1fec.md
+    Date: 2025/11/07
+    Age: 178 days
+    Quality: 6.9
     Reasons: low_quality
 
 
@@ -250,39 +144,37 @@ Stock: 3048 (益登)
 
   File: 3048_益登_factset_93f4de7b.md
     Date: 2026/04/17
-    Age: 16 days
+    Age: 17 days
     Quality: 6.7
     Reasons: low_quality
 
 
 Stock: 3231 (緯創)
-  Old files: 2
+  Old files: 1
 
-  File: 3231_緯創_factset_226e6b99.md
-    Date: 2025/11/03
-    Age: 181 days
+  File: 3231_緯創_factset_3b667430.md
+    Date: 2026/04/02
+    Age: 32 days
     Quality: 6.9
     Reasons: low_quality
 
-  File: 3231_緯創_factset_a3a4ffa4.md
-    Date: 2025/11/13
-    Age: 171 days
+
+Stock: 3661 (世芯-KY)
+  Old files: 1
+
+  File: 3661_世芯-KY_factset_72537fdd.md
+    Date: 2026/04/08
+    Age: 26 days
     Quality: 6.9
     Reasons: low_quality
 
 
 Stock: 3711 (日月光投控)
-  Old files: 2
+  Old files: 1
 
-  File: 3711_日月光投控_factset_f636e77f.md
-    Date: 2026/02/09
-    Age: 83 days
-    Quality: 7.2
-    Reasons: low_quality
-
-  File: 3711_日月光投控_factset_342a3bc5.md
-    Date: 2026/04/30
-    Age: 3 days
+  File: 3711_日月光投控_factset_27db5e80.md
+    Date: 2026/04/14
+    Age: 20 days
     Quality: 7.2
     Reasons: low_quality
 
@@ -292,13 +184,13 @@ Stock: 4938 (和碩)
 
   File: 4938_和碩_factset_240490f3.md
     Date: 2025/05/21
-    Age: 347 days
+    Age: 348 days
     Quality: 6.5
     Reasons: low_quality
 
   File: 4938_和碩_factset_3db667f5.md
     Date: 2025/12/01
-    Age: 153 days
+    Age: 154 days
     Quality: 6.5
     Reasons: low_quality
 
@@ -308,18 +200,8 @@ Stock: 5269 (祥碩)
 
   File: 5269_祥碩_factset_2c9da550.md
     Date: 2025/11/12
-    Age: 172 days
+    Age: 173 days
     Quality: 6.5
-    Reasons: low_quality
-
-
-Stock: 5274 (信驊)
-  Old files: 1
-
-  File: 5274_信驊_factset_a4d93ba3.md
-    Date: 2025/11/25
-    Age: 159 days
-    Quality: 6.9
     Reasons: low_quality
 
 
@@ -328,23 +210,32 @@ Stock: 6669 (緯穎)
 
   File: 6669_緯穎_factset_0c7d8a1b.md
     Date: 2026/01/09
-    Age: 114 days
+    Age: 115 days
     Quality: 6.9
     Reasons: low_quality
 
   File: 6669_緯穎_factset_95b8a8e1.md
     Date: 2026/03/04
-    Age: 60 days
+    Age: 61 days
     Quality: 7.2
+    Reasons: low_quality
+
+
+Stock: 9914 (美利達)
+  Old files: 1
+
+  File: 9914_美利達_factset_eb518989.md
+    Date: 2026/02/06
+    Age: 87 days
+    Quality: 6.5
     Reasons: low_quality
 
 
 ================================================================================
 SUMMARY
 ================================================================================
-Total stocks affected: 26
-Total files to quarantine: 38
-Average age: 103.8 days
-Low quality files: 37
-Inflated quality scores (high score, no data): 1
-Oldest file: 4938_和碩_factset_240490f3.md (347 days)
+Total stocks affected: 20
+Total files to quarantine: 24
+Average age: 95.5 days
+Low quality files: 24
+Oldest file: 4938_和碩_factset_240490f3.md (348 days)
