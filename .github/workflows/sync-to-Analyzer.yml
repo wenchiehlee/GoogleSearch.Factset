@@ -10,6 +10,8 @@ on:
      paths:
        - data/reports/raw_factset_detailed_report.csv
        - raw_column_definition.md
+       - .github/sync-to-YahooFinance.yml
+       - .github/workflows/sync-to-Analyzer.yml
 
 concurrency:
   group: sync-analyzer
@@ -36,6 +38,15 @@ jobs:
         with:
           GH_PAT: ${{ secrets.REPO_FILE_SYNC_WENCHIEHLEE_MONEY }}
           CONFIG_PATH: .github/sync-to-TAIEX.yml
+          COMMIT_EACH_FILE: false
+          PR_LABELS: "automated-sync"
+          SKIP_PR: true
+
+      - name: Sync up to Yahoo.Finance
+        uses: BetaHuhn/repo-file-sync-action@latest
+        with:
+          GH_PAT: ${{ secrets.REPO_FILE_SYNC_WENCHIEHLEE }}
+          CONFIG_PATH: .github/sync-to-YahooFinance.yml
           COMMIT_EACH_FILE: false
           PR_LABELS: "automated-sync"
           SKIP_PR: true
