@@ -1,5 +1,8 @@
 name: Daily FactSet Process - Taiwan Financial Data
 on:
+  push:
+    branches:
+      - main
   workflow_run:
     workflows: ["Quarantine Files (CSV-based)"]  # Trigger after Quarantine completes
     types:
@@ -38,7 +41,7 @@ on:
 jobs:
   process:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 120
     
     steps:
     - name: Checkout repository
