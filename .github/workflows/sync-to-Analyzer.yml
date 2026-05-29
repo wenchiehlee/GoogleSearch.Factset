@@ -58,6 +58,16 @@ jobs:
           PR_LABELS: "automated-sync"
           SKIP_PR: true
 
+      - name: Sync up to biztrends.TW
+        if: env.SYNC_PAT_MONEY != ''
+        uses: BetaHuhn/repo-file-sync-action@latest
+        with:
+          GH_PAT: ${{ env.SYNC_PAT_MONEY }}
+          CONFIG_PATH: .github/sync-to-biztrends.yml
+          COMMIT_EACH_FILE: false
+          PR_LABELS: "automated-sync"
+          SKIP_PR: true
+
       - name: Skip Yahoo sync notice
         if: env.SYNC_PAT_YAHOO == ''
         run: echo "::warning::REPO_FILE_SYNC_WENCHIEHLEE is not configured; skipping Yahoo.Finance sync."
