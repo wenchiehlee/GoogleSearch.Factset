@@ -1,7 +1,8 @@
 group:
-  - repository: wenchiehlee-money/biztrends.TW
-    files:
+  - files:
       - source: data/reports/raw_factset_detailed_report.csv
         dest: data/GoogleSearch.Factset/raw_factset_detailed_report.csv
       - source: raw_column_definition_Factset.md
         dest: definitions/raw_column_definition_Factset.md
+    repos: |
+      wenchiehlee-money/biztrends.TW
