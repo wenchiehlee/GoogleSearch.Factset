@@ -1,16 +1,16 @@
 {
   "version": "3.6.1-modified",
-  "timestamp": "2026-06-17T14:39:59.370641",
+  "timestamp": "2026-06-17T21:26:06.048277",
   "results": {
     "md_scanner": {
       "status": "success",
-      "message": "\u627e\u5230 266 \u500b MD \u6a94\u6848",
-      "files_count": 266
+      "message": "\u627e\u5230 263 \u500b MD \u6a94\u6848",
+      "files_count": 263
     },
     "md_parser": {
       "status": "success",
       "message": "MD Parser v3.6.2-md-date-migrate \u904b\u884c\u6b63\u5e38",
-      "test_file": "9914_\u7f8e\u5229\u9054_factset_eb518989.md",
+      "test_file": "9914_\u7f8e\u5229\u9054_factset_b9414b05.md",
       "content_date_extracted": true,
       "quality_score": 8.9,
       "enhanced_scoring": false
