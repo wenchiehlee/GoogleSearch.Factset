@@ -30,7 +30,7 @@ on:
       no_upload:
         description: 'Skip Google Sheets upload'
         required: false
-        default: false
+        default: true
         type: boolean
       force_upload:
         description: 'Force upload ignoring validation errors'
