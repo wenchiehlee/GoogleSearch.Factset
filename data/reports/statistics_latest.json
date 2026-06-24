@@ -1,7 +1,7 @@
 {
   "version": "3.6.1-updated-for-md-date",
   "report_type": "comprehensive_with_md_date_priority",
-  "timestamp": "2026-06-23T21:23:08.449617",
+  "timestamp": "2026-06-24T21:02:45.846602",
   "total_companies": 250,
   "companies_with_data": 250,
   "success_rate": 100.0,
@@ -30,8 +30,8 @@
     "lowest_quality_score": 7.7,
     "files_with_quality_1_or_less": 0,
     "quality_distribution": {
-      "excellent_9_10": 141,
-      "good_7_8": 109,
+      "excellent_9_10": 142,
+      "good_7_8": 108,
       "fair_5_6": 0,
       "poor_3_4": 0,
       "very_poor_1_2": 0,
