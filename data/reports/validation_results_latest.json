@@ -1,11 +1,11 @@
 {
   "version": "3.6.1-modified",
-  "timestamp": "2026-06-25T20:59:18.788787",
+  "timestamp": "2026-06-26T20:45:14.857363",
   "results": {
     "md_scanner": {
       "status": "success",
-      "message": "\u627e\u5230 246 \u500b MD \u6a94\u6848",
-      "files_count": 246
+      "message": "\u627e\u5230 245 \u500b MD \u6a94\u6848",
+      "files_count": 245
     },
     "md_parser": {
       "status": "success",
