@@ -76,7 +76,7 @@ class ReportGenerator:
     def _get_taipei_time(self) -> str:
         """取得台北時間的字串格式"""
         taipei_time = datetime.now(self.taipei_tz)
-        return taipei_time.strftime('%Y-%m-%d %H:%M:%S')
+        return taipei_time.strftime('%Y-%m-%d %H:%M:%S CST')
 
     def _should_include_in_report_v351_updated(self, company_data: Dict[str, Any]) -> bool:
         """UPDATED: 判斷是否應該將此資料包含在報告中 - 使用 md_date 優先邏輯"""
