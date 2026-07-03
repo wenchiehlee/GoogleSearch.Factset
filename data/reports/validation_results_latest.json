@@ -1,6 +1,6 @@
 {
   "version": "3.6.1-modified",
-  "timestamp": "2026-07-02T20:17:43.410663",
+  "timestamp": "2026-07-03T20:17:33.503047",
   "results": {
     "md_scanner": {
       "status": "success",
@@ -10,7 +10,7 @@
     "md_parser": {
       "status": "success",
       "message": "MD Parser v3.6.2-md-date-migrate \u904b\u884c\u6b63\u5e38",
-      "test_file": "9914_\u7f8e\u5229\u9054_factset_fd3e01de.md",
+      "test_file": "9914_\u7f8e\u5229\u9054_factset_b9414b05.md",
       "content_date_extracted": true,
       "quality_score": 8.9,
       "enhanced_scoring": false
@@ -21,8 +21,8 @@
     },
     "watchlist_analyzer": {
       "status": "success",
-      "message": "WatchlistAnalyzer v3.6.1 \u5df2\u8f09\u5165\uff0c\u89c0\u5bdf\u540d\u55ae: 129 \u5bb6\u516c\u53f8",
-      "watchlist_size": 129
+      "message": "WatchlistAnalyzer v3.6.1 \u5df2\u8f09\u5165\uff0c\u89c0\u5bdf\u540d\u55ae: 130 \u5bb6\u516c\u53f8",
+      "watchlist_size": 130
     },
     "report_generator": {
       "status": "success",
