@@ -1,0 +1,7432 @@
+---
+url: https://bubuaplus.com/
+title: 布嬸A+股幣
+quality_score: 6.7
+company: 精誠
+stock_code: 6214
+md_date: 2026/07/17
+extracted_date: 2026-07-18T19:17:52.491690
+search_query: '"精誠" "EPS" "預估" "2025" "2026"'
+result_index: 1
+content_validation: {'is_valid': True, 'reason': 'Valid content - symbol and name found within 11 characters', 'confidence': 0.989, 'symbol_found': True, 'symbol_in_context': True, 'name_found': True, 'false_positive': False, 'validation_layer': 'proximity_check', 'proximity_distance': 11}
+version: 3.6.2-md-date-migrate
+updated_date: 2026-07-18T19:20:36.156255
+---
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>布嬸A+股幣</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="布嬸A+股幣">
+<meta name="theme-color" content="#0b0e14">
+<style>
+  :root{
+    --bg:#0b0e14; --card:#141823; --card2:#1a1f2e; --border:#252b3b;
+    --text:#e6e9f0; --muted:#8a93a6; --green:#16c784; --red:#ea3943;
+    --yellow:#f0b90b; --blue:#4a8cff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{overscroll-behavior-y:contain}
+  #ptr{position:fixed;top:-58px;left:50%;transform:translate(-50%,0);width:50px;height:50px;border-radius:50%;background:var(--card2);border:1px solid var(--border);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:26px;z-index:999;opacity:0;transition:transform .25s,opacity .25s;pointer-events:none;box-shadow:0 2px 10px rgba(0,0,0,.5)}
+  #ptr.spin{animation:ptrspin .7s linear infinite}
+  @keyframes ptrspin{from{transform:translate(-50%,60px) rotate(0)}to{transform:translate(-50%,60px) rotate(360deg)}}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;padding:16px;max-width:1460px;margin:0 auto}
+  .layout{display:flex;gap:16px;align-items:flex-start}
+  .sidenav{width:170px;flex-shrink:0;position:sticky;top:16px;display:flex;flex-direction:column;gap:6px}
+  .nav-item{padding:10px 12px;border-radius:8px;font-size:14px;cursor:pointer;color:var(--muted);border:1px solid transparent}
+  .nav-item:hover{background:var(--card2);color:var(--text)}
+  .nav-item[data-page="bu"]{border-color:#b18cff;color:#c4a6ff;background:rgba(177,140,255,.10);font-weight:700}
+  .nav-item.active{background:rgba(255,107,120,.12);border-color:#ff6b78;color:#ff8a94;font-weight:700}
+  .subnav{display:flex;gap:8px;margin:0 0 14px}
+  .subtab{flex:1;text-align:center;padding:10px 12px;border-radius:8px;font-size:14px;cursor:pointer;color:var(--muted);border:1px solid var(--border);background:var(--card2);font-weight:700;white-space:nowrap}
+  .subtab:hover{color:var(--text)}
+  .subtab.active{background:rgba(255,107,120,.12);border-color:#ff6b78;color:#ff8a94}
+  .ap-actions{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  /* 手機：A+台股/美股/掃幣按鈕群一律換到整行、右對齊，兩區位置一致（台股3顆、美股2顆也對齊） */
+  @media(max-width:640px){ .ap-actions{flex:1 1 100%;justify-content:flex-end} }
+  .main{flex:1;min-width:0}
+  @media(max-width:900px){
+    .layout{flex-direction:column;align-items:stretch}
+    .sidenav{position:static;width:100%;flex-direction:row;flex-wrap:wrap}
+    .nav-item{flex:1 1 42%;text-align:center;white-space:nowrap}
+    .nav-item[data-page="bu"]{flex:1 1 100%;font-size:15px;padding:12px}
+    .main{width:100%;max-width:100%;min-width:0;overflow-x:hidden}
+    .card{max-width:100%}
+  }
+  h1{font-size:20px;display:flex;align-items:center;gap:10px}
+  h2{font-size:15px;margin-bottom:10px;color:var(--yellow)}
+  #page-bu h2{font-size:16px}  /* 布嬸A+頁卡片標題放大（略小於0050燈號結論字級） */
+  .header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+  .status{font-size:12px;color:var(--muted)}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);margin-right:5px}
+  .dot.on{background:var(--green)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  @media(max-width:900px){.grid2,.grid3{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:14px}
+  .coin-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+  .coin-name{font-size:17px;font-weight:700}
+  .price{font-size:24px;font-weight:700;font-variant-numeric:tabular-nums}
+  .chg{font-size:13px;font-weight:600;margin-left:8px}
+  .up{color:var(--red)} .down{color:var(--green)}
+  .rangebar{position:relative;height:8px;background:linear-gradient(90deg,var(--red),var(--yellow),var(--green));border-radius:4px;margin:14px 0 4px}
+  .marker{position:absolute;top:-4px;width:4px;height:16px;background:#fff;border-radius:2px;box-shadow:0 0 6px #000;transform:translateX(-50%)}
+  .range-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:10px}
+  .pos-label{text-align:center;font-size:12px;color:var(--muted);margin-bottom:10px}
+  .liq-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .liq-box{background:var(--card2);border-radius:8px;padding:10px;text-align:center}
+  .liq-box .v{font-size:16px;font-weight:700;font-variant-numeric:tabular-nums}
+  .liq-box .t{font-size:11px;color:var(--muted);margin-top:2px}
+  .note{font-size:11px;color:var(--muted);margin-top:8px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:right;color:var(--muted);font-weight:500;padding:6px 8px;border-bottom:1px solid var(--border);white-space:nowrap}
+  td{text-align:right;padding:7px 8px;border-bottom:1px solid var(--border);font-variant-numeric:tabular-nums;white-space:nowrap}
+  th:first-child,td:first-child{text-align:left}
+  tr:last-child td{border-bottom:none}
+  .sym{font-weight:600}
+  .badge{display:inline-block;padding:1px 7px;border-radius:4px;font-size:11px;font-weight:600}
+  .b-long{background:rgba(234,57,67,.15);color:var(--red)}
+  .b-short{background:rgba(22,199,132,.15);color:var(--green)}
+  .b-fire{background:rgba(240,185,11,.15);color:var(--yellow)}
+  .idx-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  @media(max-width:600px){.idx-row{grid-template-columns:repeat(2,1fr)}}
+  .rpt-badge{display:inline-block;padding:3px 10px;border-radius:6px;font-size:12px;font-weight:700;margin-left:6px}
+  .rpt-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:12px 0}
+  .rpt-metric{background:var(--card2);border-radius:8px;padding:10px;text-align:center}
+  .rpt-metric .v{font-size:16px;font-weight:700}
+  .rpt-metric .t{font-size:11px;color:var(--muted);margin-top:3px}
+  .rpt-sec{font-size:15px;font-weight:700;color:#8ab4ff;margin:18px 0 4px;border-left:3px solid #8ab4ff;padding-left:10px}
+  .rpt-sec small{color:var(--muted);font-weight:400;font-size:11px;margin-left:8px;letter-spacing:1px}
+  .rpt-item{margin:10px 0;font-size:13.5px;line-height:1.85}
+  .rpt-item b.tag{color:var(--yellow)}
+  .rpt-callout{background:rgba(240,185,11,.07);border:1px solid rgba(240,185,11,.3);border-radius:8px;padding:12px;font-size:13px;line-height:1.8;margin:10px 0}
+  .rpt-callout.warn{background:rgba(234,57,67,.07);border-color:rgba(234,57,67,.35)}
+  .tut-card{border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:12px;background:var(--card2)}
+  /* 價值掃描：摘要卡＋展開式報告 */
+  .vs-card{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:14px;overflow:hidden;transition:border-color .2s}
+  .vs-card.open{border-color:rgba(240,185,11,.45)}
+  .vs-head{padding:16px;cursor:pointer;-webkit-user-select:none;user-select:none}
+  .vs-head:hover{background:rgba(255,255,255,.025)}
+  .vs-trow{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap}
+  .vs-name{font-size:18px;font-weight:800}
+  .vs-sum{font-size:13px;color:var(--muted);line-height:1.7;margin-top:8px}
+  .vs-mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:8px;margin-top:10px}
+  .vs-more{text-align:center;font-size:12.5px;font-weight:700;color:#c4a6ff;margin-top:12px;padding-top:10px;border-top:1px dashed var(--border)}
+  .vs-more::after{content:'展開完整報告 ▾'}
+  .vs-card.open .vs-more::after{content:'收合報告 ▴'}
+  .vs-body{display:none;padding:0 16px 16px;border-top:1px solid var(--border)}
+  .vs-card.open .vs-body{display:block}
+  @media (max-width:600px){.vs-head{padding:12px}.vs-body{padding:0 12px 12px}.vs-name{font-size:16px}}
+  .tut-h{font-size:14px;font-weight:700;color:#fff;margin-bottom:10px;text-align:center}
+  .tut-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .tp-wrap{width:200px;height:376px;overflow:hidden}
+  .tp{width:250px;height:470px;transform:scale(.8);transform-origin:top left;border:6px solid #2a3145;border-radius:34px;background:#10141f;position:relative;overflow:hidden}
+  .tut-lbl{text-align:center;font-size:12px;color:var(--muted);margin-top:4px}
+  .tut-hl{border:2px solid var(--yellow);border-radius:8px}
+  .limitup{display:inline-block;background:#ff2e44;color:#ffffff;font-weight:700;padding:2px 6px;border-radius:4px;margin:-2px -6px -2px 0}
+  .limitdown{display:inline-block;background:#00d17c;color:#03130b;font-weight:700;padding:2px 6px;border-radius:4px;margin:-2px -6px -2px 0}
+  .strength{display:inline-block;height:6px;background:var(--red);border-radius:3px;vertical-align:middle}
+  #feed{max-height:300px;overflow-y:auto}
+  .feed-item{display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border);font-size:12px}
+  .empty{color:var(--muted);text-align:center;padding:18px;font-size:13px}
+  .totalbar{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;margin-bottom:14px}
+  .totalbar span b{font-variant-numeric:tabular-nums}
+  .footer{font-size:11px;color:var(--muted);text-align:center;margin:18px 0}
+  .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:1000;display:none;align-items:center;justify-content:center;padding:14px}
+  .modal-bg.show{display:flex}
+  .kmodal{background:var(--card);border:1px solid var(--border);border-radius:12px;max-width:880px;width:100%;padding:14px}
+  .kmodal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .kmodal-title{font-size:16px;font-weight:700}
+  .kclose{background:var(--card2);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:4px 12px;font-size:14px;cursor:pointer}
+  .sym-click{cursor:pointer;text-decoration:underline;text-decoration-color:rgba(255,255,255,.25);text-underline-offset:3px}
+  .sym-click:hover{color:var(--yellow)}
+  .visit-box{margin-top:10px;padding:10px 12px;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:12px;color:var(--muted);line-height:1.8}
+  .visit-box b{color:var(--yellow);font-variant-numeric:tabular-nums}
+  @media(max-width:900px){.visit-box{display:flex;gap:14px;margin-top:0;align-items:center}}
+  .ctrl{background:var(--card2);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer}
+  .btn:hover{border-color:var(--blue);color:var(--blue)}
+  .btn:disabled{opacity:.5;cursor:wait}
+
+  /* ---------- 手機版微調 ---------- */
+  @media(max-width:600px){
+    html{-webkit-text-size-adjust:100%}
+    body{padding:10px}
+    .layout{gap:10px}
+    .nav-item{flex:1 1 42%;padding:9px 4px;font-size:13px}
+    .visit-box{flex-basis:100%;justify-content:center;font-size:11px;padding:8px 10px}
+    .card{padding:12px;border-radius:10px;margin-bottom:10px}
+    .grid2,.grid3{gap:10px}
+    h1{font-size:17px}
+    h2{font-size:14px;margin-bottom:8px}
+    .header{margin-bottom:10px;gap:6px}
+    .header .status{width:100%;justify-content:flex-start}
+    .price{font-size:20px}
+    .chg{font-size:12px;margin-left:6px}
+    .coin-name{font-size:15px}
+    .liq-box{padding:8px}
+    .liq-box .v{font-size:14px}
+    .liq-box .t{font-size:10px}
+    table{font-size:12px}
+    th,td{padding:6px 5px}
+    .totalbar{gap:8px;font-size:12px;padding:10px 12px}
+    .badge{font-size:10px;padding:1px 5px}
+    .note{font-size:10px}
+    .feed-item{flex-wrap:wrap;row-gap:2px}
+    .ctrl{padding:5px 8px;font-size:11.5px}
+    .footer{font-size:10px;margin:12px 0}
+    .empty{padding:14px;font-size:12px}
+    .strength{max-width:36px}
+    /* 布嬸專區手機貼合 */
+    #page-bu .card{padding:10px}
+    #page-bu table{font-size:11.5px;table-layout:auto}
+    #page-bu th,#page-bu td{padding:6px 3px}
+    #page-bu th:first-child,#page-bu td:first-child{white-space:normal;word-break:break-all;max-width:96px}
+    #page-bu h2 .ctrl{padding:4px 7px;font-size:11px}
+    #page-bu .note{word-break:break-all}
+  }
+</style>
+<script>window.__BUILD="202607181639"</script>
+</head>
+<body>
+<div id="ptr">↻</div>
+
+<div id="kModal" class="modal-bg" onclick="if(event.target===this)closeKChart()">
+  <div class="kmodal">
+    <div class="kmodal-head">
+      <span class="kmodal-title" id="kTitle">--</span>
+      <button class="kclose" onclick="closeKChart()">✕ 關閉</button>
+    </div>
+    <canvas id="kCanvas" style="width:100%;height:380px"></canvas>
+    <div class="note" id="kNote">日線 K 棒（近 6 個月）｜<span style="color:#4a8cff">━ MA20</span>　<span style="color:#f0b90b">━ MA60</span></div>
+  </div>
+</div>
+
+<div class="layout">
+<nav class="sidenav">
+  <div class="nav-item active" data-page="crypto">⚡ 加密貨幣掃描</div>
+  <div class="nav-item" data-page="twus">📊 台美股市掃描</div>
+  <div class="nav-item" data-page="value">💎 價值投資掃描</div>
+  <div class="nav-item" data-page="health">👨‍⚕️ 自選健檢掃描</div>
+  <div class="nav-item" data-page="bu">🌟 布嬸A+掃描</div>
+  <div class="visit-box">
+    <div>累積瀏覽 <b><span id="pvCount">--</span></b> 次</div>
+    <div>使用人數 <b><span id="uvCount">--</span></b> 人</div>
+  </div>
+</nav>
+<div class="main">
+
+<div id="page-crypto">
+<div class="header">
+  <h1>⚡ 加密貨幣掃描</h1>
+  <div class="status" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+    <span><span class="dot" id="wsDot"></span>即時連線</span>
+    <span>掃描更新：<span id="lastScan">--</span></span>
+    <select id="intervalSel" class="ctrl">
+      <option value="10000">自動更新 10秒</option>
+      <option value="30000">自動更新 30秒</option>
+      <option value="60000" selected>自動更新 60秒</option>
+    </select>
+  </div>
+</div>
+
+<div class="grid2">
+  
+  <div class="card">
+    <h2>📈 1小時週期多頭趨勢</h2>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>標的</th><th>價格</th><th>1H漲跌</th><th>24H漲跌</th><th>漲破均線</th><th>強度</th></tr></thead>
+      <tbody id="trendBody"><tr><td colspan="6" class="empty">掃描中…</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+
+  
+  <div class="card">
+    <h2>📉 1小時週期空頭趨勢</h2>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>標的</th><th>價格</th><th>1H漲跌</th><th>24H漲跌</th><th>跌破均線</th><th>強度</th></tr></thead>
+      <tbody id="bearBody"><tr><td colspan="6" class="empty">掃描中…</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>⚡ 波動率突增</h2>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>標的</th><th>價格</th><th>1H漲跌</th><th>24H漲跌</th><th>波動倍數</th></tr></thead>
+    <tbody id="spikeBody"><tr><td colspan="5" class="empty">掃描中…</td></tr></tbody>
+  </table>
+  </div>
+</div>
+
+<div class="grid2">
+  <div class="card" id="card-BTCUSDT"></div>
+  <div class="card" id="card-ETHUSDT"></div>
+</div>
+
+<div class="footer">資料來源：幣安公開 API。本工具僅供參考，非投資建議。</div>
+</div>
+
+<div id="twus-subnav" class="subnav" style="display:none">
+  <div class="subtab active" data-sub="tw">📊 台股掃描</div>
+  <div class="subtab" data-sub="us">🇺🇸 美股掃描</div>
+</div>
+
+<div id="page-tw" style="display:none">
+  <div class="header">
+    <h1>📊 台股掃描</h1>
+    <div class="status" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <span id="twMode" class="badge b-fire" style="display:none"></span>
+      <span>資料更新：<span id="twLast">--</span></span>
+    </div>
+  </div>
+
+  <div class="card" id="twIndexCard"><div class="empty">加權指數載入中…</div></div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>🚀 漲幅排行（上市個股）</h2>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>標的</th><th>收盤</th><th>漲跌%</th><th>成交值</th></tr></thead>
+        <tbody id="twGainBody"><tr><td colspan="4" class="empty">載入中…</td></tr></tbody>
+      </table>
+      </div>
+    </div>
+    <div class="card">
+      <h2>📉 跌幅排行（上市個股）</h2>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>標的</th><th>收盤</th><th>漲跌%</th><th>成交值</th></tr></thead>
+        <tbody id="twLoseBody"><tr><td colspan="4" class="empty">載入中…</td></tr></tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>💰 成交值排行（人氣股）</h2>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>標的</th><th>收盤</th><th>漲跌%</th><th>成交值</th></tr></thead>
+        <tbody id="twValueBody"><tr><td colspan="4" class="empty">載入中…</td></tr></tbody>
+      </table>
+      </div>
+    </div>
+    <div class="card">
+      <h2>🔥 振幅排行（波動大）</h2>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>標的</th><th>收盤</th><th>振幅%</th><th>漲跌%</th></tr></thead>
+        <tbody id="twAmpBody"><tr><td colspan="4" class="empty">載入中…</td></tr></tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">資料來源：台灣證交所。盤中為即時報價（約5秒延遲），收盤後為全市場盤後資料。本工具僅供參考，非投資建議。</div>
+</div>
+
+<div id="page-us" style="display:none">
+  <div class="header">
+    <h1>🇺🇸 美股掃描</h1>
+    <div class="status" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <span>資料更新：<span id="usLast">--</span></span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="idx-row">
+      <div class="liq-box"><div style="font-size:15px;font-weight:700;color:#fff">S&P 500</div><div style="margin-top:3px"><span id="idx-GSPC" style="font-weight:700">--</span> <span id="idxc-GSPC" style="font-size:12px"></span></div></div>
+      <div class="liq-box"><div style="font-size:15px;font-weight:700;color:#fff">NASDAQ 100</div><div style="margin-top:3px"><span id="idx-NDX" style="font-weight:700">--</span> <span id="idxc-NDX" style="font-size:12px"></span></div></div>
+      <div class="liq-box"><div style="font-size:15px;font-weight:700;color:#fff">費城半導體</div><div style="margin-top:3px"><span id="idx-SOX" style="font-weight:700">--</span> <span id="idxc-SOX" style="font-size:12px"></span></div></div>
+      <div class="liq-box"><div style="font-size:15px;font-weight:700;color:#fff">道瓊工業</div><div style="margin-top:3px"><span id="idx-DJI" style="font-weight:700">--</span> <span id="idxc-DJI" style="font-size:12px"></span></div></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>🚀 漲幅排行</h2>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>標的</th><th>價格</th><th>漲跌%</th><th>成交值</th></tr></thead>
+        <tbody id="usGainBody"><tr><td colspan="4" class="empty">載入中…</td></tr></tbody>
+      </table>
+      </div>
+    </div>
+    <div class="card">
+      <h2>📉 跌幅排行</h2>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>標的</th><th>價格</th><th>漲跌%</th><th>成交值</th></tr></thead>
+        <tbody id="usLoseBody"><tr><td colspan="4" class="empty">載入中…</td></tr></tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>💰 成交值排行（人氣股）</h2>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>標的</th><th>價格</th><th>漲跌%</th><th>成交值</th></tr></thead>
+        <tbody id="usValueBody"><tr><td colspan="4" class="empty">載入中…</td></tr></tbody>
+      </table>
+      </div>
+    </div>
+    <div class="card">
+      <h2>🔥 振幅排行（波動大）</h2>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>標的</th><th>價格</th><th>振幅%</th><th>漲跌%</th></tr></thead>
+        <tbody id="usAmpBody"><tr><td colspan="4" class="empty">載入中…</td></tr></tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">資料來源：Yahoo Finance（報價約有15分鐘延遲，收盤後為最新收盤價）。本工具僅供參考，非投資建議。</div>
+</div>
+
+<div id="page-health" style="display:none">
+  <div class="header"><h1>👨‍⚕️ 自選健檢掃描</h1></div>
+
+  <div class="card">
+    <h2 style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+      <span>🩺 自選股健檢</span>
+      <span class="ap-actions">
+        <button id="watchClear" class="ctrl btn">🧹 一鍵清除</button>
+        <button id="watchBtn" class="ctrl btn">🔄 重新健檢</button>
+        <button id="watchNotifyBtn" class="ctrl btn" style="border-color:#b18cff;color:#c4a6ff">🔔 健檢通知</button>
+      </span>
+    </h2>
+    <div class="note" style="margin-top:2px">自選股加入清單（最多5檔），布嬸以 A+引擎評估型態成熟度。</div>
+    <div style="display:flex;gap:8px;margin:12px 0;flex-wrap:wrap">
+      <input id="watchInput" maxlength="10" placeholder="台股代號或股名(2330、台積電) 或 美股(NVDA)" style="flex:1;min-width:170px;background:var(--card2);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:9px 12px;font-size:16px;outline:none">
+      <button id="watchAdd" class="ctrl btn">＋ 加入</button>
+    </div>
+    <div id="watchMsg" class="note" style="min-height:14px"></div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>標的</th><th>收盤</th><th>趨勢</th><th>A+ 型態評估</th><th>強勢健檢</th><th></th></tr></thead>
+      <tbody id="watchBody"><tr><td colspan="6" class="empty">尚未加入自選股</td></tr></tbody>
+    </table>
+    </div>
+    <div class="note">以上資料由布嬸A+引擎評估，僅供參考，非投資建議。</div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h2 style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+      <span>⚔️ 強勢比較</span>
+      <span class="ap-actions">
+        <button id="cmpClear" class="ctrl btn">🧹 一鍵清除</button>
+        <button id="cmpFromWatch" class="ctrl btn">📥 帶入自選</button>
+        <button id="cmpRun" class="ctrl btn" style="border-color:#b18cff;color:#c4a6ff;font-weight:800">⚔️ 開始比較</button>
+      </span>
+    </h2>
+    <div class="note" style="margin-top:2px">輸入標的（台股/美股可混比），同一起點累積報酬走勢互相比較</div>
+    <div style="display:flex;gap:8px;margin:12px 0 8px;flex-wrap:wrap">
+      <input id="cmpInput" maxlength="10" placeholder="台股代號或股名 / 美股代號" style="flex:1;min-width:170px;background:var(--card2);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:9px 12px;font-size:16px;outline:none">
+      <button id="cmpAdd" class="ctrl btn">＋ 加入</button>
+      <select id="cmpPeriod" class="ctrl btn" style="cursor:pointer">
+        <option value="22">近 1 個月</option>
+        <option value="66" selected>近 3 個月</option>
+        <option value="126">近 6 個月</option>
+      </select>
+    </div>
+    <div id="cmpChips" style="display:flex;gap:8px;flex-wrap:wrap;min-height:20px;margin-bottom:6px"></div>
+    <div id="cmpMsg" class="note" style="min-height:16px"></div>
+    <canvas id="cmpChart" style="width:100%;height:280px;display:none;margin-top:6px"></canvas>
+    <div style="overflow-x:auto;margin-top:10px">
+    <table id="cmpTbl" style="display:none">
+      <thead><tr><th>標的</th><th>1個月</th><th>3個月</th><th>6個月</th><th>強弱</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<div id="page-value" style="display:none">
+  <div class="header"><h1>💎 價值投資掃描</h1></div>
+  <div class="note" style="margin:-6px 0 12px">精選個股深度分析報告，點擊卡片即可展開／收合完整內容。</div>
+
+  <div class="card">
+    <h2>🙏 報告許願池</h2>
+    <div class="note" style="margin-top:6px">想看哪一檔的深度分析報告？輸入代號或名稱投票，人氣最高的優先分析上架。</div>
+    <div style="display:flex;gap:8px;margin:12px 0;flex-wrap:wrap">
+      <input id="wishInput" maxlength="16" placeholder="例：2330、台積電 或 NVDA" style="flex:1;min-width:180px;background:var(--card2);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:9px 12px;font-size:16px;outline:none">
+      <button id="wishBtn" class="ctrl btn">送出許願</button>
+    </div>
+    <div id="wishMsg" class="note" style="min-height:16px"></div>
+    <div id="wishList" style="margin-top:8px"></div>
+  </div>
+
+  <div class="card">
+    <h2>⚡ 報告速覽</h2>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>標的</th><th>報告日</th><th>即時價</th><th>報告目標</th><th>距目標</th><th>估值判斷</th></tr></thead>
+      <tbody id="vsSumBody"><tr><td colspan="6" class="empty">載入中…</td></tr></tbody>
+    </table>
+    </div>
+    <button id="vsSumMoreBtn" class="ctrl btn" style="width:100%;margin-top:10px;display:none">顯示全部 ▾</button>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-17">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','6811','宏碁資訊')">宏碁資訊 6811</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI/雲端/資安服務</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">價值+成長·低本益比高息</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/17</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">239.5</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">約12–15x（同業105x）</div><div class="t">本益比</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">價值成長/合理偏低</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>宏碁集團旗下數位雲端/AI 服務商，整合 AI、雲端與資安，主攻系統整合與數位轉型。基本面穩健成長且估值低：2026 Q1 EPS 4.8（季增 54%、年增 20%）、雲端及軟體服務營收破 20 億、資安/備份成長超 17%、<b>雲端 AI 專案量年增近四成</b>；1-5 月累計營收 44.16 億（年增 19.7%）。現金股利 10.5 元、<b>殖利率 4.67%</b>。<b>本益比約 12–15x，遠低於同業約 105x</b>，屬深度價值窪地。越南子公司首年即獲利。屬價值＋成長兼具、低本益比高股息的穩健成長股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「企業 AI/雲端服務＋數位轉型＋資安」。宏碁資訊定位 AI 服務商，整合 AI、雲端與資安協助客戶打造成長動能。2026 Q1 雲端及大量軟體服務營收突破 20 億、雲端 AI 專案量年增近四成；資安、備份、備援等加值產品成長超 17%。數位轉型需求延伸至資料治理與資安，以金融、高科技製造業及國營機構最積極。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2026 Q1 EPS 4.8（季增 54%、年增 20%）、營收與獲利創同期歷史新高；1-5 月累計營收 44.16 億（年增 19.7%）、4 月營收 8.84 億（年增 24.3%）。現金股利 10.5 元、殖利率 4.67%（6/25 除息）。越南子公司受惠台商供應鏈移轉、營運首年即獲利。本益比約 12–15x。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看企業 AI/雲端服務放量、資安剛性需求、低本益比高股息、穩健成長且獲利創高；空方憂系統整合成長溫和（非高爆發題材）、專案認列季度波動、與精誠/敦陽科等系統整合同業競爭。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>宏碁資訊是市場少見「AI/雲端題材＋深度價值＋高股息」三者兼具的標的——它不是硬體題材股，而是實實在在受惠企業 AI 導入、雲端遷移與資安剛性需求的「AI 服務商」：2026 Q1 雲端及軟體服務營收破 20 億、雲端 AI 專案量年增近四成、資安成長超 17%，獲利創同期新高、EPS 4.8（年增 20%）。但市場給它的本益比只有約 12–15x，遠低於同業約 105x，加上殖利率 4.67% 的現金股利，形成明顯的「價值窪地」。原因是系統整合/IT 服務業成長相對穩健（非硬體那種爆發性）、且缺乏 CoWoS/HBM 這類鎂光燈題材，因此估值被壓低。真正的看點在於：一是企業 AI 落地（生成式 AI、資料治理、資安）是否讓雲端與軟體服務營收持續放量（目前年增近四成的動能是關鍵）；二是越南等海外子公司獲利貢獻；三是穩定配息（高息保護下檔）。風險是專案型認列的季度波動與同業競爭。對偏好「穩健成長＋低估值＋高股息」的追蹤者，宏碁資訊是相對抗跌、估值合理偏低的 AI 服務價值成長股，但成長斜率不如硬體題材股陡。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$300億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">4.8（年增20%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">44.16億（年增19.7%）</div><div class="t">1-5月累計營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">年增近四成</div><div class="t">雲端AI專案</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">成長超17%</div><div class="t">資安/備份</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">約12–15x</div><div class="t">本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#8ab4ff">約105x</div><div class="t">同業平均本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">10.5元 / 4.67%</div><div class="t">現金股利 / 殖利率</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">宏碁資訊</td><td>6811</td><td>約300億</td><td>約12–15x</td><td style="text-align:left">宏碁集團AI/雲端/資安服務，成長20%+、殖利率4.67%、本益比遠低於同業</td></tr>
+        <tr><td class="sym">精誠</td><td>6214</td><td>中大型</td><td>有獲利</td><td style="text-align:left">系統整合龍頭，AI/雲端/金融科技</td></tr>
+        <tr><td class="sym">敦陽科</td><td>2480</td><td>中型</td><td>高息</td><td style="text-align:left">系統整合，穩健高股息</td></tr>
+        <tr><td class="sym">零壹</td><td>3029</td><td>中小型</td><td>有獲利</td><td style="text-align:left">IT 通路/系統整合</td></tr>
+        <tr><td class="sym">大世科</td><td>8099</td><td>中小型</td><td>有獲利</td><td style="text-align:left">雲端/系統整合服務</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：價值成長／合理偏低（低本益比、高股息、穩健成長）。</b>本益比約 12–15x，遠低於同業約 105x，加上殖利率 4.67% 的現金股利，形成明顯價值窪地；獲利穩健成長（2026 Q1 EPS 年增 20%、雲端 AI 專案年增近四成、資安成長超 17%）。原因是系統整合/IT 服務成長相對穩健、缺鎂光燈題材，故估值被壓低。合理與否取決於企業 AI 落地能否讓雲端與軟體服務持續放量。屬價值＋成長兼具、抗跌、估值合理偏低的 AI 服務股，惟成長斜率不如硬體題材股陡。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>企業 AI/雲端服務＋資安剛性需求＋低本益比高股息，防禦兼成長；股價位於 52週中上緣、波動相對溫和，今日逆勢走強。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>偏多穩健，看好雲端/AI 服務成長與低估值高股息；多空對「成長斜率是否值得重估、系統整合競爭」有分歧，但價值窪地是共識。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">專案認列波動/成長放緩/大盤修正</td><td>195 – 215</td><td class="down">約 −12%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">雲端AI/資安穩健成長、EPS續增</td><td>240 – 275</td><td class="up">約 +7%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">企業AI落地放量+估值向同業靠攏</td><td>300 – 340</td><td class="up">約 +33%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI服務全面重估+海外擴張</td><td>360 +</td><td class="up">約 +50%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：價值＋成長兼具、低本益比高股息的 AI 服務股</b> — 宏碁集團 AI/雲端/資安服務商，2026 Q1 EPS 4.8（年增 20%）、雲端 AI 專案年增近四成、資安成長超 17%、殖利率 4.67%；本益比約 12–15x 遠低於同業約 105x，明顯價值窪地。Base +7%、Bull +33%、Bear 累跌 12%，下檔有高股息保護。核心變數是企業 AI 落地讓雲端/軟體服務持續放量。屬抗跌、估值合理偏低的穩健成長股，成長斜率不如硬體題材股陡。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Yahoo股市／Goodinfo／Win投資／財報狗／statementdog（即時報價、EPS/營收/股利、本益比）、宏碁資訊法說/財報（2026 Q1 EPS 4.8、雲端 AI 專案年增近四成、資安成長超 17%、越南子公司獲利）。截至 2026/07/17 盤中。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-17">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','8033','雷虎')">雷虎 8033</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">軍工無人機/無人艇轉型</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.28);color:#ff6b78">⚠ 高本益比·高風險投機</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/17</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">219</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">逾300x（極高）</div><div class="t">本益比</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">題材/高投機</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>全球前五大遙控模型玩具廠，轉型國防與工業級<b>無人機、無人艇</b>、精密醫療。軍工題材發酵：接獲<b>美國防部 1,520 架無人機訂單</b>、取得陸軍訓練型無人機標案 2,033 萬，聚焦立院「無人機特別條例」與國防預算解套。惟獲利仍小：2026 Q1 EPS 0.34（+36%）、2025 EPS 0.58、近四季 0.67；<b>以現價 219 計本益比逾 300x（極高）</b>。屬國防無人機轉型題材、獲利尚在爬坡的高本益比、高波動<b>投機標的</b>；曾列處置股，今日大跌逾一成。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-callout warn" style="border-color:#ff6b78;background:rgba(234,57,67,.12);margin-top:14px">
+      <b style="color:#ff6b78">⚠ 高風險投機標的：</b>本標的本益比逾 300x、獲利遠跟不上股價，且曾列處置股、波動極劇烈（今日大跌逾一成）。題材（軍工無人機）雖有實質進展，但估值幾乎全數反映未來想像，僅適合高風險承受能力且嚴設停損之資金。以下分析僅為資訊彙整，非投資建議。
+    </div>
+    <div class="rpt-sec" style="margin-top:14px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「國防/工業級無人機、無人艇轉型＋立院無人機特別條例」。雷虎由全球前五大遙控模型廠轉型國防與工業級無人機、無人艇；接獲美國防部 1,520 架無人機訂單、取得陸軍訓練型無人機標案 2,033 萬元，已進入實質接單與備料階段。市場聚焦立院「無人機特別條例」推進、國防預算解套與 DDP（國防去中化）商機，並規劃建廠擴產。</div>
+    <div class="rpt-item"><b class="tag">▪ 財務現況　</b>2026 Q1 EPS 0.34（季增327%、年增36%）、2025 全年 EPS 0.58、近四季 EPS 0.67；2026 Q1 合併營收 3.75 億（年增11.9%）、5 月營收 1.17 億。獲利雖成長但基期小，以現價 219 計本益比逾 300x（用近四季 EPS 0.67），估值極高、幾乎全數反映未來題材。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看無人機軍購爆發、美國防部與台灣國防訂單、特別條例預算解套、無人機市場長線成長、法人與主力買盤推升；空方憂本益比逾 300x 純題材、獲利基期極小、訂單認列時程與良率、處置股與籌碼波動劇烈。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>雷虎的題材是真的有進展——美國防部 1,520 架無人機訂單、陸軍標案、已進入實質接單備料，加上立院「無人機特別條例」與國防去中化（DDP）的政策順風，長線無人機/無人艇的成長空間確實存在，這也是股價自低點 62 漲逾 3 倍到 272 的原因。但必須把「題材」和「當期獲利」分清楚：2026 Q1 EPS 才 0.34、近四季 EPS 0.67，以現價 219 計本益比逾 300x，代表市場幾乎把未來好幾年的無人機成長全部提前定價，估值缺乏當期基本面支撐。真正變數有三：一是訂單能否如期認列為營收獲利（軍工訂單交付與驗收時程長、且有良率/認證門檻）；二是立院特別條例與國防預算的推進速度（政策題材，時程與金額未定）；三是籌碼——雷虎曾列處置股、波動劇烈（今日大跌逾一成），股價由題材與買盤主導，容錯極低。這是一檔「題材有實質進展、但獲利遠遠跟不上股價」的高本益比、高波動投機標的：多頭賭無人機軍購與特別條例兌現，空頭賭估值均值回歸。適合高風險承受、嚴設停損的投機性資金，非穩健標的。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$500億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">0.58元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">0.34（+36%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v">0.67元</div><div class="t">近四季 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">逾300x（極高）</div><div class="t">本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">3.75億（+11.9%）</div><div class="t">2026 Q1 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">美防部1,520架</div><div class="t">關鍵訂單</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">高投機/曾處置</div><div class="t">風險屬性</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">雷虎</td><td>8033</td><td>約500億</td><td>逾300x</td><td style="text-align:left">遙控模型轉型國防無人機/無人艇，美防部訂單、題材強、本益比極高、高投機</td></tr>
+        <tr><td class="sym">漢翔</td><td>2634</td><td>中大型</td><td>有獲利</td><td style="text-align:left">航太軍工龍頭，戰機/引擎維修</td></tr>
+        <tr><td class="sym">經緯</td><td>3163</td><td>中小型</td><td>題材</td><td style="text-align:left">空拍/無人機系統整合</td></tr>
+        <tr><td class="sym">龍德造船</td><td>6753</td><td>中型</td><td>有獲利</td><td style="text-align:left">軍工造船/無人艇</td></tr>
+        <tr><td class="sym">中光電</td><td>5371</td><td>大型</td><td>有獲利</td><td style="text-align:left">集團旗下無人機（智能）</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout" style="border-color:#ff6b78;background:rgba(234,57,67,.10)">
+      <b style="color:#ff6b78">估值判斷：題材／高度投機（本益比逾 300x、獲利遠跟不上股價）。</b>2026 Q1 EPS 0.34、近四季 EPS 0.67，以現價 219 計本益比逾 300x，估值幾乎全數反映未來無人機軍購與特別條例的想像，缺乏當期基本面支撐。題材有實質進展（美防部 1,520 架訂單、陸軍標案、政策順風），但訂單認列時程、特別條例推進、良率與籌碼（曾處置股）都是變數。屬國防無人機轉型題材、獲利尚在爬坡的高本益比高波動投機標的，適合高風險承受且嚴設停損的資金，非穩健標的。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>軍工無人機題材延燒、美防部訂單與特別條例預期升溫、法人與主力買盤推升；股價自低點漲逾 3 倍、曾列處置股，波動劇烈（今日大跌逾一成）。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>無明確估值共識（獲利基期小、本益比逾 300x 屬題材評價）；多空對「訂單認列時程與特別條例兌現、估值是否過度」分歧極大，屬事件/政策題材驅動。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">訂單認列慢/特別條例延宕/題材退燒</td><td>130 – 165</td><td class="down">約 −30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">題材延續但獲利仍小、高檔震盪</td><td>195 – 235</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">美防部+國防訂單放量認列、EPS跳增</td><td>280 – 330</td><td class="up">約 +40%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">無人機軍購超級循環+特別條例大解套</td><td>380 +</td><td class="up">約 +74%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px;border-color:#ff6b78;background:rgba(234,57,67,.10)">
+      <b style="color:#ff6b78">分析總結：軍工無人機題材有實質進展、但獲利遠跟不上股價的高投機標的</b> — 遙控模型轉型國防無人機/無人艇，美防部1,520架訂單、陸軍標案、立院特別條例題材；惟 2026 Q1 EPS 僅0.34、近四季0.67，本益比逾300x。Bull +40% 但 Bear 累跌30%，風險報酬不對稱、下檔明確。核心變數是訂單認列、特別條例推進與籌碼（曾處置股）。屬高本益比、高波動投機標的，須嚴設停損。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Yahoo股市／Goodinfo／財報狗／Win投資（即時報價、EPS/營收）、口袋學堂／CMoney（美防部 1,520 架訂單、陸軍標案 2,033 萬、無人機特別條例、建廠、處置股）。截至 2026/07/17 盤中。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-17">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2330','台積電')">台積電 2330</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 晶圓代工龍頭</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">合理·成長</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/17</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">2,290</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">27.25（Q2新高）</div><div class="t">單季 EPS</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">合理/成長</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>全球晶圓代工龍頭（市占逾 6 成）、<b>AI 超級週期最核心受惠者</b>。2026 Q2（7/16 法說）三率三獲利創新高：合併營收 1.27 兆（美元 402 億、年增 33.7%）、<b>EPS 27.25、毛利率 67.7%</b>、淨利年增 77%，2 奈米開始貢獻。Q3 指引再創新高、全年美元營收年增上修至「略高於 40%」。法人估 2026 EPS 逼近百元（93–96）、配息至少 24 元、目標價 2,400–2,600（花旗 3,800）。以 2026e EPS 約 95–100 計本益比僅約 <b>23–24x，對品質與成長屬合理</b>。今日隨大盤回檔約 6% 至 2,290（法說後利多出盡）。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「AI 超級週期＋先進製程（2/3 奈米）＋CoWoS 先進封裝」。台積電是 AI 晶片（NVIDIA/AMD/博通/蘋果等）的獨家/主要代工廠，2026 Q2 2 奈米開始貢獻營收、CoWoS 產能 2026 底看月產 10–12 萬片。魏哲家二度上修全年展望：全年美元營收年增「略高於 40%」，並大幅加碼資本支出與美國投資。AI 能見度「更長、更確定」。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2026 Q2 合併營收 1.27 兆（美元 402 億、年增 33.7%、季增 12%）、EPS 27.25（歷史新高）、毛利率 67.7%、營益率 60.3%、稅後純益率 55.6%、淨利年增 77%。Q3 指引美元營收 446–458 億（中位年增約 37%）、毛利率 65–67%。法人估 2026 全年 EPS 逼近百元（93–96）、配息至少 24 元。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看 AI 超級週期、2/3 奈米獨強、CoWoS 擴產、定價權與毛利率創高、目標價上看 2,600–3,800；空方憂股價一年翻倍後法說「利多出盡」回檔、AI 資本支出循環、地緣（美國關稅/擴廠成本）與匯率。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>台積電這次法說會真正的訊息不是單季數字有多漂亮（EPS 27.25、毛利率 67.7% 都創新高），而是「AI 超級週期的能見度更長、更確定」——魏哲家二度上修全年美元營收年增至「略高於 40%」、Q3 指引再創新高、2 奈米已開始貢獻且良率/需求強勁、CoWoS 產能持續擴到 2026 底月產 10–12 萬片。這代表台積電的成長不是一次性 AI 拉貨，而是結構性的多年製程領先＋先進封裝瓶頸卡位。估值上，現價 2,290、以 2026e EPS 約 95–100 計本益比僅約 23–24x，對一家毛利率近 68%、營收年增逾 40%、近乎壟斷 AI 先進製程的公司而言並不貴（甚至低於許多本益比 40–60x 的 AI 題材股），這也是花旗給到 3,800 目標價的邏輯。真正變數是 AI 資本支出循環的持續性、地緣政治（美國關稅、海外擴廠稀釋毛利）與匯率。股價一年翻倍後、法說「利多出盡」今日隨大盤回檔約 6%，屬正常獲利了結；但以基本面與估值看，台積電是 AI 超級週期裡「品質最高、估值相對合理」的核心持股，波動來自市場情緒而非基本面惡化。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$59兆</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">1.27兆（年增33.7%）</div><div class="t">Q2 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">27.25（新高）</div><div class="t">Q2 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">67.7%（新高）</div><div class="t">Q2 毛利率</div></div>
+      <div class="rpt-metric"><div class="v">約95–100</div><div class="t">2026e EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">約23–24x</div><div class="t">2026e 本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">年增>40%（上修）</div><div class="t">全年美元營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">月產10–12萬片</div><div class="t">CoWoS 2026底</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">台積電</td><td>2330</td><td>約59兆</td><td>2026e 23–24x</td><td style="text-align:left">全球代工龍頭(市占>60%)、2/3奈米+CoWoS獨強、AI最核心、毛利68%</td></tr>
+        <tr><td class="sym">三星電子</td><td>005930</td><td>巨型</td><td>落後</td><td style="text-align:left">代工#2，先進製程良率追趕中</td></tr>
+        <tr><td class="sym">Intel</td><td>INTC</td><td>中大型</td><td>轉型</td><td style="text-align:left">IDM+代工，18A製程重整中</td></tr>
+        <tr><td class="sym">聯電</td><td>2303</td><td>大型</td><td>成熟</td><td style="text-align:left">成熟/成長製程代工龍二</td></tr>
+        <tr><td class="sym">格芯</td><td>GFS</td><td>中大型</td><td>成熟</td><td style="text-align:left">成熟特殊製程代工</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理／成長（AI 代工王者、品質最高、估值相對合理）。</b>現價 2,290、以 2026e EPS 約 95–100 計本益比僅約 23–24x；對一家毛利率近 68%、全年美元營收年增逾 40%、近乎壟斷 AI 先進製程（2/3 奈米）與 CoWoS 先進封裝的公司而言並不貴，明顯低於多數本益比 40–60x 的 AI 題材股，這也是花旗給 3,800 目標價的邏輯。合理與否取決於 AI 資本支出循環延續與地緣/匯率。屬 AI 超級週期裡品質最高、估值相對合理的核心龍頭，惟股價一年翻倍、波動來自市場情緒。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 超級週期＋2 奈米量產＋毛利創高，法人目標上看 2,600–3,800；惟股價一年翻倍後法說「利多出盡」，今日隨大盤回檔約 6% 至 2,290，屬獲利了結而非基本面惡化。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>內外資一致偏多，2026 EPS 93–96（逼近百元）、目標價 2,400–2,600、花旗最高 3,800；多空對「股價短線是否過熱、AI 資本支出循環持續性」有分歧，但基本面共識極強。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">AI資本支出放緩/地緣關稅/毛利稀釋</td><td>1,700 – 2,000</td><td class="down">約 −15%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">AI需求延續、2026 EPS約95–100</td><td>2,300 – 2,700</td><td class="up">約 +9%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">2奈米放量+CoWoS滿載、EPS上修</td><td>2,900 – 3,300</td><td class="up">約 +35%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI超級週期全面重估（花旗3,800）</td><td>3,600 +</td><td class="up">約 +57%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：AI 超級週期最核心、品質最高且估值相對合理的龍頭</b> — 全球代工龍頭(市占>60%)，2026 Q2 EPS 27.25/毛利率67.7%創高、2奈米貢獻、全年美元營收年增上修至>40%；2026e EPS 約95–100、本益比僅約23–24x，明顯低於多數 AI 題材股。Base +9%、Bull +35%、花旗目標3,800。核心變數是 AI 資本支出循環與地緣/匯率。股價一年翻倍後今日回檔約6%屬利多出盡/獲利了結。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Yahoo股市／TSMC IR（2026 Q2 法說：營收 1.27 兆、EPS 27.25、毛利率 67.7%、Q3 指引、全年美元營收年增>40%）、鉅亨／經濟日報／工商時報（2 奈米貢獻、CoWoS 10–12 萬片、配息 24 元）、豐雲學堂／花旗（2026 EPS 93–96、目標價 2,400–3,800）。截至 2026/07/17 盤中。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-17">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','1519','華城')">華城 1519</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 電力·重電·變壓器</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">訂單到2028·回檔後成長</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/17</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">655</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">花旗目標 1,150</div><div class="t">分析師目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">成長/合理偏高</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>台灣<b>重電四雄</b>之一，AI 資料中心電力設備最直接受惠。第一家取得美國「星際之門(Stargate)」電力變壓器訂單的台廠，<b>AIDC 訂單累計逾 150 億</b>、北美出貨占比破 50%、能見度直達 2028；全球變壓器約 30% 供需缺口。法人估 2026 EPS 18–22（花旗 21.91）、2027 上看 25.5–28、花旗目標 1,150。惟股價已自高點 1,115 <b>回檔約 41% 至 655</b>、今日再跌約一成；回檔後 2026e 本益比約 30–36x，估值較高點改善但仍屬成長溢價。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「AI 資料中心電力＋台電強韌電網」雙引擎。華城是重電四雄外銷龍頭，率先卡位 AI 資料中心電力供應鏈，2024 年底取得美國星際之門專案第 1 期約 20 億元變壓器訂單，AIDC 整體訂單累計突破 150 億、出貨 2025–2028，占營收比重由去年約 5% 提升至今年 20% 以上；北美出貨占比破 50%、交期 2.5–3 年。全球變壓器供需缺口約 30%。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>法人預估 2026 營收約 271 億（年增 11%）、稅後淨利約 57.5 億（年增 30%）、EPS 約 18.2；另有法人/花旗估 2026 EPS 21.91；2027 營收上看 352 億（年增 30%）、EPS 25.5–28。花旗目標價 1,150。訂單能見度直達 2028、部分看到 2030。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看 AI 用電爆發、變壓器供需缺口、訂單滿到 2028–2030、重電長多；空方憂股價自高點大幅回檔、重電為專案交付（認列節奏）、本益比仍屬成長溢價、AI 資本支出循環與匯率。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>華城的訂單能見度是重電股裡最扎實的之一——AIDC 變壓器訂單累計破 150 億、能見度到 2028（部分看 2030）、北美占比破 50%、且是第一家打入美國星際之門的台廠，這是實打實的在手訂單，不是純想像。全球變壓器約 30% 供需缺口與交期 2.5–3 年，給了華城定價權與獲利彈性（AIDC 占營收由 5%→20%+）。但要看清兩件事：一是估值——股價曾攻上千元、本益比逾 60x，屬高度成長溢價，如今已自高點 1,115 回檔約 41% 至 655，回檔後 2026e 本益比約 30–36x（對 2026 EPS 18–22），估值明顯改善但仍不便宜；二是獲利認列節奏——重電是專案型交付，營收與獲利隨出貨與認列波動，單季會有起伏，重點看在手訂單與 2026–2028 出貨兌現。真正變數是 AI 資料中心資本支出的持續性與變壓器缺口延續。對追蹤者而言，訂單基本面強、回檔後估值合理化，但仍是成長股、波動大（今日再跌約一成），須以訂單能見度而非單季評估。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$2,100億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">約271億（+11%）</div><div class="t">2026e 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">約57.5億（+30%）</div><div class="t">2026e 淨利</div></div>
+      <div class="rpt-metric"><div class="v">18–22元</div><div class="t">2026e EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">25.5–28元</div><div class="t">2027e EPS</div></div>
+      <div class="rpt-metric"><div class="v">約30–36x</div><div class="t">2026e 本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">累計逾150億</div><div class="t">AIDC 訂單</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">直達2028</div><div class="t">訂單能見度</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">華城</td><td>1519</td><td>約2,100億</td><td>2026e 33x</td><td style="text-align:left">重電外銷龍頭，美國星際之門變壓器、AIDC訂單150億+、能見度2028</td></tr>
+        <tr><td class="sym">中興電</td><td>1513</td><td>中大型</td><td>成長</td><td style="text-align:left">重電+統包工程，台電強韌電網</td></tr>
+        <tr><td class="sym">士電</td><td>1503</td><td>中大型</td><td>成長</td><td style="text-align:left">重電，美國布局、AIDC</td></tr>
+        <tr><td class="sym">亞力</td><td>1514</td><td>中型</td><td>成長</td><td style="text-align:left">重電/配電盤，AIDC題材</td></tr>
+        <tr><td class="sym">東元</td><td>1504</td><td>大型</td><td>成長</td><td style="text-align:left">馬達/重電，資料中心電力</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：成長／合理偏高（AI 電力龍頭、回檔後估值改善）。</b>股價曾攻千元、本益比逾 60x，屬高成長溢價；如今自高點 1,115 回檔約 41% 至 655，回檔後 2026e 本益比約 30–36x（對 2026 EPS 18–22）、且低於花旗目標 1,150，估值明顯改善但仍不便宜。訂單基本面扎實（AIDC 150 億+、能見度 2028、北美占比破 50%）。合理與否取決於 AI 資料中心資本支出與變壓器缺口延續。屬訂單能見度強、回檔後估值合理化的重電成長龍頭，惟仍屬成長股、波動大。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 用電＋變壓器缺口＋星際之門題材熱、法人喊買；惟股價自高點 1,115 回檔約 41% 至 655、今日再跌約一成，波動大、獲利了結與成長股修正壓力並存。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>偏多，花旗目標 1,150、法人 2026 EPS 18–22/2027 25.5–28、訂單滿到 2028；多空對「成長溢價本益比與 AI 資本支出持續性」有分歧。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">AI資本支出放緩/認列遞延/估值修正</td><td>520 – 620</td><td class="down">約 −15%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">AIDC訂單如期出貨、2026 EPS約20</td><td>680 – 820</td><td class="up">約 +15%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">變壓器缺口延續+新單、EPS上修</td><td>950 – 1,150</td><td class="up">約 +55%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI電力超級循環全面重估</td><td>1,250 +</td><td class="up">約 +91%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：訂單能見度強、回檔後估值合理化的重電成長龍頭</b> — 美國星際之門變壓器、AIDC訂單累計150億+、能見度2028、北美占比破50%；2026 EPS 18–22、花旗目標1,150。股價自高點1,115回檔約41%至655，回檔後本益比約30–36x。Base +15%、Bull +55% 但 Bear 累跌15%。核心變數是 AI 資料中心資本支出與變壓器缺口延續，重電專案認列節奏須看在手訂單。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Yahoo股市／Goodinfo／Win投資（即時報價、EPS/營收）、華城法說會（星際之門訂單、AIDC 150 億、能見度 2028）、FTNN／旺得富／花旗環球（目標價 1,150、2026 EPS 18–22/2027 25.5–28）。截至 2026/07/17 盤中。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-17">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','8150','南茂')">南茂 8150</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">驅動IC＋記憶體封測</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">記憶體循環·成長</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/17</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">110.5</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">0.72（淨利+186%）</div><div class="t">2026 Q1 EPS</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">成長/循環</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>全球前三大 LCD 驅動 IC 封測廠，同時投入記憶體與高階 IC 封測（含 AI、雲端資料中心記憶體）。受惠記憶體漲價回溫＋AI 帶動訂單。2026 Q1 營收 69.36 億（年增 25%）、<b>稅後淨利 5.05 億（年增 186%）</b>、EPS 0.72；法人估 2026 EPS 挑戰 2.8。股價自 52週低 23.1 漲逾 4 倍至 125、現 110.5（距高約 -12%）。以 2026e EPS 2.8 計本益比約 39x，屬記憶體循環由谷底翻揚的成長股，波動較大。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「記憶體漲價回溫＋AI 封測」。南茂是全球前三大 LCD 驅動 IC 封測廠，穩定基本盤來自面板驅動 IC 封測；同時投入記憶體與高階 IC 封測（含 AI、雲端資料中心相關記憶體），直接受惠 AI 記憶體超級循環下的漲價與稼動率回升。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2026 Q1 營收 69.36 億（季增 6.4%、年增 25.4%）、稅後淨利 5.05 億（季增 1%、年增 186%）、EPS 0.72；法人估 2026 全年 EPS 挑戰 2.8。6/29 除息、配現金股利 1.23 元。獲利隨記憶體報價與稼動率波動。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看記憶體漲價循環、AI/雲端記憶體封測放量、擴產與獲利彈性；空方憂記憶體屬深度景氣循環、股價自低點已漲逾 4 倍、本益比約 39x 對成長性偏高、循環反轉風險。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>南茂的價值在於「穩定基本盤＋記憶體循環彈性」的雙層結構——底層是全球前三大 LCD 驅動 IC 封測（替面板產業長期處理驅動 IC，提供穩定營收），上層是記憶體與高階 IC 封測，直接吃到 AI 記憶體超級循環的漲價與稼動率回升（2026 Q1 淨利年增 186%、EPS 0.72，法人估全年挑戰 2.8）。股價因此自 52週低 23.1 漲逾 4 倍。關鍵要看兩件事：一是記憶體漲價循環的持續性（DRAM/利基記憶體缺貨與 AI 帶動）——這是獲利彈性的來源，但記憶體是深度週期股，一旦供給趕上或需求放緩，封測稼動率與獲利會回落；二是估值——以 2026e EPS 2.8 計本益比約 39x，用的是剛回升、仍在爬坡的獲利，屬成長溢價。與純題材股不同，南茂有實質封測產能與驅動 IC 穩定盤，轉機有基本面支撐；但股價已漲逾 4 倍、位於高檔，須以週期思維評估。真正變數是記憶體報價與稼動率能否續強。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$800億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">69.36億（年增25%）</div><div class="t">2026 Q1 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">5.05億（年增186%）</div><div class="t">2026 Q1 淨利</div></div>
+      <div class="rpt-metric"><div class="v">0.72元</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">挑戰2.8元</div><div class="t">2026e EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#8ab4ff">約39x</div><div class="t">2026e 本益比</div></div>
+      <div class="rpt-metric"><div class="v">LCD驅動IC封測#3</div><div class="t">本業</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">記憶體/AI封測</div><div class="t">成長引擎</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">南茂</td><td>8150</td><td>約800億</td><td>2026e 39x</td><td style="text-align:left">全球#3驅動IC封測＋記憶體封測，記憶體漲價+AI封測、由谷底翻揚</td></tr>
+        <tr><td class="sym">力成</td><td>6239</td><td>約2,500億</td><td>成長</td><td style="text-align:left">記憶體封測全球#3＋FOPLP</td></tr>
+        <tr><td class="sym">福懋科</td><td>8131</td><td>約300億</td><td>成長</td><td style="text-align:left">記憶體封測，AI伺服器DDR5/HBM</td></tr>
+        <tr><td class="sym">頎邦</td><td>6147</td><td>中型</td><td>有獲利</td><td style="text-align:left">驅動IC封測，面板/OLED</td></tr>
+        <tr><td class="sym">華泰</td><td>2329</td><td>中小型</td><td>轉機</td><td style="text-align:left">記憶體封測/導線架</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：成長／循環（記憶體漲價受惠、有穩定驅動IC基本盤）。</b>以 2026e EPS 2.8 計本益比約 39x，用的是剛回升、仍在爬坡的獲利，屬成長溢價；但南茂有全球前三大驅動 IC 封測的穩定基本盤＋記憶體循環彈性（2026 Q1 淨利年增186%）。記憶體屬深度景氣循環，須以週期思維評估。合理與否取決於記憶體漲價與稼動率續強。屬有基本面支撐、由谷底翻揚的成長封測股，惟股價自低點漲逾4倍、位於高檔，波動較大。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>記憶體漲價＋AI 封測題材熱、獲利彈性大；股價自 52週低漲逾 4 倍、位於高檔（距高約 -12%），波動較大。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>偏多，法人估 2026 EPS 挑戰 2.8、記憶體循環回溫；多空對「本益比 39x 是否偏高、循環持續性」有分歧。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">記憶體循環反轉/稼動率回落/估值修正</td><td>78 – 92</td><td class="down">約 −20%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">漲價循環延續、2026 EPS約2.8</td><td>108 – 125</td><td class="up">約 +8%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">記憶體大漲+AI封測放量、EPS上修</td><td>140 – 160</td><td class="up">約 +35%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">記憶體超級循環全面重估</td><td>175 +</td><td class="up">約 +58%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：記憶體循環由谷底翻揚、有驅動IC穩定盤的成長封測股</b> — 全球#3驅動IC封測＋記憶體封測，2026 Q1 淨利年增186%、EPS 0.72、法人估全年挑戰2.8；本益比約39x。股價自低點漲逾4倍。Base +8%、Bull +35%、Bear 累跌20%。核心變數是記憶體漲價與稼動率續強，循環反轉是風險，須以週期思維評估。屬有基本面支撐的成長封測股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Yahoo股市／Goodinfo／Win投資／CMoney（即時報價、EPS/營收/股利）、南茂法說（2026 Q1 淨利年增 186%、記憶體/AI 封測）、理財周刊／CMoney（2026 EPS 挑戰 2.8、記憶體漲價擴產）。截至 2026/07/17 盤中。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-17">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2441','超豐')">超豐 2441</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">成熟製程封測·力成集團</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">估值相對便宜·穩健</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/17</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">126.5</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">1.4（+35%）</div><div class="t">2026 Q1 EPS</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">約29x（同業72x）</div><div class="t">本益比</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>力成集團子公司（力成持股約 42.91%），主攻<b>成熟製程與傳統封測</b>。與母公司力成「分層分工」：力成專攻 AI/HPC 高階先進封裝，超豐維持成熟製程競爭力。2026 Q1 EPS 1.4（年增 35%）、2025 EPS 4.31、1-6 月累計營收 100.06 億（年增 21.76%），2026 營收挑戰雙位數成長。<b>本益比約 29x、明顯低於同業平均約 72x</b>，估值相對便宜。屬穩健成長、配息穩定、相對同業低估的封測價值股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「成熟製程封測穩健成長＋力成集團分工」。超豐為力成集團子公司（力成持股約 42.91%），與母公司採分層分工：力成專攻 AI 與高效能運算高階先進封裝，超豐維持成熟製程與傳統封測（打線封裝、測試）競爭力，承接穩定的消費/工控/車用/邏輯 IC 封測需求。2026 營收目標挑戰雙位數成長。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2026 Q1 EPS 1.4（季增 24%、年增 35%）、2025 全年 EPS 4.31；1-6 月累計營收 100.06 億（年增 21.76%）、2025 全年營收 167.64 億。本益比約 29.23x，明顯低於同業平均約 72.2x。配息穩定。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看半導體成熟製程復甦、封測稼動率回升、超豐估值相對同業便宜、力成集團奧援；空方憂成熟製程封測成長性不如 AI 先進封裝、缺乏 HBM/CoWoS 高階題材、成長溫和。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>超豐是封測族群裡少見「成長穩健＋估值相對便宜」的標的——本益比約 29x，明顯低於同業平均約 72x，因為市場把資金集中在 AI 先進封裝（CoWoS/HBM/FOPLP）的高本益比題材股，而超豐做的是成熟製程與傳統封測，不在最熱的鎂光燈下。但要看到兩點：一是超豐的獲利是實在的（2026 Q1 EPS 年增 35%、1-6 月營收年增 21.76%、2025 EPS 4.31、配息穩定），受惠半導體成熟製程復甦與封測稼動率回升；二是力成集團「分層分工」的戰略價值——力成專攻 AI/HPC 高階，超豐承接成熟製程與傳統封測，兩者互補，超豐有母公司奧援與穩定訂單。缺點是成長溫和、缺乏 HBM/CoWoS 高階爆發題材，因此本益比被壓低。對偏好「穩健成長＋估值合理＋配息」的追蹤者，超豐是相對低估的封測價值股；但若追求 AI 先進封裝的高彈性成長，超豐的題材性不如力成、日月光。真正變數是成熟製程復甦力道與成長能否加速。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$700億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">4.31元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">1.4（年增35%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">100.06億（年增21.76%）</div><div class="t">1-6月累計營收</div></div>
+      <div class="rpt-metric"><div class="v">167.64億</div><div class="t">2025 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">約29x</div><div class="t">本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#8ab4ff">約72x</div><div class="t">同業平均本益比</div></div>
+      <div class="rpt-metric"><div class="v">約42.91%</div><div class="t">力成持股</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">超豐</td><td>2441</td><td>約700億</td><td>約29x</td><td style="text-align:left">力成集團子公司，成熟製程封測、穩健成長、本益比低於同業(約72x)</td></tr>
+        <tr><td class="sym">力成</td><td>6239</td><td>約2,500億</td><td>成長</td><td style="text-align:left">母集團，記憶體封測#3＋FOPLP高階</td></tr>
+        <tr><td class="sym">京元電</td><td>2449</td><td>中大型</td><td>有獲利</td><td style="text-align:left">專業測試龍頭，AI/HBM測試</td></tr>
+        <tr><td class="sym">頎邦</td><td>6147</td><td>中型</td><td>有獲利</td><td style="text-align:left">驅動IC封測</td></tr>
+        <tr><td class="sym">南茂</td><td>8150</td><td>約800億</td><td>成長</td><td style="text-align:left">記憶體/驅動IC封測</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：成長／合理（穩健封測、估值相對同業便宜）。</b>本益比約 29x 明顯低於同業平均約 72x，因超豐做成熟製程與傳統封測、不在 AI 先進封裝最熱題材上，但獲利實在（2026 Q1 EPS 年增35%、1-6 月營收年增21.76%、配息穩定）、有力成集團分工奧援。缺點是成長溫和、缺 HBM/CoWoS 高階爆發題材。對偏好穩健成長＋估值合理＋配息者屬相對低估的封測價值股。合理與否取決於成熟製程復甦與成長能否加速。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>成熟製程復甦＋封測稼動回升，超豐估值相對同業便宜；股價位於 52週中上緣，波動相對溫和（較 AI 題材封測股穩）。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>偏多穩健，看好成熟製程復甦與 2026 雙位數營收成長；多空對「缺高階 AI 題材、成長溫和是否值得溢價」有分歧，但估值相對便宜是共識。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">成熟製程復甦慢/需求走弱/估值修正</td><td>95 – 112</td><td class="down">約 −15%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">成熟製程穩健成長、2026 EPS約5.5</td><td>125 – 145</td><td class="up">約 +8%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">成熟製程回升加速+稼動滿載、EPS上修</td><td>155 – 175</td><td class="up">約 +30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">封測全面回升+估值向同業靠攏</td><td>190 +</td><td class="up">約 +50%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：穩健成長、估值相對同業便宜的封測價值股</b> — 力成集團子公司、成熟製程封測，2026 Q1 EPS 年增35%、1-6月營收年增21.76%、2025 EPS 4.31、配息穩定；本益比約29x明顯低於同業約72x。Base +8%、Bull +30%、Bear 累跌15%。與 AI 先進封裝高本益比題材股不同，超豐是穩健成長＋估值合理的價值型封測，缺點是缺高階爆發題材、成長溫和。核心變數是成熟製程復甦力道。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Yahoo股市／Goodinfo／Win投資／玩股網（即時報價、EPS/營收、PE）、超豐/力成集團資料（持股 42.91%、分層分工）、鉅亨／CMoney（2026 Q1 EPS 年增35%、1-6 月營收年增21.76%、同業平均 PE 72）。截至 2026/07/17 盤中。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-17">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','6488','環球晶')">環球晶 6488</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">矽晶圓三雄·千金股</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">估值偏高·高波動</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/17</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">1,305</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">7.33（+1208%）</div><div class="t">5月 EPS</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">成長/估值偏高</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>全球第三大半導體矽晶圓廠、台廠<b>矽晶圓三雄</b>之一，新晉千金股。本業獲利爆發：5 月 EPS 7.33（年增 1208%、扣業外）、2026 Q1 EPS 3.97、近四季 16.21；FactSet 估 2026 EPS 20.3–21.1。AI/HPC 帶動 12 吋滿載、成熟製程復甦、漲價、海外新產能。惟股價自 5 月 580 兩個月漲約 161% 至 1,515、<b>今日回檔逾一成至 1,305</b>，2026e 本益比約 63x、<b>現價遠高於分析師目標（580–733.5）</b>，估值偏高、波動極大。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「矽晶圓景氣谷底翻揚＋AI/HPC 需求」。環球晶是全球第三大半導體矽晶圓廠，AI/HPC 帶動高階邏輯與記憶體晶圓需求，12 吋矽晶圓維持滿載；成熟製程復甦、矽晶圓價格有望調漲、海外新產能（美國/日本）開始貢獻。法人稱「最壞已過」四大王牌到位。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>5 月 EPS 7.33（年增 1208%，扣業外之本業獲利爆發）、2026 Q1 EPS 3.97（季減 13.9%）、近四季 EPS 16.21；FactSet 估 2026 EPS 20.3–21.1、營收約 643 億（逐季成長）。以現價 1,305、2026e EPS 約 20.7 計本益比約 63x。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看矽晶圓漲價循環、AI/HPC 滿載、谷底反轉、千金股題材；空方憂股價兩個月漲 161%、本益比約 63x 過高、現價遠高於分析師目標價（580–733.5）、今日單日大跌逾一成顯示波動與獲利了結風險。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>環球晶的獲利反轉是真的（5 月本業 EPS 7.33、年增 1208%，AI/HPC 帶動 12 吋滿載＋矽晶圓漲價＋成熟製程復甦），但股價的漲幅遠遠跑在基本面前面——兩個月自 580 漲約 161% 到 1,515，以 2026e EPS 約 20.7 計本益比已達約 63x，而 FactSet 分析師目標價僅 580–733.5，代表現價比最樂觀的分析師目標還高出約 78%。這是典型「基本面反轉為真、但股價已過度反映甚至超前定價」的情況：矽晶圓是景氣循環股，本益比 63x 用的是剛爆發、仍在上行的獲利，一旦漲價循環或 AI 資本支出稍有雜音，估值修正空間很大（今日單日大跌逾一成即為警訊）。真正變數是矽晶圓漲價與 AI/HPC 需求的持續性、以及海外新產能的獲利兌現。對追蹤者而言，基本面值得肯定，但現價估值偏高、波動極大、且已超越分析師目標，屬追高容錯極低的階段。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$5,700億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">3.97元</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">7.33（+1208%）</div><div class="t">5月 EPS</div></div>
+      <div class="rpt-metric"><div class="v">16.21元</div><div class="t">近四季 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">20.3–21.1元</div><div class="t">2026e EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#8ab4ff">約63x</div><div class="t">2026e 本益比</div></div>
+      <div class="rpt-metric"><div class="v">約643億</div><div class="t">2026e 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">580–733.5</div><div class="t">分析師目標（低於現價）</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">環球晶</td><td>6488</td><td>約5,700億</td><td>2026e 63x</td><td style="text-align:left">全球#3矽晶圓，AI/HPC滿載、獲利爆發但股價已超分析師目標、估值偏高</td></tr>
+        <tr><td class="sym">台勝科</td><td>3532</td><td>中大型</td><td>成長</td><td style="text-align:left">矽晶圓三雄，日商信越集團</td></tr>
+        <tr><td class="sym">合晶</td><td>6182</td><td>中型</td><td>轉機</td><td style="text-align:left">矽晶圓（磊晶/拋光），成熟製程</td></tr>
+        <tr><td class="sym">中美晶</td><td>5483</td><td>中大型</td><td>母公司</td><td style="text-align:left">環球晶母公司，太陽能+半導體</td></tr>
+        <tr><td class="sym">信越/SUMCO</td><td>JP</td><td>巨型</td><td>龍頭</td><td style="text-align:left">日系全球#1/#2 矽晶圓</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：成長／估值偏高（本業爆發但股價已超前）。</b>本業獲利反轉為真（5 月 EPS 年增 1208%、12 吋滿載、漲價循環），但以 2026e EPS 約 20.7 計本益比約 63x、且現價 1,305 已遠高於 FactSet 分析師目標 580–733.5（高出約 78%）。矽晶圓屬景氣循環股，高本益比用的是剛爆發的獲利，估值修正空間大（今日單日大跌逾一成）。合理與否取決於漲價與 AI/HPC 需求持續性。屬基本面反轉為真、但股價已過度反映的高波動千金股。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>矽晶圓漲價＋AI/HPC＋谷底反轉＋千金股題材極熱；股價兩個月漲約 161% 後今日大跌逾一成，波動極大、獲利了結壓力浮現。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>FactSet 估 2026 EPS 20.3–21.1、目標價 580–733.5（均低於現價 1,305）；多空對「本益比 63x 是否過高、股價是否超前基本面」分歧極大。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">漲價循環雜音/獲利了結/估值修正</td><td>800 – 1,000</td><td class="down">約 −30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">矽晶圓漲價延續、2026 EPS約20</td><td>1,200 – 1,450</td><td class="up">約 +5%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">AI/HPC滿載+漲價+海外產能、EPS上修</td><td>1,600 – 1,850</td><td class="up">約 +33%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">矽晶圓超級循環全面重估</td><td>2,000 +</td><td class="up">約 +53%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：基本面反轉為真、但股價已過度反映、高波動</b> — 全球#3矽晶圓，5 月本業 EPS 年增1208%、12 吋滿載、2026e EPS 20-21；惟本益比約 63x、現價遠高於分析師目標（580-733.5）、兩月漲161%後今日大跌逾一成。Base +5%、Bear 累跌30%，下檔風險明確。核心變數是漲價與 AI/HPC 需求持續性。屬追高容錯極低的高波動千金股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Yahoo股市／Goodinfo／財報狗／Win投資（即時報價、EPS/營收）、鉅亨／FactSet（2026 EPS 20.3-21.1、目標價 580-733.5）、工商時報／永豐金（最壞已過四大王牌、AI/HPC 滿載）。截至 2026/07/17 盤中。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-17">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','8131','福懋科')">福懋科 8131</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 記憶體封測 DDR5/HBM</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">成長·合理</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/17</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">72</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">0.96（+182%）</div><div class="t">2026 Q1 EPS</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">成長/合理</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>專業封測廠，聚焦記憶體封測，<b>AI 伺服器記憶體與 DDR5/HBM 先進封裝成長黑馬</b>。新建五廠一期先進封裝（晶圓凸塊/RDL/TSV），2026 下半年試量產，攻 AI 伺服器 DDR5 高容量記憶體模組與 HBM 測試平台，投資約 7 億。受惠 DDR5 滲透＋AI 伺服器 DRAM 容量大增，稼動率逐季提升。2026 Q1 EPS 0.96（年增 182%）、2025 EPS 1.36；5 月營收 10.53 億（年增 49.6%）、累計年增 37%（2025/11 曾創 13 年新高）。以 2026 成長軌跡看估值相對合理。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「AI 伺服器記憶體＋DDR5/HBM 先進封裝擴產」。福懋科新建五廠一期先進封裝無塵室（晶圓凸塊 Bumping、重布線層 RDL、矽穿孔 TSV），2026 下半年試量產，主攻伺服器用 DDR5 高容量密度記憶體模組，也可用於 AI 伺服器；並導入 3D TSV 堆疊、布局 DDR5 與 HBM 模組測試平台。投資約 7 億 204 萬元。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2026 Q1 EPS 0.96（季增 7%、年增 182%）、2025 全年 EPS 1.36；5 月營收 10.53 億（年增 49.6%、月增 5.4%）、1-5 月累計 49.96 億（年增 37%）。2025/11 營收創 13 年新高（年增 46.6%）。稼動率隨 DDR5 滲透與 AI 伺服器 DRAM 容量提升逐季上行。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看 AI 伺服器記憶體＋DDR5/HBM 先進封裝擴產、營收獲利雙成長、五廠 2026 下半年放量；空方憂記憶體封測隨 DRAM 景氣循環、新廠試量產與客戶認證時程、獲利仍在爬坡。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>福懋科是「AI 記憶體封測」題材中，同時具備「當期成長＋擴產卡位」的中型封測廠——不同於純題材股，它的營收獲利已在實際放量（2026 Q1 EPS 年增 182%、5 月營收年增 49.6%、2025/11 創 13 年新高），成長來自 DDR5 滲透率提升與 AI 伺服器 DRAM 容量大增帶動記憶體封測稼動率。更關鍵的是五廠一期先進封裝（晶圓凸塊/RDL/TSV）2026 下半年試量產，把福懋科從「傳統記憶體封測」往「AI 伺服器 DDR5/HBM 先進封裝」升級，這是未來成長斜率的來源。以 2026 成長軌跡看，現價估值相對合理（非過度炒作）。真正變數：一是 DRAM/記憶體景氣循環的持續性（封測獲利跟著波動）；二是五廠先進封裝試量產與客戶認證時程；三是與力成、南茂等記憶體封測同業的競爭。若 DDR5/HBM 需求延續、五廠如期放量，成長可望延續；反之循環反轉與認證延遲是風險。屬 AI 記憶體封測的成長中型股。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$300億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">1.36元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">0.96（年增182%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">10.53億（年增49.6%）</div><div class="t">5月營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">49.96億（年增37%）</div><div class="t">1-5月累計</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">五廠2026H2試量產</div><div class="t">先進封裝</div></div>
+      <div class="rpt-metric"><div class="v">約7億元</div><div class="t">擴產投資</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#8ab4ff">Bumping/RDL/TSV</div><div class="t">技術布局</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">福懋科</td><td>8131</td><td>約300億</td><td>成長</td><td style="text-align:left">記憶體封測，AI伺服器DDR5/HBM先進封裝擴產、營收獲利雙成長</td></tr>
+        <tr><td class="sym">力成</td><td>6239</td><td>約2,500億</td><td>成長</td><td style="text-align:left">記憶體封測全球#3＋FOPLP</td></tr>
+        <tr><td class="sym">南茂</td><td>8150</td><td>中小型</td><td>轉機</td><td style="text-align:left">記憶體封測，同題材</td></tr>
+        <tr><td class="sym">華泰</td><td>2329</td><td>中小型</td><td>轉機</td><td style="text-align:left">記憶體封測/導線架</td></tr>
+        <tr><td class="sym">京元電</td><td>2449</td><td>中大型</td><td>有獲利</td><td style="text-align:left">專業測試龍頭，AI/HBM 測試</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：成長／合理（AI 記憶體封測、實際放量）。</b>與純題材股不同，福懋科營收獲利已實際成長（2026 Q1 EPS 年增 182%、5 月營收年增 49.6%、2025/11 創 13 年新高），且五廠先進封裝（Bumping/RDL/TSV）2026 下半年試量產、往 AI 伺服器 DDR5/HBM 升級。以 2026 成長軌跡看估值相對合理（非過度炒作）。合理與否取決於 DDR5/HBM 需求延續與五廠如期放量。屬 AI 記憶體封測的成長中型股，惟記憶體景氣循環與新廠認證時程是變數。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 伺服器記憶體＋DDR5/HBM 先進封裝題材熱、營收創新高（曾漲停）；股價位於 52週中上緣，波動來自記憶體景氣與新廠進度。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>偏多，看好 AI 記憶體封測成長與五廠擴產放量；多空對「記憶體循環持續性與新廠試量產時程」有分歧。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">記憶體循環反轉/新廠認證延遲</td><td>52 – 62</td><td class="down">約 −20%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">DDR5成長延續、五廠如期放量</td><td>72 – 82</td><td class="up">約 +8%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">AI伺服器記憶體放量+先進封裝貢獻、EPS上修</td><td>90 – 105</td><td class="up">約 +35%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI記憶體超級循環+HBM封測全面重估</td><td>115 +</td><td class="up">約 +60%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向、AI 記憶體封測成長中型股</b> — 記憶體封測，2026 Q1 EPS 年增182%、5 月營收年增49.6%、2025/11 創13年新高，五廠先進封裝（Bumping/RDL/TSV）2026 下半年試量產攻 AI 伺服器 DDR5/HBM；Base +8%、Bull +35%。與純題材股不同，成長已實際放量、估值相對合理。核心變數是記憶體景氣循環與新廠放量。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Yahoo股市／Goodinfo／Win投資／nStock（即時報價、EPS/營收）、經濟日報／TechNews（五廠先進封裝 7 億、DDR5/HBM/TSV）、口袋學堂／鉅亨（11 月營收創 13 年新高）。截至 2026/07/17 盤中。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-17">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2367','燿華')">燿華 2367</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">低軌衛星/AI 伺服器 PCB</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">虧損轉機</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/17</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">45.25</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">-0.4（虧損）</div><div class="t">2026 Q1 EPS</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">虧損/轉機</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>HDI 印刷電路板廠，轉機題材：三廠分工——泰國廠（<b>低軌衛星 LEO＋美系 AI 伺服器板，非中非台</b>）、台灣廠（AI/資通訊）、南通廠（車用）。2026 低軌衛星板營收占比看 30%；已啟動漲價、2026 Q3 起改善毛利；法說會官方背書 2026 營收逐季改善。惟仍在轉機階段：<b>2026 Q1 EPS -0.4（虧損）</b>、2025 EPS 0.68；5 月營收 15.33 億（年增 15.9%）但 1-4 月累計年減 13.4%。屬「轉機被提前定價」型，股價自 82.5 回檔約 45% 至 45.25。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「低軌衛星＋AI 伺服器 PCB 轉機」。燿華為 HDI 龍頭，泰國新廠已開幕、以低軌衛星（LEO）與美系 AI 伺服器板為主力（非中非台供應鏈）；台灣廠主攻 AI 與資通訊、南通廠主攻車用板，三廠分工明確。管理層估 2026 低軌衛星板營收占比成長至 30%；全球 LEO 市場 2025 年 118 億→2030 年逾 206 億美元（CAGR 11.9%）。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2026 Q1 EPS -0.4（虧損、季減與年減幅大）、2025 全年 EPS 0.68；5 月營收 15.33 億（年增 15.9%）、但 1-4 月累計年減 13.4%。法說會預估泰國廠 Q2 後訂單逐步增加、下半年恢復正常；已啟動漲價機制、2026 Q3 起效益顯現改善毛利。2026 營收逐季改善路徑有官方背書。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看低軌衛星長線題材（非中非台稀缺產能）、AI 伺服器板、泰國廠放量與 2026 轉機；空方憂公司 Q1 仍虧損、累計營收年減、轉機尚待兌現、股價已自高點提前定價轉機故事。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>燿華是典型「轉機股被提前定價」——股價的上漲（曾衝 82.5）靠的是「低軌衛星＋AI 伺服器 PCB」的轉機故事，而非當期業績（2026 Q1 仍虧損 EPS -0.4、1-4 月累計營收年減 13.4%）。轉機故事本身有基本面支撐：泰國廠以「非中非台」供應低軌衛星與美系 AI 伺服器板，切中地緣供應鏈稀缺性（LEO 市場 2025 年 118 億→2030 年逾 206 億美元）；管理層估 2026 低軌衛星板營收占比達 30%、Q3 起漲價改善毛利、營收逐季改善且有官方背書。但要清楚：這是「轉機」不是「業績」——虧損能否如期收斂、泰國廠訂單能否放量、漲價能否轉嫁，都還在驗證中。股價已自高點回檔約 45% 至 45.25，反映市場對轉機時程的重新定價。真正變數是泰國廠 LEO/AI 伺服器板放量速度與虧損收斂。屬有基本面題材支撐、但獲利尚未兌現的轉機股，波動較大、需追蹤季度營收與毛利改善。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$180億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">0.68元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">-0.4元（虧損）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">15.33億（年增15.9%）</div><div class="t">5月營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">年減13.4%</div><div class="t">1-4月累計</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">2026看30%</div><div class="t">LEO營收占比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#8ab4ff">2026Q3起</div><div class="t">漲價效益</div></div>
+      <div class="rpt-metric"><div class="v">22.9 – 82.5</div><div class="t">52週區間</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">燿華</td><td>2367</td><td>約180億</td><td>虧損轉機</td><td style="text-align:left">HDI PCB，泰國廠低軌衛星+AI伺服器板(非中非台)，Q1虧損、轉機待驗證</td></tr>
+        <tr><td class="sym">華通</td><td>2313</td><td>中大型</td><td>有獲利</td><td style="text-align:left">低軌衛星板龍頭，泰國廠擴產</td></tr>
+        <tr><td class="sym">台光電</td><td>2383</td><td>大型</td><td>成長</td><td style="text-align:left">AI伺服器CCL/銅箔基板龍頭</td></tr>
+        <tr><td class="sym">金像電</td><td>2368</td><td>中大型</td><td>成長</td><td style="text-align:left">AI伺服器PCB主力</td></tr>
+        <tr><td class="sym">欣興</td><td>3037</td><td>大型</td><td>週期</td><td style="text-align:left">ABF載板/HDI</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：虧損／轉機（獲利未兌現、題材有基本面支撐）。</b>公司 2026 Q1 仍虧損（EPS -0.4）、1-4 月累計營收年減，傳統估值不適用；股價由「低軌衛星＋AI 伺服器 PCB」轉機故事驅動，已自高點 82.5 回檔約 45%。轉機有基本面支撐（泰國廠非中非台稀缺產能、LEO 長線成長、官方背書 2026 逐季改善、Q3 漲價），但虧損收斂與泰國廠放量仍待驗證。屬有題材支撐、但獲利尚未兌現的轉機股，須追蹤季度營收與毛利改善，波動較大。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>低軌衛星＋AI 伺服器 PCB 轉機題材熱、外資與主力近期轉買；股價自高點 82.5 回檔約 45% 至 45.25，波動較大、轉機時程主導。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>偏多（富果等給買進），看好 2026 本業進入高速成長、低軌衛星長線；多空對「虧損能否如期收斂、泰國廠放量時程」分歧。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">泰國廠放量慢/虧損延續/題材退燒</td><td>30 – 38</td><td class="down">約 −25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">營收逐季改善、Q3漲價、虧損收斂</td><td>44 – 54</td><td class="up">約 +10%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">LEO/AI伺服器板放量、轉虧為盈</td><td>62 – 75</td><td class="up">約 +50%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">低軌衛星+AI PCB 全面重估</td><td>82 +</td><td class="up">約 +81%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：轉機題材有基本面支撐、但獲利未兌現</b> — HDI PCB，泰國廠低軌衛星+美系AI伺服器板(非中非台)、2026 LEO占比看30%、Q3漲價改善毛利；惟 2026 Q1 仍虧損（EPS -0.4）、累計營收年減，股價自高點回檔約45%。Base +10%、Bull +50% 但 Bear 累跌25%。核心變數是泰國廠放量與虧損收斂。屬有題材支撐、獲利待兌現的轉機股，須追蹤季度營收毛利。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Yahoo股市／Goodinfo／Win投資／財報狗（即時報價、EPS/營收）、燿華法說會（泰國廠低軌衛星/AI伺服器板、Q3漲價、三廠分工）、理財周刊／富果／鉅亨（LEO 市場 118→206 億美元、營收逐季改善）。截至 2026/07/17 盤中。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-16">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','6239','力成')">力成科技 6239</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">記憶體封測＋FOPLP</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">成長</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/16</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">321.5</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">約13（+73%）</div><div class="t">2026e EPS</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">成長/合理偏高</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>全球前五大封測廠、<b>記憶體封測全球約第三</b>（DRAM/HBM 月封裝產能 1.2 億顆），直接受惠 AI 記憶體超級循環。2026 Q1 EPS 2.50（年增 58%）、2025 EPS 7.48，市場估 <b>2026 EPS 約 13</b>（挑戰新高）。先進封裝 FOPLP 良率 94–95%、2027 上半年量產、2028 占比上看 20–30%；資本支出上修 500 億、美國亞利桑那廠 2026 Q3 投產。以 2026e EPS 約 13 計本益比約 24.7x，成長合理偏高。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「AI 記憶體/HBM 封測放量＋FOPLP 先進封裝轉型」。力成是全球記憶體封測前段班（DRAM/HBM 月產能 1.2 億顆），直接吃到 AI 記憶體超級循環的封裝測試需求；同時將扇出型面板級封裝（FOPLP）良率拉到 94–95%，下半年客戶認證、2027 上半年量產、2028 占比上看 20–30%。美國亞利桑那新廠 2026 Q3 投產。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2026 Q1 EPS 2.50（季減 1%、年增 58%）、2025 全年 EPS 7.48；市場預估 2026 營收約 998 億、EPS 約 13（挑戰歷史新高）。資本支出上修至 500 億（同業成長之冠），投入 FOPLP 擴廠、兩層樓無塵室與高階測試設備。以 2026e EPS 13 計本益比約 24.7x。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看 AI 記憶體/HBM 封測放量＋FOPLP 2027 起爆發，法人喊 2026 EPS 上看 13；空方憂記憶體封測隨 DRAM 景氣循環、資本支出天量（折舊壓力）、FOPLP 量產時程與良率認證仍待驗證。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>力成同時踩在兩條 AI 主軸上——一是「AI 記憶體/HBM 封測」的當期放量（DRAM/HBM 超級循環，月產能 1.2 億顆直接受惠，2026 Q1 EPS 年增 58%、全年上看 13）；二是「FOPLP 面板級封裝」的未來成長（良率已 94–95%、2027 量產、2028 占比上看 20–30%）。市場常只看單季，但力成的獲利引擎是「記憶體循環的當期彈性＋FOPLP 的中期斜率」雙引擎。以 2026e EPS 約 13、本益比約 24.7x 看屬成長合理偏高。真正變數有二：一是 DRAM/HBM 景氣循環的持續性（記憶體是深度週期，封測獲利跟著波動）；二是 500 億天量資本支出的折舊與 FOPLP 認證/量產時程（2027 才放量、2028 才顯著貢獻）。若記憶體循環延續、FOPLP 如期放量，前瞻本益比更低；反之折舊壓力與循環反轉是風險。屬 AI 記憶體與先進封裝雙受惠的成長封測股。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$2,500億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">7.48元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">2.50（年增58%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">約13（+73%）</div><div class="t">2026e EPS</div></div>
+      <div class="rpt-metric"><div class="v">約998億</div><div class="t">2026e 營收</div></div>
+      <div class="rpt-metric"><div class="v">約24.7x</div><div class="t">2026e 本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">94–95%</div><div class="t">FOPLP 良率</div></div>
+      <div class="rpt-metric"><div class="v">500億（上修）</div><div class="t">2026 資本支出</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">力成</td><td>6239</td><td>約2,500億</td><td>2026e 24.7x</td><td style="text-align:left">記憶體封測全球#3(DRAM/HBM)＋FOPLP，AI記憶體雙受惠、成長</td></tr>
+        <tr><td class="sym">日月光</td><td>3711</td><td>約3.0兆</td><td>成長</td><td style="text-align:left">全球封測龍頭，CoWoS/先進封裝</td></tr>
+        <tr><td class="sym">京元電</td><td>2449</td><td>中大型</td><td>有獲利</td><td style="text-align:left">專業測試龍頭，AI/HBM 測試</td></tr>
+        <tr><td class="sym">頎邦</td><td>6147</td><td>中型</td><td>有獲利</td><td style="text-align:left">驅動 IC 封測，面板/OLED</td></tr>
+        <tr><td class="sym">南茂</td><td>8150</td><td>中小型</td><td>週期</td><td style="text-align:left">記憶體封測，對照組</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：成長／合理偏高（AI 記憶體＋FOPLP 雙引擎）。</b>以 2026e EPS 約 13 計本益比約 24.7x，對成長性（EPS 年增約 73%）不算貴；記憶體封測受惠 HBM/DRAM 超級循環當期放量，FOPLP 提供 2027–2028 中期成長。惟記憶體屬深度景氣循環、500 億天量資本支出帶來折舊壓力、FOPLP 量產認證仍待驗證。合理與否取決於記憶體循環延續與 FOPLP 如期放量。屬 AI 記憶體與先進封裝雙受惠的成長封測股。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 記憶體/HBM 封測＋FOPLP 題材熱、法人喊 2026 EPS 上看 13；股價位於 52週中上緣，波動來自記憶體景氣與資本支出折舊。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>偏多，2026 EPS 預估約 13（挑戰新高）、資本支出同業之冠；多空對「記憶體循環持續性與 FOPLP 量產時程」有分歧。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">記憶體循環反轉/FOPLP延遲/折舊壓力</td><td>230 – 270</td><td class="down">約 −20%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">2026 EPS約13、記憶體循環延續</td><td>330 – 380</td><td class="up">約 +12%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">HBM封測放量+FOPLP提前量產、EPS上修</td><td>420 – 470</td><td class="up">約 +40%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI記憶體超級循環+FOPLP全面重估</td><td>520 +</td><td class="up">約 +62%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向、AI 記憶體＋先進封裝雙引擎</b> — 記憶體封測全球#3（HBM 月產能1.2億顆）＋FOPLP 良率94-95%，2026 Q1 EPS 年增58%、全年上看13、本益比約24.7x；Base +12%、Bull +40%。核心變數是記憶體景氣循環延續與 FOPLP 如期量產，天量資本支出折舊是風險。屬成長合理偏高的封測股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Yahoo股市／Goodinfo／Win投資／nStock（即時報價、EPS/營收）、力成法說會（FOPLP 良率、資本支出 500 億、亞利桑那廠）、CMoney／富果（2026 EPS 上看 13）。截至 2026/07/16 盤中。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-16">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','3711','日月光')">日月光投控 3711</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 先進封裝 CoWoS/LEAP</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">龍頭·估值偏高</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/16</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">694</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">16.25 / 23.07</div><div class="t">2026e/2027e EPS</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">成長/偏高</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>全球封測（OSAT）龍頭，<b>AI 先進封裝（CoWoS full process、LEAP 平台）最直接受惠者</b>。外資估 full process CoWoS 由 2026 年 3 億→2027 年 20 億美元；LEAP 平台 36 億→67 億美元；CoWoS 產能 2026 底 20k→2027 底 50k wpm。5 月營收 630 億（年增 28.6%）、Q1 EPS 3.24 創同期新高。市場估 2026 EPS 16.25、2027 EPS 23.07。惟股價一年漲逾 4 倍、位 52週上緣，<b>2026e 本益比約 42.7x 偏高</b>。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「AI 先進封裝爆發」。日月光是全球封測龍頭，full process CoWoS 銷售額外資估由 2026 年 3 億美元快速成長到 2027 年 20 億美元；LEAP 先進封裝平台由 36 億美元→67 億美元。CoWoS 產能 2026 底約 20k wpm、2027 底衝 50k wpm。封裝再喊漲（部分製程調漲最高 20%）。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>Q1 EPS 3.24（歷史同期新高）、5 月營收 630 億（年增 28.6%）；市場估 2026 EPS 16.25、2027 EPS 23.07（年增約 42%）。全年資本支出上調至逾 80 億美元，其中 LEAP 先進封測目標上修至 35 億美元以上。以 2026e EPS 16.25 計本益比約 42.7x、2027e 約 30x。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看 AI 先進封裝（CoWoS/LEAP）倍增、封裝漲價潮、外資目標價創新高；空方憂股價一年漲逾 4 倍、2026e 本益比 42x 偏高（封測歷史多在 15–20x）、先進封裝擴產競爭與 AI 資本支出循環。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>日月光的重估邏輯已從「傳統封測（週期、PE 15–20x）」轉為「AI 先進封裝平台（成長、PE 40x+）」——市場買的是 CoWoS full process 由 2026 年 3 億美元→2027 年 20 億美元（近 7 倍）、LEAP 平台 36 億→67 億美元的成長斜率，以及封裝漲價潮。這使股價一年漲逾 4 倍、2026e 本益比衝到約 42.7x。關鍵在於：一是先進封裝營收放量是否如外資預期（CoWoS 產能 2026 底 20k→2027 底 50k wpm 是溢價核心）；二是 2027 EPS 能否兌現 23.07（對應前瞻本益比約 30x，才撐得起現價）；三是封裝漲價的持續性與競爭（台積電自建先進封裝、其他 OSAT 擴產）。以現價本益比 42x，已計入相當樂觀的 2026–2027 成長，追高容錯低；但若 AI 先進封裝需求延續、CoWoS 放量兌現，仍是最直接的封測龍頭。屬 AI 先進封裝成長龍頭、但估值已偏高。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$3.0兆</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">3.24（同期新高）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">630億（年增28.6%）</div><div class="t">5月營收</div></div>
+      <div class="rpt-metric"><div class="v">16.25元</div><div class="t">2026e EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">23.07元（+42%）</div><div class="t">2027e EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#8ab4ff">約42.7x</div><div class="t">2026e 本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">3億→20億美元</div><div class="t">CoWoS 銷售</div></div>
+      <div class="rpt-metric"><div class="v">逾80億美元</div><div class="t">2026 資本支出</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">日月光</td><td>3711</td><td>約3.0兆</td><td>2026e 42.7x</td><td style="text-align:left">全球封測龍頭，CoWoS/LEAP 先進封裝，AI最直接、估值偏高</td></tr>
+        <tr><td class="sym">Amkor</td><td>AMKR</td><td>中大型</td><td>成長</td><td style="text-align:left">全球封測#2（美），先進封裝</td></tr>
+        <tr><td class="sym">力成</td><td>6239</td><td>約2,500億</td><td>2026e 25x</td><td style="text-align:left">記憶體封測#3＋FOPLP</td></tr>
+        <tr><td class="sym">京元電</td><td>2449</td><td>中大型</td><td>有獲利</td><td style="text-align:left">專業測試龍頭，AI/HBM 測試</td></tr>
+        <tr><td class="sym">頎邦</td><td>6147</td><td>中型</td><td>有獲利</td><td style="text-align:left">驅動 IC 封測</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：成長／偏高（AI 先進封裝龍頭、估值已計入樂觀）。</b>以 2026e EPS 16.25 計本益比約 42.7x、2027e 約 30x，遠高於封測歷史 15–20x；重估來自 CoWoS full process（3→20 億美元）與 LEAP（36→67 億美元）的成長斜率與封裝漲價。合理與否取決於先進封裝放量與 2027 EPS 23.07 能否兌現。屬 AI 先進封裝最直接受惠的封測龍頭，惟股價一年漲逾 4 倍、位於 52週上緣，估值偏高、追高容錯低。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 先進封裝（CoWoS/LEAP）題材極熱、外資目標價創新高、封裝漲價潮；股價一年漲逾 4 倍、位於 52週上緣（距高約 -5%），波動來自 AI 資本支出與擴產競爭。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>偏多，外資目標價再創新高、2026 EPS 16.25/2027 EPS 23.07；多空對「2026e 本益比 42x 是否過高、先進封裝放量能否兌現」分歧。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">先進封裝放量不如預期/AI資本支出放緩/估值修正</td><td>520 – 600</td><td class="down">約 −18%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">CoWoS/LEAP 如期放量、2027 EPS 兌現</td><td>680 – 780</td><td class="up">約 +8%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">先進封裝倍增+封裝漲價、EPS 上修</td><td>850 – 960</td><td class="up">約 +30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI先進封裝超級循環全面重估</td><td>1,050 +</td><td class="up">約 +51%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬中性偏正、AI 先進封裝龍頭但估值偏高</b> — 全球封測龍頭、CoWoS full process 3→20 億美元、LEAP 36→67 億美元、2026 EPS 16.25/2027 EPS 23.07；Base +8%、Bull +30%。核心變數是先進封裝放量與 2027 EPS 兌現。惟股價一年漲逾 4 倍、2026e 本益比約 42.7x 偏高、位於 52週上緣，追高容錯低。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Yahoo股市／Goodinfo／Win投資（即時報價、EPS/營收）、日月光法說會（CoWoS/LEAP、資本支出 80 億美元）、外資報告／永豐金（CoWoS 3→20 億、LEAP 36→67 億、產能 20k→50k wpm）。截至 2026/07/16 盤中。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-16">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','3339','泰谷')">泰谷 3339</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">矽光子/InP 轉型</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.28);color:#ff6b78">⚠ 高風險投機</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/16</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">39.25</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">-2.0 / -0.77（虧損）</div><div class="t">2025 / 26Q1 EPS</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">高度投機/轉機</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>傳統氮化鎵（GaN）LED 磊晶/晶粒廠，轉型三大題材：延伸 MOCVD 至<b>磷化銦（InP）雷射、矽光子高速光通訊</b>；整併子公司做 IC 探針卡與後段測試（AI 記憶體檢測）。股價曾因題材多次漲停、衝 72.7 後回檔至 39.25。惟<b>公司仍虧損</b>（2025 EPS -2.0、2026 Q1 EPS -0.77），本益比不適用；月營收年增逾 50% 但獲利、毛利改善待驗證。屬純題材、獲利未兌現的<b>高風險投機/轉機標的</b>。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-callout warn" style="border-color:#ff6b78;background:rgba(234,57,67,.12);margin-top:14px">
+      <b style="color:#ff6b78">⚠ 高風險投機標的：</b>本標的公司目前仍虧損、獲利尚未兌現，股價由題材與籌碼驅動、波動極劇烈，僅適合高風險承受能力且嚴設停損之資金。以下分析僅為資訊彙整，非投資建議。
+    </div>
+    <div class="rpt-sec" style="margin-top:14px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「GaN LED 本業→InP/矽光子/AI 記憶體檢測轉型題材」。泰谷將既有 MOCVD 與磊晶技術延伸至磷化銦（InP），切入雷射二極體與矽光子（Silicon Photonics）高速光通訊；並整併子公司發展 IC 探針卡與後段測試，跨入 AI 記憶體檢測。題材貼合 AI/CPO（共同封裝光學）與矽光子熱潮。</div>
+    <div class="rpt-item"><b class="tag">▪ 財務現況　</b>公司仍在虧損。2025 全年 EPS -2.0、2026 Q1 EPS -0.77（季減、年減幅大）；因處虧損，傳統本益比不適用。近月營收年增逾 50%（部分月創近期高）對股價提供支撐，但整體獲利結構與毛利率改善仍待驗證。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看矽光子/InP/AI 記憶體檢測轉型想像、營收高成長、主力控盤題材股（曾多次漲停）；空方憂本業 LED 虧損、轉型需設備投資與技術/產能認證、獲利兌現遙遠、股價波動劇烈由籌碼題材驅動。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>泰谷是典型的「轉型題材股」——股價的漲停與波動來自「GaN LED→InP 雷射→矽光子→AI 記憶體檢測」的想像，貼合 CPO/矽光子與 AI 檢測熱潮，但要看清獲利品質：公司目前仍虧損（2025 EPS -2.0、2026 Q1 EPS -0.77），轉型的 InP 雷射、矽光子光通訊、IC 探針卡/AI 記憶體檢測都還在「設備投資＋技術認證＋產能驗證」階段，尚未貢獻穩定獲利。近月營收年增逾 50% 提供題材支撐，但毛利與獲利結構改善仍待驗證。這是一檔「題材強、獲利未兌現」的高風險投機標的：股價曾自低檔漲停衝到 72.7、再回檔到 39.25，波動由籌碼與題材主導，容錯極低。真正變數是轉型業務（矽光子/InP/AI 檢測）能否從「題材」變成「訂單與獲利」；在虧損轉盈與轉型認證兌現前，估值缺乏基本面錨定。適合高風險承受、且嚴設停損的投機性資金，非穩健標的。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">39.25元</div><div class="t">現價</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">-2.0元（虧損）</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">-0.77元（虧損）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">不適用（虧損）</div><div class="t">本益比</div></div>
+      <div class="rpt-metric"><div class="v">23.25 – 72.7</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">年增逾50%</div><div class="t">近月營收</div></div>
+      <div class="rpt-metric"><div class="v">GaN LED 磊晶</div><div class="t">本業</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#8ab4ff">InP/矽光子/檢測</div><div class="t">轉型</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">泰谷</td><td>3339</td><td>中小型</td><td>虧損</td><td style="text-align:left">GaN LED→InP/矽光子/AI檢測轉型題材，虧損中、高投機</td></tr>
+        <tr><td class="sym">富采</td><td>3714</td><td>中大型</td><td>週期</td><td style="text-align:left">LED/化合物半導體（晶電+隆達）</td></tr>
+        <tr><td class="sym">聯亞</td><td>3081</td><td>中型</td><td>有題材</td><td style="text-align:left">InP/雷射二極體、光通訊</td></tr>
+        <tr><td class="sym">全新</td><td>2455</td><td>中型</td><td>有獲利</td><td style="text-align:left">GaAs 化合物半導體磊晶</td></tr>
+        <tr><td class="sym">聯鈞</td><td>3450</td><td>中型</td><td>有獲利</td><td style="text-align:left">光通訊/雷射模組</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout" style="border-color:#ff6b78;background:rgba(234,57,67,.10)">
+      <b style="color:#ff6b78">估值判斷：高度投機／轉機（虧損中、獲利未兌現）。</b>公司 2025 EPS -2.0、2026 Q1 EPS -0.77，仍在虧損，傳統本益比不適用；股價由「InP/矽光子/AI 記憶體檢測」轉型題材與籌碼驅動，曾漲停衝 72.7 再回檔。估值缺乏基本面錨定，須待轉型業務（矽光子光通訊、IC 探針卡/檢測）從題材變訂單與獲利、並轉虧為盈才有評價基礎。屬高風險投機標的，適合高風險承受且嚴設停損的資金，非穩健標的。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>矽光子/InP/AI 記憶體檢測題材熱、主力控盤、曾多次漲停；波動極劇烈（自 23 漲停衝 72.7 再回 39），籌碼與題材主導。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>無明確共識（虧損股、法人覆蓋少）；多空對「轉型能否兌現、虧損能否收斂」分歧極大，屬事件/題材驅動。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">轉型不如預期/持續虧損/題材退燒</td><td>24 – 30</td><td class="down">約 −30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">營收成長但仍虧損、題材震盪</td><td>36 – 44</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">矽光子/InP 訂單落地、虧損收斂</td><td>55 – 68</td><td class="up">約 +55%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">轉型成功轉盈+矽光子重估</td><td>75 +</td><td class="up">約 +91%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px;border-color:#ff6b78;background:rgba(234,57,67,.10)">
+      <b style="color:#ff6b78">分析總結：高風險投機／轉型題材、獲利未兌現</b> — GaN LED 本業虧損（2025 EPS -2.0、2026 Q1 -0.77），靠 InP/矽光子/AI 記憶體檢測轉型題材與籌碼驅動，股價曾漲停衝 72.7 再回 39，波動劇烈。Bull +55% 但 Bear 累跌 30%，風險報酬不對稱且下檔明確。核心變數是轉型能否從題材變獲利、並轉虧為盈。屬高風險投機標的，須嚴設停損。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Yahoo股市／Goodinfo／財報狗／Win投資（即時報價、EPS/營收）、CMoney（矽光子/AI記憶體檢測轉型、漲停題材）、StockFeel（公司業務/InP 轉型）。截至 2026/07/16 盤中。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-16">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','6770','力積電')">力積電 6770</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">晶圓代工＋利基DRAM</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">轉機·循環高波動</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/16</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">77.5</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">3.36（轉盈）</div><div class="t">2026 Q1 EPS</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">轉機/循環</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>晶圓代工＋利基型記憶體（DRAM）整合廠（前身力晶），AI 記憶體超級循環與 DRAM 漲價的<b>「轉機」受惠者</b>。2025 EPS -1.86（虧損），<b>2026 Q1 EPS 3.36 大幅轉盈</b>；6 月營收 65 億創 47 個月新高（年增 68.75%）。本益比約 39x、股價淨值比約 3.04x。股價自 52週低 14.7 漲逾 5 倍至 94.5、現 77.5（距高約 -18%）。屬記憶體/代工景氣循環由谷底翻揚的<b>轉機股</b>——彈性大但波動劇烈，須以週期思維評估。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「記憶體漲價＋晶圓代工回溫的轉機循環」。力積電是晶圓代工＋利基型 DRAM 記憶體整合廠（前身力晶科技），直接受惠 AI 記憶體超級循環下的 DRAM/利基記憶體缺貨漲價，以及成熟製程代工需求回溫。2026 Q1 由虧轉盈、EPS 3.36；6 月營收 65 億創 47 個月新高（年增 68.75%）。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2025 全年 EPS -1.86（虧損），2026 Q1 EPS 3.36（季增約 2340%、年增約 1392%，由谷底大幅轉盈）；6 月營收 65 億（47 個月高、年增 68.75%）。本益比約 39x、股價淨值比約 3.04x、市值約 3,200 億。獲利隨記憶體報價與稼動率波動。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看 DRAM/利基記憶體漲價循環、代工稼動率回升、由虧轉盈的獲利彈性；空方憂記憶體是深度景氣循環、股價自低點已漲逾 5 倍、本益比 39x 對剛轉盈的獲利偏高、循環若反轉獲利快速回落。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>力積電是典型「景氣循環由谷底翻揚的轉機股」——2025 還在虧損（EPS -1.86），2026 Q1 靠 DRAM/利基記憶體漲價與代工回溫大幅轉盈（EPS 3.36）、6 月營收創 47 個月新高，股價因此自 52週低 14.7 漲逾 5 倍。關鍵要看兩件事：一是這波記憶體漲價循環（AI 帶動 DRAM/HBM 排擠效應、利基記憶體缺貨）的持續性與力積電的稼動率、報價彈性；二是估值——本益比約 39x 是用「剛轉盈、仍在爬坡」的獲利計算，若循環延續、全年獲利放大則前瞻本益比會降，但記憶體是深度週期股，一旦供給趕上或需求放緩，獲利與股價可能快速反轉。與純題材股不同，力積電是有實體晶圓產能與營收的成熟廠（前身力晶），轉機有基本面支撐；但股價已漲逾 5 倍、位於高檔，追高須看記憶體報價續強與稼動率維持。屬高彈性、高波動的記憶體/代工循環轉機股，須以週期思維（而非成長股本益比）評估。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$3,200億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">-1.86元（虧損）</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">3.36（轉盈）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">65億（47個月高）</div><div class="t">6月營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">+68.75%</div><div class="t">營收年增</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#8ab4ff">約39x</div><div class="t">本益比</div></div>
+      <div class="rpt-metric"><div class="v">約3.04x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v">14.7 – 94.5</div><div class="t">52週區間</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">力積電</td><td>6770</td><td>約3,200億</td><td>約39x</td><td style="text-align:left">晶圓代工+利基DRAM，記憶體漲價由虧轉盈、循環轉機、高波動</td></tr>
+        <tr><td class="sym">世界先進</td><td>5347</td><td>中大型</td><td>有獲利</td><td style="text-align:left">成熟製程代工，類比/電源</td></tr>
+        <tr><td class="sym">聯電</td><td>2303</td><td>大型</td><td>有獲利</td><td style="text-align:left">成熟/成長製程代工龍二</td></tr>
+        <tr><td class="sym">南亞科</td><td>2408</td><td>中大型</td><td>轉機</td><td style="text-align:left">DRAM 專業廠，記憶體循環</td></tr>
+        <tr><td class="sym">華邦電</td><td>2344</td><td>中大型</td><td>轉機</td><td style="text-align:left">記憶體（DRAM/Flash）+代工</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：轉機／循環（由虧轉盈、記憶體漲價受惠、高波動）。</b>本益比約 39x 是用剛轉盈、仍在爬坡的獲利計算，看似偏高；但若 DRAM/利基記憶體漲價循環延續、全年獲利放大，前瞻本益比會下降。記憶體屬深度景氣循環股，須以週期思維而非成長股本益比評估。與純題材股不同，力積電有實體晶圓產能與營收（前身力晶），轉機具基本面支撐；惟股價自低點漲逾 5 倍、位於高檔，循環反轉是主要風險。屬高彈性、高波動的記憶體/代工循環轉機股。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>DRAM/利基記憶體漲價＋代工回溫題材熱、由虧轉盈獲利彈性大；股價自 52週低漲逾 5 倍、位於高檔（距高約 -18%），波動劇烈。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>偏多但分歧，多方看記憶體漲價循環與獲利彈性，空方憂本益比 39x 對剛轉盈獲利偏高、循環反轉風險；屬循環轉機評價。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">記憶體循環反轉/稼動率回落/估值修正</td><td>50 – 62</td><td class="down">約 −25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">漲價循環延續、獲利爬坡</td><td>74 – 88</td><td class="up">約 +8%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">DRAM大漲+稼動滿載、全年EPS放大</td><td>95 – 110</td><td class="up">約 +35%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">記憶體超級循環全面重估</td><td>120 +</td><td class="up">約 +55%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：高彈性轉機、記憶體循環由谷底翻揚</b> — 晶圓代工+利基DRAM，2025 虧損（EPS -1.86）、2026 Q1 由虧轉盈（EPS 3.36）、6 月營收創 47 個月高，股價自低點漲逾 5 倍。本益比約 39x 屬循環轉機評價；Base +8%、Bull +35%、Bear 累跌 25%。核心變數是記憶體漲價循環延續與稼動率，循環反轉是主要風險，須以週期思維評估。屬高波動循環轉機股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Yahoo股市／Goodinfo／Win投資／玩股網（即時報價、EPS/營收、PE/PB）、鉅亨網（6月營收 47 個月高、記憶體漲價）、力積電財報（Q1 轉盈）。截至 2026/07/16 盤中。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-14">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('us','MU','Micron')">Micron MU</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 記憶體 HBM/DRAM</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">超級循環</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/14</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">$983</div><div class="t">現價 (USD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">$41.5B（+346%）</div><div class="t">FQ3 營收</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">合理/循環高峰</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>AI 記憶體（HBM/DRAM/NAND）<b>超級循環</b>主角，市值破 1 兆美元。FQ3 2026 營收 415 億（年增 346%、季增 74%）、Non-GAAP EPS $25.11；<b>HBM 產能 2026、2027 全數售罄、客戶預訂到 2028</b>。TTM EPS $44.31、本益比 22x、<b>前瞻本益比僅 6.9x</b>——獲利爆發但記憶體屬深度景氣循環股（低本益比常見於循環高峰）。分析師 Strong Buy、目標 $1,486（+51%）、KeyBanc 上調 $1,750。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>AI 記憶體超級循環。HBM（高頻寬記憶體）為 AI 加速器必需，Micron HBM 產能「2026、2027 全數售罄、客戶已預訂到 2028」；DRAM 為最大獲利來源（佔約 3/4 營收）。FQ3 2026 營收 415 億（年增 346%、季增 74%），為連五季創新高。並宣布加碼逾 30 億美元強化美國半導體供應鏈（含台灣 5 億）。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>FQ3 2026 GAAP 淨利 282 億（$24.67/股）、Non-GAAP 淨利 289 億（$25.11/股）、毛利率逾 80%；TTM 營收 903 億（+167%）、淨利 505 億、EPS $44.31。本益比 22.2x、前瞻本益比 6.85x、Beta 2.14。市值 1.11 兆、發行 11.3 億股。FY2025 營收 373.8 億。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>多方看 HBM 售罄到 2027、記憶體漲價循環延續（KeyBanc 稱「記憶體緊張至 2027」、目標 $1,750）、前瞻本益比僅 6.9x 便宜；空方憂記憶體是深度景氣循環股，低本益比常是循環高峰訊號、SK Hynix（SKHY 剛登 Nasdaq）／Samsung 擴產恐引供給過剩、股價一年漲近 8 倍波動劇烈（Beta 2.14）。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>Micron 前瞻本益比僅 6.9x 看似極便宜，但這正是「記憶體週期股的估值陷阱」——低本益比往往出現在獲利循環高峰，因為市場預期未來獲利會從峰值回落。真正的多空分野在於這次 AI 記憶體超級循環「是否不一樣」：HBM 已售罄到 2027、客戶預訂到 2028，供給端受先進製程與產能限制紀律，理論上比過去純消費性記憶體循環更有結構支撐（KeyBanc 稱記憶體緊張至 2027、目標 $1,750）。但風險同樣清楚：SK Hynix（剛登 Nasdaq）、Samsung 大舉擴產，一旦供給趕上、或 AI 資本支出放緩，記憶體價格與獲利可能快速反轉，股價 Beta 2.14、一年漲近 8 倍、距高點已回 22%，波動極大。這是一檔「基本面爆發但屬深度週期」的標的——多頭賭超級循環延續，空頭賭均值回歸。追高須看 HBM 售罄能見度與記憶體報價是否續強。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">$1.11T</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">$90.3B（+167%）</div><div class="t">TTM 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">$50.5B</div><div class="t">TTM 淨利</div></div>
+      <div class="rpt-metric"><div class="v">$44.31</div><div class="t">TTM EPS</div></div>
+      <div class="rpt-metric"><div class="v">22.2x</div><div class="t">本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">6.9x</div><div class="t">前瞻本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">$41.5B（+346%）</div><div class="t">FQ3 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">售罄至 2027</div><div class="t">HBM 產能</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">Micron</td><td>MU</td><td>$1.11T</td><td>前瞻6.9x</td><td style="text-align:left">唯一美系 DRAM/HBM/NAND 整合廠，HBM 售罄至2027、AI 直接受惠</td></tr>
+        <tr><td class="sym">SK Hynix</td><td>SKHY</td><td>巨型</td><td>低PE</td><td style="text-align:left">HBM 龍頭（供 NVIDIA），剛登 Nasdaq ADR</td></tr>
+        <tr><td class="sym">Samsung</td><td>005930</td><td>巨型</td><td>低PE</td><td style="text-align:left">記憶體最大廠，HBM 追趕中</td></tr>
+        <tr><td class="sym">SanDisk</td><td>SNDK</td><td>中型</td><td>週期</td><td style="text-align:left">NAND 快閃記憶體/儲存</td></tr>
+        <tr><td class="sym">南亞科</td><td>2408</td><td>中小型</td><td>週期</td><td style="text-align:left">台系 DRAM，規模與製程落後</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理／循環高峰（前瞻本益比低但屬深度週期）。</b>前瞻本益比僅 6.9x 客觀便宜、獲利爆發（FQ3 營收年增 346%、HBM 售罄至 2027），多頭認為 AI 超級循環使這次「不一樣」；但記憶體是深度景氣循環股，低本益比常是循環高峰訊號，SK Hynix／Samsung 擴產與 AI 資本支出放緩是反轉風險。合理與否取決於這波超級循環的持續性（HBM 售罄能見度、記憶體報價）。屬基本面強、但需以週期思維評估的高波動標的。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 記憶體超級循環題材極熱、HBM 售罄至 2027、KeyBanc 目標上調 $1,750；股價一年漲近 8 倍、Beta 2.14、距高約 -22%，波動劇烈（受 SK Hynix／Samsung 消息連動）。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>Strong Buy（45 位分析師）、平均目標 $1,486（+51%）、KeyBanc $1,750（記憶體緊張至 2027）；多空對「這次超級循環是否不一樣、低前瞻本益比是否為週期陷阱」分歧最大。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (USD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">記憶體供給趕上/AI資本支出放緩、循環反轉</td><td>600 – 780</td><td class="down">約 −30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">HBM售罄延續、循環高原、獲利高檔</td><td>950 – 1,150</td><td class="up">約 +10%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">HBM緊俏至2027、報價續強、EPS再上修</td><td>1,300 – 1,500</td><td class="up">約 +45%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI記憶體超級循環全面重估（KeyBanc $1,750）</td><td>1,700 +</td><td class="up">約 +73%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬高、基本面爆發但屬深度週期</b> — 市值破 1 兆、FQ3 營收年增 346%、HBM 售罄至 2027、前瞻本益比僅 6.9x、Strong Buy 目標 $1,486（+51%）。多頭賭 AI 記憶體超級循環「這次不一樣」，空頭警示低本益比為週期高峰陷阱、SK Hynix／Samsung 擴產風險。股價一年漲近 8 倍、Beta 2.14，波動極大，須以週期思維評估。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：StockAnalysis.com（CBOE 即時報價/估值）、Micron IR／SEC 8-K（FQ3 2026 財報、HBM 售罄、美國投資）、CNBC／Barron's／TipRanks（KeyBanc $1,750、記憶體緊張至 2027、SK Hynix 上市）。截至 2026/07/14。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-14">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('us','CCJ','Cameco')">Cameco CCJ</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">鈾礦＋核能</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">核能復興·估值偏高</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/14</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">$91.57</div><div class="t">現價 (USD)</div></div>
+        <div class="rpt-metric"><div class="v">85.8x</div><div class="t">TTM 本益比</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">偏昂貴/核能復興</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>全球第二大鈾礦商（約 12% 供給），垂直整合鈾礦→轉化→<b>Westinghouse 核電技術（持股 49%）</b>。核能復興主軸：DOE 承諾 175 億美元低利貸款支持 10 座 Westinghouse AP1000 新反應爐、AI 資料中心電力需求推升核電。2026 指引維持：交付 2,900–3,200 萬磅、實現價 $85–89/磅。惟<b>本益比 85x、估值領先當期獲利</b>（GF Value $66.87 vs 現價 $90）；Cigar Lake 因磨機硫酸廠問題短暫停產（約兩週、預期不影響 2026 產量）。分析師 Buy、目標 $132（+44%）。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>核能復興＋Westinghouse 大單。美國能源部（DOE）承諾 175 億美元低利貸款，支持 Westinghouse 建置 10 座 AP1000 大型反應爐（2030 目標）、重啟大型核能供應鏈；AI 資料中心電力需求成核電長線催化。Cameco 持有 Westinghouse 49%，直接受惠。並完成收購 TEPCO 在 Cigar Lake 的 5% 權益、提高自有礦權益。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2026 Q1 鈾 segment EBITDA 4.23 億、合併營收 8.45 億、淨利 1.31 億、調整後淨利 2.03 億、調整後 EBITDA 5.09 億；McArthur River／Key Lake／Cigar Lake／Inkai 產量如期。2026 全年指引維持：營收 31.3–33.7 億、交付 2,900–3,200 萬磅、平均實現價 $85–89/磅。本益比 85.8x、前瞻 66.5x；市值 393 億、發行 4.36 億股。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視 CCJ 為「核能復興＋AI 電力＋鈾長多」最直接的一線標的（垂直整合、有契約現金流、風險最低）。多方看 DOE 貸款、AP1000 建置、鈾長約重定價；空方憂本益比 85x 昂貴（GF Value $66.87 vs 現價 $90）、鈾現貨較 BofA 2026 預估低 23%、Cigar Lake 停產與工程執行風險。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>CCJ 的評價已從「鈾礦商」轉為「核能供應鏈平台」——本益比 85x 用當期鈾獲利看確實昂貴（GF Value 才 $66.87），但市場買的是 Westinghouse（持股 49%）＋DOE 175 億貸款＋10 座 AP1000＋AI 電力的多年建置預期，屬「估值領先當期獲利」的長線題材股。真正變數有三：一是鈾長約重定價速度（現貨較 BofA 2026 預估低 23%，反映簽約摩擦與供給紀律，屬補漲空間也是風險）；二是 Westinghouse 反應爐訂單與 DOE 貸款落地節奏（這是溢價的核心）；三是礦場執行（Cigar Lake 停產約兩週、預期不影響 2026 產量，但反映工程風險）。分析師偏多（Buy、目標 $132、RBC C$175、Truist $129、BofA $140），但現價已位於高檔區間中段、本益比昂貴，追高須看核電建置與長約重定價兌現。屬 Tier-1 品質、核能復興最直接但估值偏高的長線核心標的。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">$39.3B</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">$2.53B（+7.5%）</div><div class="t">TTM 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">$466M（+162%）</div><div class="t">TTM 淨利</div></div>
+      <div class="rpt-metric"><div class="v">$1.07</div><div class="t">TTM EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">85.8x</div><div class="t">本益比（偏高）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">66.5x</div><div class="t">前瞻本益比</div></div>
+      <div class="rpt-metric"><div class="v">$203M</div><div class="t">Q1 調整後淨利</div></div>
+      <div class="rpt-metric"><div class="v">$85–89/磅</div><div class="t">2026e 實現價</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">Cameco</td><td>CCJ</td><td>$39.3B</td><td>PE 85x</td><td style="text-align:left">全球#2鈾(~12%)＋Westinghouse 49%，垂直整合、有契約現金流、Tier-1</td></tr>
+        <tr><td class="sym">Kazatomprom</td><td>KAP</td><td>≈$10B</td><td>低PE</td><td style="text-align:left">全球#1鈾（哈薩克），成本最低但地緣風險高</td></tr>
+        <tr><td class="sym">NexGen</td><td>NXE</td><td>≈$8B</td><td>開發中</td><td style="text-align:left">加拿大 Arrow 高品位礦，尚未量產</td></tr>
+        <tr><td class="sym">Uranium Energy</td><td>UEC</td><td>≈$4B</td><td>題材</td><td style="text-align:left">美國 ISR 鈾，產量小、彈性高</td></tr>
+        <tr><td class="sym">Denison</td><td>DNN</td><td>≈$2B</td><td>開發中</td><td style="text-align:left">加拿大 Wheeler River，尚在建置</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴（核能復興題材、估值領先當期獲利）。</b>本益比 85.8x、前瞻 66.5x，用當期鈾獲利看昂貴（GF Value $66.87 vs 現價 $90）；但市場評價的是 Westinghouse（49%）＋DOE 175 億貸款＋10 座 AP1000＋AI 電力＋鈾長約重定價的多年建置預期。合理與否取決於核電新建與長約重定價能否兌現為經常性現金流。屬 Tier-1 品質、垂直整合、有契約現金流的核能復興核心標的，惟現價已計入相當樂觀的長線成長。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>核能復興＋AI 電力＋鈾長多題材熱、DOE 175 億貸款與 AP1000 建置為長線催化；股價位於 52週中段，波動來自鈾現貨、長約重定價與工程執行。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>Buy（25 位分析師）、平均目標 $132.07（+44%）；RBC C$175、Truist Buy $129、BofA $140；GuruFocus 以 GF Value $66.87 視為偏貴。多空對「85x 本益比是否合理」分歧。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (USD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">鈾現貨疲弱/DOE 貸款延遲/估值修正</td><td>70 – 82</td><td class="down">約 −15%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">指引達標、長約重定價、Westinghouse 穩步</td><td>95 – 115</td><td class="up">約 +15%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">AP1000 訂單+鈾長多重定價、EBITDA 跳增</td><td>130 – 150</td><td class="up">約 +50%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">核能超級循環+Westinghouse 全面重估</td><td>160 +</td><td class="up">約 +75%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬中性偏正、核能復興最直接但估值偏高</b> — 全球#2 鈾＋Westinghouse 49%＋DOE 175 億貸款＋10 座 AP1000＋AI 電力，2026 指引維持（交付 29-32M 磅、實現價 $85-89）；分析師 Buy、目標 $132（+44%）。惟本益比 85x 昂貴（GF Value 僅 $66.87）、估值領先當期獲利，核心變數是核電建置與長約重定價兌現。屬 Tier-1 品質長線核心標的、但現價已計入樂觀預期。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：StockAnalysis.com（CBOE 即時報價/估值）、Cameco IR／Business Wire（Q1 財報、2026 指引、Cigar Lake、TEPCO 收購）、Reuters／CBC（Cigar Lake 停產）、DOE／Westinghouse（175 億貸款、AP1000）、TheFly（RBC／Truist／BofA 目標）。截至 2026/07/14。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-13">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','6139','亞翔')">亞翔工程 6139</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 半導體廠務統包</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">高成長</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/13</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">875</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">9.45（+149%）</div><div class="t">2026 Q1 EPS</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">合理/成長</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b><b>無塵室與廠務統包工程龍頭</b>，站在 AI 半導體擴產、HBM 產能建置的核心——承接大型半導體廠務統包（含<b>新加坡大型半導體廠務統包案</b>）。高速成長：2026 Q1 EPS 9.45（年增 149%）、5 月營收 +103%、累計 +75%、2025 EPS 30.51。本益比 28.7x（河流圖「合理」）、殖利率約 3.85%（9/2 除息 23 元）。屬 AI 半導體基建、訂單能見度高的成長龍頭。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「<b>AI 半導體擴產＋廠務統包大單</b>」。亞翔為無塵室與機電/廠務統包工程龍頭，站在 AI 晶片/HBM 產能建置、先進封裝廠房興建的核心；承接大型半導體廠務統包（含新加坡大型半導體廠務統包案），訂單能見度高。5 月營收 85.88 億（月增 0.6%、年增 103.3%）、5 月累計 374.72 億（年增 75.2%）。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2026 Q1 EPS 9.45（季減 28%、年增 149%）、2025 全年 EPS 30.51、營收 767 億；本益比 28.7x（河流圖「合理」）、股價淨值比河流圖「偏高」。市值約 2,000 億、發行 2.36 億股。9/2 除息、配現金股利 23 元、近五年平均 10.37、平均殖利率 3.85%。獲利隨半導體資本支出與工程進度認列。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視亞翔為「AI 半導體基建/廠務統包最直接受惠」龍頭，法人重估、四燈號健診偏強。多方看半導體擴產與大單放量，空方憂工程業獲利認列波動（季度不均）、半導體資本支出循環與股價已大漲。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>亞翔的成長是「AI 半導體資本支出的直接工程受惠」——每一座 AI 晶片/HBM/先進封裝新廠都需要無塵室與廠務統包，亞翔訂單能見度來自客戶的建廠時程，5 月營收年增 103%、累計年增 75% 反映在建工程大量認列。與晶片股不同，工程業獲利是「照工程進度認列」，因此季度 EPS 會不均（2026 Q1 EPS 季減 28% 但年增 149% 即為此），重點看「在手訂單與累計營收動能」而非單季。本益比 28.7x 對應 2025 EPS 30.51 屬河流圖「合理」區，若 2026 EPS 隨大單放量續增，前瞻本益比更低。真正變數是半導體資本支出循環（AI 擴產能否延續）與大單執行；股價已位於 52週上緣、股價淨值比偏高，追高須看資本支出續強與訂單能見度。屬 AI 半導體基建的高品質成長龍頭。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$2,000億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">30.51元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">9.45（年增149%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v">767億</div><div class="t">2025 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">85.88億（年增103%）</div><div class="t">5月營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">28.7x（合理）</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">374.7億（年增75%）</div><div class="t">累計營收</div></div>
+      <div class="rpt-metric"><div class="v">9/2 配 23 元</div><div class="t">除息/股利</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">亞翔</td><td>6139</td><td>約2,000億</td><td>PE 28.7x</td><td style="text-align:left">無塵室/廠務統包龍頭，AI半導體+新加坡大單，高成長</td></tr>
+        <tr><td class="sym">漢唐</td><td>3306</td><td>≈1,500億</td><td>有獲利</td><td style="text-align:left">半導體廠務工程(台積電供應鏈)，龍頭</td></tr>
+        <tr><td class="sym">聖暉</td><td>5536</td><td>≈500億</td><td>有獲利</td><td style="text-align:left">無塵室/機電統包工程</td></tr>
+        <tr><td class="sym">帆宣</td><td>6196</td><td>≈600億</td><td>有獲利</td><td style="text-align:left">半導體設備/廠務系統整合</td></tr>
+        <tr><td class="sym">崇越</td><td>5434</td><td>≈400億</td><td>有獲利</td><td style="text-align:left">半導體材料/設備通路+工程</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理／成長（AI 半導體基建、訂單能見度）。</b>本益比 28.7x 對應 2025 EPS 30.51 處河流圖「合理」區；獲利高速成長（2026 Q1 EPS 年增 149%、5 月營收年增 103%），若 2026 EPS 隨大單放量續增，前瞻本益比更具吸引力。股價淨值比偏高、股價位於 52週上緣，題材已反映部分。以工程業在手訂單與累計營收動能評價，屬 AI 半導體資本支出的高品質成長龍頭，惟需資本支出循環延續與工程執行兌現。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 半導體廠務統包題材熱、法人重估、四燈號偏強；股價位於 52週上緣，波動來自半導體資本支出與工程認列節奏。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>法人高度關注、重估中（新加坡大單、AI 半導體基建）；本益比河流圖「合理」，市場偏多，惟工程認列季度不均。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">半導體資本支出/大單延遲、估值修正</td><td>600 – 720</td><td class="down">約 −20%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">訂單能見度高、EPS 成長</td><td>820 – 950</td><td class="up">約 +5%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">新加坡大單+AI 廠務放量、EPS 跳增</td><td>1,050 – 1,200</td><td class="up">約 +35%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI 半導體基建超級循環全面重估</td><td>1,350 +</td><td class="up">約 +54%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向、AI 半導體基建成長龍頭</b> — 無塵室/廠務統包龍頭、AI 半導體擴產與新加坡大單直接受惠、2026 Q1 EPS 年增 149%、5 月營收年增 103%、本益比河流圖「合理」；Base +5%、Bull +35%。核心變數是半導體資本支出循環延續與大單執行，工程認列季度不均需看累計動能。屬高品質 AI 基建成長股、但股價已位於 52週上緣。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、EPS/營收/股利）、YouTube 法人（新加坡大單、AI 半導體廠務統包）。52週為概估（截至 2026/07/13）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-13">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','3481','群創')">群創光電 3481</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">面板→FOPLP 封裝</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">轉型題材·高估值</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/13</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">61</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">28.39（PB 2.15x）</div><div class="t">每股淨值</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">偏昂貴/轉型</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>面板廠（Innolux），轉型「<b>面板級封裝 FOPLP＋車用座艙</b>」——舊 3.5/4.5 代面板產線改造成 FOPLP 線、2026 中進入一線客戶量產；車用（CarUX）佔比逾兩成；出售舊廠進帳約 197 億業外。股價上半年自 18.1 漲逾 3 倍至 72.6、現 61。惟<b>近四季 EPS 僅 0.11（本業極薄）</b>、2026 EPS 估約 1.5 含大額業外、股價淨值比 2.15x、河流圖「偏高」，屬<b>轉型題材、獲利品質待驗</b>的高估值股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「<b>面板級封裝 FOPLP 轉型＋車用＋資產處分</b>」。群創將舊 3.5/4.5 代面板產線改造成 FOPLP（Fan-Out Panel-Level Packaging）封裝線，利用面板大面積基板提高面積利用率、降低封裝成本，2026 中已進入一線客戶量產出貨；車用智慧座艙（子公司 CarUX）營收佔比突破兩成。透過出售部分舊世代產線廠房進帳約 197 億業外。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>4 月自結純益 21.59 億（年增 26 倍）、單月 EPS 0.27；近四季 EPS 僅 0.11（本業薄）。市場預估 2026 全年 EPS 有機會挑戰 1.50（含大額業外資產處分）。每股淨值 28.39、股價淨值比 2.15x、市值約 4,873 億、發行 79.89 億股。6/11 除息、配現金股利 1 元。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視群創為「面板轉型 FOPLP 半導體封裝＋車用」重估題材股，股價上半年漲逾 3 倍、曾創 18 年新高後回檔。多方看 FOPLP 量產與面板級封裝滲透，空方憂本業獲利極薄、2026 EPS 靠一次性業外、股價淨值比偏高、面板景氣循環。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>群創股價上半年漲逾 3 倍，靠的是「FOPLP 面板級封裝轉型」的想像，但要拆清楚獲利品質——近四季 EPS 僅 0.11（面板本業幾乎不賺）、2026 全年估 EPS 約 1.5 當中含約 197 億「出售舊廠房」的一次性業外，並非本業經常性獲利。FOPLP 確有結構意義（用面板大基板做扇出型封裝、降本，且已進入一線客戶量產）、車用座艙（CarUX）佔比逾兩成也是實質轉型，但目前對整體獲利貢獻仍在爬坡。以股價淨值比 2.15x（面板股歷史多在 1x 上下）、本益比河流圖「偏高」看，股價已計入「FOPLP 全面放量＋轉型成功」的樂觀。真正變數是 FOPLP 一線客戶放量速度與是否能撐起經常性獲利（而非靠賣廠）；面板本業具景氣循環，股價已漲逾 3 倍、位於 52週上緣，追高容錯低。屬轉型題材為真、但估值與獲利品質待驗的高波動面板股。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$4,873億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">28.39元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">2.15x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">0.11元（本業薄）</div><div class="t">近四季 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">約1.5（含業外）</div><div class="t">2026e EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">約197億</div><div class="t">業外（賣廠）</div></div>
+      <div class="rpt-metric"><div class="v">18.1 – 72.6</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">逾 3 倍</div><div class="t">上半年漲幅</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">群創</td><td>3481</td><td>約4,873億</td><td>PB 2.15x</td><td style="text-align:left">面板+FOPLP封裝+車用轉型，股價漲3倍、獲利靠業外、估值偏高</td></tr>
+        <tr><td class="sym">友達</td><td>2409</td><td>≈1,800億</td><td>低PB</td><td style="text-align:left">面板廠，同樣布局FOPLP/面板級封裝</td></tr>
+        <tr><td class="sym">彩晶</td><td>6116</td><td>≈300億</td><td>週期</td><td style="text-align:left">中小尺寸面板</td></tr>
+        <tr><td class="sym">京東方</td><td>BOE(A股)</td><td>巨型</td><td>週期</td><td style="text-align:left">全球面板龍頭</td></tr>
+        <tr><td class="sym">精材</td><td>3374</td><td>≈300億</td><td>有獲利</td><td style="text-align:left">晶圓級封裝(WLCSP)，封裝對照組</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴（轉型題材、獲利品質待驗）。</b>本業獲利極薄（近四季 EPS 0.11）、2026 EPS 估約 1.5 含約 197 億一次性業外（賣廠）；以股價淨值比 2.15x（面板股歷史多在 1x 上下）、本益比河流圖「偏高」看，股價已計入 FOPLP 全面放量與轉型成功的樂觀。合理與否取決於 FOPLP 一線客戶放量能否轉為經常性獲利（而非靠資產處分）；股價上半年漲逾 3 倍、位於 52週上緣。屬轉型題材為真、但估值領先經常性獲利的高波動面板股。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>FOPLP 面板級封裝＋車用轉型題材熱、股價上半年漲逾 3 倍、曾創 18 年新高後回檔；波動劇烈、籌碼與題材驅動。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>無單一明確目標；市場預估 2026 EPS 約 1.5（含業外），本益比河流圖「偏高」；多空對「FOPLP 經常性獲利兌現」分歧大。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">FOPLP 不如預期/面板景氣/業外一次性、股價修正</td><td>42 – 52</td><td class="down">約 −23%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">FOPLP 起步+車用、獲利含業外約 1.5</td><td>58 – 68</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">FOPLP 一線客戶放量、轉型兌現經常性獲利</td><td>75 – 88</td><td class="up">約 +33%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">面板級封裝全面重估</td><td>100 +</td><td class="up">約 +64%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏空／轉型題材、獲利品質待驗</b> — 股價上半年漲逾 3 倍、股價淨值比 2.15x（面板股偏高）、近四季 EPS 僅 0.11、2026 估 EPS 約 1.5 含約 197 億賣廠業外；Base 持平、Bear 達累跌 23%。FOPLP 與車用轉型為真，但獲利尚靠一次性業外，關鍵是 FOPLP 一線客戶放量能否撐起經常性獲利。屬高波動、估值領先經常性獲利的面板轉型股，追高容錯低。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／財報狗（淨值/PB）、Win 投資／TOPONE（FOPLP 轉型、CarUX 車用、賣廠業外 197 億、2026 EPS 約 1.5）（截至 2026/07/13）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-13">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2316','楠梓電')">楠梓電 2316</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI/機器人 PCB</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">低本益比·滬電資產</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/13</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">184</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">3.53（+142%）</div><div class="t">2026 Q1 EPS</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">合理偏低/成長</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>印刷電路板（PCB/WUS）廠，<b>AI 高階 HDI（PCIe FPGA 加速卡）＋人形機器人電路板訂單</b>＋AI 伺服器/高速運算。獲利高速成長——2026 Q1 EPS 3.53（年增 142%）、2025 全年 13.38、6 月累計營收年增 31%；<b>本益比僅 13.7x（河流圖偏低）</b>。並持有大陸 PCB 大廠「滬電股份」股權（隱藏資產）。惟股價一年已漲約 3.4 倍（53.4→248.5）、非低基期。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「<b>AI PCB 升級＋機器人新訂單＋滬電資產</b>」。楠梓電高效能運算（HPC）產品 2025 佔比逾三成、2026 拚 40%，AI 相關屬高階 HDI 製程（用於 PCIe FPGA 加速卡）；已接獲非中國品牌人形機器人電路板訂單、進入打樣與初期量產。受惠 AI 伺服器、高速運算與網通需求擴張。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2026 Q1 EPS 3.53（季增 37%、年增 142%）、2025 全年 EPS 13.38；6 月營收 3.21 億（年增 27.8%）、上半年累計 21.54 億（年增 31%）。本益比 13.7x（河流圖偏低）、市值約 336 億。7/13 除息、配現金股利 2 元。並持有大陸上市 PCB 大廠「滬電股份」股權，業外/資產題材為評價重估來源。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視楠梓電為「AI PCB＋人形機器人＋滬電資產重估」題材股，外資爆量、股價一年漲約 3.4 倍、曾亮燈漲停 226。多方看 AI/機器人 PCB 放量與滬電資產價值，空方憂股價已大漲、PCB 景氣循環與滬電股權波動。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>楠梓電同時具備三個少見的正向條件——本益比僅 13.7x（河流圖「偏低」，遠低於多數 AI PCB 股）、獲利高速成長（2026 Q1 EPS 年增 142%）、且持有大陸 PCB 大廠「滬電股份」股權的隱藏資產。市場對它的評價重估，關鍵在於「AI/機器人 PCB 本業成長＋滬電資產價值」能否被充分認列——若人形機器人電路板放量、HPC 佔比提升至 40%、滬電股權價值被重估，低本益比有向上修正空間。但也要留意：股價一年已漲約 3.4 倍（53.4→248.5）、位於 52週上緣、股價淨值比河流圖「偏高」，題材與資產價值有相當程度已反映；PCB 具景氣循環、滬電股權隨陸股波動，追高須看本業放量與資產認列的實際兌現。屬低本益比成長＋資產重估的正向標的，但已非低基期。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$336億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">13.38元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">3.53（年增142%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">13.7x（偏低）</div><div class="t">本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">21.54億（年增31%）</div><div class="t">6月累計營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">逾30%（拚40%）</div><div class="t">HPC 佔比</div></div>
+      <div class="rpt-metric"><div class="v">53.4 – 248.5</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">約 3.4 倍</div><div class="t">一年漲幅</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">楠梓電</td><td>2316</td><td>約336億</td><td>PE 13.7x</td><td style="text-align:left">AI HDI/機器人PCB+滬電資產，低本益比成長，一年漲3.4倍</td></tr>
+        <tr><td class="sym">華通</td><td>2313</td><td>≈1,200億</td><td>有獲利</td><td style="text-align:left">PCB/HDI(手機/AI)，載板布局</td></tr>
+        <tr><td class="sym">金像電</td><td>2368</td><td>≈1,500億</td><td>有獲利</td><td style="text-align:left">AI伺服器PCB(高多層板)龍頭</td></tr>
+        <tr><td class="sym">燿華</td><td>2367</td><td>≈300億</td><td>有獲利</td><td style="text-align:left">PCB/HDI，車用/工業</td></tr>
+        <tr><td class="sym">滬電股份</td><td>(A股)</td><td>巨型</td><td>有獲利</td><td style="text-align:left">大陸PCB大廠，楠梓電持股(資產題材來源)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理偏低／成長（低本益比＋滬電資產）。</b>本益比僅 13.7x（河流圖「偏低」）、獲利高速成長（2026 Q1 EPS +142%），對一檔 AI HDI/機器人 PCB＋持有滬電股份資產的公司而言不貴；以同業合理倍數（15-25x）×成長後 EPS 推估，加計滬電股權價值，合理價有向上空間。惟股價一年已漲約 3.4 倍、股價淨值比偏高、位於 52週上緣，題材與資產已相當程度反映；屬低本益比成長＋資產重估標的，但需本業放量與資產認列兌現，且非低基期。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI PCB＋人形機器人＋滬電資產題材熱、外資爆量、曾漲停 226；股價一年漲約 3.4 倍，波動大、追高情緒濃。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>投顧初評「買進」（較早期、目標 127 已被股價超越、參考性有限）；本益比河流圖偏低，市場關注 AI/機器人放量與滬電資產重估。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">PCB景氣/題材退燒/滬電波動、股價高基期修正</td><td>130 – 155</td><td class="down">約 −25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">AI PCB成長、EPS續增、低本益比支撐</td><td>175 – 210</td><td class="up">約 +5%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">機器人/AI PCB放量+滬電資產重估</td><td>230 – 260</td><td class="up">約 +35%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">本業+資產全面重估、重返高點</td><td>280 +</td><td class="up">約 +52%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向、低本益比成長＋資產重估</b> — 本益比僅 13.7x（河流圖偏低）、2026 Q1 EPS 年增 142%、AI HDI/機器人 PCB＋滬電股份隱藏資產，評價有重估空間；Base +5%、Bull +35%。核心變數是「人形機器人/AI PCB 放量與滬電資產價值認列」。惟股價一年已漲約 3.4 倍、位於 52週上緣、股價淨值比偏高，追高須看實際兌現、非低基期。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、EPS/PB/52週/營收/股利）、CMoney／uc913（AI HDI、人形機器人 PCB、滬電持股、投顧評等）（截至 2026/07/13）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-13">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('us','NOK','Nokia')">Nokia NOK</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 資料中心轉型</span>
+          <span class="rpt-badge" style="background:rgba(240,185,11,.15);color:var(--yellow)">估值分歧</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/13</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">$11.69</div><div class="t">現價 (USD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">$15.16（+30%）</div><div class="t">共識目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">合理偏高/分歧</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>百年電信網通設備商（5G、網路基礎設施、IP 路由、專利授權），正重塑為「<b>AI 資料中心網通基礎設施</b>」供應商——獲 <b>NVIDIA 約 10 億美元入股</b>背書、股價今年漲約 90%。惟本益比 73.6x、前瞻 29.3x、2025 獲利年減 49%；分析師買進、目標 $15.16（+30%），但<b>價值模型（GuruFocus GF Value $5.07）認為高估</b>。今日 −6%，估值分歧極大。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「<b>從傳統電信設備轉型 AI 資料中心網通</b>」。NVIDIA 約 10 億美元入股，將 AI 導入電信網路、切入 AI 資料中心網通（IP 路由/光傳輸）；WSJ 稱 Nokia 為 AI 資料中心熱潮供應商、股價今年漲約 90%。業務四大板塊：網路基礎設施、行動網路（5G AirScale）、雲端與網路服務、Nokia Technologies（專利授權，高毛利現金流）。近期與台灣大哥大擴大 5G AI 合作、NestAI 國防合作。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>2025 營收 €19.89B（+3.48%）、獲利 €651M（年減 49%，反映重整與一次性）；TTM 營收 $23.06B（+4.3%）、淨利 $918M、EPS 0.16。11 位分析師「買進」、共識目標 $15.16（+30%）；Danske 升評買進、目標 €14。下次財報 7/23（市場預期為轉折點）。股利 0.94%。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場敘事從「沒落手機品牌」轉為「AI 資料中心/網通基礎設施＋專利授權引擎」；NVIDIA 入股為最大催化。多方看 AI 網通放量與 NVIDIA 綜效，空方（如 GuruFocus GF Value $5.07）憂本益比 73x/前瞻 29x 偏高、獲利實際下滑、AI 貢獻仍小、股價已漲 90%。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>Nokia 是估值「分歧極大」的標的——分析師共識目標 $15.16（較現價 +30%）與價值模型 GuruFocus GF Value $5.07 相差近 3 倍，反映市場對「AI 資料中心轉型能貢獻多少實質獲利」完全對立。真正被市場提前定價的是「NVIDIA 入股＋AI 網通願景」，但 2025 獲利實際年減 49%、TTM 本益比 73x，AI 資料中心營收貢獻目前仍小——股價今年漲約 90% 主要靠敘事重估而非獲利兌現。真正變數是 7/23 財報能否證明 AI 網通訂單與獲利開始放量、以及 Nokia Technologies 專利授權的穩定現金流；beta 0.79 相對低，但今日 −6% 顯示敘事股的波動。若 AI 兌現，前瞻 29x 尚可支撐、目標 $15 可期；若僅是題材，估值向價值模型（$5–7）修正的風險不小。屬 AI 轉型敘事、估值兩極分歧的事件驅動股。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">$67.54B</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">$23.06B（+4.3%）</div><div class="t">營收 (TTM)</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">€651M（年減49%）</div><div class="t">2025 獲利</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">0.16</div><div class="t">EPS (TTM)</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">73.6x</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v">29.3x</div><div class="t">前瞻本益比</div></div>
+      <div class="rpt-metric"><div class="v">$4.00 – $17.45</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">約 +90%</div><div class="t">今年漲幅</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">Nokia</td><td>NOK</td><td>$67.5B</td><td>前瞻29x</td><td style="text-align:left">5G/網通+專利授權+AI資料中心轉型(NVIDIA入股)，估值分歧</td></tr>
+        <tr><td class="sym">Ericsson</td><td>ERIC(美)</td><td>≈$35B</td><td>有獲利</td><td style="text-align:left">5G/電信設備直接對手，估值較低</td></tr>
+        <tr><td class="sym">Cisco</td><td>CSCO(美)</td><td>≈$300B</td><td>有獲利</td><td style="text-align:left">企業網通/資料中心交換器龍頭</td></tr>
+        <tr><td class="sym">Arista</td><td>ANET(美)</td><td>≈$150B</td><td>高本益</td><td style="text-align:left">AI 資料中心交換器(高速乙太網)龍頭</td></tr>
+        <tr><td class="sym">NVIDIA</td><td>NVDA(美)</td><td>巨型</td><td>高本益</td><td style="text-align:left">AI 晶片龍頭，Nokia 入股方/AI 網通夥伴</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理偏高／分歧（AI 轉型敘事重估、估值兩極）。</b>TTM 本益比 73.6x 偏高（2025 獲利年減 49%）、前瞻本益比 29.3x 因獲利回升而較合理；分析師目標 $15.16（+30%）、Danske €14，但價值模型 GuruFocus GF Value $5.07 認為高估。差距近 3 倍反映對 AI 資料中心貢獻的高度不確定。合理與否取決於 AI 網通與 NVIDIA 綜效能否兌現至獲利：若兌現，前瞻 29x 可支撐、目標 $15 可期；若僅題材，向價值（$5–7）修正風險大。屬敘事驅動、估值分歧股。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 資料中心轉型＋NVIDIA 入股題材偏多、股價今年漲約 90%；但今日 −6%、價值模型示警高估，多空對 AI 貢獻分歧極大。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>買進（11 位）、共識目標 $15.16（+30%）、Danske 升評買進（€14）；惟價值模型（GuruFocus GF Value $5.07、GF Score 58）認為高估，共識與價值模型分歧。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (USD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">AI 題材退燒/獲利不如預期、向價值模型修正</td><td>$7 – $9</td><td class="down">約 −32%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">5G 穩+AI 資料中心起步、獲利溫和回升</td><td>$11 – $13</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">NVIDIA 綜效+AI 網通放量、達分析師目標</td><td>$15 – $17</td><td class="up">約 +30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI 資料中心全面重估、重返 52週高</td><td>$18 +</td><td class="up">約 +54%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬對稱偏事件驅動、AI 轉型敘事</b> — 分析師目標 $15.16（+30%）與價值模型 $5.07 分歧近 3 倍，股價今年漲約 90% 靠敘事重估、2025 獲利實際年減 49%；Base 持平、Bull +30%、Bear 達累跌 32%。核心變數是 7/23 財報能否證明 AI 網通與 NVIDIA 綜效開始兌現至獲利、以及專利授權現金流。屬估值兩極分歧、敘事/事件驅動的電信轉型股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：StockAnalysis.com／Yahoo Finance（即時報價、市值、52週、財報）、WSJ／The Motley Fool（NVIDIA 入股、AI 資料中心）、TipRanks／Danske（評等、目標）、GuruFocus（GF Value $5.07）（截至 2026/07/13）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','8096','擎亞')">擎亞電子 8096</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">三星半導體代理</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">記憶體題材·高估值</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">166.5</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">14.10（PB 12x）</div><div class="t">每股淨值</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">偏昂貴/週期</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>三星在台重要<b>半導體代理商</b>（CIS/記憶體/AP）。搭上「記憶體漲價循環」——DRAM/NAND 缺貨使代理商低價庫存增值，2026 Q1 EPS 1.9（季增 513%）；傳接晶圓代工大廠上百億記憶體大單。惟<b>本益比 97.4x（同業平均 36.6）、股價淨值比 12x</b>、股價一年漲約 4.5 倍近 52週高，估值極端、屬記憶體漲價題材的高波動通路股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「<b>記憶體漲價循環＋三星代理放量</b>」。DRAM/NAND 進入缺貨漲價，代理商手中低價庫存增值、獲利暴衝——2026 Q1 EPS 1.9（季增 513%、年增 76%，2025 全年僅 0.89）；市場傳擎亞接獲台系晶圓代工大廠上百億元記憶體大單（供自用資料中心）、2 月起陸續放量。AI 手機/PC 對高階 CIS 與記憶體需求同步升溫。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2026 Q1 EPS 1.9、2025 全年 EPS 0.89；每股淨值 14.10、股價淨值比 12x、本益比 97.4x（同業平均 36.6）。市值約 253 億、發行 1.49 億股，屬中小型通路股。通路業本質毛利薄、獲利隨代理產品（記憶體/CIS）價格與拉貨波動大。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視擎亞為「記憶體漲價＋三星代理＋大單」題材股；本益比河流圖處偏高。多方看記憶體超級循環與大單放量，空方憂通路商低毛利、獲利品質、估值（PE 97/PB 12）極端與週期反轉。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>擎亞的獲利暴衝（Q1 EPS 季增 513%）本質是「記憶體漲價循環中，代理商低價庫存增值＋拉貨放量」的週期性獲利，而非結構性提升——通路業毛利薄、獲利高度隨 DRAM/NAND 價格與客戶拉貨波動。以本益比 97.4x（遠高於通路同業平均 36.6x）、股價淨值比 12x、股價一年漲約 4.5 倍近 52週高看，市場已把「記憶體超級循環全面兌現＋大單持續」的最樂觀情境完全定價。真正變數是記憶體漲價與大單能否持續放量至獲利續強，而非題材本身；一旦記憶體價格見頂回落或庫存跌價，97 倍本益比與 12 倍 P/B 缺乏支撐、回檔幅度大。屬記憶體漲價題材、估值極端的高波動通路股，追高容錯低。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$253億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">14.10元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">12.0x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">1.9（季增513%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v">0.89元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">97.4x</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v">36.6x</div><div class="t">同業平均PE</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">37.1 – 173.5（漲4.5倍）</div><div class="t">52週區間</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">擎亞</td><td>8096</td><td>約253億</td><td>PE 97x</td><td style="text-align:left">三星代理(CIS/記憶體/AP)，記憶體漲價受惠、估值極端、高波動</td></tr>
+        <tr><td class="sym">大聯大</td><td>3702</td><td>≈1,000億</td><td>有獲利</td><td style="text-align:left">亞太半導體通路龍頭，代理廣</td></tr>
+        <tr><td class="sym">文曄</td><td>3036</td><td>≈1,500億</td><td>有獲利</td><td style="text-align:left">半導體通路(併購安富利亞太)，規模大</td></tr>
+        <tr><td class="sym">至上</td><td>8112</td><td>≈150億</td><td>週期</td><td style="text-align:left">半導體/記憶體通路，記憶體漲價受惠</td></tr>
+        <tr><td class="sym">益登</td><td>3048</td><td>≈100億</td><td>週期</td><td style="text-align:left">半導體代理(NVIDIA 等)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴（記憶體漲價題材、估值透支）。</b>本益比 97.4x 遠高於通路同業平均 36.6x、股價淨值比 12x；獲利暴衝（Q1 EPS 季增 513%）係記憶體漲價的週期性、低價庫存增值所致，非結構性。以通路業正常化獲利與合理倍數（15-25x）推估，合理價明顯低於現價——股價已計入記憶體超級循環全面兌現＋大單持續的樂觀。屬題材驅動、估值領先獲利品質的高波動通路股，週期反轉風險大。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>記憶體漲價題材極熱、股價一年漲 4.5 倍近 52週高、今日漲停；籌碼與題材驅動，波動劇烈。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>中小型通路股、券商覆蓋少、無明確目標價共識；本益比河流圖偏高，屬題材與記憶體價格驅動，參考性有限。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">記憶體漲價退燒/庫存跌價、高估值修正</td><td>90 – 120</td><td class="down">約 −37%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">漲價續、代理拉貨、獲利維持</td><td>155 – 180</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">記憶體大單放量、EPS 續跳增</td><td>200 – 240</td><td class="up">約 +30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">記憶體超級循環全面重估</td><td>280 +</td><td class="up">約 +68%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏空／估值極端、記憶體題材通路股</b> — 本益比 97.4x（同業 36.6x）、股價淨值比 12x、股價一年漲 4.5 倍，獲利暴衝係記憶體漲價週期性；Base 持平、Bear 達累跌 37%。上檔須「記憶體漲價與大單持續放量至獲利續強」，下檔為週期反轉與庫存跌價。屬高波動、估值透支的題材通路股，追高容錯低。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、EPS/淨值/PB/52週）、經濟日報（記憶體大單）、DA Labs／口袋學堂（三星代理業務）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','8299','群聯')">群聯電子 8299</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">NAND 控制IC／儲存</span>
+          <span class="rpt-badge" style="background:rgba(240,185,11,.15);color:var(--yellow)">週期高峰·估值分歧</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">2,220</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v">2,200（≈現價）</div><div class="t">券商目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">分歧/週期</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b><b>NAND 控制 IC 與儲存龍頭（Phison）</b>，NAND 缺貨中握有控制 IC 話語權。搭上「記憶體超級循環」——4 月營收 202 億（年增 237%）、坐擁約 350 億低價庫存；近四季 EPS 104.89。本益比 21.2x 看似不貴，但係<b>強週期股獲利高峰</b>；券商 2026 EPS 估分歧大（78.56–128.98）、目標 2,200 ≈ 現價、股價淨值比 11.9x 偏高。屬記憶體超級循環龍頭，惟<b>估值分歧、週期高峰風險</b>並存。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「<b>NAND 記憶體超級循環＋控制 IC 話語權</b>」。NAND 缺貨漲價，群聯為控制 IC 與儲存方案龍頭，握有低價庫存（約 350 億）與定價優勢；2026 4 月營收 202.07 億（月增 10.3%、年增 236.6%）、累計 611.74 億（年增 208%）。獲利暴衝——2025 Q4 EPS 22.08（季增 105%）、近四季 EPS 104.89、2025 全年 41.98（年增 54%）。AI 儲存（高容量 SSD/企業級）為長線動能。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>券商 2026 EPS 估分歧——一投顧估 128.98、本土投顧上修至 78.56（前值 50.38）、2027 約 81–129；以 2027 年 17 倍 PE 推目標價 2,200（約等於現價）。近五年平均現金股利 21.02、平均殖利率 4.63%。低價庫存與漲價為獲利關鍵，惟高度依 NAND 價格週期。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視群聯為「記憶體超級循環＋NAND 控制 IC 龍頭」；本益比河流圖「合理」、股價淨值比河流圖「偏高」。多方看 NAND 缺貨延續與低價庫存優勢，空方憂 EPS 104 為週期高峰、NAND 價格終將反轉、目標價已約等於現價。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>群聯本益比 21.2x 看似「合理甚至便宜」，但這正是強週期股的典型陷阱——近四季 EPS 104.89 是 NAND 超級循環下的「獲利高峰」，用高峰 EPS 算出的低本益比會低估風險。券商 2026 EPS 估從 78.56 到 128.98 分歧極大，正反映對「NAND 漲價能延續多久、獲利能否維持在高檔」的高度不確定；且以 2027 年 17 倍推的目標價 2,200 已約等於現價（上檔有限）。群聯的護城河（控制 IC 話語權＋約 350 億低價庫存）是真的，短期獲利也強，但真正變數是 NAND 價格週期何時見頂——一旦反轉，EPS 將自高峰回落、低本益比會隨 EPS 下修而「被動變貴」。屬記憶體超級循環龍頭、但處週期高峰、估值分歧的循環股，須留意見頂時點而非帳面低本益比。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$5,300億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">104.89元</div><div class="t">近四季 EPS</div></div>
+      <div class="rpt-metric"><div class="v">41.98元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">78.56–128.98</div><div class="t">2026e EPS（券商）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">21.2x（高峰）</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">11.9x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v">185.81元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">202億（年增237%）</div><div class="t">4月營收</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">群聯</td><td>8299</td><td>約5,300億</td><td>PE 21x</td><td style="text-align:left">NAND控制IC+儲存龍頭，超級循環受惠、獲利高峰、估值分歧</td></tr>
+        <tr><td class="sym">慧榮</td><td>SIMO(美)</td><td>≈$3B</td><td>週期</td><td style="text-align:left">NAND 控制 IC(主要競爭者)</td></tr>
+        <tr><td class="sym">威剛</td><td>3260</td><td>≈600億</td><td>週期</td><td style="text-align:left">記憶體模組(DRAM/SSD)，漲價受惠</td></tr>
+        <tr><td class="sym">十銓</td><td>4967</td><td>≈300億</td><td>週期</td><td style="text-align:left">記憶體模組/SSD，漲價受惠</td></tr>
+        <tr><td class="sym">南亞科</td><td>2408</td><td>≈2,000億</td><td>週期</td><td style="text-align:left">DRAM 廠，記憶體超級循環</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：分歧／週期高峰（強週期股，低本益比陷阱）。</b>本益比 21.2x 表面合理，但係以近四季 EPS 104.89（NAND 超級循環高峰）計算——強週期股在獲利高峰的低本益比常是「週期高峰陷阱」。券商 2026 EPS 估 78.56–128.98 分歧極大、目標價 2,200 約等於現價（上檔有限）、股價淨值比 11.9x 偏高。合理與否取決於 NAND 價格週期能延續多久：若超級循環續強，現價尚可支撐；若見頂反轉，EPS 自高峰回落、估值「被動變貴」。屬龍頭但處週期高峰、估值分歧的循環股。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>記憶體超級循環題材熱、獲利暴衝；但股價自 52週高 2880 回檔約 23%、目標約等於現價，多空對「週期見頂時點」分歧大。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>券商 2026 EPS 估 78.56–128.98（分歧大）、以 2027 年 17x 推目標 2,200（約等於現價）；評等偏中性偏多，上檔有限、估值分歧。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">NAND 週期反轉/EPS 自高峰回落、估值被動變貴</td><td>1,400 – 1,700</td><td class="down">約 −30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">超級循環續、2026 EPS 約 78–90</td><td>2,100 – 2,400</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">NAND 缺貨延續、EPS 達 128、目標達</td><td>2,700 – 2,880</td><td class="up">約 +25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI 儲存超級循環全面重估</td><td>3,200 +</td><td class="up">約 +44%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬對稱偏事件驅動、週期高峰龍頭</b> — NAND 超級循環與控制 IC 話語權為真，但近四季 EPS 104 為獲利高峰、本益比 21x 是強週期股的低本益比陷阱、券商目標 2,200 約等於現價、EPS 估分歧大；Base 持平、Bear 達累跌 30%。核心變數是「NAND 價格週期見頂時點」，而非帳面低本益比。屬記憶體超級循環龍頭、但處週期高峰的循環股，須留意見頂風險。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、EPS/淨值/PB/52週/營收）、理財周刊／CMoney／旺得富（NAND 缺貨、低價庫存、券商 EPS 78.56–128.98／目標 2200）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2308','台達電')">台達電 2308</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 電源／散熱</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">高成長</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">1,880</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">約2,730（+45%）</div><div class="t">外資目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">合理偏高/成長</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>全球電源管理與散熱龍頭，<b>AI 資料中心電源（HVDC）＋液冷散熱</b>核心供應商（供 NVIDIA GB200/Rubin 機櫃電源）。2026 Q1 EPS 7.91 改寫單季紀錄、資料中心佔比升至約 40%。±400V 今年量產、800V 2027 主貢獻。外資上修 2026-28 EPS 至 41.5/65.1/98.5、目標約 2,730。惟本益比 57.5x、股價位於 52週上緣，屬高成長但高估值的 AI 電源權值股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>核心為「<b>AI 資料中心電源＋散熱結構升級</b>」。台達為全球電源龍頭，AI 機櫃功率密度飆升帶動高壓直流（HVDC）電源與液冷散熱需求；2026 Q1 資料中心電源+散熱佔營收約 40%（創紀錄）、EPS 7.91 改寫單季紀錄。±400V HVDC 今年率先量產出貨、800V 架構 2026 下半年小量出貨、2027 進入主要貢獻期。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>近四季 EPS 27.12、2026 Q1 EPS 7.91（季增 18.6%）；外資上修 2026/2027/2028 EPS 至 41.5/65.1/98.5 元、以 2027 年 42 倍 PE 評價並上調目標價（約 2,730）。管理層看 AI 電源與散熱多年結構成長、800V 為下一波動能。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視台達為「AI 電源/散熱最大受惠權值股」；多方看 HVDC/液冷放量與 800V 2027 爆發，空方憂本益比 57.5x 偏高、股價已大漲（52週 393→2585）、AI 資本支出循環與匯率。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>台達的 AI 電源成長是「分階段放量」——±400V HVDC 是 2026 的現在進行式，而真正的爆發點 800V 架構要 2026 下半年才小量、2027 才進入主要貢獻期。故本益比 57.5x 對應外資 2026e EPS 41.5 的前瞻本益比約 45x，看似高，但外資是以「2027 年 EPS 65.1 × 42 倍」在評價目標（約 2,730、高於現價 45%）——市場買的是 2027-2028 的獲利（EPS 上看 98.5）。真正變數是 HVDC/800V 放量節奏與 AI 機櫃功率升級能否如外資樂觀兌現；股價已自 52週低 393 大漲至 1,880、位於上緣，若 AI 資本支出或 800V 時程遞延，高本益比缺乏支撐、回檔幅度大。屬高品質、但估值不便宜的 AI 電源成長股。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$4.9兆</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">27.12元</div><div class="t">近四季 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">7.91（創紀錄）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">41.5</div><div class="t">2026e EPS（外資）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">65.1</div><div class="t">2027e EPS（外資）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">57.5x</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">約 45x</div><div class="t">前瞻本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">約 40%（創高）</div><div class="t">資料中心佔比</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">台達電</td><td>2308</td><td>約4.9兆</td><td>前瞻~45x</td><td style="text-align:left">全球電源+散熱龍頭，AI HVDC/液冷核心，高成長高估值</td></tr>
+        <tr><td class="sym">光寶科</td><td>2301</td><td>≈3,000億</td><td>有獲利</td><td style="text-align:left">電源/雲端電源，AI 伺服器電源受惠</td></tr>
+        <tr><td class="sym">群電</td><td>6412</td><td>≈600億</td><td>有獲利</td><td style="text-align:left">電源供應器(PSU)，AI 伺服器電源</td></tr>
+        <tr><td class="sym">康舒</td><td>6282</td><td>≈300億</td><td>有獲利</td><td style="text-align:left">電源/工業，AI 電源布局</td></tr>
+        <tr><td class="sym">Vertiv</td><td>VRT(美)</td><td>≈$60B</td><td>有獲利</td><td style="text-align:left">資料中心電源/散熱(液冷)全球龍頭</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理偏高／成長（AI 電源結構成長支撐）。</b>本益比 57.5x、前瞻本益比約 45x（外資 2026e EPS 41.5）偏高；但外資是以 2027 年 EPS 65.1 × 42 倍評價目標（約 2,730、+45%），反映 800V 2027 放量與多年成長。以高品質 AI 電源龍頭而言估值偏高但非透支，端視 HVDC/800V 放量兌現；若成長如外資上修，現價仍有空間，惟容錯較低。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 電源/散熱核心權值股、法人偏多、外資上修；股價位於 52週上緣，波動來自 AI 資本支出與 800V 時程。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>外資上修 2026-28 EPS 至 41.5/65.1/98.5、以 2027 年 42x 評價、上調目標（約 2,730、+45%）；評等偏買進、共識偏多。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">AI 電源競爭/800V 遞延、估值修正</td><td>1,300 – 1,550</td><td class="down">約 −25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">±400V 放量、成長續、EPS 達 41+</td><td>1,800 – 2,100</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">800V 2027 放量、外資 EPS 兌現</td><td>2,400 – 2,730</td><td class="up">約 +40%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI 電源超級循環全面重估</td><td>2,900 +</td><td class="up">約 +54%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向但估值不便宜、AI 電源高成長</b> — 外資上修目標約 2,730（+45%）、前瞻本益比約 45x 有 HVDC/800V 多年成長支撐；Base 持平、Bull +40%。核心變數是「±400V/800V 放量節奏與 AI 機櫃功率升級兌現」，下檔為高估值與 AI 資本支出循環。屬高品質 AI 電源龍頭、但需成長兌現的成長股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、EPS、52週）、豐雲學堂／CMoney（法說會、HVDC/800V、外資 EPS 41.5/65.1/98.5、目標）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2454','聯發科')">聯發科 2454</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">IC 設計／AI ASIC</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">高成長</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">3,925</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">5,000（+27%）</div><div class="t">高盛目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">合理偏高/成長</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>全球<b>手機晶片王（天璣旗艦 SoC）＋AI ASIC</b> 新引擎的 IC 設計龍頭。1Q26 EPS 15.17、毛利率 46.3%。高盛看 AI ASIC 為關鍵成長：2026 營收目標 $2B、市場 2027 上看 $700-800B、聯發科拚 10-15% 市占；估 2026/27/28 EPS 63.29/132.18/406.51、目標價 <b>5,000（+27%）</b>。惟本益比 62.6x、股價位於 52週上緣，屬高成長但高估值的 IC 設計龍頭。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>核心為「<b>手機晶片王＋AI ASIC 新成長引擎</b>」。天璣（Dimensity）旗艦 SoC 站穩高階手機；AI ASIC（客製化 AI 晶片）與 NVIDIA 等合作切入資料中心，成為新成長主軸。1Q26 EPS 15.17、毛利率 46.3%、費用收斂撐住獲利。7/7 除息 24.5 元。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>高盛估 2026/2027/2028 EPS 63.29/132.18/406.51、目標價 5,000；AI ASIC 2026 營收目標 $2B、ASIC 市場 2027 上看 $700-800B、聯發科拚 10-15% 市占。天璣穩健、ASIC 為倍數成長來源。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視聯發科為「手機晶片龍頭轉型 AI ASIC」的重估標的；多方看 ASIC 倍數成長與客戶導入，空方憂本益比 62.6x 偏高、ASIC 兌現時程與手機需求週期、股價已大漲（52週 1130→4970）。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>聯發科的估值分成兩塊——手機晶片（天璣）是成熟穩定的現金流本業，而 AI ASIC 是市場正在重估的「選擇權（option）」。高盛目標 5,000 與 2028 EPS 406.51 的樂觀，幾乎全押在「AI ASIC 拿下 10-15% 市占、營收從 2026 的 $2B 倍數成長」——這是本益比 62.6x 的真正支撐，也是最大變數。若 ASIC 客戶導入與放量如高盛預期，前瞻本益比會隨 EPS 倍增快速下降（2027 EPS 132 → 前瞻~30x）、現價仍有空間；但 ASIC 競爭（博通/世芯/Marvell）激烈、兌現有時間差，若不如預期，62x 本益比缺乏支撐。真正變數是 ASIC 訂單能見度與市占，而非手機本業；股價已自 52週低 1130 大漲至 3,925、位於上緣，追高須看 ASIC 兌現節奏。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$6.3兆</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">約244元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">15.17（毛利46%）</div><div class="t">1Q26 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">63.29</div><div class="t">2026e EPS（高盛）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">132.18</div><div class="t">2027e EPS（高盛）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">62.6x</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">營收目標$2B</div><div class="t">AI ASIC 2026</div></div>
+      <div class="rpt-metric"><div class="v">1130 – 4970</div><div class="t">52週區間</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">聯發科</td><td>2454</td><td>約6.3兆</td><td>前瞻~62x</td><td style="text-align:left">手機晶片王(天璣)+AI ASIC新引擎，高成長高估值</td></tr>
+        <tr><td class="sym">高通</td><td>QCOM(美)</td><td>≈$180B</td><td>有獲利</td><td style="text-align:left">手機晶片/車用/AIoT，估值較低</td></tr>
+        <tr><td class="sym">博通</td><td>AVGO(美)</td><td>≈$1.5兆</td><td>高本益</td><td style="text-align:left">客製 AI ASIC 龍頭，主要競爭者</td></tr>
+        <tr><td class="sym">聯詠</td><td>3034</td><td>≈2,000億</td><td>有獲利</td><td style="text-align:left">顯示驅動/SoC IC 設計</td></tr>
+        <tr><td class="sym">瑞昱</td><td>2379</td><td>≈3,000億</td><td>有獲利</td><td style="text-align:left">網通/乙太網路 IC，AI 網通受惠</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理偏高／成長（手機本業＋AI ASIC 選擇權）。</b>本益比 62.6x、股價淨值比約 16x 偏高；但高盛以 AI ASIC 倍數成長評價（2027 EPS 132.18、2028 EPS 406.51、目標 5,000、+27%）。若 ASIC 放量兌現，前瞻本益比將隨 EPS 倍增快速下降，現價尚有空間；若 ASIC 不如預期，估值缺乏支撐。屬手機龍頭現金流＋AI ASIC 成長選擇權的組合，估值偏高但有題材支撐、需 ASIC 兌現。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI ASIC 重估題材偏多、外資與高盛看好；股價位於 52週上緣，波動來自 ASIC 進度與手機週期。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>高盛目標 5,000（+27%）、2026-28 EPS 63/132/406；整體偏買進，AI ASIC 為共識成長主軸，惟估值偏高。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">手機淡/ASIC 不如預期、估值修正</td><td>3,000 – 3,400</td><td class="down">約 −18%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">天璣穩、ASIC 起步、EPS 達 63+</td><td>3,800 – 4,300</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">AI ASIC 放量、達高盛 EPS/目標</td><td>4,700 – 5,000</td><td class="up">約 +22%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">ASIC 市占 10-15% 全面重估</td><td>5,500 +</td><td class="up">約 +40%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向但估值不便宜、AI ASIC 重估</b> — 高盛目標 5,000（+27%）、以 ASIC 倍數成長評價；手機本業提供現金流、ASIC 為成長選擇權。Base 持平、Bull +22%。核心變數是「AI ASIC 客戶導入與市占兌現（拚 10-15%）」，下檔為高估值與手機週期。屬 IC 設計龍頭、但估值偏高需 ASIC 兌現的成長股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、EPS/淨值/52週）、豐雲學堂／Yahoo（法說會、AI ASIC、高盛 EPS 63/132/406、目標 5,000）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','3515','華擎')">華擎科技 3515</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 伺服器轉型</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">低本益比·高殖利</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">217</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">19.59（+28%）</div><div class="t">2026e EPS</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">便宜/成長</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>ASRock，已由主機板廠成功<b>轉型為「AI 伺服器為核心」</b>——伺服器營收佔比由 2021 Q1 約 15% 爆升至 2026 Q1 約 67%。2026 Q1 營收年增 28%、淨利年增 53%、EPS 4.14；2026 EPS 估 19.59（+28%、歷史次高）。與多數高本益比 AI 股不同：<b>本益比僅 13.7x（同業平均約 36x）、殖利率約 4.9%</b>、股價近 52週低（距高點 360 約 −40%），屬低估值的 AI 伺服器成長股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>核心為「<b>AI 伺服器＋工業電腦雙動能、主機板轉型伺服器</b>」。華擎伺服器營收佔比由 2021 Q1 約 15% 升至 2026 Q1 約 67%，主機板由逾 55% 萎縮至約 13%；AI 伺服器（GPU 平台/準系統）與工業電腦（IPC）帶動獲利。2026 Q1 營收年增 28% 至 133.67 億、淨利年增 53% 至 8.52 億、EPS 4.14，獲利拚歷史次高。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>2025 全年 EPS 15.28；2026 EPS 估成長 28.2% 至 19.59（歷史次高）。7/1 除息、配現金股利 11 元、近五年平均 10.44、平均殖利率 4.93%。伺服器與工業電腦為主要成長，主機板為穩定基本盤。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視華擎為「AI 伺服器轉型＋低估值＋高殖利率」標的；本益比僅 13.7x（同業平均約 36x）、股價自高點 360 回檔約 40% 至近 52週低。多方看伺服器放量與低估值，空方憂伺服器代工毛利、競爭與獲利品質。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>與多數本益比動輒 40-90x 的 AI 股相反，華擎是少數「本益比僅 13.7x（遠低於同業平均約 36x）、殖利率約 4.9%、且股價近 52週低」的 AI 伺服器成長股。市場似乎還把它當「主機板廠」評價，但事實上伺服器已佔營收約 67%、獲利年增 53%、2026 EPS 估年增 28% 至 19.59——以 2026e EPS 計前瞻本益比僅約 11x。真正的重估關鍵是「市場認知從主機板廠轉為 AI 伺服器廠」：若伺服器放量持續、獲利兌現，估值有從 13x 向同業（30x+）靠攏的重評空間；風險在於伺服器代工毛利偏低、競爭激烈與獲利品質，但低估值＋高殖利率提供相對下檔保護。屬低估值、被低估認知的 AI 伺服器成長股。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$268億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">15.28元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">4.14（年增53%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">19.59（+28%）</div><div class="t">2026e EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">13.7x（同業~36x）</div><div class="t">本益比</div></div>
+      <div class="rpt-metric"><div class="v">約66元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">約 4.9%</div><div class="t">殖利率</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">約67%（2026Q1）</div><div class="t">伺服器佔比</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">華擎</td><td>3515</td><td>約268億</td><td>PE 13.7x</td><td style="text-align:left">主機板轉AI伺服器(佔67%)，低本益比、高殖利率、股價近52週低</td></tr>
+        <tr><td class="sym">技嘉</td><td>2376</td><td>≈3,000億</td><td>有獲利</td><td style="text-align:left">主機板+AI伺服器(GPU準系統)，AI 伺服器大廠</td></tr>
+        <tr><td class="sym">微星</td><td>2377</td><td>≈1,500億</td><td>有獲利</td><td style="text-align:left">主機板/顯卡+AI伺服器</td></tr>
+        <tr><td class="sym">華碩</td><td>2357</td><td>≈5,000億</td><td>有獲利</td><td style="text-align:left">品牌PC+AI伺服器，通路廣</td></tr>
+        <tr><td class="sym">緯穎</td><td>6669</td><td>≈6,000億</td><td>高本益</td><td style="text-align:left">AI伺服器ODM龍頭(超大型客戶)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：便宜／成長（低本益比、認知重估空間）。</b>本益比僅 13.7x（以 2026e EPS 19.59 計前瞻約 11x），遠低於 AI 伺服器/主機板同業平均約 36x；殖利率約 4.9%。市場仍以「主機板廠」折價評價，但伺服器已佔營收約 67%、獲利高速成長。以同業合理倍數（20-30x）×2026e EPS 推估，合理價明顯高於現價——若「市場認知轉為 AI 伺服器廠」且獲利兌現，估值有向同業靠攏的重評空間。屬低估值成長股，惟需留意伺服器代工毛利與獲利品質。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 伺服器轉型＋低估值題材，但股價自高點回檔約 40% 至近 52週低、情緒中性偏弱；低本益比與高殖利率提供支撐。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>本篇未見明確券商目標價共識；2026 EPS 估 19.59（+28%）、獲利創歷史次高，市場關注伺服器放量與估值重評。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">伺服器競爭/毛利壓、成長不如預期</td><td>175 – 195</td><td class="down">約 −14%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">伺服器成長、EPS 達 19.6、殖利率支撐</td><td>210 – 250</td><td class="up">約 +6%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">AI 伺服器放量、本益比向同業重估</td><td>280 – 330</td><td class="up">約 +40%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">認知轉 AI 伺服器廠、重返高點 360</td><td>360 +</td><td class="up">約 +66%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向、低估值 AI 伺服器成長股</b> — 本益比僅 13.7x（前瞻~11x、同業~36x）、殖利率約 4.9%、股價近 52週低，伺服器已佔營收約 67%、2026 EPS 估 +28%；Base +6%、Bull +40%。上檔關鍵是「市場認知從主機板廠重估為 AI 伺服器廠、估值向同業靠攏」，下檔有低估值與高殖利率保護。屬被低估認知的 AI 伺服器成長股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資／財報狗（即時報價、EPS/淨值/PB/52週/股利）、CMoney（伺服器佔比、獲利、2026 EPS 19.59）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-10">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('us','PLTR','Palantir')">Palantir PLTR</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 數據分析軟體</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">高成長高估值</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/10</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">$126.79</div><div class="t">現價 (USD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">$183（+44%）</div><div class="t">共識目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">偏昂貴/高成長</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>AI 數據分析軟體平台——政府（Gotham）＋商業（Foundry）＋<b>AI 應用平台 AIP（AI orchestration）</b>。超高速成長：2025 營收 +56%、獲利 +252%；TTM 營收 +68%、淨利 +300%。分析師買進（32 家）、共識目標 <b>$183（+44%）</b>。惟本益比 142x、前瞻本益比 <b>79.8x</b> 極高、beta 1.56，股價已自 52週高 $207.5 <b>回檔約 39%</b>（YTD −25%），屬高成長但高估值的 AI 軟體股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>核心為「<b>AI orchestration 平台（AIP）＋政府/商業雙引擎放量</b>」。政府端 Gotham（國防/情報）穩固、商業端 Foundry 與 AIP 加速滲透美國企業；近期擴張含墨西哥 GNP Seguros（保險 AI）、與 Rackspace 合作（regulated/sovereign AI 生產化）、SNP SE 夥伴、NVDA 合作。Citi 列 2026 軟體首選之一、DA Davidson 升評買進。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>2025 營收 $4.48B（+56%）、淨利 $1.63B（+252%）；TTM 營收 $5.22B（+68%）、淨利 $2.28B（+300%）、EPS 0.89。管理層看今年現金流倍增、AIP 帶動美國商業高速成長。下次財報 8/3。分析師買進（32 家）、共識目標 $183.12（+44%）。CEO Karp 對「AI 依用量計價（token）」模式提出質疑。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視 Palantir 為「AI 軟體/orchestration 稀缺標的」；多方看 AIP 商業放量與獨特 AI 護城河，空方憂本益比 142x/前瞻 80x 極高、估值透支、政治爭議（倫敦警政合約、FT 質疑）。股價 2026 自高點大幅回檔、波動劇烈。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>Palantir 同時是「基本面最強」與「估值最貴」的 AI 軟體股——營收 +68%、獲利 +300%、Rule of 40 遠超標準，這是真成長；但前瞻本益比仍達 79.8x（本益比 142x），即使獲利再高速成長，估值仍將絕大部分未來成長提前定價。關鍵在於股價已自 52週高 $207.5 回檔約 39%（YTD −25%），反而讓 32 位分析師共識目標 $183（+44%）高於現價——多空分歧在於「AIP 商業放量能否讓前瞻本益比在成長中快速下降、消化極高估值」。真正變數是美國商業 AIP 滲透速度與續約擴張，而非政府基本盤；beta 1.56、政治爭議與 AI 資本支出雜訊會放大波動，屬高成長、但估值容錯低、事件驅動的 AI 軟體股。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">$303.96B</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">$5.22B（+68%）</div><div class="t">營收 (TTM)</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">$4.48B（+56%）</div><div class="t">2025 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">$2.28B（+300%）</div><div class="t">淨利 (TTM)</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">142.53x</div><div class="t">本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">79.8x</div><div class="t">前瞻本益比</div></div>
+      <div class="rpt-metric"><div class="v">$106.37–$207.52</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">約 39%</div><div class="t">自52週高回檔</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">Palantir</td><td>PLTR</td><td>$304B</td><td>前瞻80x</td><td style="text-align:left">AI orchestration(AIP)+政府/商業，成長最強、估值最貴</td></tr>
+        <tr><td class="sym">Snowflake</td><td>SNOW</td><td>≈$70B</td><td>高本益</td><td style="text-align:left">資料雲/AI 數據平台</td></tr>
+        <tr><td class="sym">CrowdStrike</td><td>CRWD</td><td>≈$110B</td><td>高本益</td><td style="text-align:left">AI 資安平台(Falcon)</td></tr>
+        <tr><td class="sym">Datadog</td><td>DDOG</td><td>≈$50B</td><td>高本益</td><td style="text-align:left">可觀測性/監控 SaaS</td></tr>
+        <tr><td class="sym">ServiceNow</td><td>NOW</td><td>≈$200B</td><td>有獲利</td><td style="text-align:left">企業工作流/AI 平台，獲利穩</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴（高成長、估值透支風險）。</b>本益比 142x、前瞻本益比 79.8x 遠高於同業與軟體歷史中樞；即使營收 +68%、獲利 +300% 為真成長，估值已把數年高速成長提前定價。以高成長軟體 EV/Sales 與 PEG 框架，PLTR 仍屬最貴之一。惟股價已自高點回檔約 39%、32 位分析師共識目標 $183（+44%）高於現價——反映市場對「AIP 商業放量續強」的信心。合理與否取決於前瞻本益比能否在成長中快速下降；容錯低、波動大。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 軟體稀缺題材偏多、但估值極高且政治爭議；股價 2026 自高點 −39%、YTD −25%、beta 1.56，波動劇烈，多空對估值分歧大。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>買進（32 家）；共識目標 $183.12（+44%）；近期 DA Davidson、Citi 等偏多，惟部分憂估值。整體偏多但估值偏貴。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (USD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">AI 支出放緩/成長減速/估值修正</td><td>$85 – $105</td><td class="down">約 −25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">成長續強、AIP 放量、維持高估值</td><td>$120 – $150</td><td class="up">約 +8%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">商業放量+主權 AI、達共識目標</td><td>$175 – $200</td><td class="up">約 +45%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI orchestration 龍頭重估、重返高點</td><td>$210 +</td><td class="up">約 +66%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬對稱偏事件驅動、高成長高估值</b> — 基本面最強（營收 +68%、獲利 +300%）但估值最貴（前瞻本益比 80x）；股價已自高點回檔約 39%，32 位分析師共識目標 $183（+44%）高於現價。Base +8%、Bull +45%、Bear 達累跌 25%。上檔須「美國商業 AIP 放量讓前瞻本益比在成長中快速下降」兌現，屬高波動、估值容錯低的 AI 軟體成長股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：StockAnalysis.com／Yahoo Finance（即時報價、市值、52週、財報）、TipRanks／Barrons／Reuters（目標價、評等、合約新聞）、公司財報（截至 2026/07/10）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','3089','億杰')">億杰科技 3089</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">電子零組件</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">本業虧損·獲利靠業外</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈81</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">9.52（PB≈8.5x）</div><div class="t">每股淨值</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">不適用/投機</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>小型電子零組件公司（EJECTT），業務含電解電容零件、太陽能工程、航太設備。<b>關鍵風險：本業毛利率 −40.75%（本業虧損）</b>，當季 EPS 1.13 幾乎全來自業外收益（淨利率 2689%、營益率 563% 即反映獲利非本業）。股價約 81、每股淨值僅 9.52（PB≈8.5x）、52週僅 79-84.5（極窄、流動性低）、外資僅 0.73%、無券商覆蓋，屬<b>高風險、獲利不透明的投機小型股</b>。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>億杰科技（EJECTT）為小型電子零組件公司，主要經營電解電容器零件與材料之製造加工買賣、太陽能工程、航太設備組裝與銷售。資本額 6.51 億、已發行 6,511 萬股，屬上櫃小型股。近期無明確重大催化題材見於公開報導；成交與波動極小（52週僅 79-84.5）。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>當季 EPS 1.13、每股淨值 9.52、年股利 0.30（殖利率極低）；但毛利率 −40.75%（本業於毛利階段即虧損）、營益率 563%、淨利率 2689% —— 此組合代表「獲利幾乎全來自業外（投資/處分/其他收益）而非本業」，本業（電容/太陽能/航太）實質虧損。獲利品質與可持續性存疑。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>外資持股僅 0.73%、股東 8991 人、前十大持股 20.24%，法人與券商幾無覆蓋；市場關注度低、資訊揭露有限。太陽能與航太或為潛在題材，但公開資料難以評估其實質貢獻。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>億杰最需要留意的不是題材，而是「獲利結構」——毛利率 −40.75% 意味本業（電解電容、太陽能工程、航太）在最基本的毛利階段就虧損，而帳面 EPS 1.13 與淨利率 2689% 幾乎全靠業外收益（投資、處分或其他一次性/非經常項目）撐起。這種獲利不具可持續性：一旦業外收益消失，帳面就會回到本業虧損。加上股價 81 對每股淨值 9.52 的 PB 高達約 8.5x（對一家本業虧損公司而言極貴）、52週區間僅 79-84.5（極窄，反映流動性低、籌碼集中）、外資僅 0.73%、無券商覆蓋，屬資訊不透明、流動性低的高風險投機小型股。任何評價都應以「可承受全損的極小部位」為前提，並優先查閱公司財報釐清業外收益來源。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$52.7億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">9.52元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">≈8.5x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">1.13元（業外）</div><div class="t">當季 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">−40.75%（本業虧）</div><div class="t">毛利率</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">2689%（業外）</div><div class="t">淨利率</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">79 – 84.5（極窄）</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v">0.30元 / 極低</div><div class="t">年股利/殖利率</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">億杰</td><td>3089</td><td>約52.7億</td><td>PB≈8.5x</td><td style="text-align:left">電容/太陽能/航太，本業毛利為負、獲利靠業外、流動性低</td></tr>
+        <tr><td class="sym">立隆電</td><td>2472</td><td>≈300億</td><td>有獲利</td><td style="text-align:left">鋁質電解電容龍頭，本業獲利穩</td></tr>
+        <tr><td class="sym">智寶</td><td>2375</td><td>≈80億</td><td>有獲利</td><td style="text-align:left">電解電容，本業經營</td></tr>
+        <tr><td class="sym">凱美</td><td>5317</td><td>≈60億</td><td>有獲利</td><td style="text-align:left">電解電容/被動元件</td></tr>
+        <tr><td class="sym">金山電</td><td>8042</td><td>≈50億</td><td>週期</td><td style="text-align:left">電容/電子零件</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。億杰本業佔比小、可比性有限。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：不適用／投機（本業虧損、獲利靠業外）。</b>傳統本益比參考性極低——EPS 幾乎全來自業外收益、非本業經常性獲利；本業毛利率 −40.75%。改以 P/B 看，現價 81 對每股淨值 9.52 的 P/B 約 8.5x，對一家本業於毛利階段即虧損的小型公司而言明顯偏貴、缺乏基本面支撐。合理價難以本業獲利推估，端視業外收益能否持續（不確定性高）。屬估值與獲利品質皆存疑的投機標的。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>低關注、低流動性（52週僅 79-84.5）、籌碼集中（前十大 20.24%、外資 0.73%）；缺乏法人與券商追蹤，波動與資訊揭露皆有限。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>無券商覆蓋、無明確目標價共識；評價須自行查閱公司財報（尤其業外收益與資產負債表），公開資訊參考性有限。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">業外收益消失/本業續虧、評價向淨值靠攏</td><td>40 – 60</td><td class="down">約 −38%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">維持現狀、業外挹注、窄幅整理</td><td>76 – 85</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">太陽能/航太題材發酵、本業改善</td><td>90 – 105</td><td class="up">約 +20%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">題材大幅重估（投機）</td><td>120 +</td><td class="up">約 +48%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏空／獲利品質存疑、投機小型股</b> — 本業毛利率 −40.75% 為負、帳面 EPS 幾乎全靠業外（不可持續）、PB≈8.5x 對本業虧損公司偏貴、52週區間極窄（流動性低）、無券商覆蓋。下檔為業外消失後向淨值靠攏（可達累跌 38%），上檔須題材投機驅動。不宜作為核心持股，任何參與都應以可承受全損的極小部位、並先查閱財報釐清業外來源為前提。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網 cnyes.com/twstock/3089（簡介、財務指標、52週）、Goodinfo／財報狗／公開資訊觀測站（MOPS）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2327','國巨')">國巨 2327</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">被動元件/MLCC 龍頭</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">估值偏高</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">900</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">≈81（PB 11.1x）</div><div class="t">每股淨值</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">偏昂貴</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>全球<b>被動元件（MLCC/晶片電阻）龍頭</b>，透過併購 KEMET、普思、施耐德感測壯大。AI 伺服器/車用帶動需求——5 月營收 150.6 億（年增 47.5%）。惟本益比 <b>71x</b>、股價淨值比 <b>11.1x</b>（河流圖雙紅「昂貴」）、2026 Q1 EPS 3.9 <b>年減 64%</b>（高基期），市值約 1.86 兆，屬營收強但<b>估值偏高、獲利波動</b>的權值股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>核心為「<b>AI/車用被動元件需求＋併購綜效</b>」。國巨為全球被動元件龍頭，AI 伺服器、資料中心、電動車與工業帶動 MLCC、電阻需求，5 月營收 150.58 億（月增 7.3%、年增 47.5%）、5 月累計 672.63 億（年增 27.4%）；持續透過併購（KEMET、普思 Pulse、施耐德感測等）擴大高階/工規/車規版圖。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2025 全年 EPS 11.51、營收 1329.3 億；2026 Q1 EPS 3.9（季增 19%、年減 64%，去年同期高基期）；除息 6/12 配現金股利 5.998、近五年平均現金股利 15.23。營收動能強但單季獲利受高基期與併購費用影響波動。市值約 1.86 兆、已發行 20.71 億股。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視國巨為 AI/車用被動元件龍頭與併購成長股；四燈號基本面/籌碼/技術偏強，但估值面本益比與股價淨值比河流圖皆處「紅色（昂貴）」區。多方看 AI/車用放量與併購綜效，空方憂 PE 71x/PB 11x 偏高、單季 EPS 波動與被動元件景氣循環。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>國巨的「營收強」與「估值貴」並存——5 月營收年增 47.5% 亮眼，但 2026 Q1 EPS 卻年減 64%（去年高基期＋併購攤銷/費用），顯示營收成長未等比反映到每股盈餘。以本益比 71x、股價淨值比 11.1x（遠高於被動元件歷史中樞、河流圖雙紅）看，股價已計入 AI/車用被動元件「量價齊揚＋併購綜效全面兌現」的樂觀情境。真正變數是高階/車規產品組合與併購效益能否讓獲利（而非只是營收）持續放量、消化高基期；被動元件本質具景氣循環，若需求或價格回軟，71 倍本益比與 11 倍 P/B 缺乏支撐、回檔幅度可觀。市值近 1.86 兆的權值股，追高須留意估值透支風險。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$1.86兆</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">1,329億</div><div class="t">2025 營收</div></div>
+      <div class="rpt-metric"><div class="v">11.51元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">3.9（年減64%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">71x</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">11.1x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v">≈81元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">150.6億（年增47%）</div><div class="t">5月營收</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">國巨</td><td>2327</td><td>約1.86兆</td><td>PE 71x</td><td style="text-align:left">被動元件全球龍頭，併購壯大、營收強但估值偏高、EPS波動</td></tr>
+        <tr><td class="sym">華新科</td><td>2492</td><td>≈1,500億</td><td>有獲利</td><td style="text-align:left">MLCC/電阻，國內被動元件第二大</td></tr>
+        <tr><td class="sym">禾伸堂</td><td>3026</td><td>≈300億</td><td>有獲利</td><td style="text-align:left">高階MLCC/連接器，工規車規</td></tr>
+        <tr><td class="sym">奇力新</td><td>2456</td><td>≈500億</td><td>有獲利</td><td style="text-align:left">電感/被動元件（國巨集團）</td></tr>
+        <tr><td class="sym">村田 Murata</td><td>日</td><td>巨型</td><td>有獲利</td><td style="text-align:left">全球MLCC龍頭，高階車規/高頻</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴（營收強、估值透支風險）。</b>本益比 71x、股價淨值比 11.1x 遠高於被動元件歷史中樞（PE 常態約 12–20x），河流圖雙紅「昂貴」；2026 Q1 EPS 年減 64%（高基期）。以正常化被動元件週期獲利與合理倍數推估，合理價明顯低於現價——股價已計入 AI/車用量價齊揚與併購綜效的樂觀。屬營收成長為真、但估值領先獲利的權值成長股，容錯低、需獲利（非僅營收）持續放量兌現。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI/車用被動元件題材偏多、權值股籌碼強；但估值面雙紅（昂貴），單季 EPS 波動，追高與景氣循環風險。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>市場對國巨營收成長正向，惟無高於現價且可靠的一致目標價共識；估值面（PE 71x/PB 11x）已處歷史高位，屬偏多但估值偏高。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">被動元件景氣/價格回軟、EPS 高基期、估值修正</td><td>650 – 780</td><td class="down">約 −20%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">AI/車用營收成長、EPS 穩健</td><td>850 – 1,000</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">高階/車規放量＋併購綜效、EPS 跳增</td><td>1,050 – 1,200</td><td class="up">約 +25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI 被動元件超級循環全面重估</td><td>1,300 +</td><td class="up">約 +44%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏空／估值領先</b> — 營收成長為真（5 月 +47%），但本益比 71x、股價淨值比 11.1x 偏高、2026 Q1 EPS 年減 64%，估值已透支；Base 持平、Bear 達累跌 20%。上檔須「高階/車規與併購綜效讓獲利（非僅營收）持續放量」兌現，被動元件具景氣循環、追高容錯低。屬龍頭但估值不便宜的權值成長股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、EPS/淨值/PB/營收/股利）、財報狗（本益比/EPS）。52週為概估（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','8069','元太')">元太科技 8069</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">電子紙龍頭</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">估值偏低/成長</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">200.5</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">230–245（+15~22%）</div><div class="t">Factset目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">合理偏低/成長</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>全球<b>電子紙（E Ink）顯示器龍頭、寡占</b>。受惠產品結構升級——Q2 毛利率達 <b>55.8%</b>（近年高，來自高毛利彩色電子紙）、2026 Q1 EPS 2.41（年增 26%）。Amazon 布局新一代彩色電子閱讀器、零售數位轉型帶動電子貨架標籤（ESL）。本益比 <b>20.8x</b>、股價淨值比 3.6x（河流圖皆「偏低」）、Factset 估 2026 EPS 11.55–12.25、目標 230–245，屬<b>估值偏低的寡占成長股</b>。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>核心為「<b>電子紙結構成長＋產品升級</b>」。元太為全球電子紙顯示器龍頭（寡占），應用涵蓋電子書閱讀器、電子貨架標籤（ESL）、電子看板、物流標籤等。零售業數位轉型加速帶動 ESL 銷售；Amazon 積極布局新一代彩色電子閱讀器，帶動高毛利彩色電子紙（Kaleido/Gallery）出貨。Q2 毛利率達 55.8%、創近年高點。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>2025 全年 EPS 9.14；2026 Q1 EPS 2.41（季增 148%、年增 26%）；6 月營收 40.41 億（月增 23.2%）、上半年累計 188.5 億（年增 0.9%）。Factset 多家外資上修 2026 EPS 至 11.55–12.25、目標價 230–245。除息 7/20 配現金股利 5.888、近五年平均 6.05。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視元太為「電子紙寡占＋彩色升級＋ESL 放量」的結構成長股；本益比與股價淨值比河流圖皆處「藍色（偏低）」區。多方看彩色電子紙與 ESL 滲透率提升，空方憂上半年營收年增僅個位數、消費性需求與新應用放量節奏。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>相較多數 AI 題材股本益比動輒 40–90x，元太是少數「本益比與股價淨值比河流圖同時處於偏低（藍色）區、且 Factset 目標（230–245）高於現價（+15~22%）」的寡占成長股。真正被低估的是「產品組合升級的獲利槓桿」——Q2 毛利率 55.8% 創高、彩色電子紙（高單價高毛利）出貨提升，讓 2026 EPS 上看 11.55–12.25（較 2025 的 9.14 成長）、前瞻本益比降至約 16–17x。變數是上半年營收年增僅約 0.9%、消費性電子書需求平淡，成長主要靠 ESL 與彩色升級；若 ESL 滲透與彩色放量如期，估值有重評空間，屬結構成長中的合理偏低標的。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">NT$2,314億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">55.81元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">3.6x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v">9.14元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">2.41（季增148%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">11.55–12.25</div><div class="t">2026e EPS（Factset）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">55.8%（創高）</div><div class="t">Q2 毛利率</div></div>
+      <div class="rpt-metric"><div class="v">135 – 286</div><div class="t">52週區間</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">元太</td><td>8069</td><td>2,314億</td><td>前瞻~16x</td><td style="text-align:left">全球電子紙寡占龍頭，彩色/ESL成長、估值偏低、目標高於現價</td></tr>
+        <tr><td class="sym">達運</td><td>6120</td><td>≈100億</td><td>週期</td><td style="text-align:left">背光模組/顯示，元太集團關聯</td></tr>
+        <tr><td class="sym">振曜</td><td>6143</td><td>≈150億</td><td>有獲利</td><td style="text-align:left">電子紙模組（下游），ESL/閱讀器</td></tr>
+        <tr><td class="sym">凌巨</td><td>8105</td><td>≈80億</td><td>週期</td><td style="text-align:left">中小尺寸面板</td></tr>
+        <tr><td class="sym">Amazon</td><td>美</td><td>巨型</td><td>有獲利</td><td style="text-align:left">彩色電子閱讀器客戶（需求端）</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理偏低／成長（寡占、獲利槓桿）。</b>本益比 20.8x、股價淨值比 3.6x，河流圖皆處「偏低（藍色）」區；以 Factset 2026 EPS 11.55–12.25 計前瞻本益比約 16–17x，對一個電子紙寡占、毛利率創高（55.8%）、有 ESL 與彩色升級結構成長的龍頭而言不貴。Factset 目標 230–245（+15~22%）高於現價。屬結構成長中估值偏低的標的，重評關鍵在彩色與 ESL 放量。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>電子紙寡占＋彩色升級題材穩健、估值偏低；股價位於 52週中段，情緒中性偏多，波動小於高本益比題材股。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>Factset 多家外資上修 2026 EPS 至 11.55–12.25、目標 230–245（+15~22%）；共識正向、估值偏低。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">消費性需求弱/ESL 放量遞延、成長不如預期</td><td>165 – 185</td><td class="down">約 −12%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">彩色/ESL 穩健成長、2026 EPS 約 11.5</td><td>200 – 230</td><td class="up">約 +7%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">彩色電子紙+ESL 放量、EPS 達 12+</td><td>245 – 275</td><td class="up">約 +30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">電子紙新應用全面滲透、估值重評</td><td>300 +</td><td class="up">約 +50%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向、估值偏低的寡占成長股</b> — 本益比 20.8x（前瞻~16x）、河流圖偏低、Factset 目標（230–245）高於現價（+15~22%），毛利率創高、彩色/ESL 結構成長；Base +7%、Bull +30%。下檔為消費性需求平淡與放量節奏，但估值偏低提供相對支撐。屬有寡占護城河、估值不貴的成長股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、EPS/淨值/PB/營收/股利）、FactSet（2026 EPS 11.55–12.25／目標 230–245）、公司法說（毛利率、彩色/ESL）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','5347','世界先進')">世界先進 5347</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">成熟製程晶圓代工</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">VSMC/GaN 成長</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">176.5</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">196（+11%）</div><div class="t">券商目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">合理偏高/成長</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>台積電集團<b>成熟製程晶圓代工</b>廠（8吋+12吋，電源管理/類比/顯示驅動）。搭上「成熟製程復甦＋AI 電源需求＋新加坡 VSMC 12吋新廠」——2025 營收 485.9 億（歷史次高）、EPS 4.3、配息 4.5；2026 Q1 EPS 1.18（季增 27%）、下半年稼動率估 85-90%。券商估 2026 EPS 6.26、目標 196。惟本益比 42x、PB 6.32x 偏高、2026-27 折舊費用高壓抑短期獲利，屬成長題材與高估值並存。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>核心為「<b>成熟製程復甦＋AI 電源管理＋VSMC 新廠</b>」。8 吋產能結構性收縮、AI 伺服器推升電源管理(PMIC)需求，訂單能見度回升至 4 個月、下半年稼動率估 85-90%。與 NXP 合資新加坡 VSMC 12 吋廠(130-40nm，高速運算/車用/高階電源)2027 Q1 量產、4.47 萬片產能全數售罄(LTA 長約)、已討論第二階段擴產。GaN on Si 已量產打入資料中心、GaN on QST(650-1200V)量產、SiC 2026 試產。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>2025 營收 485.9 億(年增 10.3%)、EPS 4.3；2026 Q1 EPS 1.18(季增 27%)、Q2 晶圓出貨量季增雙位數、毛利率上看 33%。管理層估 2026 成長優於業界(mid-teens)。券商估 2026 EPS 6.26、目標價 196、2026 營收約 577 億。2026 資本支出 600-700 億(85% 用於 VSMC)。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視世界先進為「台積電集團成熟製程復甦＋GaN/SiC 化合物＋VSMC 擴產」受惠股；多方看 AI 電源與 VSMC 放量，空方憂本益比 42x/PB 6.3x 偏高、折舊費用高壓抑短期獲利、成熟製程中國擴產競爭。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>世界先進是「成熟製程復甦」與「長線結構成長(VSMC 12吋+GaN/SiC)」的組合，但兩者時間錯位——復甦(稼動率回升、AI 電源)是 2026 的現在進行式，而 VSMC 新廠 2027 才量產、且 2026-27 建廠折舊與費用高(資本支出 600-700 億、85% 投 VSMC)，會壓抑近期每股盈餘與自由現金流。故 TTM 本益比 42x 對應 2026e EPS 6.26 的前瞻本益比約 28x，看似合理，但「折舊高峰＋成熟製程價格競爭」是雙面刃。真正變數是 AI 電源與 VSMC 售罄產能能否讓 2027 起獲利放量、消化折舊；PB 6.32x 已反映相當的成長預期，若復甦或 VSMC 放量遞延，高估值缺乏支撐。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">NT$3,317億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">27.89元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">6.32x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v">4.3元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">1.18（季增27%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">6.26</div><div class="t">2026e EPS（券商）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">42x</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v">87.6 – 223</div><div class="t">52週區間</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">世界先進</td><td>5347</td><td>3,317億</td><td>前瞻~28x</td><td style="text-align:left">台積集團成熟製程+VSMC 12吋+GaN/SiC，復甦成長、估值偏高</td></tr>
+        <tr><td class="sym">聯電</td><td>2303</td><td>≈6,000億</td><td>有獲利</td><td style="text-align:left">成熟製程晶圓代工龍頭(28/22nm)，殖利率相對高</td></tr>
+        <tr><td class="sym">力積電</td><td>6770</td><td>≈1,500億</td><td>週期</td><td style="text-align:left">成熟製程+記憶體代工，稼動率敏感</td></tr>
+        <tr><td class="sym">漢磊</td><td>3707</td><td>≈300億</td><td>高本益</td><td style="text-align:left">GaN/SiC 化合物半導體代工，功率元件</td></tr>
+        <tr><td class="sym">台積電</td><td>2330</td><td>巨型</td><td>有獲利</td><td style="text-align:left">先進+成熟製程龍頭，世界先進母集團(持股約28%)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理偏高／成長（復甦+VSMC 支撐、但折舊壓抑）。</b>TTM 本益比 42x、PB 6.32x 偏高；以 2026e EPS 6.26 計前瞻本益比約 28x，對成熟製程復甦+化合物+VSMC 成長股尚屬合理偏高，券商目標 196(+11%)。惟 2026-27 折舊高峰壓抑獲利、成熟製程有中國擴產競爭。合理與否取決於 AI 電源與 VSMC 放量能否消化折舊、2027 起獲利放量；屬有集團加持與結構題材、但估值不便宜的成長股。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>台積集團成熟製程復甦＋VSMC/GaN 題材偏多；股價自 52週高 223 回落約 21%，情緒中性偏多，波動來自稼動率與折舊。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>券商估 2026 EPS 6.26、目標 196(+11%)、2026 營收約 577 億；成熟製程復甦與 VSMC 獲法人正向看待，共識偏多但估值偏高。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">成熟製程競爭/折舊壓抑/稼動率不如預期</td><td>130 – 150</td><td class="down">約 −18%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">復甦續、稼動率回升、2026 EPS 約 6</td><td>170 – 200</td><td class="up">約 +8%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">AI 電源+VSMC 放量、EPS 達 6.26+</td><td>210 – 240</td><td class="up">約 +25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">VSMC 二期+GaN/SiC 全面重估</td><td>260 +</td><td class="up">約 +47%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向但估值不便宜、復甦+結構成長</b> — 券商目標 196 略高於現價(+11%)、前瞻本益比約 28x 有成熟製程復甦與 VSMC/GaN 成長支撐，台積集團加持；Base +8%、Bull +25%。核心變數是「AI 電源與 VSMC 售罄產能放量能否消化 2026-27 折舊高峰」，下檔為估值偏高(PB 6.3x)與成熟製程競爭。屬有基本面與長線題材、但需耐心的成長股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、EPS/淨值/PB/52週/股利）、豐雲學堂／CMoney／vocus（法說會、VSMC、EPS 6.26／目標 196）、公司新聞稿（VSMC/NXP）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','3653','健策')">健策精密 3653</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 均熱片/導線架</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">目標高於現價</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">3,430</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">5,757（+68%）</div><div class="t">元大目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">合理偏高/成長</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>AI 晶片<b>均熱片(heat spreader)＋導線架</b>龍頭，切入 AI GPU/CPU 散熱升級供應鏈。2025 EPS 36.75、元大估 2026 EPS <b>68.24</b>(近乎倍增)、目標價 <b>5,757（+68%）</b>看多。TTM 本益比 93x（河流圖「合理」區）、股價已自 52週高 5685 回落約 4 成，屬有獲利倍增支撐的 AI 散熱權值股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>核心為 <b>AI 晶片散熱升級</b>。健策為均熱片(IHS/lid、VC 均熱板)與精密導線架龍頭，供 AI GPU/CPU 封裝散熱(對應 NVIDIA 等高階運算晶片)，受惠 AI 伺服器功耗攀升、散熱規格升級。4 月營收 23.11 億(月增 6.8%、年增 26.9%)、累計 76.16 億(年增 15.9%)；2025 全年營收 202.76 億。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>元大投顧估 2026 營收約 327.1 億(年增約 61%)、EPS 68.24(較 2025 的 36.75 近乎倍增)、目標價 5,757、評等看多；2026 Q1 EPS 9.53(季減 3%、年減 1%)。7/22 除息、配發現金股利 21.72 元。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視健策為「AI 散熱＋均熱片」核心受惠、高單價權值股；本益比河流圖處「合理」區、股價淨值比河流圖「偏高」。多方看 2026 EPS 倍增與目標 5,757，空方憂絕對股價高、單一 AI 供應鏈集中與高基期。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>與多數「目標價低於現價」的 AI 題材股不同，健策元大目標 5,757 遠高於現價 3,430(+68%)，且本益比河流圖處「合理」區——關鍵在 EPS 高速成長：2025 EPS 36.75、元大估 2026 達 68.24(近乎倍增)，故 TTM 本益比 93x 對應的前瞻本益比降至約 50x，對 AI 散熱龍頭並不算離譜；且股價已自 52週高 5685 回落約 4 成，並非追在高點。真正變數是 AI 均熱片放量與 2026 EPS 能否如元大樂觀兌現至倍增；若 AI 資本支出或散熱規格升級不如預期，高絕對股價與偏高 P/B 缺乏支撐、回檔幅度大。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$5,040億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">202.76億</div><div class="t">2025 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">36.75元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v">9.53元</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">93x</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">68.24</div><div class="t">2026e EPS（元大）</div></div>
+      <div class="rpt-metric"><div class="v">1265 – 5685</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">5,757（+68%）</div><div class="t">元大目標價</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">健策</td><td>3653</td><td>約5,040億</td><td>前瞻~50x</td><td style="text-align:left">AI均熱片+導線架龍頭，目標高於現價、獲利倍增成長</td></tr>
+        <tr><td class="sym">奇鋐</td><td>3017</td><td>≈4,500億</td><td>高本益</td><td style="text-align:left">散熱模組/3DVC龍頭，AI伺服器散熱</td></tr>
+        <tr><td class="sym">雙鴻</td><td>3324</td><td>≈1,800億</td><td>高本益</td><td style="text-align:left">散熱模組/VC均熱板，AI/液冷</td></tr>
+        <tr><td class="sym">尼得科超眾</td><td>6230</td><td>≈500億</td><td>有獲利</td><td style="text-align:left">散熱模組/均熱片</td></tr>
+        <tr><td class="sym">順德</td><td>2351</td><td>≈300億</td><td>有獲利</td><td style="text-align:left">導線架(leadframe)，功率/封裝</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理偏高／成長（獲利倍增支撐）。</b>TTM 本益比 93x 絕對值高，但係「高成長」所致——元大估 2026 EPS 自 36.75 倍增至 68.24，前瞻本益比降至約 50x，本益比河流圖處「合理」區；股價淨值比河流圖「偏高」。以 2026e EPS 68.24 × 合理成長倍數，元大合理目標 5,757(+68%)。屬有獲利、有目標支撐的 AI 散熱成長股，估值偏高但非透支，惟需 EPS 倍增兌現。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 散熱核心權值股、法人看多；股價已自 52週高回落約 4 成，情緒中性偏多，波動來自 AI 資本支出與散熱規格。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>元大投顧看多、目標 5,757(+68%)、2026 EPS 68.24；AI 散熱族群普遍獲法人正向看待，共識偏多。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">AI 資本支出/散熱升級遞延、EPS 不如預期</td><td>2,400 – 2,900</td><td class="down">約 −22%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">均熱片穩健放量、EPS 成長</td><td>3,400 – 4,000</td><td class="up">約 +8%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">2026 EPS 達 68 倍增、AI 散熱放量</td><td>5,000 – 5,757</td><td class="up">約 +55%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI 均熱片全面滲透、重返高點</td><td>5,685 +</td><td class="up">約 +66%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向、AI 散熱成長龍頭</b> — 元大目標 5,757 高於現價(+68%)、前瞻本益比約 50x 有獲利倍增支撐，且股價已自高點回落約 4 成；Base +8%、Bull +55%。上檔須「AI 均熱片放量讓 2026 EPS 倍增兌現」，下檔風險為高絕對股價與 AI 資本支出雜訊。屬有基本面支撐的高成長 AI 權值股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、EPS、營收、52週）、元大投顧（2026 EPS 68.24／目標 5757／看多）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','8039','台虹')">台虹 8039</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI FCCL 軟板材料</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">復甦成長</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">154</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">38.19（PB 4.03x）</div><div class="t">每股淨值</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">分歧/成長</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>高階<b>軟性銅箔基板(FCCL)</b>材料廠。AI 終端與高頻高速運算帶動高階 FCCL 出貨看旺、獲利自谷底復甦——2026 Q1 EPS 0.65（年增 103%）、TTM 本益比 65x。股價一年自 44.3 漲至 52週高 170.5（近 4 倍）、現價 154、PB 4.03x。法人情境估 2026 EPS 3.5–5.5、目標 105–176，屬<b>復甦成長、估值分歧</b>股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>核心為「<b>AI 帶動高階 FCCL 復甦成長</b>」。台虹專於高階軟性銅箔基板(FCCL)，AI 伺服器、高頻高速運算與 AI 終端帶動高階 FCCL(低損耗/高頻)需求升溫、出貨看旺。獲利自谷底翻揚：2026 Q1 EPS 0.65（年增 103%）。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>法人情境推估 2026 EPS——保守 3.5(目標 105)、中性 4.5(目標 135)、樂觀 5.5 給 32 倍(目標 176)。TTM EPS 2.39、本益比 64.98(同業平均約 80)；2026/6/30 除息、現金股利 1.993 元，近五年平均現金股利 2.58、平均殖利率 4.57%。市值約 406 億、每股淨值 38.19、PB 4.03x。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視台虹為 AI 高階 FCCL 材料受惠股、獲利復甦題材；多方看高階 FCCL 放量與漲價，空方憂股價一年近 4 倍、PB 4x、獲利兌現時程與波動。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>台虹 TTM 本益比 65x 看似偏高，但係「獲利剛從谷底復甦」所致（2026 Q1 EPS 年增 103%）——若 AI 高階 FCCL 放量讓 2026 EPS 兌現至 3.5–5.5 元，前瞻本益比反而降至約 28–44x，對一個高頻高速材料成長股尚屬合理偏高。真正變數是「高階 FCCL 出貨與漲價幅度、產品組合升級速度」能否讓獲利如法人樂觀兌現。這是復甦/成長股：估值分歧反映多空對「獲利兌現時程」的分歧；股價一年近 4 倍、PB 4x、波動大，追高須看兌現節奏與回檔風險。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$406億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">38.19元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">4.03x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v">2.39元</div><div class="t">TTM EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">0.65（年增103%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">3.5–5.5</div><div class="t">2026e EPS（情境）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">65x</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v">44.3 – 170.5</div><div class="t">52週區間</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">台虹</td><td>8039</td><td>406億</td><td>PB 4.03x</td><td style="text-align:left">高階FCCL龍頭，AI高頻高速受惠、復甦成長、估值分歧</td></tr>
+        <tr><td class="sym">律勝</td><td>3159</td><td>≈200億</td><td>高本益</td><td style="text-align:left">PI膜/FCCL基材(COF)，高階軟板材料</td></tr>
+        <tr><td class="sym">達邁</td><td>3645</td><td>≈150億</td><td>週期</td><td style="text-align:left">PI膜(聚醯亞胺)，軟板/散熱基材</td></tr>
+        <tr><td class="sym">南亞</td><td>1303</td><td>≈5,500億</td><td>有獲利</td><td style="text-align:left">FCCL+玻纖布+CCL+電子材料，塑化龍頭</td></tr>
+        <tr><td class="sym">台燿</td><td>6274</td><td>≈600億</td><td>有獲利</td><td style="text-align:left">高速CCL(硬板材料)，AI伺服器基板</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：分歧／復甦成長（估值取決於獲利兌現）。</b>TTM 本益比 65x、PB 4.03x 看偏貴，但係「獲利剛從谷底復甦」所致（2026 Q1 +103%）、參考性受限；改以前瞻獲利——若 2026 EPS 兌現至 3.5–5.5 元，前瞻本益比約 28–44x，對 AI 高頻高速 FCCL 成長股尚屬合理偏高。核心分歧在「高階 FCCL 放量與獲利兌現時程」；股價一年近 4 倍、下檔波動大，屬有結構題材支撐的復甦成長股。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 高階 FCCL 復甦題材熱、獲利翻揚；但股價一年近 4 倍、PB 4x，波動大，多空對估值分歧。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>無單一明確目標；法人情境估 2026 EPS 3.5–5.5、目標 105(保守)–176(樂觀)、中性約 135，屬獲利兌現驅動、不確定性中等。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">FCCL 放量/漲價不如預期、高 PE 修正</td><td>95 – 115</td><td class="down">約 −29%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">復甦成長續、2026 EPS 約 4.5</td><td>130 – 155</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">高階 FCCL 放量、EPS 達 5.5</td><td>170 – 190</td><td class="up">約 +18%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI FCCL 超級循環全面重估</td><td>210 +</td><td class="up">約 +36%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬對稱偏事件驅動、復甦成長</b> — AI 高階 FCCL 需求與獲利翻揚為真題材，前瞻本益比若獲利兌現尚屬合理；但股價一年近 4 倍、PB 4x、波動大，Base 持平、Bear 達累跌 29%。上檔須「高階 FCCL 放量讓 2026 EPS 達 4.5–5.5」兌現，屬高波動題材/成長股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、EPS/淨值/PB/52週/股利）、股市爆料同學會／法人情境（FCCL、目標價、EPS）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','8064','東捷')">東捷科技 8064</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">面板→半導體設備</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">高估值高波動</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">138</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">23.42（PB 5.89x）</div><div class="t">每股淨值</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">偏昂貴/轉型</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>LCD 檢測/自動化/濺鍍設備廠，積極<b>轉型半導體設備</b>。法人估半導體設備佔營收比重 2026 超過 30%（毛利高於面板）。2026 前 4 月營收 8.67 億（年增 30.3%）、昨漲停 138。惟本益比 58x、PB 5.89x、股價一年自 36.25 漲逾 5 倍（52週高 189.5），屬<b>高估值、高波動的小型轉型設備股</b>。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>核心為「<b>面板設備廠轉型半導體設備</b>」。東捷經營 LCD 檢測整修、自動化/製程設備、濺鍍及蒸鍍設備，近年積極切入半導體設備。法人估半導體設備佔營收比重 2026 超過 30%(2025 較低)，半導體設備毛利高於傳統面板設備，佔比提升將同步帶動營收與毛利成長。2026 1–4 月累計營收 8.67 億(年增 30.3%)。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2026 Q1 EPS 0.35、近四季 EPS 2.36；每股淨值 23.42、本益比 58.47、股價淨值比 5.89。市值約 255 億、發行股數 1.85 億股。營收成長來自半導體設備轉單，惟半導體佔比仍在提升初期。昨日爆量漲停 138(+9.96%)。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視東捷為「半導體設備轉型＋AI/先進製程」題材小型股；多方看半導體佔比與毛利提升，空方憂本益比 58x、PB 5.89x 偏高、轉型仍在初期、面板設備景氣與小型股波動。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>東捷本質仍是「面板設備廠」，半導體設備佔比 2026 才「超過 30%」——多數營收仍來自面板/傳統設備，轉型尚在初期。以本益比 58x、股價淨值比 5.89x 對一個轉型中的小型設備商(市值 255 億)而言偏高，且股價一年已自 36.25 漲逾 5 倍(52週高 189.5)、雖回落至 138 仍漲停。真正變數是「半導體設備佔比與毛利能否如法人預期持續提升至兌現獲利跳增」，而非題材本身；若轉型放緩或面板設備疲弱，58x 本益比與近 6 倍 P/B 缺乏支撐、小型股回檔幅度大。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$255億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">23.42元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">5.89x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v">2.36元</div><div class="t">近四季 EPS</div></div>
+      <div class="rpt-metric"><div class="v">0.35元</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">58x</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v">36.25 – 189.5</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">2026&gt;30%</div><div class="t">半導體佔比</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">東捷</td><td>8064</td><td>255億</td><td>PB 5.89x</td><td style="text-align:left">面板檢測/自動化轉半導體設備，佔比初期、估值偏高、高波動</td></tr>
+        <tr><td class="sym">均豪</td><td>5443</td><td>≈300億</td><td>週期</td><td style="text-align:left">面板/半導體設備+自動化，轉型半導體</td></tr>
+        <tr><td class="sym">志聖</td><td>2467</td><td>≈200億</td><td>有獲利</td><td style="text-align:left">PCB/半導體塗佈曝光烘烤設備</td></tr>
+        <tr><td class="sym">由田</td><td>3455</td><td>≈250億</td><td>高本益</td><td style="text-align:left">AOI 光學檢測設備</td></tr>
+        <tr><td class="sym">帆宣</td><td>6196</td><td>≈600億</td><td>有獲利</td><td style="text-align:left">半導體設備/廠務工程系統整合</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴（轉型初期、估值偏高）。</b>本益比 58x、股價淨值比 5.89x 對一個半導體佔比 2026 才「超過 30%」、多數營收仍面板的小型轉型設備商而言偏高；股價一年漲逾 5 倍。若以轉型成功、半導體佔比與毛利持續提升的樂觀情境，前瞻本益比可下修，但兌現有時間差與不確定性。屬題材驅動、估值領先基本面的小型設備股，容錯低、需轉型實質兌現。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>半導體設備轉型題材熱、小型股波動大(昨爆量漲停)；股價一年漲逾 5 倍後回落，多空對轉型兌現分歧。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>市值小、無明確券商目標價共識；法人估半導體佔比 2026 超過 30%、帶動營收與毛利，屬轉型兌現驅動、參考性有限。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">轉型放緩/面板設備疲弱、高估值修正</td><td>85 – 105</td><td class="down">約 −31%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">半導體佔比提升、營收溫和成長</td><td>125 – 150</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">半導體設備放量、毛利跳升</td><td>170 – 195</td><td class="up">約 +35%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">轉型成功全面重估、重返高點</td><td>220 +</td><td class="up">約 +59%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏空／估值領先、轉型題材</b> — 本益比 58x、PB 5.89x 對半導體佔比才「超過 30%」的小型轉型設備商偏高，股價一年漲逾 5 倍；Base 持平、Bear 達累跌 31%。上檔須「半導體設備佔比與毛利持續提升至獲利跳增」兌現，屬高波動、估值領先基本面的小型題材股，追高容錯低。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資／vocus（即時報價、EPS/淨值/PB/52週、半導體轉型、營收）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','1802','台玻')">台玻 1802</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 玻纖布</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">由虧轉盈</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">66.20</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">16.35（PB 4.05x）</div><div class="t">每股淨值</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#8ab4ff">分歧/成長</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>老牌玻璃廠＋<b>AI 玻纖布</b>五強之一。低介電 Low DK／低膨脹 Low CTE 玻纖布供不應求至 2027 下半年、科技巨頭搶料、漲價循環，擴產拚市占 20-25%→40%。2025 EPS −0.2 由虧轉盈、2026 Q1 +254%。惟股價一年最高漲約 5 倍、PB 4.05x、TTM 本益比 506x（EPS 剛翻正），<b>估值分歧、波動大</b>。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「<b>AI 玻纖布史詩級缺貨＋漲價循環</b>」。AI 伺服器、先進封裝與 800G/1.6T 網通帶動低介電 Low DK／低膨脹 Low CTE 高階玻纖布需求爆發，供不應求至 2027 下半年，NVIDIA/Google/Amazon 等搶料；台玻與南亞、富喬、建榮、德宏並列玻纖布五強，訂單能見度排至 2027。中國電子級玻纖布年初調漲，開啟新一輪漲價循環。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／擴產指引　</b>目標全球市占由 20-25% 拉升至 40%；董事會通過 TD 紗場新建案投資約 22.5 億、Low DK 產線由 4 條擴至 12 條，新產能 1–1.5 年陸續開出、高階玻纖布供貨較 2025 年增約五成。2025 EPS −0.2（虧損）、2026 Q1 EPS 0.2（季增 54%、年增 254%，由虧轉盈）；5 月營收 39.2 億（年增 17.71%）、累計 180.93 億（年增 8.63%）。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視玻纖布為「下一個記憶體」的史詩級缺貨題材，台玻爆量漲停領軍；多方看漲價與 Low DK 放量帶動獲利跳增，空方憂股價已漲約 5 倍、PB 4x 偏高、認證與放量兌現有時間差、波段波動大（曾急跌至 51）。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>台玻的估值同時「看起來便宜又看起來昂貴」——以 TTM 本益比 506x 或股價淨值比 4.05x（遠高於玻璃股歷史）看很貴，但這是「EPS 剛從虧損翻正」的假象；若 AI 玻纖布漲價與 Low DK 放量讓 2026 EPS 兌現至 2–3.5 元，前瞻本益比反而降至約 19–33x，對一個結構性供不應求至 2027 的成長股並不離譜。真正變數不是當期帳面數字，而是「Low DK 玻纖布漲價幅度、認證通過與新產線放量速度」能否讓獲利如法人樂觀預期跳增。這是週期/轉機成長股：估值分歧本身反映多空對「獲利兌現時程」的分歧；股價一年漲約 5 倍、波動大，追高須留意兌現節奏與回檔風險。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">NT$1,925億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">16.35 元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">4.05x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">−0.2 元（虧損）</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">0.2（年增254%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">上看 2–3.5</div><div class="t">2026e EPS（樂觀）</div></div>
+      <div class="rpt-metric"><div class="v">15.8 – 81.2</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">至2027下半年</div><div class="t">玻纖布缺料</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">台玻</td><td>1802</td><td>1,925億</td><td>PB 4.05x</td><td style="text-align:left">玻纖布五強、關鍵技術，由虧轉盈、擴產拚市占翻倍，估值分歧</td></tr>
+        <tr><td class="sym">南亞</td><td>1303</td><td>≈5,500億</td><td>有獲利</td><td style="text-align:left">玻纖布+EG+CCL+電子材料，塑化龍頭、玻纖布最大</td></tr>
+        <tr><td class="sym">富喬</td><td>1815</td><td>≈300億</td><td>高本益</td><td style="text-align:left">玻纖布(Low CTE)，AI題材純度高、擴產</td></tr>
+        <tr><td class="sym">建榮</td><td>5340</td><td>≈150億</td><td>高本益</td><td style="text-align:left">玻纖布/玻纖紗，AI缺料受惠、彈性大</td></tr>
+        <tr><td class="sym">德宏</td><td>5475</td><td>≈80億</td><td>高本益</td><td style="text-align:left">玻纖布，小型高彈性題材股</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：分歧／週期成長（估值取決於獲利兌現）。</b>以 TTM 本益比（506x）與股價淨值比（4.05x）看偏貴，但係「EPS 剛翻正」所致、參考性低；改以前瞻獲利評估——若 2026 EPS 因玻纖布漲價與 Low DK 放量兌現至 2–3.5 元，前瞻本益比約 19–33x，對結構性供不應求至 2027 的成長股尚屬合理偏高。核心分歧在「獲利兌現時程」；股價已漲約 5 倍、下檔波動大，屬高於價值但有結構題材支撐的週期成長股。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 玻纖布題材極熱、爆量漲停領軍、被喻「下一個記憶體」；但股價一年漲約 5 倍、PB 4x，波動劇烈（曾急跌至 51），多空對估值分歧大。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>無單一明確目標價共識；法人普遍看好玻纖布缺料至 2027、台玻擴產與市占翻倍，2026 EPS 樂觀估上看 2–3.5 元（不確定性高），屬題材與獲利兌現驅動。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">漲價/認證/放量不如預期、AI雜訊、高PB修正</td><td>45 – 55</td><td class="down">約 −24%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">由虧轉盈續、玻纖布穩健放量、EPS 回升</td><td>60 – 72</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">Low DK 漲價+擴產放量、2026 EPS 達 2–3.5</td><td>80 – 95</td><td class="up">約 +30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">玻纖布超級循環+市占翻倍全面重估</td><td>105 +</td><td class="up">約 +59%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬對稱偏事件驅動、週期成長</b> — 結構性玻纖布缺料至 2027、擴產市占翻倍、由虧轉盈為真題材，前瞻本益比若獲利兌現尚屬合理；但股價一年漲約 5 倍、PB 4x、波動大，Base 持平、Bear 達累跌 24%。上檔須「Low DK 漲價與放量讓獲利如法人樂觀兌現」，屬高波動題材/成長股，追高須看兌現節奏。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、EPS/淨值/PB/52週/市值）、財報狗／今周刊／理財周刊／科技新報（玻纖布缺料、漲價、擴產、五強）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','1806','冠軍')">冠軍建材 1806</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">磁磚／綠建材／資產</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">股價遠低於淨值</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">8.88</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">13.63（PB 0.65x）</div><div class="t">每股淨值</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">便宜/資產</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>台灣磁磚龍頭（磁磚 94.5%＋營建），全國綠建材標章最多、再生綠建材佔 55%。造橋廠產能+30%、能耗−20%。現價 8.88 近 52週低、<b>遠低於每股淨值 13.63（PB 僅 0.65x、低於逾九成五公司）</b>，屬深度折價低 PB 資產股；惟獲利薄、無券商覆蓋，價值在資產負債表而非當期獲利，具<b>價值陷阱</b>風險。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「<b>低 PB 資產股＋綠建材趨勢</b>」。冠軍為老牌磁磚龍頭，業務磁磚 94.5%、營建 5.3%，並有特定專業區開發／新市鎮開發之土地資產。造橋廠產線優化完成，引進義大利最新成型機與自動化窯爐（熱回收），能耗降逾 20%、產能增逾 30%；再生綠建材標章佔比 55%、目標 58%，卡位淨零建築趨勢。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／財務　</b>2024 全年 EPS 0.22 元、2025 前三季累計 EPS 0.23 元（Q3 單季 0.16）、Q3 稅後淨利 0.6 億；2025/1 營收 2.66 億、年減 24%（農曆年工作天少）。獲利偏薄、本益比 30.6x（低 EPS 造成）；配息不穩，近 3 年平均現金殖利率約 3.3%。市值僅 34.67 億，屬小型資產股。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視冠軍為「低股價淨值比、綠建材與土地資產題材」的價值/資產股。多方看深度折價（PB 0.65x）與資產活化想像，空方憂磁磚內需疲弱、房市/營建景氣、獲利薄且無明確催化，折價恐長期存在。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>冠軍現價 8.88 對每股淨值 13.63 的股價淨值比僅 0.65x（低於逾九成五上市櫃公司），本質是「市場給的價格遠低於帳面資產」的深度折價資產股。真正的價值不在當期微薄獲利（本益比 30.6x 是低 EPS 的假象），而在資產負債表——磁磚廠土地、特定專業區/新市鎮開發用地與綠建材產能。但這也是低 PB 資產股的兩面：若缺乏「資產活化、土地開發價值實現或磁磚景氣明顯回升」的催化，深度折價可能長期存在（價值陷阱風險），股價近 52週低、市值僅 34.67 億、流動性小、無券商覆蓋，重估需要耐心與明確事件。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">NT$34.67億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">13.63 元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">0.65x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v">0.22 元</div><div class="t">2024 EPS</div></div>
+      <div class="rpt-metric"><div class="v">0.23 元</div><div class="t">2025前三季EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">30.6x</div><div class="t">本益比</div></div>
+      <div class="rpt-metric"><div class="v">8.02 – 12.25</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">55%（目標58%）</div><div class="t">綠建材佔比</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">冠軍</td><td>1806</td><td>34.67億</td><td>PB 0.65x</td><td style="text-align:left">磁磚龍頭+綠建材+土地資產，深度折價、低於逾95%公司</td></tr>
+        <tr><td class="sym">和成</td><td>1810</td><td>≈120億</td><td>低PB</td><td style="text-align:left">衛浴陶瓷(HCG)+建材，同屬老牌資產股</td></tr>
+        <tr><td class="sym">中釉</td><td>1809</td><td>≈30億</td><td>低PB</td><td style="text-align:left">陶瓷釉藥/建材，小型資產股</td></tr>
+        <tr><td class="sym">環泥</td><td>1104</td><td>≈200億</td><td>低PB</td><td style="text-align:left">水泥/建材+資產開發，資產股</td></tr>
+        <tr><td class="sym">國產</td><td>2504</td><td>≈200億</td><td>有獲利</td><td style="text-align:left">預拌混凝土/建材，內需營建</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：便宜（低 PB 資產股、股價遠低於淨值）。</b>獲利薄使本益比（30.6x）失真、參考性低；核心錨在 P/B——現價 8.88 對淨值 13.63 僅 0.65x，深度折價。以資產股框架，合理價應向淨值靠攏（回 0.8–1.0x P/B 約 11–13.6）；但「便宜」能否收斂取決於資產活化或磁磚景氣催化，否則折價恐延續。屬低估值資產股、非估值透支，惟具價值陷阱風險、需明確事件驅動重估。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>低調價值/資產股，成交與波動小、無券商覆蓋；近 52週低，題材以綠建材與資產折價為主，缺乏動能買盤。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>市值小、無明確券商目標價共識；估值判斷以 P/B 為主（深度折價 0.65x），評價端視資產活化與磁磚景氣，參考性有限。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">磁磚內需疲弱/獲利續薄、折價長存（價值陷阱）</td><td>7.5 – 8.0</td><td class="down">約 −12%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">綠建材放量、獲利溫和、折價小幅收斂</td><td>8.5 – 10</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">資產活化/土地價值實現、PB 回升</td><td>11 – 12.5</td><td class="up">約 +35%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">資產重估至接近淨值（1x P/B）</td><td>13.6 +</td><td class="up">約 +53%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向但需催化、低 PB 資產股</b> — 股價淨值比僅 0.65x、遠低於淨值，下檔有資產帳面價值相對支撐；Base 持平、Bull +35% 須「資產活化或磁磚景氣回升」兌現。核心風險是「深度折價缺乏催化而長期存在」的價值陷阱，加上獲利薄、流動性小、無券商覆蓋。屬耐心持有型價值/資產股，而非題材動能股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／財報狗／Win 投資（即時報價、EPS/淨值/PB/52週/股利）、經濟日報／公司官網（造橋廠產能、綠建材、營收）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2002','中鋼')">中鋼 2002</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">鋼鐵／熱軋冷軋</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">股價低於淨值</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">18.55</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">22（+19%）</div><div class="t">共識目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">便宜/週期</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>台灣最大鋼鐵廠。搭上「鋼市谷底反轉」——中國反內捲/減產＋2026 起鋼鐵出口許可制抑制低價鋼出口，Q2 旺季補庫存、中鋼盤價連漲。現價 18.55 <b>低於每股淨值 20.23（PB 僅 0.92x）</b>、連 36 年配息；惟近四季 EPS 仍 −0.46（虧損），FactSet 估 2026 由虧轉盈、共識目標 22–24.5，屬<b>低估值週期轉機股</b>。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為「<b>鋼市谷底向上反轉</b>」。中國推動鋼鐵「反內捲」與減排，2026 粗鋼產量估續降、並自 2026 起實施鋼鐵出口許可制，抑制低價鋼大量出口、改善全球供需。台灣進入 Q2 旺季補庫存，中鋼新盤價連漲（4–5 月熱軋、盤元漲逾千元/噸，連三月四位數調漲），管理層喊 2026 拚穩定獲利、看好 Q2 盤價。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>2025/12 營收年減 13.8% 至 255.4 億（仍在庫存調整尾聲）；FactSet 10 位分析師估 2026 EPS 中位 0.1–0.12 元（由虧轉盈）、部分法人估上看 0.42 元；12 家以上法人共識目標最高 24.5 元。連 36 年配息、累計配息 57.17 元，2025 股利 0.15 元（獲利低故縮減）。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視鋼鐵三雄為 2026 傳產反轉新亮點，「千張大戶」布局、中鋼拐點題材；多方看鋼價復甦與中國減產，空方憂復甦力道、需求疲弱與獲利回升緩慢。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>與近期多檔「目標價低於現價、估值透支」的 AI 題材股相反，中鋼是典型「股價低於淨值（PB 0.92x）、法人目標（22–24.5）高於現價、且處產業週期底部」的低估值轉機標的。真正的關鍵變數不是帳面 EPS 仍虧損，而是「中國反內捲/減產與出口許可制能否真正收縮全球鋼鐵供給、讓鋼價與中鋼獲利實質回升」——這是強週期股的核心：底部買的是「正常化獲利與淨值」，而非當期虧損的本益比。下檔有淨值（20.23）與連 36 年配息的相對支撐，但若鋼市復甦跳票、中國減產不如預期，獲利與股價回升將遞延。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">NT$2,942億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">20.23 元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">0.92x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">−0.46 元</div><div class="t">近四季 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">−0.16</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">0.1–0.42</div><div class="t">2026e EPS</div></div>
+      <div class="rpt-metric"><div class="v">17.6 – 21.6</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v">0.15元 / 36年</div><div class="t">2025股利/連配</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">中鋼</td><td>2002</td><td>2,942億</td><td>PB 0.92x</td><td style="text-align:left">一貫作業鋼廠龍頭，股價低於淨值、週期轉機、目標高於現價</td></tr>
+        <tr><td class="sym">中鴻</td><td>2014</td><td>≈250億</td><td>週期</td><td style="text-align:left">中鋼集團熱軋/冷軋/鍍面，隨中鋼盤價連動</td></tr>
+        <tr><td class="sym">豐興</td><td>2015</td><td>≈360億</td><td>有獲利</td><td style="text-align:left">電爐鋼筋/型鋼，獲利與殖利率相對穩</td></tr>
+        <tr><td class="sym">東和鋼鐵</td><td>2006</td><td>≈450億</td><td>有獲利</td><td style="text-align:left">電爐鋼筋龍頭，內需建築鋼</td></tr>
+        <tr><td class="sym">大成鋼</td><td>2027</td><td>≈600億</td><td>週期</td><td style="text-align:left">不鏽鋼/鋁，美國通路，關稅受惠</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：便宜（週期底部、股價低於淨值）。</b>近四季虧損使本益比不適用；改以 P/B 錨定——現價 18.55 對每股淨值 20.23 的 P/B 僅 0.92x（低於淨值、低於逾七成同業）。強週期股底部應以正常化獲利與淨值評價：若 2026 由虧轉盈至 0.1–0.42 元、鋼價週期回升，合理價可回至淨值上下（20–24），對應法人共識 22–24.5。下檔有淨值與連 36 年配息支撐，屬低估值轉機而非估值透支，惟需鋼市復甦兌現。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>傳產反轉題材回溫、鋼鐵三雄受關注、千張大戶布局；但成交與波動相對溫和，屬價值/週期股而非動能題材股。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>FactSet 10 位估 2026 EPS 中位 0.1–0.12（由虧轉盈）、目標 22；12 家以上法人共識目標最高 24.5（較現價 +19~32%），評等中性偏買進。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">鋼市復甦跳票/中國減產不如預期、續虧</td><td>16.5 – 17.6</td><td class="down">約 −8%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">由虧轉盈、盤價續漲、EPS 約 0.1–0.4</td><td>18 – 21</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">週期回升明確、EPS 回升、PB 回 1x+</td><td>22 – 24.5</td><td class="up">約 +25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">鋼鐵超級循環、獲利大幅回升</td><td>27 +</td><td class="up">約 +46%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向、低估值週期轉機</b> — 股價低於淨值（PB 0.92x）、法人目標高於現價、產業處週期底部，下檔有淨值與連 36 年配息支撐；Base 持平、Bull +25%，上檔須「中國減產/出口許可制收縮供給、鋼價與獲利實質回升」兌現。屬價值/循環股而非題材股，波動較小但需耐心等待鋼市復甦。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／財報狗／Win 投資（即時報價、EPS/淨值/PB/52週/股利）、FactSet（2026 EPS/目標價）、經濟日報／工商時報／CMoney（鋼價、中國反內捲、盤價）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('us','KURA','Kura Oncology')">Kura Oncology KURA</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">menin/AML 生技</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">目標遠高於現價</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">$11.91</div><div class="t">現價 (USD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">$31.17（+162%）</div><div class="t">共識目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--yellow)">投機/生技</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>臨床期生技，首款藥 KOMZIFTI（ziftomenib，menin 抑制劑）2025/11 獲 FDA 核准治 R/R NPM1-m AML。上市首季淨營收 $5.8M 優於預期、Phase III 前線進度超前、現金 $580.8M 充裕、beta 僅 0.35。分析師<b>強力買進</b>、共識目標 $31.17（<b>較現價 +162%</b>）。惟仍大額虧損（TTM −$294.6M），屬事件驅動、二元的高風險生技股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>核心為 <b>KOMZIFTI（ziftomenib）商業放量＋前線適應症擴張</b>。2025/11 FDA 核准治 R/R NPM1-m AML；Q1 上市首季淨產品營收 $5.8M（85 名新病患、157 張處方、&gt;93% 給付覆蓋）、launch 優於預期。KOMET-007 前線 7+3 合併：NPM1-m 12 個月 OS 高達 94%、KMT2A-r 71%，支持 Phase III。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>Phase III 前線進度超前；第二資產 darlifarnib（FTI，與 adagrasib 合併）在 KRAS 突變實體瘤展現活性（胰腺癌 ORR 67%）；KO-7246 次世代 menin。現金 $580.8M（3/31）支撐多項催化。2025 營收 $67.48M（+25%）、淨損 $278.67M。下次財報 2026/08/06。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>華爾街極度看多——15 位分析師「強力買進」、13 買進 2 持有、目標中位 $28、最高 $76、最低 $16，共識 $31.17 較現價 +162%。空方憂 AML 市場競爭（Syndax revumenib）、燒錢與增資稀釋。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>與近期多檔「目標價低於現價」的高估值題材股相反，KURA 是少數「分析師共識目標（$31.17）遠高於現價（$11.91）、達 +162%」的正向不對稱標的，反映市場對 menin 類別與前線 AML 機會的高度認同，且現金 $580.8M 充裕、beta 僅 0.35。但這仍是臨床期生技：本益比不適用、TTM 淨損 $294.6M，股價本質由 Phase III 讀數、KOMZIFTI 放量曲線與競品（Syndax revumenib）動態驅動，屬二元、事件驅動。任何 Phase III 失利、放量不如預期或增資稀釋將劇烈衝擊；上檔想像雖大，仍應以可承受高波動的部位參與。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">$1.06B</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">$71.64M（+5.4%）</div><div class="t">營收 (TTM)</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">$67.48M（+25%）</div><div class="t">2025 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">−$294.6M</div><div class="t">TTM 淨損</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">−3.35</div><div class="t">EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">$580.8M</div><div class="t">現金</div></div>
+      <div class="rpt-metric"><div class="v">$5.45 – $12.49</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v">0.35</div><div class="t">Beta</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">Kura Oncology</td><td>KURA</td><td>$1.06B</td><td>虧損</td><td style="text-align:left">KOMZIFTI(menin)已上市+前線Phase III，目標遠高於現價</td></tr>
+        <tr><td class="sym">Syndax</td><td>SNDX</td><td>≈$1.5B</td><td>虧損</td><td style="text-align:left">Revuforj(revumenib，menin)已上市，直接競品</td></tr>
+        <tr><td class="sym">Rigel</td><td>RIGL</td><td>≈$0.7B</td><td>近平衡</td><td style="text-align:left">AML/血液腫瘤，有營收</td></tr>
+        <tr><td class="sym">Geron</td><td>GERN</td><td>≈$2B</td><td>虧損</td><td style="text-align:left">Rytelo(MDS)已上市血液腫瘤</td></tr>
+        <tr><td class="sym">Kyowa Kirin</td><td>KYKOF</td><td>≈$10B</td><td>有獲利</td><td style="text-align:left">KURA ziftomenib 全球合作夥伴（非直接競品）</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：不適用／投機（臨床期生技、虧損）。</b>無本益比（TTM 淨損 $294.6M）；市值 $1.06B vs TTM 營收 $71.64M，合理價難以基本面推估，端視 KOMZIFTI 放量與 Phase III 成敗。與眾不同的是分析師共識目標 $31.17 遠高於現價（+162%）、且現金 $580.8M 充裕——屬「題材與臨床里程碑驅動、正向不對稱」的定價，但下檔含試驗失利與稀釋風險，容錯仍低。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>偏多但屬事件驅動生技，波動來自臨床讀數與放量數據。beta 0.35 低（與大盤連動小、走自身題材）；上市放量優於預期帶動情緒。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>強力買進（15 位）；共識目標 $31.17（+162%）、中位 $28、區間 $16（保守）至 $76（樂觀）；13 買進 2 持有 0 賣出。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (USD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">Phase III 失利/放量不如預期/增資稀釋</td><td>$6 – $8</td><td class="down">約 −40%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">KOMZIFTI 穩健放量、Phase III 進行</td><td>$11 – $14</td><td class="up">約 +5%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">放量加速＋前線 7+3 數據續強</td><td>$20 – $28</td><td class="up">約 +100%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">前線擴適應症＋darlifarnib 題材重估</td><td>$31 +</td><td class="up">約 +160%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬正向不對稱、事件驅動</b> — 罕見「共識目標較現價 +162%」的上檔想像，且現金充裕、beta 低；但本質為臨床期生技，下檔含 Phase III 失利與稀釋的尾端風險（可達 −40%）。適合作為可承受高波動的小部位參與，關鍵催化為 KOMZIFTI 放量曲線、前線 Phase III 讀數與 8/6 財報。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：StockAnalysis.com／Yahoo Finance（即時報價、市值、52週、財報）、公司新聞稿／GlobeNewswire（FDA、KOMET-007、Q1）、MarketBeat／TipRanks／Public（目標價、評等）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('us','AAOI','Applied Optoelectronics')">Applied Optoelectronics AAOI</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 資料中心光模組</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">高估值高波動</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">$122.21</div><div class="t">現價 (USD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">$151.3（+24%）</div><div class="t">共識目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">偏昂貴</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>AI 資料中心光模組（800G/1.6T 光收發器）＋有線電視 HFC 網通廠。今日 +6.79% 收 $122.21，市值 $9.81B（年增 682%）、營收 TTM $507M（+64%）、2026 指引上調至 $11 億、供給落後需求至 2027。惟仍 TTM 虧損 $43M、前瞻本益比 <b>67.2x</b>、beta <b>3.69</b>，已自 52週高 $233.67 回檔約 48%；分析師目標分歧極大（$57.5～$220），屬高估值、高波動 AI 動能股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>核心為 <b>AI 資料中心光收發器放量</b>。800G 需求強勁、1.6T 陸續放量，台灣與德州（Sugar Land）大幅擴產（休士頓廠擴至 90 萬平方呎）、獲德州半導體創新基金 $20.9M 補助；多次獲超大型客戶 800G 上修訂單。Q1 營收年增 51% 創高、資料中心＋CATV 雙引擎；2026 營收指引上調至 $11 億、供給落後需求至 2027。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>2025 營收 $455.72M（+82.75%）、淨損收窄至 $38.23M；管理層看 2026 穩健成長、H2（Q3 起）隨 800G 產能上線加速，毛利率隨高階產品放量改善。仍為虧損轉盈過程中，前瞻本益比 67.2x。下次財報 2026/08/06。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場追捧「AI 光模組/CPO 供應鏈」，AAOI 為高 beta（3.69）動能股。多方看 800G/1.6T 放量與毛利改善，空方憂估值（前瞻 67x）偏高、獲利未穩、單一大客戶集中與高波動；目標價分歧極大反映多空對立。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>AAOI 目標價分歧是全場最大的訊號——同一時間 Rosenblatt 喊 $220（買進）、Raymond James $160（優於大盤），但 Northland 僅 $57.5（中性/Market Perform），共識 $151.3；區間 $57.5～$220 幾乎相差 4 倍，反映多空對「AI 光模組放量與毛利能否兌現」完全對立。且股價已自 52週高 $233.67 回檔約 48%、市值一年暴增 682%、beta 3.69。真正變數是 800G/1.6T 訂單與毛利率能否讓公司由虧轉盈至撐起前瞻 67x 本益比，而非題材本身；高 beta 下任何 AI 資本支出雜訊或客戶訂單波動都會放大股價振幅。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">$9.81B</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">$507M（+64%）</div><div class="t">營收 (TTM)</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">$455.7M（+83%）</div><div class="t">2025 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">−$43.3M</div><div class="t">TTM 淨損</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">約 $11 億</div><div class="t">2026 營收指引</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">67.2x</div><div class="t">前瞻本益比</div></div>
+      <div class="rpt-metric"><div class="v">$18.5 – $233.67</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">約 48%</div><div class="t">自52週高回檔</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">Applied Opto</td><td>AAOI</td><td>$9.81B</td><td>前瞻67x</td><td style="text-align:left">800G/1.6T 光模組+CATV，虧轉盈中、beta 3.69、估值高波動</td></tr>
+        <tr><td class="sym">Coherent</td><td>COHR</td><td>≈$25B</td><td>有獲利</td><td style="text-align:left">光通訊/雷射龍頭，資料中心光模組</td></tr>
+        <tr><td class="sym">Lumentum</td><td>LITE</td><td>≈$10B</td><td>轉盈中</td><td style="text-align:left">雷射/光模組，AI 資料中心受惠</td></tr>
+        <tr><td class="sym">Fabrinet</td><td>FN</td><td>≈$15B</td><td>有獲利</td><td style="text-align:left">光學代工龍頭，客戶含 NVDA/Ciena</td></tr>
+        <tr><td class="sym">Credo</td><td>CRDO</td><td>≈$15B</td><td>轉盈中</td><td style="text-align:left">AI 連結(AEC/DSP)，高成長高估值</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴（AI 動能、估值透支風險）。</b>TTM 仍虧損、前瞻本益比 67.2x 偏高，beta 3.69 屬高波動；市值一年暴增 682%。營收成長為真（+64%、指引 $11 億），但獲利尚未穩定支撐估值。合理價高度取決於毛利改善速度——分析師區間 $57.5～$220 正凸顯此不確定；共識 $151.3 較現價 +24%，惟容錯低、下檔波動大。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 光模組題材熱、高 beta（3.69）動能股；已自高點回檔約 48%、波動劇烈，多空對估值與毛利分歧大。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>買進（6 位）；共識目標 $151.3（+24%），但區間 $57.5（Northland 中性）至 $220（Rosenblatt 買進）分歧近 4 倍，缺乏一致性。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (USD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">AI 資本支出/訂單放緩、毛利不如預期</td><td>$60 – $85</td><td class="down">約 −40%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">800G 放量、指引 $11 億達標</td><td>$115 – $135</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">1.6T 放量＋毛利改善轉盈</td><td>$160 – $190</td><td class="up">約 +40%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI 光模組全面重估、重返高點</td><td>$220 +</td><td class="up">約 +80%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬對稱偏事件驅動、高波動</b> — 共識目標 +24% 但目標區間分歧近 4 倍（$57.5～$220）、beta 3.69、前瞻 67x 且 TTM 仍虧損；Base 持平、Bear 達 −40%，上檔須「800G/1.6T 放量＋毛利改善由虧轉盈」兌現。營收成長為真但估值已高，屬高波動 AI 動能股，追高容錯低。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：StockAnalysis.com（即時報價、市值、營收、52週、前瞻本益比、beta）、公司新聞稿／GlobeNewswire（800G 訂單、擴產、指引）、TipRanks（Rosenblatt／Raymond James／Northland 目標價）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2493','揚博')">揚博 2493</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI PCB 濕製程設備</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">高估值</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">274</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">26.22（PB~10.4x）</div><div class="t">每股淨值</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">偏昂貴</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>全球 PCB 濕製程設備領先廠（AMPOC 品牌）＋製程化學藥水，受惠 AI 伺服器／高階載板擴產題材。近月營收轉強（5 月年增 24.9%）、股價一年漲約 3 倍。惟 TTM 本益比 <b>63.8x</b>、股價淨值比 <b>10.4x</b>，2026 Q1 EPS 年減 18%、累計 1–5 月營收年增僅 4.93%，獲利動能與股價落差大、估值透支。今日除息 4 元。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為 <b>AI 高階載板／PCB 濕製程設備擴產</b>題材。揚博為全球 PCB 濕製程領先廠，產品含 PCB／LCD／半導體製程設備與各式化學藥水（AMPOC ECO 熱回收、AMPOC PURE 純化設備），受惠 AI 伺服器、高階載板、多層板與細線路擴產。5 月營收 3.72 億（月增 23.8%、年增 24.9%）、近月訂單題材發酵、股價亮燈漲停 273.5。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>2025 全年 EPS 4.36、營收 37.68 億；2026 Q1 EPS 1.26（季增 5%、年減 18%）、累計 1–5 月營收 16.10 億（累計年增僅 4.93%）。法人多聚焦 2026 成長故事，惟需對照實際接單與營收是否兌現。今日（2026/07/09）除息、現金股利 4 元。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>CMoney 等社群連日以「AI 高階 PCB 濕製程訂單題材＋主力外資加碼」推升，多頭結構；族群同業本益比普遍偏高（平均約 80x）。空方憂估值（PE~64、PB~10）透支、獲利動能放緩。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>揚博累計 1–5 月營收年增僅 4.93%、2026 Q1 EPS 1.26 年減 18%——獲利動能其實在放緩，卻與股價一年漲約 3 倍、本益比 63.8x、股價淨值比 10.4x（每股淨值僅 26.22）的極端高估值形成明顯落差。股價由「AI 高階載板／PCB 濕製程訂單」題材與籌碼（主力、外資加碼）驅動，而非當期獲利。真正變數是 AI 載板擴產能否讓設備與藥水訂單放量至獲利跳增；若題材退燒，10 倍 P/B、64 倍 PE 缺乏獲利支撐、回檔空間大；且今日除息 4 元、股價將扣除股利。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$347億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">37.68 億</div><div class="t">2025 營收</div></div>
+      <div class="rpt-metric"><div class="v">4.36 元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">1.26（年減18%）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">63.8x</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">10.4x</div><div class="t">股價淨值比</div></div>
+      <div class="rpt-metric"><div class="v">26.22 元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">年增僅4.93%</div><div class="t">累計1-5月營收</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>本益比</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">揚博</td><td>2493</td><td>~347億</td><td>~64x</td><td style="text-align:left">PCB 濕製程設備+化學藥水，PB~10x、獲利動能放緩、估值透支</td></tr>
+        <tr><td class="sym">弘塑</td><td>3131</td><td>~300億</td><td>~28x</td><td style="text-align:left">半導體/PCB 濕製程設備</td></tr>
+        <tr><td class="sym">辛耘</td><td>3583</td><td>~350億</td><td>~30x</td><td style="text-align:left">半導體濕製程設備+再生晶圓</td></tr>
+        <tr><td class="sym">志聖</td><td>2467</td><td>~200億</td><td>~25x</td><td style="text-align:left">PCB/半導體 塗佈曝光烘烤設備</td></tr>
+        <tr><td class="sym">群翊</td><td>6664</td><td>~150億</td><td>~30x</td><td style="text-align:left">PCB 自動化設備</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴（題材驅動、估值透支）。</b>TTM 本益比 63.8x、股價淨值比 10.4x 遠高於弘塑/辛耘等同業（~25–30x）；即使 2026 EPS 樂觀估自 4.36 成長至 5–6 元 × 同業合理倍數 25–30x，合理價約 125–180，仍遠低於現價 274。累計營收年增僅 4.93%、Q1 EPS 年減 18%，股價已計入 AI 載板擴產全面兌現的樂觀，屬「獲利未跟上、題材先行」的估值透支。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 高階 PCB 題材極熱、主力外資連日加碼、多頭結構；但估值（PE~64、PB~10）透支、獲利動能放緩，追高與回檔波動風險大。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>覆蓋券商少、缺乏明確目標價共識；族群同業本益比普遍偏高（平均約 80x），法人多聚焦 2026 成長故事，須對照實際接單兌現，參考性有限。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">題材退燒/成長不如預期、估值修正</td><td>150 – 190</td><td class="down">約 −40%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">AI 載板擴產持續、EPS 溫和成長</td><td>250 – 290</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">訂單放量、2026 EPS 跳增</td><td>320 – 360</td><td class="up">約 +25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI 高階載板全面重估</td><td>400 +</td><td class="up">約 +46%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏空／估值透支</b> — 本益比 63.8x、股價淨值比 10.4x，累計營收年增僅 4.93%、Q1 EPS 年減 18%，股價一年已漲約 3 倍提前反映題材；Base 僅持平、Bear 達 −40%，上檔須「AI 載板擴產讓設備／藥水訂單放量至獲利跳增」才兌現。屬題材/籌碼驅動的高估值股，而非獲利支撐的估值標的，追高容錯低。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、本益比、市值、營收、52週、EPS/淨值/PB/股利）、CMoney／vocus／uc913（AI PCB 題材、法人）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','6187','萬潤')">萬潤 6187</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 先進封裝設備</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">高估值</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">1,050</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">800（−24%）</div><div class="t">富邦目標價</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">偏昂貴</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>台積電 CoWoS 供應鏈核心設備商（晶片取放、散熱貼合、點膠、AOI 檢測），布局矽光子 CPO。今日漲停 1,050、5 月營收年增 44%、訂單看到 2026 上半年。惟 TTM 本益比 <b>67.9x</b>、富邦目標價 800 已<b>低於現價</b>、股價僅為 52週高 1490 的約 7 折，估值偏高、獲利與股價有落差。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為 <b>AI 先進封裝與 CoWoS 擴產</b>。半導體封測設備佔營收約 8–9 成，產品含晶片取放、散熱貼合、SoIC／CoPoS 點膠、AOI 外觀檢測；矽光子 CPO 量測、耦合、通訊測試設備切入客戶驗證。5 月營收 7.29 億（月增 18.8%、年增 43.8%）、累計 27.54 億（年增 23.6%）。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>法人估 Q2 續加溫、全年優於 2025。富邦看多、目標價 800、2026 EPS 估 17.71–20.62；市場預估 CPO 設備營收佔比 2026 約 9%、2027 跳升至 35%。惟 2026 Q1 EPS 3.37、年減約 6%，獲利尚未跟上股價。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>社群追捧「CoWoS／CPO 設備概念股」、與致茂並列 AI 測試設備族群；空方憂估值（PE~68）偏高、52週曾達 1490 後回落、單一券商目標價已低於現價。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>唯一覆蓋的富邦目標價 800 元，已比現價 1,050 低約 24%——重要空頭訊號；且股價一年內曾達 52週高 1490、目前僅約 7 折，為高基期回落而非新高。市場用「2027 CPO 佔比 35%」提前定價，但 2026 Q1 EPS 年減 6%、以 2026e EPS 計前瞻本益比仍達 51–59x。真正變數是 CPO／先進封裝設備能否如期放量至獲利，若資本支出或擴產遞延，高本益比缺乏獲利支撐、回檔空間大。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$1,024億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">15.25 元</div><div class="t">近四季 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">3.37（年減6%）</div><div class="t">Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">17.71–20.62</div><div class="t">2026e EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">67.9x</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">約 51–59x</div><div class="t">前瞻本益比</div></div>
+      <div class="rpt-metric"><div class="v">307.5 – 1490</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">800（低於現價）</div><div class="t">券商目標價</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>本益比</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">萬潤</td><td>6187</td><td>~1,024億</td><td>~68x</td><td style="text-align:left">CoWoS/CPO 點膠檢測設備，估值偏高、目標價已低於現價</td></tr>
+        <tr><td class="sym">致茂</td><td>2360</td><td>~1,500億</td><td>~30x</td><td style="text-align:left">半導體/電子測試量測龍頭，AI 測試</td></tr>
+        <tr><td class="sym">由田</td><td>3455</td><td>~250億</td><td>~40x</td><td style="text-align:left">AOI 光學檢測設備</td></tr>
+        <tr><td class="sym">志聖</td><td>2467</td><td>~200億</td><td>~25x</td><td style="text-align:left">封裝塗佈/曝光/烘烤設備</td></tr>
+        <tr><td class="sym">弘塑</td><td>3131</td><td>~300億</td><td>~28x</td><td style="text-align:left">半導體濕製程/先進封裝設備</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴（成長題材、估值透支）。</b>TTM 本益比 67.9x 遠高於致茂（~30x）等同業；以 2026e EPS 17.71–20.62 計前瞻本益比仍達 51–59x，且唯一券商目標價 800（隱含 ~38–40x）已低於現價 1,050。以同業中樞 30–40x × 2026e EPS 推算合理價約 530–825，均低於現價——反映股價已計入 2027 CPO 放量的樂觀情境，容錯低。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>AI 設備題材熱、動能股；但估值（PE~68）偏高、52週高 1490 後回落，多空對估值分歧大。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>覆蓋券商少，僅富邦看多、目標價 800（已低於現價，重要空頭訊號）；缺乏一致上修的市場共識。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">AI 資本支出/擴產遞延、估值修正</td><td>650 – 800</td><td class="down">約 −30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">訂單如期、EPS 溫和成長</td><td>900 – 1,050</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">CPO 放量、2026 EPS 達 20 上緣</td><td>1,200 – 1,350</td><td class="up">約 +21%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">2027 CPO 佔比 35% 全面重估</td><td>1,490 +</td><td class="up">約 +42%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏空／估值透支</b> — 唯一券商目標價（800）已低於現價、前瞻本益比 51–59x，Base 僅持平、Bear 達 −30%；上檔須「CPO／先進封裝設備如期放量至獲利」才實現。基本面成長為真，但股價已提前定價 2027 願景，屬追高風險偏高的高估值成長股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、本益比、市值、營收、52週）、經濟日報／MoneyDJ（法人展望）、富邦證券（目標價 800、2026 EPS）、財報狗（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','6182','合晶')">合晶 6182</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">矽晶圓超級循環</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.18);color:#ff6b78">週期/估值透支</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">160</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">22.14（PB~7.2x）</div><div class="t">每股淨值</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff6b78">分歧/週期</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>半導體矽晶圓／磊晶材料廠。搭上「矽晶圓超級循環」、8 吋漲價，昨日漲停 160、爆量 13.6 萬張成人氣王；12 吋擴產（龍潭 2026/4 達 40K/M）、2026 營收挑戰百億。惟 2025 EPS 僅 <b>0.09</b>、Q1 近乎損益兩平，PB 約 <b>7.2x</b>、股價一年漲約 8 倍，估值大幅透支復甦預期。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為 <b>矽晶圓超級循環</b>。去庫存結束、8 吋廠稼動率隨 AI 電源管理晶片回升至約 90%，環球晶下半年啟動漲價，帶動族群（環球晶、台勝科、合晶、嘉晶）全面噴出。合晶昨日漲停 160、爆量 13.6 萬張、成交 209.8 億居人氣王；SEMI 估 2026 全球矽晶圓出貨量年增 13.1%。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／擴產指引　</b>12 吋積極擴產——龍潭廠 2026/4 產能目標 40K/M、鄭州廠二期再增 5 萬片/月、二林廠陸續投產；2026 全年營收挑戰百億（2025 為 97.74 億）。5 月營收 8.89 億（月增 2.8%、年增 11.9%），營收溫和回升但獲利尚未跟上。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>社群追捧「矽晶圓超級循環＋12 吋擴產」、跟進記憶體與 MLCC 漲價循環；法人首選多指向環球晶（目標喊至 1500）。合晶為高人氣跟漲股，題材與籌碼驅動強，但基本面（EPS）遠落後於股價。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>合晶股價一年內自 20.15 漲到 174（近 8 倍）、現價 160 對每股淨值 22.14 的股價淨值比約 7.2 倍，遠高於矽晶圓同業歷史 P/B 中樞（約 2–4x）——但 2025 EPS 僅 0.09、2026 Q1 仍近乎損益兩平。本益比不適用，股價已完全定價「超級循環全面兌現＋12 吋擴產放量獲利」的最樂觀情境。真正變數是漲價與擴產能否在 2026–27 轉為實質獲利；若復甦遞延，7 倍 P/B 缺乏當期獲利支撐，回檔風險顯著。屬週期股「表面題材、獲利未至」的高估值定價。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">約 NT$918億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">97.74 億</div><div class="t">2025 營收</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">挑戰百億</div><div class="t">2026 營收展望</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">0.09 元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">0（近平衡）</div><div class="t">2026 Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">N/A / 極高</div><div class="t">本益比</div></div>
+      <div class="rpt-metric"><div class="v">22.14 元</div><div class="t">每股淨值</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff6b78">約 7.2x</div><div class="t">股價淨值比</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">合晶</td><td>6182</td><td>~918億</td><td>PB~7.2x</td><td style="text-align:left">矽晶圓/磊晶，近平衡、PB 最高、股價一年漲 8 倍</td></tr>
+        <tr><td class="sym">環球晶</td><td>6488</td><td>~3,000億</td><td>有獲利</td><td style="text-align:left">矽晶圓龍頭，法人目標喊 1500、漲價主導者</td></tr>
+        <tr><td class="sym">台勝科</td><td>3532</td><td>~600億</td><td>週期</td><td style="text-align:left">12 吋矽晶圓，循環復甦跟漲</td></tr>
+        <tr><td class="sym">嘉晶</td><td>3016</td><td>~400億</td><td>週期</td><td style="text-align:left">磊晶龍頭，功率/化合物半導體</td></tr>
+        <tr><td class="sym">中美晶</td><td>5483</td><td>~900億</td><td>有獲利</td><td style="text-align:left">環球晶母公司，太陽能+半導體矽晶圓</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值與倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：分歧／週期（估值透支）。</b>近乎損益兩平使本益比不適用；改以 P/B 錨定——現價 160 對每股淨值 22.14 的 P/B 約 7.2x，遠高於矽晶圓同業歷史中樞（約 2–4x）。強週期股此處是「獲利尚未啟動、股價先漲 8 倍」。以正常化中週期獲利或合理 P/B（3–4x×淨值）推估，合理價約 66–89 元，遠低於現價——股價已計入超級循環全面兌現的樂觀，屬估值透支。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>矽晶圓超級循環題材極熱、爆量人氣王、籌碼驅動強；但獲利遠落後股價、PB 7x 偏高，追高與回檔波動風險大。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>合晶本身缺乏明確券商目標價共識（近平衡難以本益比評價）；族群法人首選多指向環球晶（目標喊至 1500），合晶為高人氣跟漲股，參考性有限。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">復甦遞延/漲價不如預期、PB 修正</td><td>80 – 110</td><td class="down">約 −40%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">擴產如期、獲利溫和回升</td><td>140 – 170</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">超級循環延續、12 吋放量獲利</td><td>190 – 220</td><td class="up">約 +25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">漲價+AI 需求全面重估</td><td>240 +</td><td class="up">約 +50%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏空／週期估值透支</b> — 現價對淨值 P/B 約 7.2x、EPS 近乎為零，股價一年已漲約 8 倍提前反映復甦；Base 僅持平、Bear 達 −40%，上檔須「12 吋擴產與漲價真正轉為獲利」才兌現。屬題材/籌碼驅動的高 P/B 週期股，而非基本面支撐的估值標的，追高容錯低。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Goodinfo／Win 投資（即時報價、市值、營收、52週、EPS/淨值/PB）、經濟日報／工商時報／豐雲學堂（矽晶圓超級循環、擴產、SEMI 出貨）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2618','長榮航')">長榮航 2618</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">航空客貨運</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">低本益比循環</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ 39</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v">40–43（+3~10%）</div><div class="t">共識目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">合理（循環）</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>國內第二大航空，客運＋貨運雙引擎。2025 EPS 4.84、Q1 2026 EPS 1.53（年增 39%）、5 月營收年增 22%。惟 Factset 估 2026 EPS 下修至 <b>3.95</b>（獲利自高峰正常化）、目標 40–43，本益比僅 <b>~8x</b>，屬低估值循環股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為<b>航空客貨運景氣與獲利正常化</b>。客運需求穩健、貨運受惠 AI 伺服器／電子拉貨與運價；5 月營收 223 億、年增 22%，累計年增 14%。Q1 2026 EPS 1.53（季增 9%、年增 39%）。油價與匯率為變數。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>2025 EPS 4.84（後疫高峰），Factset 估 2026 EPS 中位 3.95（正常化、前值 4.06）；法人估全年約 4.4。持續接收新機、擴充運力。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視長榮航為低本益比、有配息的價值／循環股；貨運題材（AI 拉貨）加持，但獲利已過高峰、成長趨緩。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>長榮航本益比僅 ~8x 看似便宜，但航空為強週期股——2025 EPS 4.84 為後疫高峰，Factset 估 2026 EPS 降至 3.95（衰退），共識目標 40–43 僅小幅高於現價。真正變數是客貨運景氣、油價與匯率，而非帳面低本益比；獲利正常化下，低本益比不等於便宜。屬「低估值、但成長趨緩」的循環股。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">~NT$2,100億</div><div class="t">市值（概估）</div></div>
+      <div class="rpt-metric"><div class="v">4.84 元</div><div class="t">2025 EPS</div></div>
+      <div class="rpt-metric"><div class="v">1.53（年增39%）</div><div class="t">Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v">3.95</div><div class="t">2026e EPS（Factset）</div></div>
+      <div class="rpt-metric"><div class="v">~8x</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v">32.15 – 45.65</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ea3943">年增22%</div><div class="t">5月營收</div></div>
+      <div class="rpt-metric"><div class="v">有配息</div><div class="t">價值/循環</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">長榮航</td><td>2618</td><td>~2,100億</td><td style="text-align:left">客運＋貨運雙引擎，貨運相對強</td></tr>
+        <tr><td class="sym">中華航</td><td>2610</td><td>≈2,000億</td><td style="text-align:left">國內最大航空，客貨運</td></tr>
+        <tr><td class="sym">星宇航空</td><td>2646</td><td>≈1,000億</td><td style="text-align:left">新興全服務航空，成長中</td></tr>
+        <tr><td class="sym">台灣虎航</td><td>6757</td><td>≈300億</td><td style="text-align:left">廉航（LCC）</td></tr>
+        <tr><td class="sym">長榮航太</td><td>2645</td><td>≈600億</td><td style="text-align:left">航太維修 MRO＋無人機（關聯）</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理（低估值、循環）。</b>本益比 ~8x 為航空常見循環估值、非絕對便宜；2026 EPS 估降至 3.95（自高峰正常化）。以 EPS 4 × 循環中樞 9–11x = 36–44，現價 39 落於區間；共識目標 40–43（+3~10%）。合理與否取決於客貨運景氣、油價與匯率，屬循環價值股。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>中性偏多。貨運 AI 拉貨題材、低估值吸引；但獲利過高峰、成長趨緩，缺爆發性。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>Factset 2026 EPS 3.95、目標 40–43（+3~10%）；評等偏中性／買進，上檔有限。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">景氣轉弱／油價升／運價跌</td><td>30 – 34</td><td class="down">約 −18%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">客貨運穩健、EPS ~4</td><td>38 – 43</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">貨運運價強、EPS 優於預期</td><td>46 – 52</td><td class="up">約 +25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">貨運超級循環重演</td><td>58 +</td><td class="up">約 +49%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬對稱偏中性、低估值循環股</b> — 本益比 ~8x 提供下檔支撐，但獲利過高峰、上檔（共識 +3~10%）有限；勝負取決於客貨運景氣與油價匯率。屬低估值、成長趨緩的循環價值股，波動小於題材股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Yahoo 股市（即時報價、本益比、52週）、財報狗（EPS）、Factset（EPS／目標價）、經濟日報／CMoney（客貨運、營收）（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('us','NVDA','NVIDIA')">NVIDIA NVDA</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI GPU 霸主</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">共識看多</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/08</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ $204</div><div class="t">現價 (USD)</div></div>
+        <div class="rpt-metric"><div class="v">$300（+47%）</div><div class="t">共識目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--yellow)">合理偏高</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>AI 加速運算絕對龍頭（GPU／CUDA 生態），Blackwell／Rubin 需求爆發、約 <b>$500B 訂單 backlog</b>、2026 營收估 ~$3,230 億。現價 $204（52 週 $161–$236），共識目標 ~$300（<b>+47%</b>）、60/64 買進；估值高但獲利與訂單能見度支撐。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為 <b>AI 資料中心的超級循環</b>。Nvidia 是 AI 訓練／推論加速運算的絕對龍頭（GPU＋CUDA 護城河），Blackwell 需求強勁、Rubin next-gen 在途；累計訂單 backlog 約 $500B。2026 營收共識約 $3,230 億。近期股價 $204、52 週 $161–$236。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層指引　</b>加速運算與「AI 工廠」敘事，供應鏈改善、產能爬升；持續推進 Blackwell 出貨與 Rubin 平台。競爭（DeepSeek、客戶自研 ASIC）與出口管制為變數。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>95% 分析師看多，共識「強力買進」、平均目標 ~$300–$309（高至 $500）；市場視為 AI 最確定受益者、機構核心持股。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>Nvidia 共識目標 ~$300（+47%）、60/64 買進，看似一面倒；但市值已達數兆美元、成長基期極高，任何 AI 資本支出降溫、客戶自研 ASIC（Google TPU、博通）分食、或出口管制升級都可能壓縮估值。真正的錨是 Blackwell／Rubin 訂單能否持續複利與毛利維持，而非單一季財報。屬高品質但高基期的循環成長股，波動仍大。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">~$5兆</div><div class="t">市值（概估）</div></div>
+      <div class="rpt-metric"><div class="v">$204</div><div class="t">現價</div></div>
+      <div class="rpt-metric"><div class="v">~$3,230億</div><div class="t">2026e 營收</div></div>
+      <div class="rpt-metric"><div class="v">~$500B</div><div class="t">訂單 backlog</div></div>
+      <div class="rpt-metric"><div class="v">~$300（+47%）</div><div class="t">共識目標</div></div>
+      <div class="rpt-metric"><div class="v">強力買進(60/64)</div><div class="t">評等</div></div>
+      <div class="rpt-metric"><div class="v">$161–$236</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v">~1.7</div><div class="t">Beta</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">Nvidia</td><td>NVDA</td><td>~$5兆</td><td style="text-align:left">AI GPU 霸主，CUDA 生態，訓練／推論龍頭</td></tr>
+        <tr><td class="sym">Broadcom</td><td>AVGO</td><td>≈$1.5兆</td><td style="text-align:left">客製 ASIC（Google TPU 等）＋網通</td></tr>
+        <tr><td class="sym">TSMC</td><td>TSM</td><td>≈$2兆</td><td style="text-align:left">AI 晶片代工（通吃）</td></tr>
+        <tr><td class="sym">AMD</td><td>AMD</td><td>≈$3,000億</td><td style="text-align:left">GPU／CPU，AI 加速次要玩家</td></tr>
+        <tr><td class="sym">Marvell</td><td>MRVL</td><td>≈$2,000億</td><td style="text-align:left">客製矽／光通訊</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理偏高（品質成長）。</b>估值高，但以 $500B backlog 與 2026 營收 $3,230 億回推仍具成長性；共識目標 ~$300（+47%）、60/64 買進反映對 AI 超級循環買單。相對高速成長不算離譜，惟市值數兆、基期高。合理與否取決於 Blackwell／Rubin 訂單 durability 與 ASIC 競爭。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>極度看多共識（95% 買進）、機構核心持股；但高基期、AI 泡沫疑慮與競爭為隱憂。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>強力買進（60/64 買、12 強力買）。平均目標 ~$300–$309（+47~52%）；區間 $250（保守）至 $500（樂觀）。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>價格區間 (USD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">AI capex 降溫／ASIC 分食／出口管制</td><td>$150 – $180</td><td class="down">約 −19%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">Blackwell 放量、指引達標</td><td>$210 – $260</td><td class="up">約 +15%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">Rubin 放量＋訂單複利（近共識）</td><td>$290 – $340</td><td class="up">約 +54%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI 超級循環全面重估</td><td>$420 +</td><td class="up">約 +106%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向、品質最高</b> — 共識目標 ~$300（+47%）、60/64 買進，上檔（+54%~+106%）大於下檔（約 −19%）；核心風險非估值而在 AI capex 循環與 ASIC 競爭。屬「最高品質、高基期」的 AI 核心成長股，波動仍大。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Stockanalysis.com／Yahoo Finance（即時報價、52週）、MarketBeat／TipRanks／S&amp;P Global（目標價、評等）、公司財報／法說（Blackwell、Rubin、backlog）（截至 2026/07/08）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('us','ONTO','Onto')">Onto ONTO</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI先進封裝檢測</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">成長回檔</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/08</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ $291</div><div class="t">現價 (USD)</div></div>
+        <div class="rpt-metric"><div class="v">$344（+18%）</div><div class="t">共識目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--yellow)">合理偏高</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>半導體量測／檢測設備商，受惠 AI 先進封裝（2.5D／HBM）。FY2025 營收 $10.1 億、2026 估 <b>EPS +47%</b>／營收 +33%；Dragonfly G5 切入 2.5D AI 封裝。股價自 52 週高 $386 回檔至 $291（52 週低 $89），共識目標 $344（+18%）、Strong Buy 7/0/0。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為 <b>AI 先進封裝驅動的半導體檢測需求</b>。Onto 的 Dragonfly G5 系統獲 2.5D AI 封裝 qualification，卡位 HBM（高頻寬記憶體）量產爬坡；先進封裝擴張帶動 2026 銷售成長。股價自 52 週高 $386 回檔至 $291。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層指引　</b>FY2025 營收 $10.1 億（+1.8%）；分析師估 2026 EPS +47%、營收 +33%（AI 封裝重新加速）。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視 ONTO 為 AI 先進封裝／HBM 量測受惠股，Strong Buy 7/0/0；Oppenheimer 目標 $450、Cantor $410。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>ONTO 52 週振幅極大（$89–$386，近 4 倍），股價由 AI 先進封裝／HBM 題材與 2026 獲利重加速（EPS +47%）驅動。真正的錨是 Dragonfly G5 於 2.5D／HBM 的滲透與訂單放量，而非 FY2025 僅 +1.8% 的營收。回檔後（自 $386 跌 24%）估值較高點合理，但仍需 2026 成長兌現；半導體設備循環性與客戶集中為風險。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">~$14B</div><div class="t">市值（概估）</div></div>
+      <div class="rpt-metric"><div class="v">$10.1億（+1.8%）</div><div class="t">FY2025 營收</div></div>
+      <div class="rpt-metric"><div class="v">+47%</div><div class="t">2026e EPS</div></div>
+      <div class="rpt-metric"><div class="v">+33%</div><div class="t">2026e 營收</div></div>
+      <div class="rpt-metric"><div class="v">$343.6（+18%）</div><div class="t">共識目標</div></div>
+      <div class="rpt-metric"><div class="v">$89.4–$386.5</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">約 −24%</div><div class="t">自高點回檔</div></div>
+      <div class="rpt-metric"><div class="v">強力買進(7/0/0)</div><div class="t">評等</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">Onto</td><td>ONTO</td><td>~$14B</td><td style="text-align:left">光學量測／檢測，AI 先進封裝／HBM</td></tr>
+        <tr><td class="sym">KLA</td><td>KLAC</td><td>≈$1,700億</td><td style="text-align:left">製程控制／檢測龍頭</td></tr>
+        <tr><td class="sym">Camtek</td><td>CAMT</td><td>≈$100億</td><td style="text-align:left">先進封裝檢測（直接對手）</td></tr>
+        <tr><td class="sym">Nova</td><td>NVMI</td><td>≈$80億</td><td style="text-align:left">量測（metrology）</td></tr>
+        <tr><td class="sym">Applied Mat.</td><td>AMAT</td><td>≈$1,800億</td><td style="text-align:left">半導體設備龍頭（對照）</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理偏高（成長股、回檔後）。</b>回檔後（自 $386 跌 24%）估值較高點合理；2026 EPS +47%、營收 +33% 的重加速支撐。共識目標 $343.6（+18%）、7/0/0 買進、Oppenheimer $450。合理與否取決於 Dragonfly G5 於 2.5D／HBM 的放量與半導體設備景氣。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>偏多、成長股。AI 先進封裝題材熱；但 52 週振幅近 4 倍、波動大，自高點回檔。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>強力買進（7 買／0 持有／0 賣）。共識目標 $343.6（+18%）；區間 $315（保守）至 $450（Oppenheimer）。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>價格區間 (USD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">半導體設備循環轉弱／封裝遞延</td><td>$200 – $250</td><td class="down">約 −23%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">AI 封裝放量、指引達標</td><td>$290 – $345</td><td class="up">約 +9%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">G5 於 HBM 滲透、EPS 超預期</td><td>$380 – $450</td><td class="up">約 +42%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI 先進封裝全面重估</td><td>$500 +</td><td class="up">約 +72%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向、成長股</b> — 回檔後上檔（+42%~+72%，若 AI 封裝放量）大於下檔（約 −23%）；ONTO AI 先進封裝／HBM 題材與 2026 獲利重加速真實，但 52 週振幅大、循環性仍在。屬「成長、回檔後合理」的半導體檢測股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Stockanalysis.com／Yahoo Finance（即時報價、52週）、MarketBeat／TipRanks（目標價、評等）、Oppenheimer／Cantor（券商目標）、公司財報（Dragonfly G5、HBM）（截至 2026/07/08）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','6174','安碁')">安碁 6174</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">頻率元件/AI光通訊</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.15);color:#ff8a94">高波動投機</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ 59.5</div><div class="t">現價 (TWD·上櫃)</div></div>
+        <div class="rpt-metric"><div class="v">覆蓋少／分歧</div><div class="t">目標價</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff8a94">偏昂貴／題材</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>頻率元件（石英／被動元件）廠，Q2 業績走旺＋AI 及光通訊題材加持（與希華同族群）。股價近 3 月自 ~23 飆 <b>+158%</b> 至 59.5（52 週低 19.5、7/6 連 4 漲）。上櫃小型股、覆蓋券商少，屬高波動題材投機。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為<b>頻率元件的 AI／光通訊題材</b>。安碁（AKER）為頻率／被動元件廠，Q2 業績走旺，受惠 AI 算力與光通訊高頻傳輸對頻率元件的需求。股價近 3 月自 ~23 飆至 59.5（+158%），7/6 連 4 漲、漲幅 27%。與希華、晶技等頻率元件股同動。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層指引　</b>1990 年成立、2002 上櫃；產能與訂單隨頻率元件需求提升。（覆蓋少、公開指引有限。）</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場追捧「頻率元件 AI／光通訊題材」，散戶與族群輪動驅動；覆蓋券商少、目標價分歧。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>安碁近 3 月大漲逾 150%、自 52 週低 19.5 已數倍，題材（AI、光通訊）想像先行，實際獲利兌現需時間。上櫃小型股、流動性與波動大、覆蓋券商少、缺明確共識目標；頻率元件為競爭性零組件（晶技龍頭、希華等同業）。追高與籌碼／處置風險高，屬純題材投機。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">小型（上櫃）</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">59.5</div><div class="t">現價</div></div>
+      <div class="rpt-metric"><div class="v">19.5 – 67</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ea3943">+158%</div><div class="t">近3月</div></div>
+      <div class="rpt-metric"><div class="v">23→63</div><div class="t">3月低→高</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">偏高（題材）</div><div class="t">本益比</div></div>
+      <div class="rpt-metric"><div class="v">頻率/被動元件</div><div class="t">主力產品</div></div>
+      <div class="rpt-metric"><div class="v">券商少</div><div class="t">覆蓋</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">安碁</td><td>6174</td><td>上櫃小型</td><td style="text-align:left">頻率／被動元件，AI／光通訊題材</td></tr>
+        <tr><td class="sym">晶技</td><td>3042</td><td>≈500億</td><td style="text-align:left">石英元件全球龍頭</td></tr>
+        <tr><td class="sym">希華</td><td>2484</td><td>≈260億</td><td style="text-align:left">石英元件，SpaceX／AI 題材</td></tr>
+        <tr><td class="sym">台嘉碩</td><td>3221</td><td>≈100億</td><td style="text-align:left">石英元件</td></tr>
+        <tr><td class="sym">加高</td><td>5326</td><td>≈50億</td><td style="text-align:left">石英元件</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴／題材（獲利待兌現）。</b>近 3 月 +158%、自 52 週低數倍，題材（AI、光通訊）驅動；覆蓋券商少、無明確共識目標，本益比偏高。屬「題材先行、獲利待兌現」的高波動上櫃小型股；合理與否取決於頻率元件訂單放量至獲利。追高與流動性／處置風險高。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>極度題材／籌碼驅動、波動大。散戶追頻率元件 AI 題材、族群輪動；覆蓋極少。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>覆蓋少、無統一目標；屬上櫃題材小型股，參考性有限。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">題材退燒／獲利跟不上／處置</td><td>35 – 45</td><td class="down">約 −33%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">需求續強、高檔震盪</td><td>55 – 65</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">AI／光通訊訂單放量</td><td>75 – 90</td><td class="up">約 +38%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">頻率元件題材全面重估</td><td>100 +</td><td class="up">約 +68%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏投機、波動極大</b> — 近 3 月 +158% 後追高風險高，Base 僅高檔震盪，勝負取決於 AI／光通訊訂單能否兌現至獲利；上櫃小型、覆蓋少、流動性／處置風險，屬高波動題材投機股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Yahoo 股市（即時報價、52週、6174.TWO 上櫃）、Goodinfo／財報狗（公司資料）、CMoney／財訊（頻率元件、AI 光通訊題材）、公司公開資訊（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2484','希華')">希華 2484</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">石英/SpaceX+AI</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.15);color:#ff8a94">高波動題材</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ 92.7</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v">覆蓋少／分歧</div><div class="t">目標價</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff8a94">偏昂貴／題材</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>石英晶體元件廠，與 SpaceX Starlink v2.0 二代衛星合作供抗輻射石英元件＋AI 算力／光通訊高頻需求，頻率元件族群大噴發。股價近 3 月自 ~30 飆 <b>+205%</b> 至 92.7（52 週低 19.6）。唯一具大規模人工長晶能力台廠、自產晶棒轉供半導體級石英載板；屬高波動題材股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為<b>石英頻率元件的 AI／衛星題材重估</b>。希華與 SpaceX Starlink v2.0 二代衛星合作供抗輻射石英元件；2026 AI 算力基礎設施爆發、光通訊與高頻傳輸對頻率精準度要求提升，帶動石英元件需求。頻率元件廠 5 月大噴發、Q2 業績走旺。股價近 3 月自 ~30 飆至 92.7（+205%）。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>訂單能見度提升、需求展望樂觀；唯一具大規模人工長晶能力台廠，自產晶棒部分轉供半導體級石英載板。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場追捧「SpaceX 衛星＋AI 光通訊石英元件」，晶技／希華／台嘉碩等頻率元件股同動；覆蓋券商少、目標價分歧。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>股價近 3 月大漲逾 200%、自 52 週低 19.6 已數倍，題材（SpaceX 衛星、AI 光通訊）想像先行，實際貢獻與獲利兌現需時間。石英元件為競爭性零組件，晶技（龍頭）與國際廠競爭；覆蓋券商少、缺明確共識目標，籌碼與題材驅動、波動大。追高風險高，需留意題材退燒與獲利能否跟上股價。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">~NT$260億</div><div class="t">市值（概估）</div></div>
+      <div class="rpt-metric"><div class="v">92.7</div><div class="t">現價</div></div>
+      <div class="rpt-metric"><div class="v">19.6 – 102</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ea3943">+205%</div><div class="t">近3月</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">偏高（題材）</div><div class="t">本益比</div></div>
+      <div class="rpt-metric"><div class="v">石英振盪器/濾波器</div><div class="t">主力產品</div></div>
+      <div class="rpt-metric"><div class="v">唯一大規模人工長晶</div><div class="t">技術優勢</div></div>
+      <div class="rpt-metric"><div class="v">券商少</div><div class="t">覆蓋</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">希華</td><td>2484</td><td>~260億</td><td style="text-align:left">石英元件，唯一大規模人工長晶，SpaceX/AI 題材</td></tr>
+        <tr><td class="sym">晶技</td><td>3042</td><td>≈500億</td><td style="text-align:left">石英元件全球龍頭</td></tr>
+        <tr><td class="sym">台嘉碩</td><td>3221</td><td>≈100億</td><td style="text-align:left">石英元件</td></tr>
+        <tr><td class="sym">加高</td><td>5326</td><td>≈50億</td><td style="text-align:left">石英元件</td></tr>
+        <tr><td class="sym">泰藝</td><td>2286</td><td>≈40億</td><td style="text-align:left">石英元件</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴／題材（獲利待兌現）。</b>近 3 月 +205%、自 52 週低數倍，題材（SpaceX 衛星、AI 光通訊）驅動；覆蓋券商少、無明確共識目標，本益比偏高。屬「題材先行、獲利待兌現」的高波動股；合理與否取決於衛星／AI 光通訊訂單能否放量至獲利。追高風險高。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>極度題材驅動、波動大。散戶追 SpaceX／AI 石英題材、頻率元件族群同動；缺乏券商共識，籌碼主導。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>覆蓋少、無統一目標；屬題材小型股，參考性有限。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">題材退燒／獲利跟不上／族群回檔</td><td>55 – 70</td><td class="down">約 −32%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">需求續強、高檔震盪</td><td>85 – 100</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">SpaceX／AI 光通訊訂單放量</td><td>115 – 135</td><td class="up">約 +35%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">石英 AI 題材全面重估</td><td>150 +</td><td class="up">約 +62%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏投機、波動極大</b> — 近 3 月 +205% 後追高風險高，Base 僅高檔震盪，勝負取決於 SpaceX 衛星與 AI 光通訊訂單能否兌現至獲利；覆蓋少、題材驅動，屬高波動小型題材股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Yahoo 股市（即時報價、52週）、StockFeel／MoneyDJ（公司業務）、CMoney／Wealth Vane（石英元件題材、SpaceX 合作）、公司新聞（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('us','XPL','Solitario')">Solitario XPL</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">金/鋅探勘</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.15);color:#ff8a94">pre-revenue 投機</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/08</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ $0.75</div><div class="t">現價 (USD)</div></div>
+        <div class="rpt-metric"><div class="v">$1.2（1 家）</div><div class="t">分析師目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff8a94">投機／無營收</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>金／鋅探勘微型股（市值僅 <b>~$77M</b>）、無營收。專案：Golden Crest（南達科他金）、Florida Canyon（秘魯鋅，Nexa 39% 且 carried）、Lik（阿拉斯加鋅，Teck 各半）、Bright Angel（科羅拉多銅金）。股價 $0.75（52 週 $0.54–$0.98）雞蛋水餃股；1 家分析師目標 $1.2。屬高風險 pre-revenue 探勘投機。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為<b>金／鋅探勘題材與鑽探進度</b>。Golden Crest（南達科他 31,500 英畝金礦）2026 鑽探計畫；Florida Canyon（秘魯鋅）由 Nexa 持 39% 並 carried to production、Lik（阿拉斯加鋅）與 Teck 各半；3/10 向美國林務局提交 Bright Angel（科羅拉多金銅）首次岩心鑽探計畫。受惠金／銀價高檔的探勘題材。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層指引　</b>探勘／royalty 商業模式，2026 多專案鑽探；仍為 pre-revenue，靠現金與夥伴 carried 推進。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>貴金屬多頭下的初級探勘股，散戶題材；1 家分析師「強力買進」目標 $1.2（+60%），但覆蓋極少、分歧。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>Solitario 為 pre-revenue 初級探勘商，市值僅 ~$77M、股價 &lt;$1（雞蛋水餃股），估值全繫於「探勘成功與資源量」的想像而非現金流。探勘本質高失敗率，稀釋（增資）與商品價格風險並存；即使 Florida Canyon 由 Nexa carried，Golden Crest／Bright Angel 仍需資本與鑽探驗證。1 家分析師目標 $1.2 參考性有限。屬二元／樂透式投機，任何鑽探失利或增資將劇烈衝擊，尾端有大幅減損甚至歸零風險。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">~$77M</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">$0.75</div><div class="t">股價</div></div>
+      <div class="rpt-metric"><div class="v">$0.54–$0.98</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v">N/A</div><div class="t">本益比（無營收）</div></div>
+      <div class="rpt-metric"><div class="v">$1.2（1 家）</div><div class="t">分析師目標</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">探勘/pre-revenue</div><div class="t">屬性</div></div>
+      <div class="rpt-metric"><div class="v">Golden Crest／Florida Canyon</div><div class="t">主要專案</div></div>
+      <div class="rpt-metric"><div class="v">Teck／Nexa</div><div class="t">夥伴</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">Solitario</td><td>XPL</td><td>~$77M</td><td style="text-align:left">金／鋅探勘＋royalty，多專案、夥伴 carried</td></tr>
+        <tr><td class="sym">Teck Res.</td><td>TECK</td><td>大型</td><td style="text-align:left">Florida Canyon／Lik 合作夥伴，多金屬礦商</td></tr>
+        <tr><td class="sym">Nexa Res.</td><td>NEXA</td><td>中型</td><td style="text-align:left">Florida Canyon 39% 夥伴，鋅生產商</td></tr>
+        <tr><td class="sym">初級探勘同業</td><td>—</td><td>$50–300M</td><td style="text-align:left">pre-revenue、稀釋／商品價風險、波動大</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：不適用／投機（pre-revenue）。</b>無本益比（無營收）；估值繫於探勘成功與資源量。市值僅 ~$77M、股價 &lt;$1，屬初級探勘投機。合理價無法以基本面推估，端視鑽探結果與金／鋅價；1 家分析師目標 $1.2 參考性有限。下檔含稀釋、探勘失敗與商品價風險。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>極度投機、流動性低。貴金屬多頭題材、散戶參與；覆蓋極少。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>僅 1 家「強力買進」目標 $1.2（+60%），參考性有限、分歧。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>價格區間 (USD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">鑽探失利／增資稀釋／金鋅價回落</td><td>$0.35 – $0.50</td><td class="down">約 −40%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">專案推進、題材維持</td><td>$0.65 – $0.85</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">鑽探有重大發現／資源量提升</td><td>$1.10 – $1.40</td><td class="up">約 +73%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">重大金礦發現重估</td><td>$2.0 +</td><td class="up">約 +166%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬極端、二元／樂透</b> — 下檔含稀釋與探勘失敗（尾端有歸零風險），上檔為倍數想像；市值 ~$77M、股價 &lt;$1 的初級探勘投機股，僅適合可承受全損的極小部位。鑽探結果與金／鋅價為關鍵。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Stockanalysis.com／Yahoo Finance（即時報價、52週）、公司網站／StockTitan（專案、鑽探、JV）、公司新聞（Bright Angel Plan of Operations）、分析師評等（截至 2026/07/08）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','6719','力智')">力智 6719</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI伺服器電源IC</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">成長股回檔</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ 274</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v">Q1 EPS 2.1／毛利 41.7%</div><div class="t">財務</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--yellow)">合理偏高</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>電源管理 IC（PMIC）廠，切入 AI 伺服器電源（Vcore 控制器、BBU 備援電池模組）。Q1 2026 EPS 2.1、毛利率 41.7%，AI 應用營收占比首季突破 <b>5%</b>、全年拚雙位數，毛利率朝 43–45%。股價自高點 ~326 回檔至 274（近 3 月仍 +74%）。屬 AI 電源成長股、相對同業折價。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為<b>AI 伺服器電源的成長</b>。高功耗推動多相位整合（multiphase）電源需求，力智產品導入 AI 終端、邊緣運算與雲端伺服器，涵蓋電源模組、伺服器電源與 BBU 備援電池模組。Q1 2026 AI 伺服器營收占比突破 5%。曾亮燈漲停 255。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>Q1 EPS 2.1、毛利率 41.7%；法人預期下半年逐季成長、AI 占比全年拚雙位數，2026 毛利率朝 43–45%。核心技術自 PMIC 拓展至 Vcore 控制器與工業級功率元件。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視力智為「AI 電源」受惠股，部分分析認為相對 AI 電源國際同業有折價；但股價自高點回檔、AI 占比仍低（5%），成長兌現需時間。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>力智 AI 伺服器占比 Q1 僅 5%（衝雙位數目標），AI 電源「故事」尚未完全反映於財報——真正的觀察點是產品組合（Vcore／BBU 高價值占比）與毛利率能否如期升至 43–45%。股價自高點 326 回檔約 16%，相對 AI 電源國際同業（矽力／MPS）估值折價，但仍需 AI 營收放量兌現；屬成長股，波動隨題材與財報起伏。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">~NT$360億</div><div class="t">市值（概估）</div></div>
+      <div class="rpt-metric"><div class="v">2.1 元</div><div class="t">Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v">41.7%→43-45%</div><div class="t">毛利率</div></div>
+      <div class="rpt-metric"><div class="v">5%（衝雙位數）</div><div class="t">AI伺服器占比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">~32x</div><div class="t">前瞻 P/E</div></div>
+      <div class="rpt-metric"><div class="v">157 – 326.5</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ea3943">+74%</div><div class="t">近3月</div></div>
+      <div class="rpt-metric"><div class="v" style="color:var(--green)">約 −12%</div><div class="t">自高點回檔</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">力智</td><td>6719</td><td>~360億</td><td style="text-align:left">PMIC＋Vcore＋BBU，AI 伺服器電源</td></tr>
+        <tr><td class="sym">矽力-KY</td><td>6415</td><td>≈1,200億</td><td style="text-align:left">類比／電源 IC，AI 電源，估值高</td></tr>
+        <tr><td class="sym">茂達</td><td>6138</td><td>≈250億</td><td style="text-align:left">類比／電源 IC</td></tr>
+        <tr><td class="sym">通嘉</td><td>3588</td><td>≈80億</td><td style="text-align:left">電源 IC</td></tr>
+        <tr><td class="sym">MPS</td><td>MPWR</td><td>對照(美)</td><td style="text-align:left">電源 IC 國際龍頭，AI 電源標竿</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理偏高（成長股、回檔後）。</b>前瞻本益比 ~32x，對 EPS 成長（Q1 2.1）、毛利率升至 43–45%、AI 電源放量的 PMIC 廠屬合理偏高；相對 AI 電源國際同業（矽力／MPS）折價。合理與否取決於 AI 伺服器占比能否從 5% 衝上雙位數與毛利兌現。回檔後風險報酬較高點合理。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>偏多但回檔後轉謹慎。市場看 AI 電源成長；但 AI 占比仍低、股價自高點回檔，需財報驗證。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>覆蓋偏買、部分認為相對 AI 電源同業折價；缺明確統一目標價。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">AI 放量不如預期／電源競爭／回檔</td><td>200 – 230</td><td class="down">約 −22%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">Q2 季增、AI 占比升、EPS 成長</td><td>260 – 300</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">AI 伺服器占比衝雙位數、毛利 45%</td><td>330 – 380</td><td class="up">約 +30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">AI 電源全面重估（比擬 MPS）</td><td>420 +</td><td class="up">約 +53%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向、成長股</b> — 回檔後上檔（+30%~+53%，若 AI 占比衝雙位數）大於下檔（約 −22%）；力智 AI 電源成長真實但占比仍低（5%），須財報兌現；屬「成長、回檔後合理」的 AI 電源股，波動隨題材起伏。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Yahoo 股市（即時報價、本益比、52週）、力智法說會／公司財報（Q1 EPS、毛利率、AI 占比）、CMoney／財訊快報／聯合新聞網、豐雲學堂（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','1303','南亞')">南亞 1303</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI電子材料重估</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.15);color:#ff8a94">估值分歧</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ 183</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v">共識 81.5／JPM 200</div><div class="t">目標價（分歧）</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff8a94">偏昂貴／分歧</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>塑化大廠轉型 AI 電子材料（CCL／銅箔／玻纖／環氧樹脂垂直整合），電子材料營收占比逾五成。股價自年初約 57 大漲逾 <b>160%</b> 至 183、季度 EPS 跳增（Q1 1.8、季增 190%）。惟 Factset 共識目標 <b>81.5 已遠低於現價</b>、僅 JPM 調升至 200；TTM 本益比 ~79x 偏高，屬題材重估、分歧極大。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為<b>傳產塑化轉型 AI 電子材料的估值重估</b>。南亞 CCL（銅箔基板）、銅箔、玻纖布、環氧樹脂垂直整合，受惠 AI 伺服器／網通 PCB 需求，電子材料營收占比逾五成；Q1 2026 稅後 142.5 億、EPS 1.8（季增 190%、年增 2900%）。股價自年初 ~57 漲逾 160% 至 183。銅箔與環氧樹脂擴產案 2027 Q1 前投產、年產值逾 103 億。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>Q2 電子材料出貨受惠 AI 與網通需求成長；Factset 將 2026 EPS 上修至 4.62 元。JPM 將目標價自 125 調升至 200（+60%），看 CCL／銅箔／玻纖／樹脂垂直整合全面發酵。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場追捧「傳產 AI 材料黑馬」，散戶與部分外資看重估；但賣方共識目標（Factset 81.5）遠低於現價，多空分歧達極端。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>Factset 共識目標 81.5 已遠低於現價 183（隱含約 −55%），僅 JPM 看到 200——股價已大幅跑在「平均分析師」之前。TTM 本益比 ~79x 偏高；即使以 2026e EPS 4.62 回推，前瞻 ~40x 仍不便宜。電子材料成長真實，但股價由題材重估與 EPS 跳增的想像驅動，須「電子材料獲利連續兌現」才撐得住；塑化本業仍受景氣循環影響。這是估值分歧極端、共識目標低於現價的個股。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">~NT$1.45兆</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">2.31 元</div><div class="t">近四季 EPS</div></div>
+      <div class="rpt-metric"><div class="v">1.8（季增190%）</div><div class="t">Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v">4.62</div><div class="t">2026e EPS（Factset）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">~79x</div><div class="t">TTM 本益比</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">~40x</div><div class="t">前瞻 P/E</div></div>
+      <div class="rpt-metric"><div class="v">約 57–200</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ea3943">+115%</div><div class="t">近3月</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">南亞</td><td>1303</td><td>~1.45兆</td><td style="text-align:left">塑化＋電子材料，CCL／銅箔／玻纖／樹脂垂直整合</td></tr>
+        <tr><td class="sym">台光電</td><td>2383</td><td>≈4,500億</td><td style="text-align:left">CCL 龍頭，AI 伺服器材料</td></tr>
+        <tr><td class="sym">聯茂</td><td>6213</td><td>≈900億</td><td style="text-align:left">CCL，AI PCB 用</td></tr>
+        <tr><td class="sym">台燿</td><td>6274</td><td>≈600億</td><td style="text-align:left">CCL／銅箔基板</td></tr>
+        <tr><td class="sym">台塑</td><td>1301</td><td>≈3,600億</td><td style="text-align:left">同集團塑化龍頭（對照本業）</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值／倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴／分歧（共識目標低於現價）。</b>Factset 共識 81.5 遠低於現價 183，為明顯空頭訊號；TTM ~79x、前瞻 ~40x 偏高。電子材料轉型 re-rating 真實，但估值已計入樂觀成長，僅 JPM（200）看更高。合理與否取決於 AI 電子材料獲利 durability 與塑化本業景氣，追高風險與分歧俱高。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>題材熱、分歧極端。散戶與部分外資追 AI 材料重估；但賣方共識目標遠低於現價，籌碼與題材驅動明顯。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>分歧極大——Factset 共識目標 81.5（遠低於現價），JPM 200（街高）。無統一共識，反映「AI 材料重估 vs 估值透支」。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">電子材料不如預期／塑化循環轉弱／回歸共識</td><td>90 – 120</td><td class="down">約 −43%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">電子材料續增、估值消化</td><td>160 – 190</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">AI 材料放量、EPS 超預期（近 JPM 200）</td><td>210 – 240</td><td class="up">約 +25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">全面重估比擬 CCL 龍頭</td><td>270 +</td><td class="up">約 +48%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬分歧、偏空側</b> — 共識目標（81.5）遠低於現價、Base 僅持平、Bear 達 −43%，上檔須「電子材料獲利連續兌現至近 JPM 200」才實現；估值（79x）偏高、分歧極端，屬題材重估的高波動股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Yahoo 股市（即時報價、本益比、52週）、財報狗（EPS）、Factset／JPMorgan（目標價、EPS 預估）、今周刊／CMoney（電子材料題材）、公司財報（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2395','研華')">研華 2395</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">工業電腦／邊緣AI</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.15);color:#ff8a94">估值偏高</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/09</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ 559</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v">450（低於現價）</div><div class="t">群益目標</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff8a94">偏昂貴</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>全球工業電腦（IPC）龍頭，Edge AI 強勁成長（Q1 Edge AI 營收占 <b>20.5%</b>、年增 67%）。Q1 EPS 3.85（年增 22%）、在手訂單滿（47% 交期&gt;6 月）、外資買超，股價攻 52 週高 559（近 3 月 +60%）。惟群益目標 <b>450 已低於現價</b>、前瞻本益比 ~38x 偏高。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為<b>工業電腦龍頭的 Edge AI 成長</b>。Q1 2026 營收 204 億（季增 14%、年增 17%）、營益 37 億（年增 28%）、EPS 3.85；Edge AI 營收 $1.32 億（占 20.5%、年增 67%），目標 2026 底占比 30%。B/B ratio 美 1.77（關鍵客戶 2.37）、歐 1.76，47% 訂單交期&gt;6 月，在手訂單豐厚。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>群益「看多」目標 450、預估 2026 營收 824 億、EPS 14.62；受惠半導體設備、資料中心與提早備貨。外資近期買超積極。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>市場視研華為「工業電腦＋邊緣 AI」核心持股，法人偏多；但股價已超越群益目標 450，估值偏高疑慮升溫。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>群益目標 450 已低於現價 559（隱含約 −20%）——股價已跑在券商目標之前。以 2026e EPS 14.62 回推，前瞻本益比 ~38x（現價／14.62），高於研華歷史中樞；Edge AI 成長真實（占比 20.5%、年增 67%），但 30% 占比目標與獲利兌現需時間。研華品質高、訂單能見度佳，但估值已反映多數利多，追高須留意本益比壓縮風險。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">~NT$4,400億</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">204億（年增17%）</div><div class="t">Q1 營收</div></div>
+      <div class="rpt-metric"><div class="v">3.85（年增22%）</div><div class="t">Q1 EPS</div></div>
+      <div class="rpt-metric"><div class="v">~14.62</div><div class="t">2026e EPS（群益）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">~38x</div><div class="t">前瞻 P/E</div></div>
+      <div class="rpt-metric"><div class="v">20.5%</div><div class="t">Edge AI 占比（年增67%）</div></div>
+      <div class="rpt-metric"><div class="v">271 – 562</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ea3943">+60%</div><div class="t">近3月</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">研華</td><td>2395</td><td>~4,400億</td><td style="text-align:left">IPC 龍頭＋Edge AI，品質最高、估值最高</td></tr>
+        <tr><td class="sym">樺漢</td><td>6414</td><td>≈900億</td><td style="text-align:left">IPC 系統整合（鴻海集團）</td></tr>
+        <tr><td class="sym">凌華</td><td>6166</td><td>≈300億</td><td style="text-align:left">IPC／邊緣運算</td></tr>
+        <tr><td class="sym">廣積</td><td>8050</td><td>≈200億</td><td style="text-align:left">IPC 板卡</td></tr>
+        <tr><td class="sym">融程電</td><td>3416</td><td>≈150億</td><td style="text-align:left">強固型平板／IPC</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值／倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴（股價已超越券商目標）。</b>群益目標 450 已低於現價 559（空頭訊號）；前瞻本益比 ~38x 高於歷史中樞。研華品質高、Edge AI 年增 67% 成長真實，值得溢價，但股價已超越目標、估值透支。以 2026e EPS 14.62 × 合理 28–32x = 約 410–470，接近群益目標；上檔須「Edge AI 占比與 EPS 超預期」。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>偏多但估值分歧漸增。法人視為工業 AI 核心持股、外資買超；空方聚焦「股價已超目標、本益比 38x 偏高」。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>群益「看多」目標 450（低於現價）；整體偏買進但目標多落後股價，反映估值已充分反映。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">訂單動能放緩／估值回歸（~30x）</td><td>430 – 470</td><td class="down">約 −20%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">指引達標、EPS ~14.6、估值企穩</td><td>540 – 600</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">Edge AI 占比超前、EPS 超預期</td><td>640 – 720</td><td class="up">約 +25%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">工業 AI 全面重估</td><td>780 +</td><td class="up">約 +40%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬略偏空、品質最高但估值透支</b> — 群益目標已低於現價、Bear −20%、Base 約持平，上檔須 Edge AI 與 EPS 超預期；研華品質與訂單能見度佳，屬「高品質、偏貴」的工業 AI 龍頭。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網／Yahoo 股市（即時報價、本益比、52週）、研華法說會／公司財報（Q1 EPS、Edge AI、B/B）、群益證券（目標價、EPS 預估）、豐雲學堂／CMoney（截至 2026/07/09）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-09">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('us','ASTS','AST SpaceMobile')">AST SpaceMobile ASTS</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">衛星直連手機</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.15);color:#ff8a94">pre-revenue 投機</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/08</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ $74</div><div class="t">現價 (USD)</div></div>
+        <div class="rpt-metric"><div class="v">$88（$75–$123）</div><div class="t">共識目標（+18%）</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff8a94">投機／虧損</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>衛星「直連手機（direct-to-cell）」題材股。2025 營收 $71M（+1505%）但<b>淨損 $342M</b>；BlueBird 低軌衛星陸續發射（BB8-10 已於 6/17、BB11-13 預定 8 月），FCC 核准以 AT&amp;T／Verizon 頻譜商用。股價自 52 週高 $134 回檔至 $74（約 <b>−45%</b>）；市值 ~$29B、beta 2.6、屬高風險 pre-revenue 投機股。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為<b>「衛星直連手機（direct-to-cell）」商轉題材</b>。2025 營收 $71M（+1505%，主要來自政府里程碑）、2026 指引 $150–200M；BlueBird 低軌衛星星系建置中——6/17 SpaceX Falcon 9 發射 BB8/9/10，BB11/12/13 預定 8 月上旬發射。FCC 已核准以 AT&amp;T、Verizon 頻譜提供商用 direct-to-device 服務。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層指引　</b>重申 2026 營收指引 $150–200M（政府里程碑＋服務啟用）；持續衝衛星發射與覆蓋。2025 淨損 $341.94M（較 2024 擴大 13.9%），仍大額燒錢建置星系。下一次財報約 Q2（8 月）。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>散戶與媒體熱議「太空／6G／direct-to-cell」，多空分歧大；共識「持有」，目標區間 $75–$123（平均 ~$88）。多方看星系放量與電信合作，空方憂稀釋、發射與商轉執行風險。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>ASTS 本質是 pre-revenue 的資本密集衛星商——2026 營收指引僅 $150–200M、淨損 $342M，市值卻 ~$29B（股價營收比極高），估值已計入「星系全面商轉」的樂觀情境。真正變數是衛星發射與電信覆蓋能否如期，而非當期財務。beta 2.6、自高點回檔 45%、單日常見 ±10~20%，屬二元／樂透式投機——任何發射失敗／延遲或增資稀釋將劇烈衝擊，尾端有大幅減損風險。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">≈$29B</div><div class="t">市值</div></div>
+      <div class="rpt-metric"><div class="v">$71M</div><div class="t">2025 營收（+1505%）</div></div>
+      <div class="rpt-metric"><div class="v">$150–200M</div><div class="t">2026 營收指引</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#16c784">−$342M</div><div class="t">2025 淨損</div></div>
+      <div class="rpt-metric"><div class="v">N/A</div><div class="t">本益比（虧損）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">極高</div><div class="t">股價營收比</div></div>
+      <div class="rpt-metric"><div class="v">$36–$134</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">2.6</div><div class="t">Beta</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>獲利</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">AST SpaceMobile</td><td>ASTS</td><td>≈$29B</td><td>虧損</td><td style="text-align:left">衛星直連手機(D2D)，星系建置中、pre-revenue</td></tr>
+        <tr><td class="sym">Globalstar</td><td>GSAT</td><td>≈$3B</td><td>近平衡</td><td style="text-align:left">衛星，Apple 衛星簡訊夥伴</td></tr>
+        <tr><td class="sym">Iridium</td><td>IRDM</td><td>≈$3B</td><td>獲利</td><td style="text-align:left">成熟衛星通訊，現金流穩</td></tr>
+        <tr><td class="sym">EchoStar</td><td>SATS</td><td>≈$4B</td><td>虧損</td><td style="text-align:left">衛星／電信，5G+D2D 布局</td></tr>
+        <tr><td class="sym">Starlink</td><td>(SpaceX)</td><td>未上市</td><td>—</td><td style="text-align:left">低軌衛星龍頭，直連手機競爭者</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值／倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：不適用／投機（pre-revenue）。</b>無本益比（2025 虧損 $342M）；股價營收比極高（市值 ~$29B vs 2026 營收指引 $150–200M）。合理價難以基本面推估，端視星系商轉時程與電信覆蓋。屬「題材先行、獲利未至」的定價，反映對 direct-to-cell 全面商轉的樂觀，容錯低、下檔含稀釋與發射風險。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>極度投機、波動劇烈（beta 2.6，單日 ±10~20%）。太空／6G 題材熱、多檔衛星股同動；但自 52 週高 $134 回檔 45%、獲利了結，短線情緒轉弱。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>評等「持有」（覆蓋約 6–18 家、分歧大）。共識目標 ~$88（+18%）；區間 $75（保守）至 $123（樂觀）。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>價格區間 (USD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">發射延遲／稀釋／商轉不如預期</td><td>$35 – $50</td><td class="down">約 −40%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">星系續建、指引達標</td><td>$70 – $90</td><td class="up">約 +8%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">BlueBird 放量＋電信覆蓋擴大</td><td>$110 – $130</td><td class="up">約 +55%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">direct-to-cell 全面重估</td><td>$150 +</td><td class="up">約 +100%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬極端、二元、事件驅動</b> — 下檔可達 −40% 以上（含稀釋與發射失敗尾端風險），上檔為倍數想像；beta 2.6 屬「太空題材投機」股。不宜作為核心持股，任何參與都應以可承受高波動／大幅虧損的極小部位為前提。8 月 BlueBird 發射與 2026 營收兌現為關鍵。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Stockanalysis.com、Yahoo Finance（即時報價、52週、日線）、公司財報／SEC 8-K、MarketBeat／TipRanks／WallStreetZen（目標價、評等）、公司新聞（BlueBird 發射、FCC 授權）（截至 2026/07/08）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-08">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('us','OUST','Ouster')">Ouster OUST</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">Physical AI 題材</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.15);color:#ff8a94">高風險投機</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/07</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ $44</div><div class="t">現價 (USD)</div></div>
+        <div class="rpt-metric"><div class="v">$46.9（$22–$90）</div><div class="t">共識目標價／區間</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--yellow)">偏昂貴／投機</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>小型（市值 ~$30 億）、<b>尚未獲利</b>的光達（LiDAR）公司（2025 虧損 $56M），乘「Physical AI」題材，52 週股價 $16→$64（~4 倍）、<b>beta 高達 3.17</b>、單日常見 ±10~28%；近期剛以 $55.22 完成增資稀釋。屬高波動題材投機股，波動與虧損風險遠高於獲利型企業。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為<b>「Physical AI（機器人／自駕）」題材的估值重估</b>。數位光達龍頭之一，營收 +57%（TTM $185M）但仍虧損。近期利多密集：REV8 新一代 OS 數位光達（原生彩色）、獲 Build America Buy America（BABA）合規、與 AIM Intelligent Machines（重機具）、FieldAI（機器人）、Benchmark（量產）合作、BlueCity 交通方案（NJ DOT／2026 世界盃）。52 週股價 $16→$64。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層指引　</b>下一次財報 <b>8/6</b>。持續衝 REV8 量產與工業／機器人／智慧基建設計導入；惟 7/2 以 $55.22 完成增資（稀釋）、並提交 shelf，反映持續的資本需求。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>Physical AI 風口熱議，多檔券商看多（Roth 初評買進 $75、Rosenblatt $53）；股價單日暴漲暴跌（+28%、+26% 對 −17%、−16%），投機氣氛濃厚。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>OUST 雖有真實營收與產品（不同於純故事股），但<b>仍在虧損、持續燒錢並靠增資稀釋股東</b>；股價營收比約 16x，遠高於多數光達同業（Hesai 等 ~5x），反映 Physical AI 成長溢價已計入。光達產業具「炒作—泡沫」歷史（2021–23 多檔 SPAC 崩跌）、面臨中國低價光達競爭與汽車設計導入的循環性；共識目標 $46.9 僅 +6%（僅 7 位分析師、參考性有限）。這是題材與執行力的賽跑，波動與歸零尾端風險高。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">$2.97B</div><div class="t">市值（+171%）</div></div>
+      <div class="rpt-metric"><div class="v">$169M</div><div class="t">2025 營收（+52.5%）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#16c784">-$0.95</div><div class="t">TTM EPS</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#16c784">-$55.8M</div><div class="t">淨利</div></div>
+      <div class="rpt-metric"><div class="v">N/A</div><div class="t">本益比（虧損）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">≈16x</div><div class="t">P/S</div></div>
+      <div class="rpt-metric"><div class="v">$16.4–$63.8</div><div class="t">52週區間</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">3.17</div><div class="t">Beta</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>P/S</th><th>獲利</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">Ouster</td><td>OUST</td><td>≈$3.0B</td><td>≈16x</td><td>虧損</td><td style="text-align:left">數位光達(OS/REV8)，工業／機器人／智慧基建</td></tr>
+        <tr><td class="sym">Hesai</td><td>HSAI</td><td>≈$4B</td><td>≈5x</td><td>近損益兩平</td><td style="text-align:left">中國光達龍頭，車用出貨量最大</td></tr>
+        <tr><td class="sym">Aeva</td><td>AEVA</td><td>≈$2B</td><td>極高</td><td>虧損</td><td style="text-align:left">FMCW 4D 光達，技術差異化</td></tr>
+        <tr><td class="sym">Luminar</td><td>LAZR</td><td>≈$0.5B</td><td>≈5x</td><td>高虧損</td><td style="text-align:left">車用光達，曾為龍頭、近年重挫</td></tr>
+        <tr><td class="sym">Innoviz</td><td>INVZ</td><td>≈$0.4B</td><td>≈3x</td><td>虧損</td><td style="text-align:left">車用光達，估值最低</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業市值／倍數為市場概估，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴（題材投機、尚未獲利）。</b>無本益比（2025 虧損 $56M）；股價營收比約 16x，遠高於多數光達同業（Hesai ~5x），反映 Physical AI 成長溢價。營收雖 +57% 高成長，但仍燒錢、剛完成增資稀釋。合理價難以基本面推估，端視 Physical AI 敘事、REV8 放量與轉盈時程；光達產業具炒作—泡沫歷史、中國低價競爭與稀釋風險高，屬高風險投機。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>極度投機、波動劇烈（beta 3.17，單日常見 ±10~28%）。Physical AI 風口熱議、多檔券商看多；但剛增資、獲利了結，7/2 −17%、7/7 −11.6%。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>評等「強力買進」（僅 7 家，參考性有限）。共識目標 <b>$46.86（+6%，≈現價）</b>；券商目標分歧大（$46–$75）。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>價格區間 (USD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">Physical AI 退燒／持續燒錢稀釋／中國競爭</td><td>$22 – $30</td><td class="down">約 −40%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">營收續增、題材維持</td><td>$42 – $52</td><td class="up">約 +7%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">REV8 放量＋機器人／自駕設計導入</td><td>$65 – $78</td><td class="up">約 +60%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">Physical AI 全面重估</td><td>$90 +</td><td class="up">約 +100%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬極端、二元</b> — 下檔可達 −40% 以上（含持續稀釋與競爭風險，尾端有大幅減損可能），上檔為倍數想像；beta 3.17 波動遠大於大盤，屬「Physical AI 題材投機」小型股。不宜作為核心持股，任何參與都應以「可承受高波動／大幅虧損」的極小部位為前提。8/6 財報為關鍵。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Stockanalysis.com（即時報價、市值、財務、52週區間、日線走勢）、Business Wire／TheFly／TipRanks（REV8、合作案、增資、券商評等）、Invezz（Physical AI）、S&amp;P Global（截至 2026/07/07）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-08">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2368','金像電')">金像電 2368</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">AI 伺服器 PCB</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.15);color:#ff8a94">高波動</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/07</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ 1,235</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v">中位 1,000（700～1,585）</div><div class="t">分析師目標價</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--yellow)">偏昂貴</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>AI 伺服器高多層 PCB 核心供應商，供應四大雲端 ASIC 平台（AWS Trainium／Google TPU／Meta MTIA／Microsoft Maia）；2025 營收 <b>+54%</b>、EPS 19.47 創高，1 年股價自 287 飆至 1,580（~5.5x）。惟 TTM 本益比 54x、股價淨值比 35.7x，共識中位目標 <b>1,000 已低於現價</b>。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為 <b>AI 伺服器 PCB 的爆發性成長</b>。金像電為高多層 PCB 核心供應商，供應四大雲端自研 ASIC 平台的主要 PCB（AWS Trainium／Google TPU／Meta MTIA／Microsoft Maia），亦切入 Nvidia AI 伺服器。2025 Q3 伺服器營收占比達 80%、AI 高階專案占營收逾 50%。2025 營收 597 億（+54%）、EPS 19.47 創高。1 年股價自 287 飆抵 1,580（~5.5x）。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層／法人指引　</b>法人稱「全年無淡季」、Q2 營收季增近兩成；FactSet 將 2026 EPS 上修至 37.43 元（vs 2025 的 19.47，近倍增）。毛利率 34.8%、營益率 26.9%。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>外資大舉加碼、PCB 族群乘 AI 浪潮；目標價分歧極大——FactSet 13 位分析師中位 1,000 元（已低於現價）、最低 700，美系外資最高喊 1,585 元。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>FactSet 共識中位目標 1,000 元已低於現價 1,235（隱含約 −19%），僅美系外資看到 1,585——<b>股價已跑在「平均分析師」之前</b>。TTM 本益比 54x、股價淨值比 35.7 倍屬極端。前瞻 ~33x（以 2026e EPS 37.43，已近倍增）要求 AI 伺服器需求續強；但 PCB 為競爭性製造業（台光電、華通、健鼎、定穎同步擴 AI 產能），毛利 35% 佳但非護城河等級。任何 AI capex 放緩或 PCB 價格競爭將劇烈衝擊；股價 1 年 5.5x、單日振幅常逾 10%，波動極大。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">6,386億</div><div class="t">市值（$21B）</div></div>
+      <div class="rpt-metric"><div class="v">597億</div><div class="t">2025 營收（+54%）</div></div>
+      <div class="rpt-metric"><div class="v">22.69</div><div class="t">近四季 EPS</div></div>
+      <div class="rpt-metric"><div class="v">34.8%</div><div class="t">毛利率</div></div>
+      <div class="rpt-metric"><div class="v">≈33x</div><div class="t">2026e P/E</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">54x</div><div class="t">TTM P/E</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">35.7x</div><div class="t">P/B（極端）</div></div>
+      <div class="rpt-metric"><div class="v">9.80</div><div class="t">股利（0.8%）</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>本益比</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">金像電</td><td>2368</td><td>6,386億</td><td>54x (TTM)</td><td style="text-align:left">AI 伺服器高多層 PCB，4 大 CSP ASIC 平台</td></tr>
+        <tr><td class="sym">台光電</td><td>2383</td><td>≈4,500億</td><td>≈30x</td><td style="text-align:left">CCL 銅箔基板，AI 伺服器材料龍頭</td></tr>
+        <tr><td class="sym">華通</td><td>2313</td><td>≈1,500億</td><td>≈25x</td><td style="text-align:left">PCB／HDI，AI＋手機</td></tr>
+        <tr><td class="sym">健鼎</td><td>3044</td><td>≈2,000億</td><td>≈20x</td><td style="text-align:left">PCB，伺服器＋車用＋網通</td></tr>
+        <tr><td class="sym">定穎投控</td><td>3715</td><td>≈700億</td><td>≈25x</td><td style="text-align:left">車用＋AI PCB</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業比較表數值為市場近似值，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：偏昂貴（AI 題材已充分反映）。</b>TTM 本益比 54x、股價淨值比 35.7 倍屬極端；前瞻 ~33x（以 2026e EPS 37.43，已近倍增）高於多數 PCB 同業（華通／健鼎 ~20–25x、台光電 ~30x）。金像電擁 4 大 CSP ASIC 平台的結構性題材、成長真實，值得溢價；但共識中位目標 1,000 已低於現價、P/B 35.7x 顯示股價已跑在基本面之前。以 2026e EPS 37.43 × 25–27x（同業偏高）= 約 935–1,010 元，接近共識中位；上檔須靠「超預期成長＋維持高評價」。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>題材與外資追捧（PCB 乘 AI 浪潮、外資加碼）；但股價 1 年 5.5x 後高檔震盪、單日振幅常逾 10%，追高波動大。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>FactSet 13 位分析師，目標中位 <b>1,000 元（低於現價 ~19%）</b>；區間極廣 700（最低）～1,585（美系外資），反映「高成長 vs 高評價」之爭。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">AI capex 放緩／PCB 價格競爭／評價回歸</td><td>700 – 850</td><td class="down">約 −37%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">成長延續但估值消化（回歸共識中位）</td><td>1,000 – 1,150</td><td class="down">約 −13%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">四大 ASIC 平台放量、EPS 超預期</td><td>1,350 – 1,500</td><td class="up">約 +14%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">美系外資 1,585 情境</td><td>1,585 +</td><td class="up">約 +28%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏空（回檔後仍高估）</b> — 共識中位目標已低於現價 ~19%、P/B 35.7x 極端；Base 情境為回歸共識中位（約 −13%），上檔（+14%~+28%）僅美系外資看得到，須「超預期成長＋維持高評價」。金像電 AI 伺服器 PCB 題材與成長真實（4 大 CSP 平台），但估值已充分反映、追高風險高、波動極大。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網（即時報價、本益比、市值、52週高低、毛利率）、聯合新聞網、豐雲學堂、財報狗、FactSet／券商調查（截至 2026/07）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-08">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2408','南亞科')">南亞科 2408</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">DRAM 超循環</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.15);color:#ff8a94">純商品高波動</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/07</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ 425</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v">400～805（分歧極大）</div><div class="t">分析師目標價</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff8a94">昂貴</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>純 DRAM 廠（<b>無 HBM</b>），DRAM 漲價帶動爆發性轉盈——5 月營收年增 <b>+730%</b>、Q1 EPS 8.41（年增 1435%）、毛利率 67.9%；1 年股價自 NT$40 飆至 NT$505（~12x）。前瞻本益比看似便宜但為週期高峰，股價淨值比達 <b>8.3 倍</b>。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為 <b>DRAM 超級循環的爆發性轉盈</b>。DRAM 漲價＋產能緊張，DDR4 合約價 Q1 大漲逾 1 倍；5 月營收 276.7 億、年增 +730%，Q1 EPS 8.41（年增 1435%）、毛利率 67.9%、營益率 61.3%。1 年股價自 NT$40 飆至 NT$505（~12x），市值破 1.5 兆。法人估 2026 EPS 激增約 20 倍達 44.79 元、營收近 3 倍（上看 2,643 億）。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層指引　</b>記憶體短缺格局預期延續至 2026–2027；南亞科為純 DRAM 廠、技術追隨者。7/7 除息 1.347 元。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>題材與散戶追捧「記憶體缺貨、DRAM 大漲」；目標價分歧極大——華南投顧 400 元（已低於現價）、外資最高喊 805 元（+90%）。近期隨 Micron／記憶體股回檔。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>南亞科是<b>純商品 DRAM 廠、技術落後、無 HBM／AI 結構性題材</b>，獲利 100% 隨 DRAM 現貨／合約價週期波動——過去下行循環曾虧損。前瞻本益比 ~9.5x（以 2026e EPS 44.79）看似便宜，但這是「獲利峰值（+20 倍）」的週期陷阱；股價淨值比達 8.3 倍更是極端（歷史谷底常近 1 倍淨值）。真正變數是 DRAM 循環何時反轉，而非估值高低。Micron 已因「記憶體見頂」疑慮重挫，南亞科作為純商品股波動更劇（單日常見 ±5~10%）。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">1.5兆</div><div class="t">市值（$48B）</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ea3943">+730%</div><div class="t">5月營收 YoY</div></div>
+      <div class="rpt-metric"><div class="v">11.17</div><div class="t">近四季 EPS</div></div>
+      <div class="rpt-metric"><div class="v">67.9%</div><div class="t">毛利率</div></div>
+      <div class="rpt-metric"><div class="v">≈9.5x</div><div class="t">2026e P/E</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">41x</div><div class="t">TTM P/E</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">8.3x</div><div class="t">P/B（谷底常近1倍）</div></div>
+      <div class="rpt-metric"><div class="v">40–505</div><div class="t">52週區間</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>估值</th><th>記憶體定位</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">南亞科</td><td>2408</td><td>$48B</td><td>41x／P/B 8.3x</td><td>純 DRAM</td><td style="text-align:left">技術追隨者，無 HBM，純商品週期</td></tr>
+        <tr><td class="sym">Micron</td><td>MU</td><td>$1.06T</td><td>6.5x (fwd)</td><td>DRAM+HBM</td><td style="text-align:left">HBM 供 AI，結構性題材</td></tr>
+        <tr><td class="sym">SK 海力士</td><td>000660</td><td>≈$200B</td><td>≈7x</td><td>DRAM+HBM</td><td style="text-align:left">HBM 龍頭（供 Nvidia）</td></tr>
+        <tr><td class="sym">三星電子</td><td>005930</td><td>≈$500B</td><td>≈10x</td><td>DRAM+NAND</td><td style="text-align:left">全球最大記憶體＋晶圓</td></tr>
+        <tr><td class="sym">華邦電</td><td>2344</td><td>≈NT$3千億</td><td>高本益比</td><td>利基 DRAM/Flash</td><td style="text-align:left">台系利基型記憶體</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業比較表數值為市場近似值，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：昂貴（週期高峰、純商品 DRAM）。</b>TTM 本益比 41x、股價淨值比 8.3 倍（歷史谷底常近 1 倍淨值）。前瞻本益比 ~9.5x（以 2026e EPS 44.79）看似便宜，但為記憶體「獲利峰值、低本益比」的典型陷阱，且南亞科無 HBM／結構性題材、屬純商品週期。以正常化中週期獲利或 2–3x 淨值推估，合理值遠低於現價；目標價 400（華南）vs 805（外資）的極端分歧，正反映這是一場「DRAM 循環賭注」。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>極度投機、波動劇烈。散戶追 DRAM 缺貨題材；但記憶體見頂疑慮升溫（Micron 重挫）。目標價分歧到 400 vs 805，罕見極端。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>覆蓋少、分歧極大、無統一共識：華南 400 元（已低於現價）、外資最高 805 元（+90%）。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">DRAM 循環反轉／跌價／獲利崩</td><td>200 – 260</td><td class="down">約 −45%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">循環延續但高檔震盪</td><td>400 – 480</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">缺貨延續至 2027、EPS 兌現</td><td>600 – 700</td><td class="up">約 +50%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">外資 805 情境</td><td>805 +</td><td class="up">約 +90%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬極端、二元，且比 Micron 更純粹的商品週期賭注</b> — 上檔（+50%~+90%，若缺貨延續）與下檔（約 −45%，若循環反轉）皆巨大；南亞科無 HBM 護城河、股價淨值比 8.3 倍、過去曾虧損，是「賭 DRAM 循環」的高波動投機股，不宜視為低估值價值股。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網（即時報價、本益比、市值、52週高低、毛利率）、經濟日報、財報狗、券商調查（華南投顧、外資目標價）、Win 投資（截至 2026/07）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-08">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('tw','2303','聯電')">聯電 2303</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">題材重估</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.15);color:#ff8a94">估值偏高</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/07</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ 166</div><div class="t">現價 (TWD)</div></div>
+        <div class="rpt-metric"><div class="v">≈115（低於現價 31%）</div><div class="t">共識目標價／區間</div></div>
+        <div class="rpt-metric"><div class="v" style="color:#ff8a94">昂貴</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>成熟製程晶圓代工 #2，2026 月營收強勁再加速（6 月 <b>+22.85%</b>）＋與 Intel 傳合作，1 年股價自 NT$40 飆至 NT$185（市值 <b>+195%</b>）。惟 TTM 本益比 <b>~41x</b> 為歷史 3–4 倍、甚至高於台積電；評等「賣出」、共識目標低於現價 31%。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為<b>成熟製程循環復甦＋題材的估值重估</b>。2026 月營收強勁再加速（6 月 +22.85%、5 月 +17.78%、4 月 +17%），受惠 AI 週邊（電源管理、介面／類比）與成熟製程需求回溫；與 Intel 傳出晶圓代工合作激勵股價。1 年股價自 NT$40 飆抵 NT$185（~4.6 倍），ADR 市值年增 +194.5%。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層指引　</b>下一次財報 <b>7/29</b>。2025 為獲利下滑年（獲利 −11.6%），2026 營收月增雙位數顯示回溫；毛利率 29%、營益率 18.5%。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>散戶與題材追捧「半導體＋AI 週邊＋Intel 合作」；但賣方一面倒看空——評等「賣出」、共識目標低於現價 31%，BNP Paribas 降至 Underperform（ADR 目標 $10.2）、GuruFocus GF Value 隱含大幅高估。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>TTM 本益比 ~41x，是聯電歷史（~10–15x）的 <b>3–4 倍</b>，甚至高於台積電的前瞻 23x——但聯電是成熟製程、毛利僅 29%（台積電 66%）、2025 獲利還衰退 11.6% 的代工廠，<b>估值與品質嚴重錯配</b>。這是全套分析中唯一「賣出」評等、且共識目標低於現價的個股。營收雖回溫，但成熟製程面臨中國（中芯、華虹）低價擴產競爭、高度商品化／週期性；Intel 合作仍屬「報導」階段、具體貢獻未明。此波為情緒與題材驅動的估值重估，而非獲利跳增。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">2.09兆</div><div class="t">市值（$68B）</div></div>
+      <div class="rpt-metric"><div class="v">2,375億</div><div class="t">2025 營收（+2.3%）</div></div>
+      <div class="rpt-metric"><div class="v">4.01</div><div class="t">近四季 EPS</div></div>
+      <div class="rpt-metric"><div class="v">29.2%</div><div class="t">毛利率</div></div>
+      <div class="rpt-metric"><div class="v">≈35x</div><div class="t">2026e P/E</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">41x</div><div class="t">TTM P/E（歷史3–4倍）</div></div>
+      <div class="rpt-metric"><div class="v">18.5%</div><div class="t">營益率</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">1.57</div><div class="t">Beta</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>P/E</th><th>毛利率</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">聯電</td><td>2303</td><td>$68B</td><td>41x (TTM)</td><td>29%</td><td style="text-align:left">成熟製程 #2(台)，估值最貴卻品質最低</td></tr>
+        <tr><td class="sym">台積電</td><td>2330</td><td>$2.05T</td><td>≈23x (fwd)</td><td>66%</td><td style="text-align:left">先進製程獨占，質量最高、估值反而較低</td></tr>
+        <tr><td class="sym">GlobalFoundries</td><td>GFS</td><td>≈$25B</td><td>≈20x</td><td>~25%</td><td style="text-align:left">成熟／特殊製程（美）</td></tr>
+        <tr><td class="sym">中芯國際</td><td>0981</td><td>≈$60B</td><td>≈40x</td><td>~20%</td><td style="text-align:left">中國成熟製程龍頭，政策扶植</td></tr>
+        <tr><td class="sym">華虹半導體</td><td>1347</td><td>≈$12B</td><td>≈30x</td><td>~12%</td><td style="text-align:left">中國成熟製程，低價擴產</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業比較表數值為市場近似值，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：昂貴（估值嚴重偏離基本面）。</b>TTM 本益比 ~41x，是聯電歷史（~10–15x）的 3–4 倍，且高於台積電前瞻 23x——但聯電毛利僅 29%（台積電 66%）、2025 獲利還衰退 11.6%，估值與品質嚴重錯配。以歷史中樞 12–15x × 近四季 EPS 4.01 = 合理價約 48–60 元；即使給循環復甦溢價 20x = 80 元，仍遠低於現價 166。共識目標 −31%、評等「賣出」，GuruFocus GF Value 隱含高估逾 60%。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>題材與散戶追捧（AI 週邊、Intel 合作）vs 賣方一面倒看空。全套分析中<b>唯一「賣出」評等</b>；波動大（beta 1.57、ADR 單日常見 ±5~15%）。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>評等「賣出」（僅 4 家）。共識目標較現價 <b>−31%</b>；BNP Paribas Underperform、GuruFocus GF Value 隱含高估逾 60%，空方共識罕見一致。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (TWD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">估值回歸／中國低價競爭／循環反轉</td><td>90 – 115</td><td class="down">約 −37%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">復甦延續但估值消化</td><td>150 – 175</td><td>約 持平</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">AI 週邊＋Intel 合作放量、獲利跳增</td><td>190 – 210</td><td class="up">約 +20%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">續炒題材、動能延續</td><td>230 +</td><td class="up">約 +40%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬不對稱偏空（全套最明顯）</b> — 賣方共識目標低於現價 31%、評等「賣出」；Base 僅持平、Bear 達 −37%，上檔須「獲利真正跳增」才實現。這是估值嚴重偏離基本面的循環／題材股；與台積電（估值合理）對照，聯電是「同產業、品質更低、估值卻更貴」的極端，追高風險高。7/29 財報為關鍵。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：鉅亨網（即時報價、本益比、市值、52週高低、毛利率）、Stockanalysis.com（財務、目標價、評等）、TheFly／TipRanks（Intel 合作、券商評等）、GuruFocus（GF Value）、Business Wire（月營收）（截至 2026/07/07）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-08">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('us','SOFI','SoFi')">SoFi SOFI</span>
+          <span class="rpt-badge" style="background:rgba(22,199,132,.15);color:var(--green)">高成長轉盈</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.15);color:#ff8a94">高波動</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/07</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ $17.75</div><div class="t">現價 (USD)</div></div>
+        <div class="rpt-metric"><div class="v">$20.9（$16–$28）</div><div class="t">共識目標價／區間</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--green)">合理</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>高成長數位銀行／金融科技，營收 <b>+41%</b>、已轉盈（淨利 +20%）；惟股價今年累跌 <b>32%</b>、近 52 週低，市值自去年高峰 ~$400 億縮至 $228 億。Cathie Wood 逢低買進，華爾街整體仍謹慎（評等 Hold）；共識目標高於現價 <b>+18%</b>。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>主軸為<b>高成長數位銀行的估值去化與轉盈</b>。營收 +41%、已連續獲利（淨利 +20%）、會員高速成長；但股價今年累跌 32%、市值自去年 11 月 ~$400 億縮至 $228 億。近期密集推新品：小型企業貸款、Composer AI 投資平台（併購）、SoFiUSD 穩定幣、SoFi Coach（AI）、Social 50 ETF，定位「金融 everything app」。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層指引　</b>下一次財報 <b>7/29</b>。持續衝會員數與跨售；Galileo 科技平台、SoFi Plus 訂閱、business banking 擴張。延攬 Visa 老將 Kathleen Pierce-Gilmore 任科技方案總裁。</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>Cathie Wood（ARK）逢低買進、部分分析師看好長線平台願景；但華爾街整體謹慎（評等 Hold），Keefe 給 Underperform、目標 $16，憂估值、費用型業務放緩與穩定幣擴張阻力。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>SOFI 已從「momentum 寵兒」變「今年累跌 32% 的成長股」，但基本面持續改善（營收 +41%、轉盈、會員高成長）——市場真正在爭的是<b>「銀行 vs 平台」的評價之爭與信用循環風險</b>。高 beta 2.15 意味波動遠大於大盤；放款業務對利率與信用損失敏感，穩定幣／AI 投資等新業務尚未證明規模化。惟共識目標 $20.90（+18%）高於現價，與多數已大漲的 AI 股相反，顯示回檔後評價已具吸引力，Hold 評等則反映分歧。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">$22.8B</div><div class="t">市值（+34%）</div></div>
+      <div class="rpt-metric"><div class="v">$3.58B</div><div class="t">2025 營收（+35.6%）</div></div>
+      <div class="rpt-metric"><div class="v">$0.44</div><div class="t">TTM EPS</div></div>
+      <div class="rpt-metric"><div class="v">~15%</div><div class="t">淨利率</div></div>
+      <div class="rpt-metric"><div class="v">≈27x</div><div class="t">2026e P/E</div></div>
+      <div class="rpt-metric"><div class="v">40x</div><div class="t">TTM P/E</div></div>
+      <div class="rpt-metric"><div class="v">≈5.8x</div><div class="t">P/S</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">2.15</div><div class="t">Beta</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>Fwd P/E</th><th>P/S</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">SoFi</td><td>SOFI</td><td>$22.8B</td><td>≈27x</td><td>≈5.8x</td><td style="text-align:left">數位銀行＋貸款＋Galileo 科技平台</td></tr>
+        <tr><td class="sym">Robinhood</td><td>HOOD</td><td>≈$90B</td><td>≈45x</td><td>≈20x</td><td style="text-align:left">零售交易＋加密，估值最高</td></tr>
+        <tr><td class="sym">Nu Holdings</td><td>NU</td><td>≈$70B</td><td>≈25x</td><td>≈8x</td><td style="text-align:left">拉美數位銀行，高成長</td></tr>
+        <tr><td class="sym">PayPal</td><td>PYPL</td><td>≈$65B</td><td>≈13x</td><td>≈2x</td><td style="text-align:left">成熟支付，估值最低</td></tr>
+        <tr><td class="sym">Block</td><td>XYZ</td><td>≈$40B</td><td>≈14x</td><td>≈2x</td><td style="text-align:left">支付＋Cash App</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業比較表數值為市場近似值，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理（成長股，銀行 vs 平台的評價之爭）。</b>前瞻本益比 27x、股價營收比 ~5.8x，對營收 +41%、剛轉盈、會員高速成長的數位銀行不算貴（PEG &lt; 1，若成長延續）。惟其本質含放款業務，對利率與信用損失敏感，市場對「該給銀行折價或平台溢價」分歧大。以 2027e EPS ~$0.70 × 25–30x = $17.5–21；悲觀（銀行評價／信用惡化）可至 $10 以下，樂觀（平台重估）上看 $24+。共識目標 $20.90（+18%）。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>分歧極大、波動劇烈（beta 2.15）。多方 Cathie Wood 逢低買、看 everything-app 願景；空方 Keefe Underperform $16、憂估值與信用循環。今年累跌 32%、近 52 週低，成交爆量（日均 8,000 萬股以上）。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>評等「持有」（24 家）。共識目標 <b>$20.90（+18%）</b>；區間自 $16（Keefe，看空）至更高，分歧反映「成長 vs 風險」之爭。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (USD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">信用損失升／成長放緩／費用業務疲軟／回歸銀行評價</td><td>$11 – $13</td><td class="down">約 −30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">成長延續、估值企穩</td><td>$17 – $21</td><td class="up">約 +10%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">平台重估＋新品放量（穩定幣／AI 投資）</td><td>$24 – $28</td><td class="up">約 +45%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">everything-app 敘事全面重估</td><td>$32 +</td><td class="up">約 +80%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬對稱偏正向（回檔後）</b> — 上檔（+45%～+80%）大於下檔（約 −30%），共識目標高於現價（+18%），與多數已大漲的 AI 股相反；但屬高 beta（2.15）成長股，含放款／信用循環風險，勝負取決於成長延續與「平台 vs 銀行」的評價。7/29 財報為關鍵。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Stockanalysis.com（即時報價、市值、本益比、52週區間、日線走勢）、Reuters／Barron's（Composer 併購、動能）、TheFly／TipRanks（券商評等）、Business Wire（新品）、S&amp;P Global（截至 2026/07/07）。</div>
+    </div>
+  </div>
+
+  <div class="vs-card" data-up="2026-07-06">
+    <div class="vs-head" onclick="this.closest('.vs-card').classList.toggle('open')">
+      <div class="vs-trow">
+        <div>
+          <span class="sym-click vs-name" onclick="event.stopPropagation();showKChart('us','ON','onsemi')">onsemi ON</span>
+          <span class="rpt-badge" style="background:rgba(88,101,242,.18);color:#8ab4ff">深循環復甦</span>
+          <span class="rpt-badge" style="background:rgba(234,57,67,.15);color:#ff8a94">高波動</span>
+        </div>
+        <span class="note" style="margin:0">2026/07/06</span>
+      </div>
+      <div class="vs-mini">
+        <div class="rpt-metric"><div class="v">≈ $95</div><div class="t">現價 (USD)</div></div>
+        <div class="rpt-metric"><div class="v">$113（$110–$140）</div><div class="t">共識目標價／區間</div></div>
+        <div class="rpt-metric"><div class="v" style="color:var(--yellow)">合理偏高</div><div class="t">估值判斷</div></div>
+      </div>
+      <div class="vs-sum"><b style="color:var(--yellow)">重點觀察：</b>車用／功率半導體循環自谷底回升（2025 為底部：營收 −15%、獲利 −92%）；6/25 宣布史上最大併購——70 億美元全股收購 Synaptics 切入「實體 AI」，市場憂稀釋、單日重挫 24%。高 beta 2.01，52 週振幅達 3 倍。</div>
+      <div class="vs-more"></div>
+    </div>
+
+    <div class="vs-body">
+    <div class="rpt-sec" style="margin-top:16px">① 催化因素 <small>CATALYST BREAKDOWN</small></div>
+    <div class="rpt-item"><b class="tag">▪ 關鍵事件　</b>6/25 宣布<b>史上最大併購——70 億美元全股收購 Synaptics（SYNA）</b>，切入「實體 AI（physical AI）」（整合功率、感測、AI 原生運算）；目標年綜效 2 億美元、18 個月內 EPS 增益。市場憂全股稀釋與整合，消息日<b>股價重挫 24%</b>。同時類比／功率半導體循環自谷底回升，近期晶片股同步反彈（ON +3.8%）。</div>
+    <div class="rpt-item"><b class="tag">▪ 管理層指引　</b>CEO Hassane El-Khoury 為核心業務辯護；併購 18 個月內 EPS 增益、$200M 綜效。下一次財報 <b>8/3</b>。（2025 為循環谷底：營收 −15%、獲利 −92%。）</div>
+    <div class="rpt-item"><b class="tag">▪ 市場敘事　</b>併購後券商評價兩極：多家上調目標價（Susquehanna $140、Evercore $137、B.Riley $135、Needham $130），但 TD Cowen 降評至 Hold、Mizuho 下修至 $125。共識目標 $113（+19%）。</div>
+    <div class="rpt-callout warn">
+      <b>市場忽略但關鍵的資訊：</b>TTM 本益比 67x 因獲利處週期谷底而<b>失真</b>——onsemi 是高 beta（2.01）車用／工業循環股，2025 獲利年減 92%；52 週振幅 $44.56–$134.92（3 倍）反映極端週期性。真正的估值錨是「復甦後的 mid-cycle 獲利」與 Synaptics 整合／稀釋風險，而非當前 EPS。SiC（車用）需求、中國電動車與關稅為關鍵變數。
+    </div>
+
+    <div class="rpt-sec">② 財務健康與競爭估值 <small>FUNDAMENTALS &amp; VALUATION</small></div>
+    <div class="rpt-metrics">
+      <div class="rpt-metric"><div class="v">$36.9B</div><div class="t">市值（+67%）</div></div>
+      <div class="rpt-metric"><div class="v">$6.0B</div><div class="t">2025 營收（−15%）</div></div>
+      <div class="rpt-metric"><div class="v">$1.41</div><div class="t">TTM EPS</div></div>
+      <div class="rpt-metric"><div class="v">~40%</div><div class="t">毛利率</div></div>
+      <div class="rpt-metric"><div class="v">≈28x</div><div class="t">2026e P/E</div></div>
+      <div class="rpt-metric"><div class="v">67x</div><div class="t">TTM P/E（谷底失真）</div></div>
+      <div class="rpt-metric"><div class="v">≈7x</div><div class="t">EV/Sales</div></div>
+      <div class="rpt-metric"><div class="v" style="color:#ff8a94">2.01</div><div class="t">Beta</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>公司</th><th>代號</th><th>市值</th><th>Fwd P/E</th><th>EV/Sales</th><th style="text-align:left">定位差異</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">onsemi</td><td>ON</td><td>$36.9B</td><td>≈28x</td><td>≈7x</td><td style="text-align:left">功率(SiC)＋類比＋感測，車用／工業曝險高</td></tr>
+        <tr><td class="sym">Texas Instruments</td><td>TXN</td><td>≈$180B</td><td>≈32x</td><td>≈11x</td><td style="text-align:left">類比龍頭，通路最廣、最防禦</td></tr>
+        <tr><td class="sym">Analog Devices</td><td>ADI</td><td>≈$120B</td><td>≈28x</td><td>≈11x</td><td style="text-align:left">高性能類比，工業／通訊</td></tr>
+        <tr><td class="sym">Microchip</td><td>MCHP</td><td>≈$40B</td><td>≈25x</td><td>≈8x</td><td style="text-align:left">微控制器＋類比，循環同步</td></tr>
+        <tr><td class="sym">Infineon</td><td>IFX</td><td>≈$60B</td><td>≈22x</td><td>≈4x</td><td style="text-align:left">功率半導體(SiC) 直接對手，車用龍頭</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">同業比較表數值為市場近似值，供相對定位參考。</div>
+    <div class="rpt-callout">
+      <b>估值判斷：合理偏高（週期底部＋併購不確定）。</b>TTM 67x 因谷底獲利而失真；前瞻 28x 與類比／功率同業中位（~25x）相當略高。以復甦後 mid-cycle EPS ~$4.5 × 20x = 約 $90（≈現價）；多頭情境（強復甦＋Synaptics 綜效）EPS ~$5.5 × 22x = $120。估值已反映循環復甦預期，關鍵在復甦力道與併購整合，而非當前 EPS。
+    </div>
+
+    <div class="rpt-sec">③ 風險報酬對稱性 <small>ASYMMETRY</small></div>
+    <div class="rpt-item"><b class="tag">▪ 市場情緒　</b>極度分歧、波動劇烈（beta 2.01）。併購後多空對立（多家上調 vs TD Cowen 降評）；52 週 3 倍振幅、單日 ±10~24% 顯示情緒與循環預期主導。</div>
+    <div class="rpt-item"><b class="tag">▪ 分析師共識　</b>評等「買進」（29 家）。共識目標價 $113（+19%）；區間 $110（TD Cowen／Cantor）– $140（Susquehanna）。</div>
+
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th style="text-align:left">情境（未來12個月）</th><th style="text-align:left">關鍵假設</th><th>目標價區間 (USD)</th><th>相對現價</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(22,199,132,.15);color:var(--green)">Bear</span></td><td style="text-align:left">車用/工業復甦延後＋Synaptics 整合不順＋稀釋</td><td>$60 – $72</td><td class="down">約 −30%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(138,147,166,.15);color:var(--muted)">Base</span></td><td style="text-align:left">循環溫和復甦，併購中性</td><td>$95 – $112</td><td class="up">約 +10%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.15);color:#ff8a94">Bull</span></td><td style="text-align:left">強復甦＋SiC 放量＋綜效兌現</td><td>$125 – $140</td><td class="up">約 +40%</td></tr>
+        <tr><td style="text-align:left"><span class="rpt-badge" style="margin:0;background:rgba(234,57,67,.28);color:#ff6b78">Stretched Bull</span></td><td style="text-align:left">循環高峰重演（挑戰 $134 前高）</td><td>$150 +</td><td class="up">約 +58%</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rpt-callout" style="margin-top:12px">
+      <b>分析總結：風險報酬偏正向、惟波動極高</b> — 上檔（+40%～+58%）大於下檔（約 −30%），勝負取決於車用／工業復甦力道與 Synaptics 整合；屬高 beta（2.01）深循環股，波動遠高於大盤、非防禦性標的。8/3 財報與併購進展為關鍵。本報告僅為量化情境評析，不含任何買賣點位或操作建議。
+    </div>
+
+    <div class="note" style="margin-top:14px">資料來源：Stockanalysis.com、CNBC／Reuters（Synaptics 併購）、TheFly／TipRanks（券商目標價）、Investopedia、S&amp;P Global（截至 2026/07/06）。</div>
+    </div>
+  </div>
+
+  <div class="footer">免責聲明：本頁報告為公開資料之彙整與分析，僅供研究參考，不構成任何投資建議或買賣要約；作者非持牌投資顧問。價格與財報數據具時效性，請自行核實即時資訊。投資具風險，個人盈虧自負。</div>
+</div>
+
+<div id="page-bu" style="display:none">
+  <div class="header" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+    <h1>🌟 布嬸A+掃描</h1>
+    <span style="display:flex;gap:6px;flex-wrap:nowrap;margin-left:auto;justify-content:flex-end">
+      <button id="pushBtn" class="ctrl btn" style="border-color:#b18cff;font-size:12px;font-weight:800;padding:8px 10px;white-space:nowrap">🔔 一鍵訂閱推播</button>
+      <button id="apDailyBtn" class="ctrl btn" style="border-color:#b18cff;font-size:12px;font-weight:800;padding:8px 10px;white-space:nowrap">📰 收藏日報</button>
+      <button class="ctrl btn" onclick="location.href='/buyou.html'" style="border-color:#b18cff;color:#c4a6ff;font-size:12px;font-weight:800;padding:8px 10px;white-space:nowrap">💜 布友專區</button>
+    </span>
+  </div>
+
+  <div class="card" id="ciTopCard" style="border-color:#b18cff">
+    <h2 style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+      <span style="color:#c4a6ff">📅 每日簽到</span>
+    </h2>
+    <div id="ciTopBody" style="margin-top:8px"><span class="note" style="margin:0">載入中…</span></div>
+  </div>
+
+  <div class="card">
+    <div id="mktStrip" style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;font-size:14px"><span class="note" style="margin:0">市場行情載入中…</span></div>
+  </div>
+
+  <div class="card">
+    <h2 style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+      <span>🚦 0050紅綠燈</span>
+      <span class="note" style="margin:0">資料日期：<span id="t5Time">--</span></span>
+    </h2>
+    <div style="margin-top:8px">
+      <div id="t5Verdict" style="font-size:14px;font-weight:800">評估中…</div>
+    </div>
+    <div class="note" style="margin-top:10px">布嬸引擎評估合理性：🔴 稍高、🟡 合理、🟢 考慮。僅供參考，非投資建議。</div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2 style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+        <span>🪙 A+掃幣型態</span>
+        <span class="ap-actions">
+          <button id="apCoinBtn" class="ctrl btn">🔄 重新掃描</button>
+          <button id="apCoinDlBtn" class="ctrl btn">⬇️ 下載收藏</button>
+        </span>
+      </h2>
+      <div style="margin-top:0;margin-bottom:8px;font-size:14px;color:#ffffff">更新時間：<span id="apCoinTime">--</span>｜<span id="apCoinStatus">掃描中…</span></div>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>標的</th><th>價格</th><th>1H漲跌</th><th>24H漲跌</th><th>波動倍數</th></tr></thead>
+        <tbody id="apCoinBody"><tr><td colspan="5" class="empty">掃描中…</td></tr></tbody>
+      </table>
+      </div>
+      <div class="note">即時自動掃描更新。僅供參考，非投資建議。</div>
+    </div>
+
+    <div class="card">
+      <h2 style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+        <span>🎯 A+台股型態</span>
+        <span class="ap-actions">
+          <button id="apBtn" class="ctrl btn">🔄 重新掃描</button>
+          <button id="apDlBtn" class="ctrl btn">⬇️ 下載收藏</button>
+        </span>
+      </h2>
+      <div style="margin-top:0;margin-bottom:8px;font-size:14px;color:#ffffff">資料日期：<span id="apDate">--</span>｜<span id="apStatus">尚未掃描</span></div>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>標的</th><th>收盤</th><th>今日漲幅</th><th>量比</th><th>回撤%</th></tr></thead>
+        <tbody id="apBody"><tr><td colspan="5" class="empty">切換到本分頁即自動掃描</td></tr></tbody>
+      </table>
+      </div>
+      <div class="note">每日盤後自動以最新資料掃描，19:00 推播結果。僅供參考，非投資建議。</div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2 style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+        <span>🇺🇸 A+美股型態</span>
+        <span class="ap-actions">
+          <button id="apUsBtn" class="ctrl btn">🔄 重新掃描</button>
+          <button id="apUsDlBtn" class="ctrl btn">⬇️ 下載收藏</button>
+        </span>
+      </h2>
+      <div style="margin-top:0;margin-bottom:8px;font-size:14px;color:#ffffff">資料日期：<span id="apUsDate">--</span>｜<span id="apUsStatus">尚未掃描</span></div>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>標的</th><th>收盤</th><th>今日漲幅</th><th>量比</th><th>回撤%</th></tr></thead>
+        <tbody id="apUsBody"><tr><td colspan="5" class="empty">切換到本分頁即自動掃描</td></tr></tbody>
+      </table>
+      </div>
+      <div class="note">每日美股盤後台北時間07:00自動以最新資料掃描推播（還原權值計算）。僅供參考，非投資建議。</div>
+    </div>
+
+    <div class="card">
+      <h2 style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+        <span>💹 A+外匯型態</span>
+        <span class="ap-actions">
+          <button id="apFxBtn" class="ctrl btn">🔄 重新掃描</button>
+          <button id="apFxDlBtn" class="ctrl btn">⬇️ 下載收藏</button>
+        </span>
+      </h2>
+      <div style="margin-top:0;margin-bottom:8px;font-size:14px;color:#ffffff">更新時間：<span id="apFxTime">--</span>｜<span id="apFxStatus">掃描中…</span></div>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>標的</th><th>價格</th><th>1H漲跌</th><th>日漲跌</th><th>強度</th></tr></thead>
+        <tbody id="apFxBody"><tr><td colspan="5" class="empty">切換到本分頁即自動掃描</td></tr></tbody>
+      </table>
+      </div>
+      <div class="note">追蹤布蘭特原油、黃金、歐元、英鎊、澳幣期貨。僅供參考，非投資建議。</div>
+    </div>
+
+    <div class="card">
+      <h2>📺 布嬸專欄</h2>
+      
+      <a href="https://youtu.be/LN9YW9Sycno" target="_blank" rel="noopener" style="display:block;background:var(--card2);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:10px;text-decoration:none;color:var(--text)">
+        <img src="https://i.ytimg.com/vi/LN9YW9Sycno/hqdefault.jpg" alt="布嬸A+掃描網 EP2" loading="lazy" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">
+        <div style="padding:12px 14px">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+            <b style="font-size:15px">🎬 布嬸A+掃描網 EP2</b>
+            <span class="note" style="margin:0">2026-07-17</span>
+          </div>
+          <div class="note" style="margin:6px 0 0">布嬸頻道第二部影片</div>
+          <div style="margin-top:8px;color:var(--yellow);font-size:14px;font-weight:700">▶ 前往 YouTube 觀看</div>
+        </div>
+      </a>
+      <a href="https://youtu.be/TZ20aLRZFyg" target="_blank" rel="noopener" style="display:block;background:var(--card2);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:10px;text-decoration:none;color:var(--text)">
+        <img src="https://i.ytimg.com/vi/TZ20aLRZFyg/hqdefault.jpg" alt="布嬸A+掃描網 EP1" loading="lazy" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">
+        <div style="padding:12px 14px">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+            <b style="font-size:15px">🎬 布嬸A+掃描網 EP1</b>
+            <span class="note" style="margin:0">2026-07-13</span>
+          </div>
+          <div class="note" style="margin:6px 0 0">布嬸頻道第一部影片：認識布嬸A+掃描網</div>
+          <div style="margin-top:8px;color:var(--yellow);font-size:14px;font-weight:700">▶ 前往 YouTube 觀看</div>
+        </div>
+      </a>
+      <div class="note" style="margin-top:10px">更多影片：<a href="https://www.youtube.com/@Brucelinda" target="_blank" rel="noopener" style="color:#c4a6ff;font-weight:700">YouTube 頻道「布嬸聊投資」</a>，歡迎訂閱開啟小鈴鐺 🔔</div>
+    </div>
+
+    <div class="card">
+      <h2>📚 最新資訊</h2>
+
+      <div class="tut-card" style="text-align:center">
+        <div style="font-size:18px;font-weight:800">📱 一分鐘教學</div>
+        <div style="font-size:15px;font-weight:700;color:var(--yellow);margin-top:6px">把「布嬸A+股幣」加到手機主畫面</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.7">免下載、免安裝，點圖示直接開啟，就像 APP 一樣<br>網址：<b style="color:#fff">bubuaplus.com</b></div>
+      </div>
+
+      <div class="tut-card">
+        <div class="tut-h">iPhone｜步驟 1-2：用 Safari 開啟網站 → 點下方「分享」</div>
+        <div class="tut-row">
+          <div><div class="tp-wrap"><div class="tp">
+            <div style="padding:36px 14px 8px"><div style="color:var(--yellow);font-weight:700;font-size:13px">⚡ 加密貨幣掃描</div><div style="margin-top:8px;background:#141823;border-radius:8px;height:46px"></div><div style="margin-top:6px;background:#141823;border-radius:8px;height:46px"></div><div style="margin-top:6px;background:#141823;border-radius:8px;height:80px"></div></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:#1a1f2e;padding:8px 10px 14px"><div class="tut-hl" style="background:#252b3b;padding:7px;text-align:center;font-size:13px">bubuaplus.com</div></div>
+          </div></div><div class="tut-lbl">① Safari 輸入網址</div></div>
+          <div><div class="tp-wrap"><div class="tp">
+            <div style="padding:36px 14px 8px"><div style="color:var(--yellow);font-weight:700;font-size:13px">⚡ 加密貨幣掃描</div><div style="margin-top:8px;background:#141823;border-radius:8px;height:46px"></div><div style="margin-top:6px;background:#141823;border-radius:8px;height:46px"></div><div style="margin-top:6px;background:#141823;border-radius:8px;height:80px"></div></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:#1a1f2e;padding:10px 18px 16px;display:flex;justify-content:space-between;font-size:22px;color:var(--blue)"><span>‹</span><span>›</span><span class="tut-hl" style="padding:2px 8px">⬆️</span><span>📖</span><span>▦</span></div>
+          </div></div><div class="tut-lbl">② 點中間的分享按鈕 ⬆️</div></div>
+        </div>
+      </div>
+
+      <div class="tut-card">
+        <div class="tut-h">iPhone｜步驟 3-4：選「加入主畫面」→ 點「新增」完成</div>
+        <div class="tut-row">
+          <div><div class="tp-wrap"><div class="tp">
+            <div style="padding:36px 14px 8px"><div style="color:var(--yellow);font-weight:700;font-size:13px">⚡ 加密貨幣掃描</div><div style="margin-top:8px;background:#141823;border-radius:8px;height:46px"></div></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:#e9e9ee;border-radius:18px 18px 0 0;padding:10px;color:#111"><div style="background:#fff;border-radius:10px"><div style="padding:10px 12px;font-size:14px;border-bottom:1px solid #eee">拷貝 ⧉</div><div style="padding:10px 12px;font-size:14px;border-bottom:1px solid #eee">加入書籤 📖</div><div class="tut-hl" style="padding:10px 12px;font-size:14px;font-weight:700">加入主畫面 ➕</div></div></div>
+          </div></div><div class="tut-lbl">③ 選「加入主畫面」</div></div>
+          <div><div class="tp-wrap"><div class="tp">
+            <div style="background:#e9e9ee;height:100%;color:#111"><div style="display:flex;justify-content:space-between;align-items:center;padding:42px 12px 12px;font-size:14px"><span style="color:#4a8cff">取消</span><b>加入主畫面</b><span class="tut-hl" style="color:#4a8cff;font-weight:700;padding:2px 8px">新增</span></div><div style="background:#fff;margin:8px;border-radius:10px;padding:12px;display:flex;gap:10px;align-items:center"><div style="width:44px;height:44px;border-radius:10px;background:#0b0e14;color:#f0b90b;display:flex;align-items:center;justify-content:center;font-size:22px">⚡</div><div style="font-size:14px;font-weight:600">布嬸A+股幣</div></div></div>
+          </div></div><div class="tut-lbl">④ 點右上「新增」完成</div></div>
+        </div>
+      </div>
+
+      <div class="tut-card">
+        <div class="tut-h">Android｜Chrome：右上「⋮」→ 加入主畫面 → 新增</div>
+        <div class="tut-row">
+          <div><div class="tp-wrap"><div class="tp">
+            <div style="padding:36px 12px 8px"><div style="background:#1a1f2e;border-radius:8px;padding:7px 10px;font-size:12px;display:flex;justify-content:space-between;align-items:center"><span>bubuaplus.com</span><span class="tut-hl" style="padding:0 7px;font-weight:700">⋮</span></div></div>
+            <div style="position:absolute;top:80px;right:10px;background:#fff;color:#111;border-radius:10px;width:170px;font-size:13px"><div style="padding:10px 12px;border-bottom:1px solid #eee">新增書籤 ☆</div><div class="tut-hl" style="padding:10px 12px;font-weight:700">加入主畫面 ➕</div></div>
+          </div></div><div class="tut-lbl">① 右上選單 → 加入主畫面</div></div>
+          <div><div class="tp-wrap"><div class="tp">
+            <div style="padding:42px 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center;font-size:10px;color:#c9cede"><div><div style="width:46px;height:46px;border-radius:11px;background:#2a3145;margin:0 auto 4px"></div>訊息</div><div><div style="width:46px;height:46px;border-radius:11px;background:#2a3145;margin:0 auto 4px"></div>相機</div><div><div style="width:46px;height:46px;border-radius:11px;background:#2a3145;margin:0 auto 4px"></div>地圖</div><div style="color:#f0b90b;font-weight:700"><div style="width:46px;height:46px;border-radius:11px;background:#0b0e14;border:2px solid #f0b90b;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:22px">⚡</div>布嬸A+股幣</div></div>
+          </div></div><div class="tut-lbl">🎉 完成！點圖示直接開啟</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<script>
+const FAPI = 'https://fapi.binance.com';
+const $ = id => document.getElementById(id);
+const escN = v => String(v == null ? '' : v).replace(/[<>&"'\\`]/g, '');
+
+function fmtUSD(v){
+  if(v >= 1e9) return '$' + (v/1e9).toFixed(2) + 'B';
+  if(v >= 1e6) return '$' + (v/1e6).toFixed(2) + 'M';
+  if(v >= 1e3) return '$' + (v/1e3).toFixed(1) + 'K';
+  return '$' + v.toFixed(0);
+}
+function fmtPx(p){
+  if(p >= 1000) return p.toLocaleString('en-US',{maximumFractionDigits:1});
+  if(p >= 10) return p.toFixed(2);
+  if(p >= 0.1) return p.toFixed(4);
+  return p.toPrecision(4);
+}
+function pctCls(v){ return v >= 0 ? 'up' : 'down'; }
+function pctTxt(v){ return (v>=0?'+':'') + v.toFixed(2) + '%'; }
+
+const tickers = {}; // symbol -> {c,h,l,P}
+const oi = { BTCUSDT:{}, ETHUSDT:{} }; // {current, chg24h, hist:[{t,v}], prices:[{t,c}]}
+
+function renderCoinCard(sym){
+  const el = $('card-' + sym);
+  const t = tickers[sym];
+  const o = oi[sym];
+  const name = sym === 'BTCUSDT' ? '比特幣 BTC' : '以太幣 ETH';
+  const priceHtml = t
+    ? `<span class="price">${fmtPx(t.c)}</span><span class="chg ${pctCls(t.P)}">${pctTxt(t.P)}</span>`
+    : '<span class="price" style="color:var(--muted)">--</span>';
+  el.innerHTML = `
+    <div class="coin-head">
+      <span class="coin-name">${name}</span>
+      <span>${priceHtml}</span>
+    </div>
+    <div class="liq-row">
+      <div class="liq-box"><div class="v" style="color:var(--yellow)">${o.current ? fmtUSD(o.current) : '--'}</div><div class="t">目前未平倉量（OI）</div></div>
+      <div class="liq-box"><div class="v ${o.chg24h >= 0 ? 'up' : 'down'}">${o.chg24h != null ? pctTxt(o.chg24h) : '--'}</div><div class="t">OI 24小時變化</div></div>
+    </div>
+    <canvas id="chart-${sym}" style="width:100%;height:150px;margin-top:12px"></canvas>
+    <div class="note"><span style="color:var(--yellow)">━ 未平倉量</span>　<span style="color:var(--blue)">━ 價格</span>　● OI 最高點（過去24小時）</div>`;
+  drawOIChart(sym);
+}
+
+function drawOIChart(sym){
+  const o = oi[sym];
+  const cv = $('chart-' + sym);
+  if(!cv || !o.hist || o.hist.length < 2) return;
+  const dpr = window.devicePixelRatio || 1;
+  const W = cv.clientWidth, H = 150;
+  cv.width = W * dpr; cv.height = H * dpr;
+  const ctx = cv.getContext('2d');
+  ctx.scale(dpr, dpr);
+  const padL = 6, padR = 6, padT = 14, padB = 18;
+  const iw = W - padL - padR, ih = H - padT - padB;
+
+  const oiVals = o.hist.map(h => h.v);
+  const pxVals = o.prices.map(p => p.c);
+  const n = Math.min(oiVals.length, pxVals.length);
+  const X = i => padL + iw * i / (n - 1);
+  const Y = (v, min, max) => padT + ih * (1 - (max > min ? (v - min)/(max - min) : 0.5));
+  const oMin = Math.min(...oiVals), oMax = Math.max(...oiVals);
+  const pMin = Math.min(...pxVals), pMax = Math.max(...pxVals);
+
+  ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+  ctx.lineWidth = 1;
+  for(let g=0; g<=2; g++){
+    const y = padT + ih*g/2;
+    ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W-padR, y); ctx.stroke();
+  }
+  ctx.strokeStyle = '#4a8cff'; ctx.lineWidth = 1.5; ctx.beginPath();
+  for(let i=0;i<n;i++){ const y = Y(pxVals[i], pMin, pMax); i ? ctx.lineTo(X(i), y) : ctx.moveTo(X(i), y); }
+  ctx.stroke();
+  ctx.strokeStyle = '#f0b90b'; ctx.lineWidth = 2; ctx.beginPath();
+  for(let i=0;i<n;i++){ const y = Y(oiVals[i], oMin, oMax); i ? ctx.lineTo(X(i), y) : ctx.moveTo(X(i), y); }
+  ctx.stroke();
+  let mi = 0;
+  for(let i=1;i<n;i++) if(oiVals[i] > oiVals[mi]) mi = i;
+  const mx = X(mi), my = Y(oiVals[mi], oMin, oMax);
+  ctx.fillStyle = '#f0b90b';
+  ctx.beginPath(); ctx.arc(mx, my, 4, 0, Math.PI*2); ctx.fill();
+  ctx.font = '10px sans-serif';
+  ctx.textAlign = mi > n*0.6 ? 'right' : 'left';
+  ctx.fillText(`最大OI ${fmtUSD(oiVals[mi])} @ ${fmtPx(pxVals[mi])}`, mx + (mi > n*0.6 ? -8 : 8), my - 6);
+  ctx.fillStyle = '#8a93a6'; ctx.font = '9px sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText(new Date(o.hist[0].t).toLocaleTimeString('zh-TW',{hour:'2-digit',minute:'2-digit',hour12:false}), padL, H-5);
+  ctx.textAlign = 'right';
+  ctx.fillText(new Date(o.hist[n-1].t).toLocaleTimeString('zh-TW',{hour:'2-digit',minute:'2-digit',hour12:false}), W-padR, H-5);
+}
+
+async function loadOI(sym){
+  try{
+    const [histRes, klRes] = await Promise.all([
+      fetch(`${FAPI}/futures/data/openInterestHist?symbol=${sym}&period=1h&limit=24`),
+      fetch(`${FAPI}/fapi/v1/klines?symbol=${sym}&interval=1h&limit=24`)
+    ]);
+    const hist = await histRes.json();
+    const kl = await klRes.json();
+    if(!Array.isArray(hist) || !hist.length) return;
+    oi[sym].hist = hist.map(h => ({t: h.timestamp, v: +h.sumOpenInterestValue}));
+    oi[sym].prices = kl.map(c => ({t: c[0], c: +c[4]}));
+    oi[sym].current = +hist[hist.length-1].sumOpenInterestValue;
+    oi[sym].chg24h = (+hist[hist.length-1].sumOpenInterestValue / +hist[0].sumOpenInterestValue - 1) * 100;
+    renderCoinCard(sym);
+  }catch(e){ console.error('OI 載入失敗', sym, e); }
+}
+
+let ws, wsRetry = 0;
+function connectWS(){
+  const streams = 'btcusdt@ticker/ethusdt@ticker';
+  ws = new WebSocket('wss://fstream.binance.com/stream?streams=' + streams);
+  ws.onopen = () => { $('wsDot').classList.add('on'); wsRetry = 0; };
+  ws.onclose = () => {
+    $('wsDot').classList.remove('on');
+    setTimeout(connectWS, Math.min(30000, 1000 * Math.pow(2, wsRetry++)));
+  };
+  ws.onerror = () => ws.close();
+  ws.onmessage = ev => {
+    const msg = JSON.parse(ev.data);
+    const d = msg.data;
+    if(!d) return;
+    if(d.e === '24hrTicker'){
+      tickers[d.s] = {c:+d.c, h:+d.h, l:+d.l, P:+d.P};
+      renderCoinCard(d.s);
+    }
+  };
+}
+
+function ema(values, period){
+  const k = 2/(period+1);
+  let e = values[0];
+  for(let i=1;i<values.length;i++) e = values[i]*k + e*(1-k);
+  return e;
+}
+
+async function scan(){
+  loadOI('BTCUSDT');
+  loadOI('ETHUSDT');
+  try{
+    const res = await fetch(FAPI + '/fapi/v1/ticker/24hr');
+    const all = await res.json();
+    const top = all
+      .filter(t => t.symbol.endsWith('USDT') && !t.symbol.includes('_') && +t.quoteVolume > 0)
+      .sort((a,b) => +b.quoteVolume - +a.quoteVolume)
+      .slice(0, 30);
+
+    const results = await Promise.all(top.map(async t => {
+      try{
+        const r = await fetch(`${FAPI}/fapi/v1/klines?symbol=${t.symbol}&interval=1h&limit=120`);
+        const k = await r.json();
+        if(!Array.isArray(k) || k.length < 60) return null;
+        const closes = k.map(c => +c[4]);
+        const last = closes[closes.length-1];
+        const prev = closes[closes.length-2];
+        const e20 = ema(closes, 20), e50 = ema(closes, 50);
+        const amp = k.map(c => (+c[2] - +c[3]) / +c[4] * 100);
+        const recent = amp.slice(-3).reduce((a,b)=>a+b,0)/3;
+        const base = amp.slice(-33,-3).reduce((a,b)=>a+b,0)/30;
+        return {
+          sym: t.symbol, price: last,
+          chg1h: (last/prev - 1)*100,
+          chg24h: +t.priceChangePercent,
+          e20, e50,
+          aboveE20: (last/e20 - 1)*100,
+          isBull: last > e20 && e20 > e50,
+          isBear: last < e20 && e20 < e50,
+          recentAmp: recent,
+          volRatio: base > 0 ? recent/base : 0,
+          dir: last >= closes[closes.length-4] ? 'up' : 'down'
+        };
+      }catch(e){ return null; }
+    }));
+    const data = results.filter(Boolean);
+    const top10 = new Set(top.slice(0,10).map(t => t.symbol));
+    const data10 = data.filter(d => top10.has(d.sym));
+
+    const bulls = data10.filter(d => d.isBull).sort((a,b) => b.aboveE20 - a.aboveE20);
+    $('trendBody').innerHTML = bulls.length ? bulls.map(d => `
+      <tr>
+        <td class="sym sym-click" onclick="showKChart('coin','${d.sym}','','1h')">${d.sym.replace('USDT','')}</td>
+        <td>${fmtPx(d.price)}</td>
+        <td class="${pctCls(d.chg1h)}">${pctTxt(d.chg1h)}</td>
+        <td class="${pctCls(d.chg24h)}">${pctTxt(d.chg24h)}</td>
+        <td class="up">+${d.aboveE20.toFixed(2)}%</td>
+        <td><span class="strength" style="width:${Math.min(60, Math.max(4, d.aboveE20*8)).toFixed(0)}px"></span></td>
+      </tr>`).join('')
+      : '<tr><td colspan="6" class="empty">目前篩選無符合標的</td></tr>';
+
+    const bears = data10.filter(d => d.isBear).sort((a,b) => a.aboveE20 - b.aboveE20);
+    $('bearBody').innerHTML = bears.length ? bears.map(d => `
+      <tr>
+        <td class="sym sym-click" onclick="showKChart('coin','${d.sym}','','1h')">${d.sym.replace('USDT','')}</td>
+        <td>${fmtPx(d.price)}</td>
+        <td class="${pctCls(d.chg1h)}">${pctTxt(d.chg1h)}</td>
+        <td class="${pctCls(d.chg24h)}">${pctTxt(d.chg24h)}</td>
+        <td class="down">${d.aboveE20.toFixed(2)}%</td>
+        <td><span class="strength" style="background:var(--green);width:${Math.min(60, Math.max(4, -d.aboveE20*8)).toFixed(0)}px"></span></td>
+      </tr>`).join('')
+      : '<tr><td colspan="6" class="empty">目前篩選無符合標的</td></tr>';
+
+    const spikes = data.filter(d => d.volRatio >= 1.8).sort((a,b) => b.volRatio - a.volRatio);
+    $('spikeBody').innerHTML = spikes.length ? spikes.slice(0, 10).map(d => `
+      <tr>
+        <td class="sym sym-click" onclick="showKChart('coin','${d.sym}')">${d.sym.replace('USDT','')}</td>
+        <td>${fmtPx(d.price)}</td>
+        <td class="${pctCls(d.chg1h)}">${pctTxt(d.chg1h)}</td>
+        <td class="${pctCls(d.chg24h)}">${pctTxt(d.chg24h)}</td>
+        <td style="font-weight:700;color:var(--yellow)">${d.volRatio.toFixed(1)}×</td>
+      </tr>`).join('')
+      : '<tr><td colspan="5" class="empty">目前沒有波動率突增的標的</td></tr>';
+    notifySpikes(spikes);
+
+    const spikeMap = {};
+    spikes.forEach(s => spikeMap[s.sym] = s.volRatio);
+    const apCoins = bulls.filter(b => spikeMap[b.sym] != null);
+    $('apCoinBody').innerHTML = apCoins.length ? apCoins.map(d => `
+      <tr>
+        <td class="sym sym-click" onclick="showKChart('coin','${d.sym}')">${d.sym.replace('USDT','')}</td>
+        <td>${fmtPx(d.price)}</td>
+        <td class="${pctCls(d.chg1h)}">${pctTxt(d.chg1h)}</td>
+        <td class="${pctCls(d.chg24h)}">${pctTxt(d.chg24h)}</td>
+        <td style="font-weight:700;color:var(--yellow)">${spikeMap[d.sym].toFixed(1)}×</td>
+      </tr>`).join('')
+      : '<tr><td colspan="5" class="empty">目前沒有符合 A+ 條件的標的</td></tr>';
+    apCoinLastData = { date: new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' }),
+      hits: apCoins.map(d => ({ code: d.sym.replace('USDT',''), name: '', close: d.price,
+        chgPct: Math.round(d.chg24h * 100) / 100 })) };
+    $('apCoinStatus').textContent = `布嬸A+掃幣目前 ${apCoins.length} 檔`;
+    $('apCoinTime').textContent = new Date().toLocaleTimeString('zh-TW',{hour12:false});
+    notifyNewItems(apCoinNotify, apCoins.map(d => ({key: d.sym, d})),
+      x => '🪙 A+掃幣新標的：' + x.d.sym.replace('USDT',''),
+      x => `價格 ${fmtPx(x.d.price)}｜24H ${pctTxt(x.d.chg24h)}｜波動倍數 ${spikeMap[x.d.sym].toFixed(1)}×`);
+
+    $('lastScan').textContent = new Date().toLocaleTimeString('zh-TW',{hour12:false});
+  }catch(e){
+    console.error('掃描失敗', e);
+  }
+}
+
+let notifyOn = false, prevSpikes = new Set(), notifyReady = false;
+
+if('serviceWorker' in navigator && location.protocol === 'https:'){
+  navigator.serviceWorker.register('/sw.js').catch(() => {});
+}
+
+async function showNotify(title, body, tag){
+  try{
+    const reg = 'serviceWorker' in navigator ? await navigator.serviceWorker.getRegistration() : null;
+    if(reg && reg.showNotification){ reg.showNotification(title, {body, tag}); return; }
+  }catch(e){}
+  try{ new Notification(title, {body, tag}); }catch(e){}
+}
+
+function notifyNewItems(state, items, titleFn, bodyFn){
+  const cur = new Set(items.map(x => x.key));
+  if(state.ready && state.on && 'Notification' in window && Notification.permission === 'granted'){
+    items.forEach(x => { if(!state.prev.has(x.key)) showNotify(titleFn(x), bodyFn(x), 'ap-' + x.key); });
+  }
+  state.prev = cur;
+  state.ready = true;
+}
+
+function mkNotifyState(){ return { prev: new Set(), ready: false, get on(){ return localStorage.getItem('bu_notify_all') === '1'; } }; }
+const apCoinNotify = mkNotifyState();
+
+(function(){
+  let busy = false;
+  async function chkVer(){
+    if(!window.__BUILD || busy) return;
+    busy = true;
+    try{
+      const v = (await (await fetch('/version.txt?r=' + Date.now(), { cache: 'no-store' })).text()).trim();
+      if(/^\d{12}$/.test(v) && v !== window.__BUILD)
+        location.replace(location.pathname + '?u=' + Date.now());   // 帶隨機參數強制取得最新版
+    }catch(e){}
+    busy = false;
+  }
+  window.addEventListener('pageshow', e => { if(e.persisted) chkVer(); });   // bfcache 回復（下拉整理常見情境）
+  document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'visible') chkVer(); });
+  setTimeout(chkVer, 4000);
+  setInterval(chkVer, 600000);
+})();
+
+const CI_MILES = [[7, '🥉 7 天'], [15, '🥈 15 天'], [30, '🥇 30 天']];
+const CI_COIN = '<span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#ffe98a,#f0b90b 58%,#a8760a);border:1px solid #8f6508;box-shadow:0 0 3px rgba(240,185,11,.6);vertical-align:-2px"></span>';
+function ciCred(){
+  try{
+    const k = localStorage.getItem('bu_member_key') || '';
+    const s = localStorage.getItem('bu_member_sid') || '';
+    let d = localStorage.getItem('bu_ci_dev') || '';
+    if(!k && !d){
+      d = 'D' + (Math.random().toString(36).slice(2) + Date.now().toString(36) + '000000').slice(0, 14).toUpperCase();
+      localStorage.setItem('bu_ci_dev', d);
+    }
+    return { k, s, d };
+  }catch(e){ return { k: '', s: '', d: '' }; }
+}
+function ciQ(c){ return c.k ? 'key=' + encodeURIComponent(c.k) + '&sid=' + encodeURIComponent(c.s) : 'dev=' + encodeURIComponent(c.d); }
+function ciClear(){ try{ localStorage.removeItem('bu_member_key'); localStorage.removeItem('bu_member_sid'); }catch(e){} }
+function ciTopGuest(msg){
+  $('ciTopBody').innerHTML = '<span class="note" style="margin:0">' + (msg || '簽到暫時無法使用，請稍後再試。') + '</span>';
+}
+function ciTopRender(d){
+  const t = d.total || 0, sk = d.streak || 0, rounds = d.rounds || 0;
+  const coins = d.coins != null ? d.coins : Math.floor(t / 30);   // 總布幣（伺服器計算，含站長加發）
+  const cyc = t % 30;
+  const roundNow = sk === 30 ? rounds : rounds + 1;       // 本輪輪次（達成30當日顯示該完成輪）
+  const nextM = CI_MILES.find(([n]) => sk < n);           // 勳章＝本輪連續解鎖，每輪重新挑戰
+  const badges = CI_MILES.map(([n, l]) =>
+    '<span style="font-size:12px;border-radius:6px;padding:4px 10px;font-weight:700;'
+    + (sk >= n ? 'background:rgba(22,199,132,.15);color:#16c784' : 'background:rgba(177,140,255,.12);color:#c4a6ff')
+    + '">' + l + (sk >= n ? ' ✅' : '') + '</span>').join('');
+  $('ciTopBody').innerHTML =
+    '<div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">'
+    + '<button id="ciTopBtn" class="ctrl btn" style="' + (d.today ? 'opacity:.65' : 'border-color:#f0b90b;color:#f0b90b')
+    + ';font-weight:800;padding:9px 18px;font-size:15px"' + (d.today ? ' disabled' : '') + '>'
+    + (d.today ? '✅ 今日已簽到' : '✋ 今日簽到') + '</button>'
+    + '<span style="font-size:14px">第 <b style="color:#c4a6ff">' + roundNow + '</b> 輪｜連續 <b style="color:#c4a6ff;font-size:17px">' + sk + '</b> 天｜累積 <b style="color:var(--yellow);font-size:17px">' + t + '</b> 天</span>'
+    + '<span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">'
+    + badges
+    + (rounds > 0 ? '<span style="font-size:12px;border-radius:6px;padding:4px 10px;font-weight:800;background:rgba(240,185,11,.15);color:var(--yellow)">🏆 完成 ' + rounds + ' 輪</span>' : '')
+    + '<span style="font-size:12px;border-radius:6px;padding:4px 10px;font-weight:800;background:rgba(240,185,11,.12);color:var(--yellow);display:inline-flex;align-items:center;gap:5px">' + CI_COIN + '布幣 × ' + coins + '</span>'
+    + '</span>'
+    + (sk === 30 ? '<span class="note" style="margin:0">🎉 本輪達成！明日自動開啟下一輪挑戰</span>'
+                 : '<span class="note" style="margin:0">連續簽到再 ' + (nextM[0] - sk) + ' 天解鎖 ' + nextM[1] + ' 勳章</span>')
+    + '</div>'
+    + '<div style="background:var(--card2);border-radius:8px;height:9px;margin-top:12px;overflow:hidden">'
+    + '<div style="height:100%;width:' + (cyc / 30 * 100) + '%;background:linear-gradient(90deg,#b18cff,#f0b90b);transition:width .5s"></div></div>'
+    + '<div class="note" style="margin-top:8px;line-height:1.9">'
+    + '🏅 勳章：連續簽到 7／15／30 天獲得（中斷該輪重計，已完成輪數保留）<br>'
+    + CI_COIN + ' 布幣：累積簽到每滿 30 次獲得 1 枚'
+    + (coins > 0 ? '（已獲得 ' + coins + ' 枚）' : '') + '</div>';
+  const b = $('ciTopBtn');
+  if(b && !d.today) b.onclick = ciTopCheck;
+}
+function ciKickedMsg(){
+  ciClear();
+  ciTopLoad();
+  const el = document.createElement('div');
+  el.className = 'note'; el.style.marginTop = '6px';
+  el.innerHTML = '⚠️ 會員碼已在其他裝置登入，本機已切回訪客簽到。到 <a href="/buyou.html" style="color:#c4a6ff;font-weight:700">布友專區</a> 重新輸入可取回會員身分。';
+  $('ciTopBody').appendChild(el);
+}
+async function ciTopLoad(){
+  const c = ciCred();
+  try{
+    const d = await (await fetch('/api/checkin?' + ciQ(c) + '&r=' + Date.now())).json();
+    if(d.error === 'kicked') return ciKickedMsg();
+    if(d.error) return ciTopGuest();
+    ciTopRender(d);
+  }catch(e){}
+}
+async function ciTopCheck(){
+  const c = ciCred();
+  const b = $('ciTopBtn');
+  if(b){ b.disabled = true; b.textContent = '簽到中…'; }
+  try{
+    const d = await (await fetch('/api/checkin?' + ciQ(c), { method: 'POST' })).json();
+    if(d.ok) ciTopRender({ ...d, today: true });
+    else if(d.error === 'kicked') ciKickedMsg();
+    else ciTopLoad();
+  }catch(e){ ciTopLoad(); }
+}
+ciTopLoad();
+
+let lastApSlot = '';
+setInterval(() => {
+  const tp = new Date(new Date().toLocaleString('en-US', {timeZone:'Asia/Taipei'}));
+  const hh = tp.getHours();
+  if((hh === 16 || hh === 20) && tp.getMinutes() < 5){
+    const slot = tp.toDateString() + '-' + hh;
+    if(lastApSlot !== slot){ lastApSlot = slot; loadAPlus(true); }
+  }
+}, 60000);
+
+function notifySpikes(spikes){
+  const cur = new Set(spikes.map(d => d.sym));
+  if(notifyReady && notifyOn && 'Notification' in window && Notification.permission === 'granted'){
+    spikes.forEach(d => {
+      if(!prevSpikes.has(d.sym)){
+        showNotify('🔥 波動率突增：' + d.sym.replace('USDT',''),
+          `波動倍數 ${d.volRatio.toFixed(1)}×｜價格 ${fmtPx(d.price)}｜${d.dir === 'up' ? '▲ 偏多' : '▼ 偏空'}`,
+          'vol-' + d.sym);
+      }
+    });
+  }
+  prevSpikes = cur;
+  notifyReady = true;
+}
+
+let vsSumLast = 0;
+async function loadVsSummary(){
+  vsSumLast = Date.now();
+  const tb = $('vsSumBody');
+  const rows = [];
+  document.querySelectorAll('#page-value .vs-card').forEach(c => {
+    try{
+      const nameEl = c.querySelector('.vs-name');
+      if(!nameEl) return;
+      const m = (nameEl.getAttribute('onclick') || '').match(/showKChart\('(\w+)','([^']+)','([^']*)'\)/);
+      if(!m) return;
+      let target = '—', verdict = '—', tgtMid = null;
+      c.querySelectorAll('.vs-mini .rpt-metric').forEach(mt => {
+        const t = (mt.querySelector('.t') || {}).textContent || '';
+        const v = ((mt.querySelector('.v') || {}).textContent || '').trim();
+        if(/目標/.test(t)){
+          target = v;
+          const nums = [];
+          const re = /(\d+(?:\.\d+)?)(%?)/g; let mm;
+          const vv = v.replace(/,/g, '');
+          while((mm = re.exec(vv))) if(mm[2] !== '%') nums.push(parseFloat(mm[1]));
+          const big = nums.filter(x => x > 1);
+          if(big.length) tgtMid = big.length >= 2 ? (big[0] + big[1]) / 2 : big[0];
+        }
+        if(/估值/.test(t)) verdict = v;
+      });
+      rows.push({ mkt: m[1], code: m[2], cname: m[3], up: c.dataset.up || '', target, verdict, tgtMid });
+    }catch(e){}
+  });
+  await Promise.all(rows.map(async r => {
+    for(const sym of (r.mkt === 'tw' ? [r.code + '.TW', r.code + '.TWO'] : [r.code])){
+      try{
+        const res = (await (await fetch('/yahoo/v8/finance/chart/' + encodeURIComponent(sym) + '?range=5d&interval=1d')).json()).chart.result[0];
+        const q = res.indicators.quote[0];
+        let last = null;
+        for(let i = 0; i < res.timestamp.length; i++) if(q.close[i] != null && q.volume[i] !== 0) last = q.close[i];
+        const px = res.meta.regularMarketPrice || last;
+        if(px > 0){ r.px = px; break; }
+      }catch(e){}
+    }
+  }));
+  rows.sort((a, b) => (b.up || '').localeCompare(a.up || ''));
+  const SHOW = 6;
+  tb.innerHTML = rows.length ? rows.map((r, i) => {
+    const gap = (r.px > 0 && r.tgtMid > 0) ? (r.tgtMid / r.px - 1) * 100 : null;
+    return '<tr' + (i >= SHOW ? ' class="vs-sum-more" style="display:none"' : '') + '>'
+      + '<td class="sym sym-click" onclick="showKChart(\'' + r.mkt + '\',\'' + r.code + '\',\'' + r.cname + '\')">' + r.cname + ' ' + r.code + '</td>'
+      + '<td>' + (r.up ? r.up.slice(5) : '—') + '</td>'
+      + '<td>' + (r.px > 0 ? fmtPx(r.px) : '—') + '</td>'
+      + '<td>' + target_short(r.target) + '</td>'
+      + '<td class="' + (gap == null ? '' : (gap >= 0 ? 'up' : 'down')) + '">' + (gap == null ? '—' : (gap >= 0 ? '+' : '') + gap.toFixed(0) + '%') + '</td>'
+      + '<td style="font-size:13px">' + r.verdict + '</td>'
+      + '</tr>';
+  }).join('') : '<tr><td colspan="6" class="empty">目前沒有上架中的報告</td></tr>';
+  const moreBtn = $('vsSumMoreBtn');
+  if(rows.length > SHOW){
+    moreBtn.style.display = '';
+    moreBtn.textContent = '顯示全部 ' + rows.length + ' 檔 ▾';
+    moreBtn.onclick = () => {
+      const hidden = tb.querySelector('.vs-sum-more').style.display === 'none';
+      tb.querySelectorAll('.vs-sum-more').forEach(tr => tr.style.display = hidden ? '' : 'none');
+      moreBtn.textContent = hidden ? '收合，只看最新 6 檔 ▴' : '顯示全部 ' + rows.length + ' 檔 ▾';
+    };
+  } else moreBtn.style.display = 'none';
+}
+function target_short(t){ return t.length > 14 ? t.slice(0, 14) + '…' : t; }
+
+async function loadMktStrip(){
+  const MKT = [['加權指數', '^TWII'], ['道瓊指數', '^DJI'], ['黃金現貨', 'GC=F'], ['美元指數', 'DX-Y.NYB'], ['布蘭特原油', 'BZ=F'], ['比特幣', 'BTC-USD']];
+  const items = await Promise.all(MKT.map(async ([name, sym]) => {
+    try{
+      const res = (await (await fetch('/yahoo/v8/finance/chart/' + encodeURIComponent(sym) + '?range=2d&interval=1d')).json()).chart.result[0];
+      const m = res.meta;
+      const px = m.regularMarketPrice, prev = m.chartPreviousClose || m.previousClose;
+      if(!(px > 0)) return null;
+      return { name, pxTxt: px.toLocaleString(undefined, { maximumFractionDigits: px >= 1000 ? 0 : 2 }), pct: prev > 0 ? (px / prev - 1) * 100 : 0 };
+    }catch(e){ return null; }
+  }));
+  const ok = items.filter(Boolean);
+  window.__mktData = ok;
+  const spans = ok.map(m => '<span style="white-space:nowrap"><span style="color:var(--muted)">' + m.name + '</span> <b>' + m.pxTxt + '</b> <span class="' + pctCls(m.pct) + '">' + pctTxt(m.pct) + '</span></span>');
+  if(spans.length) $('mktStrip').innerHTML = spans.join('');
+}
+setInterval(() => { if(buLoaded) loadMktStrip(); }, 300000);
+
+async function load0050(){
+  try{
+    const r = await fetch('/yahoo/v8/finance/chart/0050.TW?range=2y&interval=1d');
+    const res = (await r.json()).chart.result[0];
+    const q = res.indicators.quote[0];
+    const closes = [], times = [];
+    for(let i = 0; i < res.timestamp.length; i++)
+      if(q.close[i] != null && q.volume[i] !== 0){ closes.push(q.close[i]); times.push(res.timestamp[i]); } // 剔除休市日幽靈K棒
+    if(closes.length < 200) throw new Error('insufficient');
+    const n = closes.length;
+    let sx = 0, sy = 0, sxy = 0, sxx = 0;
+    for(let i = 0; i < n; i++){ sx += i; sy += closes[i]; sxy += i * closes[i]; sxx += i * i; }
+    const b = (n * sxy - sx * sy) / (n * sxx - sx * sx), a = (sy - b * sx) / n;
+    let sse = 0;
+    for(let i = 0; i < n; i++){ const e = closes[i] - (a + b * i); sse += e * e; }
+    const sd = Math.sqrt(sse / n);
+    const cur = closes[n - 1];
+    const dev = (cur - (a + b * (n - 1))) / sd;
+    let color, verdict;
+    if(dev >= 1){ color = '#ea3943'; verdict = '🔴 紅燈｜估值稍高'; }
+    else if(dev <= -1){ color = '#16c784'; verdict = '🟢 綠燈｜可考慮'; }
+    else { color = '#f0b90b'; verdict = '🟡 黃燈｜合理'; }
+    $('t5Verdict').textContent = verdict; $('t5Verdict').style.color = color;
+    $('t5Time').textContent = new Date(times[n - 1] * 1000).toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' });
+  }catch(e){
+    $('t5Verdict').textContent = '資料取得失敗，請稍後重新整理';
+  }
+}
+
+const FX_UNIVERSE = [
+  { sym: 'BZ=F', name: '布蘭特原油' },
+  { sym: 'GC=F', name: '黃金期貨' },
+  { sym: '6E=F', name: '歐元期貨' },
+  { sym: '6B=F', name: '英鎊期貨' },
+  { sym: '6A=F', name: '澳幣期貨' }
+];
+async function loadAPlusFX(){
+  const st = $('apFxStatus'), body = $('apFxBody');
+  st.textContent = '掃描中…';
+  try{
+    const rows = await Promise.all(FX_UNIVERSE.map(async f => {
+      try{
+        const r = await fetch('/yahoo/v8/finance/chart/' + encodeURIComponent(f.sym) + '?range=10d&interval=60m');
+        if(!r.ok) return null;
+        const res = (await r.json()).chart.result[0];
+        const m = res.meta;
+        const closes = (res.indicators.quote[0].close || []).filter(v => v != null);
+        if(closes.length < 55) return null;
+        const last = closes[closes.length - 1];
+        const e20 = ema(closes, 20), e50 = ema(closes, 50);
+        const prev1h = closes[closes.length - 2];
+        const prevD = m.chartPreviousClose || m.previousClose;
+        const px = m.regularMarketPrice || last;
+        return {
+          ...f, price: px,
+          chg1h: prev1h > 0 ? (last/prev1h - 1)*100 : 0,
+          chgD: prevD > 0 ? (px/prevD - 1)*100 : 0,
+          aboveE20: (last/e20 - 1)*100,
+          isBull: last > e20 && e20 > e50
+        };
+      }catch(e){ return null; }
+    }));
+    const hits = rows.filter(x => x && x.isBull).sort((a,b) => b.aboveE20 - a.aboveE20);
+    apFxLastData = { date: new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' }),
+      hits: hits.map(d => ({ code: d.name, name: '', close: d.price, chgPct: Math.round(d.chgD * 100) / 100 })) };
+    notifyNewItems(apFxNotify, hits.map(d => ({ key: d.sym, d })),
+      x => '💹 A+外匯新標的：' + x.d.name,
+      x => `現價 ${fmtPx(x.d.price)}｜日漲跌 ${pctTxt(x.d.chgD)}`);
+    body.innerHTML = hits.length ? hits.map(d => `
+      <tr>
+        <td class="sym sym-click" onclick="showKChart('fx','${d.sym}','${d.name}')">${d.name}</td>
+        <td>${fmtPx(d.price)}</td>
+        <td class="${pctCls(d.chg1h)}">${pctTxt(d.chg1h)}</td>
+        <td class="${pctCls(d.chgD)}">${pctTxt(d.chgD)}</td>
+        <td><span class="strength" style="width:${Math.min(60, Math.max(4, d.aboveE20*8)).toFixed(0)}px"></span></td>
+      </tr>`).join('')
+      : '<tr><td colspan="5" class="empty">目前沒有符合 A+ 條件的標的</td></tr>';
+    st.textContent = `布嬸A+外匯目前 ${hits.length} 檔`;
+    $('apFxTime').textContent = new Date().toLocaleTimeString('zh-TW', { hour12: false });
+  }catch(e){
+    st.textContent = '掃描失敗';
+    body.innerHTML = '<tr><td colspan="5" class="empty">資料取得失敗，請稍後重試</td></tr>';
+  }
+}
+let apFxLastData = null; // 最近一次 A+外匯名單，供「下載收藏」分享卡使用
+const apFxNotify = mkNotifyState();
+setInterval(() => { if(buLoaded) loadAPlusFX(); }, 600000); // 每10分鐘自動重掃（供推播偵測新標的）
+$('apFxDlBtn').addEventListener('click', async () => {
+  const btn = $('apFxDlBtn'); const old = btn.textContent;
+  btn.disabled = true; btn.textContent = '產生中…';
+  try{
+    const data = apFxLastData;
+    if(!data || !data.hits.length){ alert('目前沒有可下載的 A+ 外匯名單，請先「重新掃描」再試'); return; }
+    const cv = document.createElement('canvas'); cv.width = 1080; cv.height = 1350;
+    drawShareCard(cv, data, { title: '💹 布嬸A+外匯', tag: ' 即時掃描', sub: '即時 A+ 型態精選',
+      priceLabel: '現價', push: '布嬸A+引擎 · 1H 即時掃描' });
+    const fname = '布嬸A+外匯-' + data.date.replace(/[\/-]/g, '') + '.png';
+    const blob = await new Promise(res => cv.toBlob(res, 'image/png'));
+    let done = false;
+    if(blob && navigator.canShare && navigator.canShare({ files: [new File([blob], fname, { type: 'image/png' })] })){
+      try{
+        await navigator.share({
+          files: [new File([blob], fname, { type: 'image/png' })],
+          title: '布嬸A+外匯',
+          text: '即時 A+ 外匯名單｜bubuaplus.com'
+        });
+        done = true;
+      }catch(err){
+        if(err && err.name === 'AbortError') return;
+      }
+    }
+    if(!done){
+      const a = document.createElement('a');
+      a.download = fname;
+      a.href = URL.createObjectURL(blob);
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+    }
+    try{
+      const base = 'https://api.counterapi.dev/v1/crypto-scanner-brucelinda/';
+      const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' });
+      fetch(base + 'dlcardfx-total/up').catch(() => {});
+      fetch(base + 'dlcardfx-' + today + '/up').catch(() => {});
+    }catch(e){}
+  }catch(e){ console.error('分享卡產生失敗', e); alert('分享卡產生失敗，請稍後再試'); }
+  finally{ btn.disabled = false; btn.textContent = old; }
+});
+$('apFxBtn').addEventListener('click', async () => {
+  const btn = $('apFxBtn');
+  btn.disabled = true; btn.textContent = '掃描中…';
+  await loadAPlusFX();
+  btn.disabled = false; btn.textContent = '🔄 重新掃描';
+});
+
+let twLoaded = false;
+let twusSub = 'tw';
+function applyTwusSub(){
+  $('page-tw').style.display = twusSub === 'tw' ? '' : 'none';
+  $('page-us').style.display = twusSub === 'us' ? '' : 'none';
+  document.querySelectorAll('#twus-subnav .subtab').forEach(b => b.classList.toggle('active', b.dataset.sub === twusSub));
+  if(twusSub === 'tw' && !twLoaded){ twLoaded = true; loadTW(); }
+  if(twusSub === 'us' && !usLoaded){ usLoaded = true; loadUS(); }
+}
+document.querySelectorAll('#twus-subnav .subtab').forEach(b => {
+  b.addEventListener('click', () => { twusSub = b.dataset.sub; applyTwusSub(); });
+});
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    item.classList.add('active');
+    const page = item.dataset.page;
+    const isTwus = page === 'twus';
+    $('twus-subnav').style.display = isTwus ? 'flex' : 'none';
+    ['crypto','health','value','bu'].forEach(p => {
+      $('page-' + p).style.display = (p === page) ? '' : 'none';
+    });
+    if(isTwus){ applyTwusSub(); }
+    else { $('page-tw').style.display = 'none'; $('page-us').style.display = 'none'; }
+    if(page === 'health') watchScan();
+    if(page === 'value' && Date.now() - vsSumLast > 600000) loadVsSummary();
+    if(page === 'bu' && !buLoaded){ buLoaded = true; loadAPlus(); loadAPlusUS(); loadAPlusFX(); load0050(); loadMktStrip(); }
+    try{ localStorage.setItem('bu_lastpage', page); }catch(e){}
+  });
+});
+
+setTimeout(() => {
+  try{
+    const last = localStorage.getItem('bu_lastpage');
+    const target = last || 'bu';
+    if(target !== 'crypto'){
+      const el = document.querySelector('.nav-item[data-page="' + target + '"]');
+      if(el) el.click();
+    }
+  }catch(e){}
+}, 0);
+
+(async () => {
+  try{
+    const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' });
+    let v = {};
+    try{ v = JSON.parse(localStorage.getItem('bu_visit') || '{}'); }catch(e){}
+    if(v.d !== today){ v = { d: today, n: (v.n || 0) + 1 }; localStorage.setItem('bu_visit', JSON.stringify(v)); }
+    if(v.n < 2 || localStorage.getItem('bu_pushprompted')) return;
+    if(!('serviceWorker' in navigator) || !('PushManager' in window)) return;
+    const reg = await navigator.serviceWorker.ready;
+    if(await reg.pushManager.getSubscription()){ localStorage.setItem('bu_pushprompted', '1'); return; }
+    setTimeout(() => {
+      const bar = document.createElement('div');
+      bar.style.cssText = 'position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:9999;background:#1a1f2b;border:1px solid #b18cff;border-radius:14px;padding:14px 16px;max-width:92vw;width:360px;box-shadow:0 8px 30px rgba(0,0,0,.5)';
+      bar.innerHTML = '<div style="font-size:14px;font-weight:700;color:#e6e9f0">🔔 開啟推播，A+ 名單出爐第一時間通知你</div>'
+        + '<div style="font-size:12px;color:#8a93a6;margin-top:4px">每日台股盤後 19:00、美股早上 07:00，關閉網頁也收得到</div>'
+        + '<div style="display:flex;gap:8px;margin-top:10px">'
+        + '<button id="ppYes" style="flex:1;background:#f0b90b;color:#111;border:none;border-radius:9px;padding:9px;font-weight:800;cursor:pointer">開啟推播</button>'
+        + '<button id="ppNo" style="flex:0 0 auto;background:transparent;color:#8a93a6;border:1px solid #242a38;border-radius:9px;padding:9px 14px;cursor:pointer">稍後再說</button></div>';
+      document.body.appendChild(bar);
+      const done = () => { localStorage.setItem('bu_pushprompted', '1'); bar.remove(); };
+      bar.querySelector('#ppYes').onclick = () => { done(); $('pushBtn').click(); };
+      bar.querySelector('#ppNo').onclick = done;
+    }, 3000);
+  }catch(e){}
+})();
+
+function twRow(s, cols){
+  return `<tr><td class="sym sym-click" onclick="showKChart('tw','${s.code}','${escN(s.name)}')">${s.code} ${escN(s.name)}</td>` + cols.map(c => {
+    if(c.cls === 'limitup' || c.cls === 'limitdown')
+      return `<td><span class="${c.cls}">${c.v}</span></td>`;
+    return `<td class="${c.cls||''}">${c.v}</td>`;
+  }).join('') + '</tr>';
+}
+async function loadTW(){
+  loadTWIndex();
+  try{
+    let rows = null;
+    for(const u of ['/twse/v1/exchangeReport/STOCK_DAY_ALL', 'https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL']){
+      try{
+        const res = await fetch(u);
+        if(res.ok){ rows = await res.json(); break; }
+      }catch(e){}
+    }
+    if(!Array.isArray(rows)) throw new Error('無法取得台股資料');
+    const num = s => parseFloat(String(s).replace(/,/g,'')) || 0;
+    const stocks = rows.map(r => {
+      const close = num(r.ClosingPrice), chg = num(r.Change);
+      const prev = close - chg;
+      const high = num(r.HighestPrice), low = num(r.LowestPrice);
+      return {
+        code: r.Code, name: r.Name, close, chg,
+        pct: prev > 0 ? chg/prev*100 : 0,
+        amp: prev > 0 ? (high-low)/prev*100 : 0,
+        high, low,
+        value: num(r.TradeValue)
+      };
+    }).filter(s => s.close > 0 && parseInt(s.code) >= 1000 && /^\d{4}$/.test(s.code) && s.value >= 1e7);
+
+    try{
+      const universe = [...stocks].sort((a,b) => b.value - a.value).slice(0,100);
+      const nameMap = {};
+      universe.forEach(s => nameMap[s.code] = s.name);
+      const rt = await fetchRT(universe.map(s => s.code), nameMap);
+      if(rt.length >= 30){
+        renderTW(rt, isTwMarketOpen() ? 'live' : 'today');
+        return;
+      }
+    }catch(e){ console.error('Yahoo 報價失敗，改用證交所盤後資料', e); }
+    renderTW(stocks, 'daily');
+  }catch(e){
+    console.error('台股載入失敗', e);
+    ['twGainBody','twLoseBody','twValueBody','twAmpBody'].forEach(id =>
+      $(id).innerHTML = '<tr><td colspan="4" class="empty">資料載入失敗，請稍後再試</td></tr>');
+  }
+}
+
+async function loadTWIndex(){
+  try{
+    const r = await fetch('/yahoo/v8/finance/chart/%5ETWII?range=1d&interval=5m');
+    const j = await r.json();
+    const res = j.chart.result[0];
+    const m = res.meta;
+    const prev = m.chartPreviousClose || m.previousClose;
+    const px = m.regularMarketPrice;
+    const chg = px - prev, pct = prev > 0 ? chg/prev*100 : 0;
+    const q = res.indicators.quote[0];
+    const closes = [], times = [];
+    (q.close || []).forEach((v, i) => { if(v != null){ closes.push(v); times.push(res.timestamp[i]); } });
+    const volSum = (q.volume || []).reduce((a,b) => a + (b||0), 0);
+
+    let volTxt = volSum > 0 ? (volSum/1e8).toFixed(1) + ' 億股' : null;
+    if(!volTxt){
+      try{
+        const r2 = await fetch('/twse/v1/exchangeReport/FMTQIK');
+        const arr = await r2.json();
+        const last = arr[arr.length-1];
+        volTxt = Math.round(parseFloat(String(last.TradeValue).replace(/,/g,''))/1e8).toLocaleString() + ' 億元';
+      }catch(e){ volTxt = '--'; }
+    }
+    const hi = m.regularMarketDayHigh, lo = m.regularMarketDayLow;
+    $('twIndexCard').innerHTML = `
+      <div class="coin-head">
+        <span class="coin-name">加權指數 TAIEX</span>
+        <span><span class="price">${px.toLocaleString('en-US',{maximumFractionDigits:2})}</span>
+        <span class="chg ${pctCls(chg)}">${(chg>=0?'+':'')+chg.toFixed(2)}（${pctTxt(pct)}）</span></span>
+      </div>
+      <div style="position:relative;margin-top:8px">
+        <canvas id="chart-TWII" style="width:100%;height:150px;display:block"></canvas>
+        <canvas id="btlCanvas" style="position:absolute;left:0;top:0;width:100%;height:150px;pointer-events:none"></canvas>
+      </div>
+      <div class="liq-row" style="margin-top:10px">
+        <div class="liq-box"><div class="v" style="color:var(--yellow)">${volTxt}</div><div class="t">成交量</div></div>
+        <div class="liq-box"><div class="v">${hi ? hi.toLocaleString('en-US',{maximumFractionDigits:2}) : '--'} / ${lo ? lo.toLocaleString('en-US',{maximumFractionDigits:2}) : '--'}</div><div class="t">今日最高 / 最低</div></div>
+      </div>`;
+    drawIndexChart($('chart-TWII'), closes, times, prev, chg >= 0, true);
+    btlFeed(px, prev, closes);
+  }catch(e){
+    console.error('加權指數載入失敗', e);
+    $('twIndexCard').innerHTML = '<div class="empty">加權指數載入失敗</div>';
+  }
+}
+
+function drawIndexChart(cv, closes, times, prev, isUp, feedBattle){
+  if(!cv || closes.length < 2) return;
+  const dpr = window.devicePixelRatio || 1;
+  const W = cv.clientWidth, H = 150;
+  cv.width = W * dpr; cv.height = H * dpr;
+  const ctx = cv.getContext('2d');
+  ctx.scale(dpr, dpr);
+  const padL = 6, padR = 6, padT = 12, padB = 18;
+  const iw = W - padL - padR, ih = H - padT - padB;
+  let lo = Math.min(...closes, prev), hi = Math.max(...closes, prev);
+  const vpad = (hi - lo) * 0.18 || prev * 0.002;
+  hi += vpad; lo -= vpad * 1.7;
+  const dateStr = new Date(times[0] * 1000).toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' });
+  const t0 = Date.parse(dateStr + 'T09:00:00+08:00') / 1000;
+  const t1 = Date.parse(dateStr + 'T13:30:00+08:00') / 1000;
+  const X = t => padL + iw * Math.min(1, Math.max(0, (t - t0) / (t1 - t0)));
+  const Y = v => padT + ih * (1 - (hi > lo ? (v - lo)/(hi - lo) : 0.5));
+  ctx.strokeStyle = 'rgba(255,255,255,0.06)'; ctx.lineWidth = 1;
+  for(let g = 0; g <= 2; g++){
+    const y = padT + ih*g/2;
+    ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W-padR, y); ctx.stroke();
+  }
+  const ticks = [
+    [t0, '09:00'], [t0 + 3600, '10:00'], [t0 + 7200, '11:00'],
+    [t0 + 10800, '12:00'], [t0 + 14400, '13:00'], [t1, '13:30']
+  ];
+  ctx.fillStyle = '#8a93a6'; ctx.font = '9px sans-serif';
+  ticks.forEach(([t, label], i) => {
+    const x = X(t);
+    ctx.strokeStyle = 'rgba(255,255,255,0.05)';
+    ctx.beginPath(); ctx.moveTo(x, padT); ctx.lineTo(x, H - padB); ctx.stroke();
+    ctx.textAlign = i === 0 ? 'left' : (i === ticks.length - 1 ? 'right' : 'center');
+    ctx.fillText(label, x, H - 5);
+  });
+  ctx.strokeStyle = '#8a93a6'; ctx.setLineDash([4,4]);
+  ctx.beginPath(); ctx.moveTo(padL, Y(prev)); ctx.lineTo(W-padR, Y(prev)); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = '#8a93a6'; ctx.textAlign = 'left';
+  ctx.fillText('昨收 ' + prev.toLocaleString('en-US',{maximumFractionDigits:0}), padL + 2, Y(prev) - 4);
+  const color = isUp ? '#ea3943' : '#16c784';
+  ctx.strokeStyle = color; ctx.lineWidth = 1.8; ctx.beginPath();
+  closes.forEach((v, i) => i ? ctx.lineTo(X(times[i]), Y(v)) : ctx.moveTo(X(times[i]), Y(v)));
+  ctx.stroke();
+  const grad = ctx.createLinearGradient(0, padT, 0, H - padB);
+  grad.addColorStop(0, isUp ? 'rgba(234,57,67,.22)' : 'rgba(22,199,132,.22)');
+  grad.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.lineTo(X(times[times.length-1]), H - padB); ctx.lineTo(X(times[0]), H - padB); ctx.closePath();
+  ctx.fillStyle = grad; ctx.fill();
+  if(feedBattle) BTL.line = closes.map((v, i) => ({ x: X(times[i]), y: Y(v) }));
+}
+
+const BTL = { pct: 0, mom: 0, line: null, sparks: [], troopers: [], bombs: [], tracers: [], deaths: [], units: [], tanks: [], jets: [], t: 0, live: false, ready: false };
+function btlFeed(px, prev, closes){
+  BTL.pct = prev > 0 ? (px - prev) / prev * 100 : 0;
+  const n = closes.length;
+  BTL.mom = (n >= 5 && prev > 0) ? (closes[n-1] - closes[n-5]) / prev * 100 : 0;
+  BTL.live = isTwMarketOpen();
+  BTL.ready = true;
+}
+function btlLineY(x){
+  const L = BTL.line;
+  if(!L || !L.length) return 75;
+  if(x <= L[0].x) return L[0].y;
+  for(let i = 1; i < L.length; i++)
+    if(x <= L[i].x){ const a = L[i-1], b = L[i]; return a.y + (b.y - a.y) * ((x - a.x) / ((b.x - a.x) || 1)); }
+  return L[L.length - 1].y;
+}
+function btlInitUnits(W){
+  BTL.units = []; BTL.tanks = []; BTL.jets = []; BTL.troopers = []; BTL.bombs = []; BTL.tracers = []; BTL.deaths = [];
+  for(let i = 0; i < 8; i++) BTL.units.push({ frac: (i + 0.5) / 8 + (Math.random() - 0.5) * 0.06, ph: Math.random() * 6.28, type: i % 3 });
+  for(let i = 0; i < 3; i++) BTL.tanks.push({ frac: 0.18 + i * 0.31 + (Math.random() - 0.5) * 0.05, ph: Math.random() * 6.28 });
+  for(let i = 0; i < 3; i++) BTL.jets.push({ x: W * 0.3 + i * (W * 0.3) + Math.random() * 40, y: 16 + i * 10, sp: (0.7 + Math.random() * 0.7) * (i === 2 ? 0.55 : 1), type: i % 3 });
+}
+const BTL_R = '#ea3943', BTL_RD = '#96262e', BTL_KH = '#a8703f', BTL_SK = '#d9a066';
+const BTL_G = '#16c784', BTL_GD = '#0c7a52', BTL_GL = '#8ff0cd';
+function btlSoldierAA(ctx, x, y, bob, type, t){
+  const ky = type === 1 ? 2 : 0;                       // 跪射姿較矮
+  ctx.lineWidth = 1.5;
+  if(type === 2){                                       // 旗手：軍旗飄揚
+    ctx.strokeStyle = BTL_RD; ctx.beginPath(); ctx.moveTo(x + 4, y); ctx.lineTo(x + 4, y - 15 + bob); ctx.stroke();
+    const w = Math.sin(t * 0.12 + x) * 1.6;
+    ctx.fillStyle = BTL_R;
+    ctx.beginPath(); ctx.moveTo(x + 4, y - 15 + bob); ctx.lineTo(x + 11, y - 13.4 + bob + w); ctx.lineTo(x + 4, y - 11.8 + bob); ctx.closePath(); ctx.fill();
+  }
+  ctx.fillStyle = BTL_R; ctx.fillRect(x - 1.7, y - 7 + bob + ky, 3.4, 5 - ky);
+  ctx.fillStyle = BTL_RD; ctx.fillRect(x - 1.7, y - 5.2 + bob + ky, 1.7, 1.6);
+  ctx.fillStyle = BTL_KH; ctx.fillRect(x + 0.2, y - 3.8 + bob + ky, 1.5, 1.2);
+  ctx.fillStyle = BTL_SK; ctx.beginPath(); ctx.arc(x, y - 8.6 + bob + ky, 1.9, 0, 6.28); ctx.fill();
+  ctx.strokeStyle = BTL_RD; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.arc(x, y - 8.9 + bob + ky, 2.1, 3.35, 6.05); ctx.stroke();
+  ctx.lineWidth = 1.5; ctx.strokeStyle = BTL_R;
+  if(type === 1){
+    ctx.beginPath(); ctx.moveTo(x, y - 2.4); ctx.lineTo(x - 3, y + 2); ctx.moveTo(x, y - 2.4); ctx.lineTo(x + 2.4, y + 2); ctx.stroke();
+  } else {
+    const sw = Math.sin(t * 0.09 + x) * 1.2;
+    ctx.beginPath(); ctx.moveTo(x, y - 2.2); ctx.lineTo(x - 2.4 - sw, y + 3); ctx.moveTo(x, y - 2.2); ctx.lineTo(x + 2.4 + sw, y + 3); ctx.stroke();
+  }
+  ctx.strokeStyle = BTL_RD;
+  ctx.beginPath(); ctx.moveTo(x - 1.2, y - 4.6 + bob + ky); ctx.lineTo(x + 5.5, y - 12.5 + bob + ky); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x + 3.4, y - 9.2 + bob + ky); ctx.lineTo(x + 4.6, y - 8.2 + bob + ky); ctx.stroke(); // 彈匣
+}
+function btlTankAA(ctx, x, y, fire){
+  ctx.fillStyle = BTL_R; ctx.fillRect(x - 11, y - 7.5, 22, 5.5);                            // 車身
+  ctx.fillStyle = BTL_RD; ctx.beginPath(); ctx.ellipse(x - 4, y - 5, 3.4, 1.5, 0, 0, 6.28); ctx.fill();   // 迷彩斑
+  ctx.fillStyle = BTL_KH; ctx.beginPath(); ctx.ellipse(x + 5, y - 4, 2.6, 1.2, 0, 0, 6.28); ctx.fill();
+  ctx.fillStyle = BTL_R; ctx.fillRect(x - 5, y - 12, 10, 5);                                 // 砲塔
+  ctx.fillStyle = BTL_RD; ctx.fillRect(x - 2.5, y - 11.2, 3.2, 2);
+  ctx.strokeStyle = BTL_R; ctx.lineWidth = 1.8;
+  ctx.beginPath(); ctx.moveTo(x + 4, y - 10.5); ctx.lineTo(x + 12, y - 19.5); ctx.stroke();  // 砲管上揚（防空）
+  ctx.strokeStyle = BTL_RD; ctx.lineWidth = 1; ctx.strokeRect(x - 11.5, y - 2.8, 23, 3.6);   // 履帶
+  ctx.fillStyle = BTL_RD;
+  for(let i = 0; i < 5; i++){ ctx.beginPath(); ctx.arc(x - 8.4 + i * 4.2, y - 1, 1.5, 0, 6.28); ctx.fill(); }
+  if(fire){ ctx.fillStyle = '#f0b90b'; ctx.beginPath(); ctx.arc(x + 13.5, y - 21, 2.6, 0, 6.28); ctx.fill(); }
+}
+function btlJet(ctx, x, y, thrust, type, t){
+  if(type === 2){                                       // 武裝直升機
+    ctx.fillStyle = BTL_G; ctx.beginPath(); ctx.ellipse(x, y, 5.5, 3, 0, 0, 6.28); ctx.fill();
+    ctx.fillStyle = BTL_GD; ctx.beginPath(); ctx.ellipse(x + 2, y + 0.5, 2.2, 1.2, 0, 0, 6.28); ctx.fill();
+    ctx.strokeStyle = BTL_G; ctx.lineWidth = 1.4;
+    ctx.beginPath(); ctx.moveTo(x + 5, y - 0.5); ctx.lineTo(x + 12.5, y - 1.5); ctx.lineTo(x + 12.5, y - 3.8); ctx.stroke(); // 尾桁＋尾翼
+    const r = Math.cos(t * 0.7) * 8.5;
+    ctx.beginPath(); ctx.moveTo(x - r, y - 4.6); ctx.lineTo(x + r, y - 4.6); ctx.stroke();   // 旋翼
+    ctx.beginPath(); ctx.moveTo(x - 3, y + 3); ctx.lineTo(x - 3, y + 4.6); ctx.moveTo(x + 3, y + 3); ctx.lineTo(x + 3, y + 4.6);
+    ctx.moveTo(x - 4.6, y + 4.6); ctx.lineTo(x + 4.6, y + 4.6); ctx.stroke();                // 起落橇
+    ctx.fillStyle = BTL_GL; ctx.beginPath(); ctx.arc(x - 3.2, y - 0.8, 1.1, 0, 6.28); ctx.fill(); // 座艙
+    return;
+  }
+  if(type === 1){                                       // 轟炸機
+    ctx.fillStyle = BTL_G; ctx.beginPath(); ctx.ellipse(x, y, 9, 2.6, 0, 0, 6.28); ctx.fill();
+    ctx.fillStyle = BTL_GD;
+    ctx.beginPath(); ctx.moveTo(x + 2, y - 2); ctx.lineTo(x + 7.5, y - 6); ctx.lineTo(x + 9, y - 1.8); ctx.closePath(); ctx.fill(); // 垂直尾翼
+    ctx.beginPath(); ctx.moveTo(x - 2, y + 0.5); ctx.lineTo(x + 4, y + 5.5); ctx.lineTo(x + 6, y + 1.2); ctx.closePath(); ctx.fill(); // 主翼
+    ctx.fillStyle = BTL_GL; ctx.beginPath(); ctx.arc(x - 6.5, y - 0.6, 1.1, 0, 6.28); ctx.fill();
+  } else {                                              // 戰鬥機
+    ctx.fillStyle = BTL_G;
+    ctx.beginPath(); ctx.moveTo(x - 11, y); ctx.lineTo(x + 7, y - 4.5); ctx.lineTo(x + 3.5, y); ctx.lineTo(x + 7, y + 4.5); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = BTL_GD;
+    ctx.beginPath(); ctx.moveTo(x + 1.5, y - 1.6); ctx.lineTo(x + 6, y - 4); ctx.lineTo(x + 6, y - 1); ctx.closePath(); ctx.fill(); // 迷彩尾翼
+    ctx.fillStyle = BTL_GL; ctx.beginPath(); ctx.arc(x - 7, y - 0.6, 1.1, 0, 6.28); ctx.fill(); // 座艙
+  }
+  ctx.strokeStyle = 'rgba(22,199,132,.35)'; ctx.lineWidth = 1.4;
+  ctx.beginPath(); ctx.moveTo(x + 9, y); ctx.lineTo(x + 16 + thrust * 8, y); ctx.stroke();   // 尾流
+}
+function btlTrooper(ctx, x, y, color, sway){
+  ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = 1.3;
+  ctx.beginPath(); ctx.arc(x + sway, y - 8, 4.5, 3.30, 6.12); ctx.stroke();              // 降落傘
+  ctx.beginPath(); ctx.moveTo(x + sway - 4, y - 9.5); ctx.lineTo(x, y - 2); ctx.moveTo(x + sway + 4, y - 9.5); ctx.lineTo(x, y - 2); ctx.stroke(); // 傘繩
+  ctx.beginPath(); ctx.arc(x, y - 1, 1.7, 0, 6.28); ctx.fill();                          // 傘兵
+  ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x, y + 3.5); ctx.stroke();
+}
+function btlDraw(){
+  const cv = $('btlCanvas');
+  if(!cv || cv.offsetParent === null || !BTL.ready || !BTL.line) return;
+  const dpr = window.devicePixelRatio || 1;
+  const W = cv.clientWidth || 600, H = cv.clientHeight || 150;
+  if(cv.width !== W * dpr){ cv.width = W * dpr; cv.height = H * dpr; btlInitUnits(W); }
+  const ctx = cv.getContext('2d');
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+  BTL.t++;
+  const R = '#ea3943', G = '#16c784', gy = H - 26;   // 地面在時間軸之上
+  const charge = Math.max(-1, Math.min(1, BTL.mom / 0.4));
+  const cR = Math.max(0, charge), cG = Math.max(0, -charge);  // 上攻/下殺強度
+  const fX = BTL.line.length ? BTL.line[BTL.line.length - 1].x : 0;
+  BTL.jets.forEach(j => {
+    if(j.down){                                          // 被擊落：翻滾墜落、拖著火焰，撞上戰線爆炸後於右側重生
+      j.x -= 0.8; j.down.vy += 0.07; j.y += j.down.vy; j.down.rot += 0.13;
+      if(BTL.t % 3 === 0) BTL.sparks.push({ x: j.x + 5, y: j.y - 2, life: 12, e: '🔥' });
+      if(j.y >= btlLineY(j.x) - 3){
+        BTL.sparks.push({ x: j.x, y: j.y, life: 26, e: '💥' });
+        j.x = W + 20 + Math.random() * 60; j.y = 16 + Math.random() * 24; j.down = null;
+      } else {
+        ctx.save(); ctx.translate(j.x, j.y); ctx.rotate(j.down.rot);
+        btlJet(ctx, 0, 0, 0, j.type, BTL.t); ctx.restore();
+      }
+      return;
+    }
+    j.x -= j.sp * (BTL.live ? (0.5 + cG * 1.8) : 0.1);
+    if(j.x < -18){ j.x = W + 16 + Math.random() * 50; }
+    const y = j.x <= fX
+      ? Math.min(j.y + Math.sin(BTL.t * 0.04 + j.y) * 1.5, btlLineY(j.x) - 16)
+      : j.y + Math.sin(BTL.t * 0.04 + j.y) * 1.5;
+    btlJet(ctx, j.x, y, cG, j.type, BTL.t);
+    if(BTL.live && j.x <= fX && Math.random() < (j.type === 2 ? 0.008 : 0.003) + cG * 0.02)   // 空降傘兵（直升機為主）
+      BTL.troopers.push({ x: j.x - 4, y: y + 6, ph: Math.random() * 6.28 });
+    if(BTL.live && j.x <= fX && cG > 0.35 && Math.random() < (j.type === 1 ? 0.025 : 0.01))   // 下殺時投彈（轟炸機為主）
+      BTL.bombs.push({ x: j.x - 2, y: y + 5, vy: 0.7 });
+  });
+  BTL.troopers = BTL.troopers.filter(p => {
+    p.y += BTL.live ? 0.4 : 0.08;
+    const sway = Math.sin(p.ph + BTL.t * 0.05) * 2.5;
+    if(p.y >= btlLineY(p.x) - 4){
+      BTL.sparks.push({ x: p.x, y: p.y - 2, life: 22, e: '⚔️' });
+      return false;
+    }
+    btlTrooper(ctx, p.x, p.y, G, sway);
+    return true;
+  });
+  BTL.bombs = BTL.bombs.filter(b => {
+    b.vy += 0.05; b.y += b.vy;
+    if(b.y >= btlLineY(b.x) - 2){ BTL.sparks.push({ x: b.x, y: b.y, life: 24, e: '💥' }); return false; }
+    ctx.fillStyle = G; ctx.beginPath(); ctx.arc(b.x, b.y, 1.8, 0, 6.28); ctx.fill();
+    return true;
+  });
+  BTL.tanks.forEach(tk => {
+    if(tk.dead){ tk.dead--; return; }                   // 被炸毀，稍後補充歸隊
+    if(fX < 70) return;
+    const x = 16 + tk.frac * (fX - 32);
+    if(btlLineY(x) > gy - 24) return;                   // 走勢線壓到陣地＝該處失守，坦克撤離
+    const fire = BTL.live && cR > 0.3 && Math.sin(tk.ph + BTL.t * 0.1) > 0.92;
+    btlTankAA(ctx, x, gy, fire);
+    if(fire && Math.random() < 0.3){                    // 上攻時對空射擊
+      const jet = BTL.jets[Math.floor(Math.random() * BTL.jets.length)];
+      const tx = x + 11, ty = gy - 19;
+      const dx = jet.x - tx, dy = jet.y - ty, d = Math.hypot(dx, dy) || 1;
+      BTL.tracers.push({ x: tx, y: ty, vx: dx / d * 2.6, vy: dy / d * 2.6, life: 46 });
+    }
+  });
+  BTL.units.forEach(u => {
+    if(u.dead){ u.dead--; return; }                     // 陣亡中，稍後補充兵歸隊
+    if(fX < 50) return;
+    const x = 12 + u.frac * (fX - 24);
+    if(btlLineY(x) > gy - 16) return;                   // 該處戰線已壓到地面＝士兵失守
+    const bob = Math.sin(u.ph + BTL.t * 0.08 * (BTL.live ? (0.6 + cR * 1.4) : 0.15)) * 1.4;
+    btlSoldierAA(ctx, x, gy, bob, u.type, BTL.t);
+  });
+  if(BTL.live && fX > 60){
+    if(cG > 0.35 && Math.random() < 0.02){              // 士兵陣亡
+      const alive = BTL.units.filter(u => !u.dead);
+      if(alive.length > 3){
+        const u = alive[Math.floor(Math.random() * alive.length)];
+        const x = 12 + u.frac * (fX - 24);
+        if(btlLineY(x) <= gy - 16){
+          u.dead = 170;
+          BTL.deaths.push({ x, life: 46 });
+          BTL.sparks.push({ x, y: gy - 10, life: 16, e: '💥' });
+        }
+      }
+    }
+    if(cG > 0.55 && Math.random() < 0.007){             // 坦克被炸毀
+      const alive = BTL.tanks.filter(tk => !tk.dead);
+      if(alive.length > 1){
+        const tk = alive[Math.floor(Math.random() * alive.length)];
+        const x = 16 + tk.frac * (fX - 32);
+        if(btlLineY(x) <= gy - 24){
+          tk.dead = 220;
+          BTL.sparks.push({ x, y: gy - 8, life: 26, e: '💥' });
+          BTL.sparks.push({ x: x + 5, y: gy - 14, life: 20, e: '🔥' });
+        }
+      }
+    }
+    if(cR > 0.35 && Math.random() < 0.012){             // 戰機被擊落
+      const cand = BTL.jets.filter(j => !j.down && j.x <= fX && j.x > 30);
+      if(cand.length){
+        const j = cand[Math.floor(Math.random() * cand.length)];
+        j.down = { vy: 0.4, rot: 0 };
+        BTL.sparks.push({ x: j.x, y: j.y, life: 16, e: '💥' });
+      }
+    }
+  }
+  BTL.deaths = BTL.deaths.filter(d => {
+    const p = 1 - d.life / 46;
+    ctx.save(); ctx.translate(d.x, gy); ctx.rotate(Math.min(1, p * 2.6) * 1.5);
+    ctx.globalAlpha = d.life < 16 ? d.life / 16 : 1;
+    ctx.fillStyle = BTL_R; ctx.fillRect(-1.7, -7, 3.4, 5);
+    ctx.fillStyle = BTL_SK; ctx.beginPath(); ctx.arc(0, -8.6, 1.9, 0, 6.28); ctx.fill();
+    ctx.strokeStyle = BTL_R; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(0, -2.2); ctx.lineTo(-2.4, 3); ctx.moveTo(0, -2.2); ctx.lineTo(2.4, 3); ctx.stroke();
+    ctx.restore(); ctx.globalAlpha = 1;
+    return --d.life > 0;
+  });
+  BTL.tracers = BTL.tracers.filter(tr => {
+    tr.x += tr.vx; tr.y += tr.vy;
+    if(--tr.life <= 0 || tr.y <= btlLineY(tr.x) - 24){
+      BTL.sparks.push({ x: tr.x, y: tr.y, life: 20, e: '💥' });
+      return false;
+    }
+    ctx.strokeStyle = 'rgba(240,185,11,.85)'; ctx.lineWidth = 1.4;
+    ctx.beginPath(); ctx.moveTo(tr.x - tr.vx * 2.5, tr.y - tr.vy * 2.5); ctx.lineTo(tr.x, tr.y); ctx.stroke();
+    return true;
+  });
+  if(BTL.live && BTL.line.length && Math.random() < 0.02 + Math.abs(charge) * 0.08){
+    const p = BTL.line[Math.max(0, BTL.line.length - 1 - Math.floor(Math.random() * Math.min(20, BTL.line.length)))];
+    BTL.sparks.push({ x: p.x, y: p.y - 4, life: 22, e: Math.random() < 0.35 ? '💥' : '⚔️' });
+  }
+  BTL.sparks = BTL.sparks.filter(s => --s.life > 0);
+  BTL.sparks.forEach(s => {
+    ctx.globalAlpha = Math.min(1, s.life / 11);
+    ctx.font = (9 + (24 - s.life) * 0.2) + 'px sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText(s.e, s.x, s.y - (24 - s.life) * 0.4);
+    ctx.globalAlpha = 1;
+  });
+  if(!BTL.live){
+    const up = BTL.pct > 0.03, dn = BTL.pct < -0.03;
+    const win = up ? '🚩 多軍勝' : dn ? '🚩 空軍勝' : '🤝 平手';
+    ctx.font = '800 12px sans-serif'; ctx.textAlign = 'center';
+    ctx.fillStyle = up ? R : dn ? G : '#8a93a6';
+    ctx.fillText(win, W / 2, (up ? gy - 24 : 28) + Math.sin(BTL.t * 0.05) * 2);
+  }
+}
+(function btlLoop(){ try{ btlDraw(); }catch(e){} requestAnimationFrame(btlLoop); })();
+
+function isTwMarketOpen(){
+  const tp = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Taipei'}));
+  const day = tp.getDay(), mins = tp.getHours()*60 + tp.getMinutes();
+  return day >= 1 && day <= 5 && mins >= 535 && mins <= 840;
+}
+
+async function fetchRT(codes, nameMap){
+  const chunks = [];
+  for(let i = 0; i < codes.length; i += 20) chunks.push(codes.slice(i, i+20));
+  const results = await Promise.all(chunks.map(async chunk => {
+    try{
+      const url = '/yahoo/v7/finance/spark?symbols=' + chunk.map(c => c + '.TW').join(',') + '&range=1d&interval=15m';
+      const res = await fetch(url);
+      if(!res.ok) return [];
+      const j = await res.json();
+      return (j.spark && j.spark.result) || [];
+    }catch(e){ return []; }
+  }));
+  const out = [];
+  results.flat().forEach(r => {
+    try{
+      const m = r.response[0].meta;
+      const prev = m.previousClose || m.chartPreviousClose;
+      const z = m.regularMarketPrice;
+      if(!(prev > 0 && z > 0)) return;
+      const high = m.regularMarketDayHigh || z, low = m.regularMarketDayLow || z;
+      const code = r.symbol.replace('.TW','');
+      out.push({
+        code, name: nameMap[code] || m.shortName || code,
+        close: z,
+        pct: (z/prev - 1)*100,
+        amp: (high-low)/prev*100,
+        high, low,
+        value: z * (m.regularMarketVolume || 0)
+      });
+    }catch(e){}
+  });
+  return out;
+}
+
+function renderTW(stocks, modeType){
+  const mode = $('twMode');
+  mode.style.display = '';
+  mode.textContent = modeType === 'live' ? '● 盤中即時（統計範圍：成交值前100檔）'
+    : modeType === 'today' ? '本日收盤（統計範圍：成交值前100檔）'
+    : '盤後資料（全市場，證交所每日更新）';
+
+  const fmtV = v => (v/1e8).toFixed(1) + '億';
+  const twPctCls = s => {
+    if(s.pct >= 9.5 && s.close === s.high) return 'limitup';
+    if(s.pct <= -9.5 && s.close === s.low) return 'limitdown';
+    return pctCls(s.pct);
+  };
+  const byPct = [...stocks].sort((a,b) => b.pct - a.pct);
+
+  $('twGainBody').innerHTML = byPct.slice(0,6).map(s => twRow(s, [
+    {v: fmtPx(s.close)}, {v: pctTxt(s.pct), cls: twPctCls(s)}, {v: fmtV(s.value)}
+  ])).join('');
+
+  $('twLoseBody').innerHTML = byPct.slice(-6).reverse().map(s => twRow(s, [
+    {v: fmtPx(s.close)}, {v: pctTxt(s.pct), cls: twPctCls(s)}, {v: fmtV(s.value)}
+  ])).join('');
+
+  $('twValueBody').innerHTML = [...stocks].sort((a,b) => b.value - a.value).slice(0,6).map(s => twRow(s, [
+    {v: fmtPx(s.close)}, {v: pctTxt(s.pct), cls: twPctCls(s)}, {v: fmtV(s.value)}
+  ])).join('');
+
+  $('twAmpBody').innerHTML = [...stocks].filter(s => s.value >= 5e7).sort((a,b) => b.amp - a.amp).slice(0,6).map(s => twRow(s, [
+    {v: fmtPx(s.close)}, {v: s.amp.toFixed(2) + '%', cls: 'b-fire'}, {v: pctTxt(s.pct), cls: twPctCls(s)}
+  ])).join('');
+
+  $('twLast').textContent = new Date().toLocaleTimeString('zh-TW',{hour12:false});
+}
+setInterval(() => {
+  if(twLoaded && $('page-tw').style.display !== 'none' && isTwMarketOpen()) loadTW();
+}, 30000);
+
+let usLoaded = false;
+const US_TICKERS = [
+'AAPL','MSFT','NVDA','GOOGL','GOOG','AMZN','META','BRK-B','TSLA','AVGO','LLY','JPM','WMT','V','UNH','XOM','MA','PG','COST','JNJ',
+'ORCL','HD','ABBV','BAC','KO','NFLX','MRK','CVX','CRM','AMD','PEP','TMO','ADBE','LIN','WFC','CSCO','ACN','MCD','IBM','GE',
+'ABT','DHR','AXP','CAT','NOW','QCOM','PM','VZ','ISRG','TXN','INTU','DIS','AMGN','GS','PFE','UBER','RTX','CMCSA','T','SPGI',
+'BLK','LOW','UNP','PDD','AZN','MELI','PANW','SNPS','CDNS','MU','LRCX','KLAC','AMAT','ADI','MRVL','INTC','ABNB','MDLZ','GILD','VRTX',
+'REGN','ADP','BKNG','SBUX','PYPL','CRWD','DDOG','FTNT','CSX','MAR','ORLY','CTAS','NXPI','PCAR','ROP','MNST','CHTR','TMUS','HON','FAST',
+'ODFL','EA','KDP','EXC','XEL','TSM','ASML','ON','MCHP','SWKS','QRVO','TER','ENTG','MPWR','GFS','STM','COHR','OLED','NKE','BA',
+'MMM','TRV','SHW',
+'TJX','BSX','SYK','PGR','BX','KKR','SCHW','C','MS','COP','NEE','PLTR','ANET','MO','BMY','UPS','DE','LMT','GD','NOC',
+'SO','DUK','ETN','PH','EMR','ITW','APH','TDG','WM','RSG','ICE','CME','COF','USB','PNC','TFC','AON','MMC','AJG','CB',
+'PLD','AMT','EQIX','CCI','PSA','O','SPG','WELL','DLR','VICI','CI','ELV','HUM','CNC','HCA','MCK','COR','CAH','ZTS','BDX',
+'EW','MDT','GEV','VST','CEG','NRG','PWR','HWM','AXON','URI','PAYX','KMB','CL','GIS','KHC','HSY','STZ','KR','SYY','TGT',
+'DG','DLTR','ROST','YUM','CMG','DPZ','DASH','LULU','RCL','CCL','DAL','UAL','FDX','NSC','WMB','KMI','OKE','SLB','HAL','BKR',
+'EOG','PSX','VLO','MPC','OXY','DVN','FANG','HES','APD','ECL','NEM','FCX','NUE','DOW','DD','PPG','CTVA','ADM','F','GM',
+'TT','CARR','OTIS','JCI','LEN','DHI','AFL'
+];
+const US_IDX = {GSPC:'%5EGSPC', NDX:'%5ENDX', SOX:'%5ESOX', DJI:'%5EDJI'};
+
+async function fetchSpark(symbols){
+  const url = '/yahoo/v7/finance/spark?symbols=' + symbols.join(',') + '&range=1d&interval=15m';
+  const res = await fetch(url);
+  if(!res.ok) return [];
+  const j = await res.json();
+  return (j.spark && j.spark.result) || [];
+}
+
+async function loadUS(){
+  try{
+    fetchSpark(Object.values(US_IDX)).then(rs => {
+      rs.forEach(r => {
+        try{
+          const m = r.response[0].meta;
+          const key = r.symbol.replace('^','');
+          const prev = m.previousClose || m.chartPreviousClose;
+          const pct = prev > 0 ? (m.regularMarketPrice/prev - 1)*100 : 0;
+          $('idx-' + key).textContent = m.regularMarketPrice.toLocaleString('en-US',{maximumFractionDigits:2});
+          $('idx-' + key).className = pctCls(pct);
+          $('idxc-' + key).textContent = pctTxt(pct);
+          $('idxc-' + key).className = pctCls(pct);
+        }catch(e){}
+      });
+    });
+
+    const chunks = [];
+    for(let i = 0; i < US_TICKERS.length; i += 20) chunks.push(US_TICKERS.slice(i, i+20));
+    const results = await Promise.all(chunks.map(c => fetchSpark(c).catch(() => [])));
+    const stocks = [];
+    results.flat().forEach(r => {
+      try{
+        const m = r.response[0].meta;
+        const prev = m.previousClose || m.chartPreviousClose;
+        const z = m.regularMarketPrice;
+        if(!(prev > 0 && z > 0)) return;
+        const high = m.regularMarketDayHigh || z, low = m.regularMarketDayLow || z;
+        stocks.push({
+          sym: r.symbol, price: z,
+          pct: (z/prev - 1)*100,
+          amp: (high - low)/prev*100,
+          value: z * (m.regularMarketVolume || 0)
+        });
+      }catch(e){}
+    });
+    if(stocks.length < 30) throw new Error('資料不足');
+
+    const usRow = (s, cols) => `<tr><td class="sym sym-click" onclick="showKChart('us','${s.sym}')">${s.sym}</td>` + cols.map(c => `<td class="${c.cls||''}">${c.v}</td>`).join('') + '</tr>';
+    const byPct = [...stocks].sort((a,b) => b.pct - a.pct);
+
+    $('usGainBody').innerHTML = byPct.slice(0,6).map(s => usRow(s, [
+      {v: fmtPx(s.price)}, {v: pctTxt(s.pct), cls: pctCls(s.pct)}, {v: fmtUSD(s.value)}
+    ])).join('');
+    $('usLoseBody').innerHTML = byPct.slice(-6).reverse().map(s => usRow(s, [
+      {v: fmtPx(s.price)}, {v: pctTxt(s.pct), cls: pctCls(s.pct)}, {v: fmtUSD(s.value)}
+    ])).join('');
+    $('usValueBody').innerHTML = [...stocks].sort((a,b) => b.value - a.value).slice(0,6).map(s => usRow(s, [
+      {v: fmtPx(s.price)}, {v: pctTxt(s.pct), cls: pctCls(s.pct)}, {v: fmtUSD(s.value)}
+    ])).join('');
+    $('usAmpBody').innerHTML = [...stocks].sort((a,b) => b.amp - a.amp).slice(0,6).map(s => usRow(s, [
+      {v: fmtPx(s.price)}, {v: s.amp.toFixed(2) + '%', cls: 'b-fire'}, {v: pctTxt(s.pct), cls: pctCls(s.pct)}
+    ])).join('');
+
+    $('usLast').textContent = new Date().toLocaleTimeString('zh-TW',{hour12:false});
+  }catch(e){
+    console.error('美股載入失敗', e);
+    ['usGainBody','usLoseBody','usValueBody','usAmpBody'].forEach(id =>
+      $(id).innerHTML = '<tr><td colspan="4" class="empty">資料載入失敗，請稍後再試</td></tr>');
+  }
+}
+setInterval(() => {
+  if(usLoaded && $('page-us').style.display !== 'none') loadUS();
+}, 60000);
+
+let buLoaded = false;
+
+let apLastData = null; // 最近一次 A+台股掃描結果，供「下載收藏」分享卡使用
+async function loadAPlus(force){
+  const st = $('apStatus'), body = $('apBody');
+  try{
+    st.textContent = '掃描中…';
+    body.innerHTML = '<tr><td colspan="5" class="empty">掃描中…</td></tr>';
+    const r = await fetch('/api/aplus' + (force ? '?r=' + Date.now() : ''), {headers: {'x-member-key': memberKey()}});
+    if(r.status === 401){
+      st.textContent = '訂閱會員專屬內容';
+      body.innerHTML = '<tr><td colspan="5" class="empty">此內容為訂閱會員專屬｜<a href="#" style="color:var(--yellow)" onclick="askMemberKey(() => loadAPlus(true));return false">輸入會員碼解鎖</a></td></tr>';
+      return;
+    }
+    if(!r.ok) throw new Error('scan failed');
+    const j = await r.json();
+    if(j.pending){
+      $('apDate').textContent = j.date || '--';
+      st.textContent = '資料同步中';
+      body.innerHTML = '<tr><td colspan="5" class="empty">⏳ 行情資料同步中（來源更新延遲），約10分鐘後自動重試</td></tr>';
+      setTimeout(() => loadAPlus(true), 600000);
+      return;
+    }
+    if(j.error || !Array.isArray(j.hits)) throw new Error('scan failed');
+    apLastData = { date: j.date, hits: j.hits };
+    $('apDate').textContent = j.date;
+    st.textContent = `布嬸A+掃股今日 ${j.hits.length} 檔`;
+    body.innerHTML = j.hits.length ? j.hits.map(h => `
+      <tr>
+        <td class="sym sym-click" onclick="showKChart('tw','${h.code}','${escN(h.name)}')">${h.code} ${escN(h.name)}</td>
+        <td>${fmtPx(h.close)}</td>
+        <td>${h.lu ? '<span class="limitup">' + pctTxt(h.chgPct) + '</span>' : '<span class="up">' + pctTxt(h.chgPct) + '</span>'}</td>
+        <td>${h.volR.toFixed(2)}</td>
+        <td>${h.dd.toFixed(1)}%</td>
+      </tr>`).join('')
+      : '<tr><td colspan="5" class="empty">☕ 掃描機器人買下午茶，待填飽數據後開工</td></tr>';
+  }catch(e){
+    console.error('A+掃描失敗', e);
+    st.textContent = '掃描失敗，請點「重新掃描」再試';
+    body.innerHTML = '<tr><td colspan="5" class="empty">資料載入失敗</td></tr>';
+  }
+}
+$('apBtn').addEventListener('click', async () => {
+  const btn = $('apBtn');
+  btn.disabled = true; btn.textContent = '掃描中…';
+  await loadAPlus(true);
+  btn.disabled = false; btn.textContent = '🔄 重新掃描';
+});
+
+const AP_QR_ROWS = ["1111111011111010101111111","1000001001110110101000001","1011101011000110101011101","1011101001000110101011101","1011101000111110001011101","1000001010000100101000001","1111111010101010101111111","0000000000101010100000000","1010001101101001000100101","0011010011010101111101011","1011011001000001101101101","0101010010011010110001000","1111101100001000101100001","0011010111001101101100011","1110101110101101111001101","0000010100111010001111000","1100111110000111111110010","0000000011000101100010001","1111111010110000101010001","1000001001000101100010010","1011101000111101111110001","1011101000101001010010110","1011101011001111100111011","1000001001111010110110000","1111111010000110101001001"];
+function drawShareCard(cv, data, opts){
+  opts = opts || {};
+  const ctx = cv.getContext('2d'); const W = 1080, H = 1350;
+  const rr = (x,y,w,h,r) => { ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); };
+  const drawQR = (x,y,size) => { const n=AP_QR_ROWS.length, cell=size/n; ctx.fillStyle='#fff'; rr(x-14,y-14,size+28,size+28,16); ctx.fill(); ctx.fillStyle='#0b0e14'; for(let r=0;r<n;r++){ const row=AP_QR_ROWS[r]; for(let c=0;c<n;c++) if(row[c]==='1') ctx.fillRect(Math.floor(x+c*cell),Math.floor(y+r*cell),Math.ceil(cell),Math.ceil(cell)); } };
+  const hits = (data.hits || []).slice(0, 6); const dateStr = (data.date || '').replace(/-/g, '/');
+  const bg = ctx.createLinearGradient(0,0,W,H); bg.addColorStop(0,'#0d1119'); bg.addColorStop(.55,'#0b0e14'); bg.addColorStop(1,'#131022'); ctx.fillStyle=bg; ctx.fillRect(0,0,W,H);
+  const glow = ctx.createRadialGradient(W-80,90,0,W-80,90,460); glow.addColorStop(0,'rgba(240,185,11,.16)'); glow.addColorStop(1,'rgba(240,185,11,0)'); ctx.fillStyle=glow; ctx.fillRect(0,0,W,560);
+  ctx.strokeStyle='rgba(240,185,11,.55)'; ctx.lineWidth=3; rr(24,24,W-48,H-48,28); ctx.stroke();
+  ctx.save(); ctx.rotate(-Math.PI/7); ctx.fillStyle='rgba(255,255,255,.032)'; ctx.font='700 54px -apple-system,"PingFang TC"'; for(let y=0;y<H*1.5;y+=190) for(let x=-500;x<W*1.4;x+=520) ctx.fillText('bubuaplus.com', x+(y%380===0?130:0), y); ctx.restore();
+  ctx.textAlign='left'; ctx.fillStyle='#f0b90b'; ctx.font='900 76px -apple-system,"PingFang TC"'; ctx.fillText(opts.title || '🎯 布嬸A+掃股',70,150);
+  ctx.fillStyle='#e8ecf4'; ctx.font='600 34px -apple-system,"PingFang TC"'; ctx.fillText(opts.sub || '每日盤後 A+ 型態精選',76,208);
+  const dBig=dateStr, dSmall=opts.tag || ' 台股盤後'; ctx.font='800 46px -apple-system,"PingFang TC"'; const wBig=ctx.measureText(dBig).width; ctx.font='600 28px -apple-system,"PingFang TC"'; const wSmall=ctx.measureText(dSmall).width; const dw=wBig+wSmall+56, dpx=W-70-dw, dpy=170, dph=74;
+  ctx.fillStyle='rgba(240,185,11,.14)'; rr(dpx,dpy,dw,dph,36); ctx.fill(); ctx.strokeStyle='rgba(240,185,11,.5)'; ctx.lineWidth=2; rr(dpx,dpy,dw,dph,36); ctx.stroke();
+  ctx.fillStyle='#f0b90b'; ctx.font='800 46px -apple-system,"PingFang TC"'; ctx.fillText(dBig,dpx+28,dpy+52); ctx.fillStyle='rgba(240,185,11,.8)'; ctx.font='600 28px -apple-system,"PingFang TC"'; ctx.fillText(dSmall,dpx+28+wBig,dpy+51);
+  const line=ctx.createLinearGradient(70,0,W-70,0); line.addColorStop(0,'rgba(240,185,11,0)'); line.addColorStop(.5,'rgba(240,185,11,.7)'); line.addColorStop(1,'rgba(240,185,11,0)'); ctx.fillStyle=line; ctx.fillRect(70,246,W-140,3);
+  const medals=['🥇','🥈','🥉','4','5','6']; const areaTop=300, areaBot=H-290; const n=Math.max(hits.length,1); const rowH=Math.min(170,Math.floor((areaBot-areaTop-(n-1)*20)/n)); const gap=20; const blockH=n*rowH+(n-1)*gap; const top=areaTop+Math.max(0,Math.floor((areaBot-areaTop-blockH)/2));
+  if(!hits.length){ ctx.textAlign='center'; ctx.fillStyle='#8a93a6'; ctx.font='600 44px -apple-system,"PingFang TC"'; ctx.fillText('☕ 今日無符合 A+ 條件的標的',W/2,600); ctx.textAlign='left'; }
+  hits.forEach((h,i) => {
+    const y=top+i*(rowH+gap);
+    ctx.fillStyle=i===0?'rgba(240,185,11,.10)':'rgba(255,255,255,.045)'; rr(70,y,W-140,rowH,20); ctx.fill();
+    if(i===0){ ctx.strokeStyle='rgba(240,185,11,.65)'; ctx.lineWidth=2.5; rr(70,y,W-140,rowH,20); ctx.stroke(); }
+    ctx.font='800 52px -apple-system,"PingFang TC"'; ctx.fillStyle=i<3?'#f0b90b':'#8a93a6'; ctx.textAlign='center'; ctx.fillText(medals[i],148,y+rowH/2+20);
+    ctx.textAlign='left'; ctx.fillStyle='#fff'; ctx.font='800 52px -apple-system,"PingFang TC"'; ctx.fillText(h.code+'  '+(h.name||''),225,y+rowH/2-4);
+    ctx.fillStyle='#8a93a6'; ctx.font='600 32px -apple-system,"PingFang TC"'; ctx.fillText((opts.priceLabel || '收盤') + ' ' + (Math.round(h.close*10000)/10000),228,y+rowH/2+44);
+    const pct=(h.chgPct>=0?'+':'')+h.chgPct+'%'; ctx.font='900 46px -apple-system,"PingFang TC"'; const pw=ctx.measureText(pct).width+56; const px=W-100-pw, py=y+rowH/2-36, ph=70;
+    if(h.lu){ ctx.fillStyle='#ea3943'; rr(px,py,pw,ph,35); ctx.fill(); ctx.fillStyle='#fff'; } else { ctx.fillStyle=h.chgPct>=0?'rgba(234,57,67,.16)':'rgba(22,199,132,.16)'; rr(px,py,pw,ph,35); ctx.fill(); ctx.fillStyle=h.chgPct>=0?'#ff6b78':'#16c784'; }
+    ctx.fillText(pct,px+28,py+52);
+    if(h.lu){ ctx.fillStyle='#ea3943'; ctx.font='800 26px -apple-system,"PingFang TC"'; const luW=ctx.measureText('漲停').width+28; rr(px-luW-14,py+17,luW,38,10); ctx.fill(); ctx.fillStyle='#fff'; ctx.fillText('漲停',px-luW,py+45); }
+  });
+  const bandH=176, fy=H-250; ctx.fillStyle='rgba(255,255,255,.05)'; rr(70,fy,W-140,bandH,20); ctx.fill(); ctx.strokeStyle='rgba(240,185,11,.28)'; ctx.lineWidth=2; rr(70,fy,W-140,bandH,20); ctx.stroke();
+  const qrSize=124; const qx=W-70-34-qrSize, qy=fy+(bandH-qrSize)/2; drawQR(qx,qy,qrSize);
+  ctx.textAlign='left'; ctx.fillStyle='#f0b90b'; ctx.font='900 50px -apple-system,"PingFang TC"'; ctx.fillText('bubuaplus.com',108,fy+66);
+  ctx.fillStyle='#e8ecf4'; ctx.font='600 30px -apple-system,"PingFang TC"'; ctx.fillText(opts.push || '布嬸A+引擎 · 每日 19:00 推播',108,fy+112);
+  ctx.fillStyle='#8a93a6'; ctx.font='600 26px -apple-system,"PingFang TC"'; ctx.fillText('📱 掃描 QR 直接開啟網站',108,fy+152);
+  ctx.fillStyle='#5c6478'; ctx.font='500 24px -apple-system,"PingFang TC"'; ctx.textAlign='center'; ctx.fillText('資料僅供參考，非投資建議 · 投資有風險，請自行判斷',W/2,H-40); ctx.textAlign='left';
+}
+$('apDlBtn').addEventListener('click', async () => {
+  const btn = $('apDlBtn'); const old = btn.textContent;
+  btn.disabled = true; btn.textContent = '產生中…';
+  try{
+    let data = apLastData;
+    if(!data){
+      const r = await fetch('/api/aplus', { headers: { 'x-member-key': memberKey() } });
+      if(r.ok){ const j = await r.json(); if(j && Array.isArray(j.hits)) data = { date: j.date, hits: j.hits }; }
+    }
+    if(!data){ alert('目前沒有可下載的 A+ 名單，請先「重新掃描」再試'); return; }
+    const cv = document.createElement('canvas'); cv.width = 1080; cv.height = 1350;
+    drawShareCard(cv, data);
+    const fname = '布嬸A+掃股-' + (data.date || new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' })).replace(/[\/-]/g, '') + '.png';
+    const blob = await new Promise(res => cv.toBlob(res, 'image/png'));
+    let done = false;
+    if(blob && navigator.canShare && navigator.canShare({ files: [new File([blob], fname, { type: 'image/png' })] })){
+      try{
+        await navigator.share({
+          files: [new File([blob], fname, { type: 'image/png' })],
+          title: '布嬸A+掃股',
+          text: '今日 A+ 名單｜bubuaplus.com'
+        });
+        done = true;
+      }catch(err){
+        if(err && err.name === 'AbortError') return; // 使用者取消分享，不計數
+      }
+    }
+    if(!done){ // 桌機或不支援分享 → 直接下載檔案
+      const a = document.createElement('a');
+      a.download = fname;
+      a.href = URL.createObjectURL(blob);
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+    }
+    try{
+      const base = 'https://api.counterapi.dev/v1/crypto-scanner-brucelinda/';
+      const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' });
+      fetch(base + 'dlcard-total/up').catch(() => {});
+      fetch(base + 'dlcard-' + today + '/up').catch(() => {});
+    }catch(e){}
+  }catch(e){ console.error('分享卡產生失敗', e); alert('分享卡產生失敗，請稍後再試'); }
+  finally{ btn.disabled = false; btn.textContent = old; }
+});
+$('apUsDlBtn').addEventListener('click', async () => {
+  const btn = $('apUsDlBtn'); const old = btn.textContent;
+  btn.disabled = true; btn.textContent = '產生中…';
+  try{
+    let data = apUsLastData;
+    if(!data){
+      const r = await fetch('/api/aplus-us', { headers: { 'x-member-key': memberKey() } });
+      if(r.ok){ const j = await r.json(); if(j && Array.isArray(j.hits)) data = { date: j.date, hits: j.hits }; }
+    }
+    if(!data){ alert('目前沒有可下載的 A+ 美股名單，請先「重新掃描」再試'); return; }
+    const cv = document.createElement('canvas'); cv.width = 1080; cv.height = 1350;
+    drawShareCard(cv, data, { title: '🇺🇸 布嬸A+美股', tag: ' 美股盤後', push: '布嬸A+引擎 · 每日 07:00 推播' });
+    const fname = '布嬸A+美股-' + (data.date || new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' })).replace(/[\/-]/g, '') + '.png';
+    const blob = await new Promise(res => cv.toBlob(res, 'image/png'));
+    let done = false;
+    if(blob && navigator.canShare && navigator.canShare({ files: [new File([blob], fname, { type: 'image/png' })] })){
+      try{
+        await navigator.share({
+          files: [new File([blob], fname, { type: 'image/png' })],
+          title: '布嬸A+美股',
+          text: '今日 A+ 美股名單｜bubuaplus.com'
+        });
+        done = true;
+      }catch(err){
+        if(err && err.name === 'AbortError') return;
+      }
+    }
+    if(!done){
+      const a = document.createElement('a');
+      a.download = fname;
+      a.href = URL.createObjectURL(blob);
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+    }
+    try{
+      const base = 'https://api.counterapi.dev/v1/crypto-scanner-brucelinda/';
+      const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' });
+      fetch(base + 'dlcardus-total/up').catch(() => {});
+      fetch(base + 'dlcardus-' + today + '/up').catch(() => {});
+    }catch(e){}
+  }catch(e){ console.error('分享卡產生失敗', e); alert('分享卡產生失敗，請稍後再試'); }
+  finally{ btn.disabled = false; btn.textContent = old; }
+});
+let apCoinLastData = null; // 最近一次 A+掃幣名單，供「下載收藏」分享卡使用
+$('apCoinDlBtn').addEventListener('click', async () => {
+  const btn = $('apCoinDlBtn'); const old = btn.textContent;
+  btn.disabled = true; btn.textContent = '產生中…';
+  try{
+    const data = apCoinLastData;
+    if(!data || !data.hits.length){ alert('目前沒有可下載的 A+ 掃幣名單，請等掃描出現標的後再試'); return; }
+    const cv = document.createElement('canvas'); cv.width = 1080; cv.height = 1350;
+    drawShareCard(cv, data, { title: '🪙 布嬸A+掃幣', tag: ' 即時掃描', sub: '即時 A+ 型態精選',
+      priceLabel: '現價', push: '布嬸A+引擎 · 24H 即時掃描' });
+    const fname = '布嬸A+掃幣-' + data.date.replace(/[\/-]/g, '') + '.png';
+    const blob = await new Promise(res => cv.toBlob(res, 'image/png'));
+    let done = false;
+    if(blob && navigator.canShare && navigator.canShare({ files: [new File([blob], fname, { type: 'image/png' })] })){
+      try{
+        await navigator.share({
+          files: [new File([blob], fname, { type: 'image/png' })],
+          title: '布嬸A+掃幣',
+          text: '即時 A+ 掃幣名單｜bubuaplus.com'
+        });
+        done = true;
+      }catch(err){
+        if(err && err.name === 'AbortError') return;
+      }
+    }
+    if(!done){
+      const a = document.createElement('a');
+      a.download = fname;
+      a.href = URL.createObjectURL(blob);
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+    }
+    try{
+      const base = 'https://api.counterapi.dev/v1/crypto-scanner-brucelinda/';
+      const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' });
+      fetch(base + 'dlcardcoin-total/up').catch(() => {});
+      fetch(base + 'dlcardcoin-' + today + '/up').catch(() => {});
+    }catch(e){}
+  }catch(e){ console.error('分享卡產生失敗', e); alert('分享卡產生失敗，請稍後再試'); }
+  finally{ btn.disabled = false; btn.textContent = old; }
+});
+$('apCoinBtn').addEventListener('click', async () => {
+  const btn = $('apCoinBtn');
+  btn.disabled = true; btn.textContent = '掃描中…';
+  await scan();
+  btn.disabled = false; btn.textContent = '🔄 重新掃描';
+});
+
+function drawDailyReport(cv){
+  const W = 1080;
+  const F = s => s + 'px -apple-system,"PingFang TC"';
+  const colorOf = v => v >= 0 ? '#ff6b78' : '#16c784';
+  const secs = [];
+  const mkt = (window.__mktData || []).map(m => ({ l: m.name, r: m.pxTxt + '　' + pctTxt(m.pct), c: colorOf(m.pct) }));
+  if(mkt.length) secs.push({ t: '🌐 市場行情', rows: mkt });
+  const t5 = document.getElementById('t5Verdict');
+  if(t5 && !/評估中|失敗/.test(t5.textContent)) secs.push({ t: '🚦 0050紅綠燈', rows: [{ l: t5.textContent, r: '', c: '#e8ecf4' }] });
+  const hitSec = (title, data) => {
+    const hits = (data && data.hits) ? data.hits : [];
+    const rows = hits.slice(0, 6).map(x => ({
+      l: (x.code || '') + (x.name ? ' ' + x.name : ''),
+      r: fmtPx(x.close) + '　' + pctTxt(x.chgPct), c: colorOf(x.chgPct)
+    }));
+    if(!rows.length) rows.push({ l: '今日無符合 A+ 條件的標的', r: '', c: '#8a93a6', muted: true });
+    else if(hits.length > 6) rows.push({ l: '…共 ' + hits.length + ' 檔，完整名單見網站', r: '', c: '#8a93a6', muted: true });
+    secs.push({ t: title, rows });
+  };
+  hitSec('🎯 A+台股' + (apLastData && apLastData.date ? '（' + apLastData.date.slice(5).replace('-', '/') + '）' : ''), apLastData);
+  hitSec('🇺🇸 A+美股' + (apUsLastData && apUsLastData.date ? '（' + apUsLastData.date.slice(5).replace('-', '/') + '）' : ''), apUsLastData);
+  hitSec('💹 A+外匯（即時）', apFxLastData);
+  hitSec('🪙 A+掃幣（即時）', apCoinLastData);
+  const H = 250 + secs.reduce((a, s) => a + 64 + s.rows.length * 50 + 30, 0) + 250;
+  cv.width = W; cv.height = H;
+  const ctx = cv.getContext('2d');
+  const rr = (x, y, w, hh, r) => { ctx.beginPath(); ctx.moveTo(x+r, y); ctx.arcTo(x+w, y, x+w, y+hh, r); ctx.arcTo(x+w, y+hh, x, y+hh, r); ctx.arcTo(x, y+hh, x, y, r); ctx.arcTo(x, y, x+w, y, r); ctx.closePath(); };
+  const bg = ctx.createLinearGradient(0, 0, W, H); bg.addColorStop(0, '#0d1119'); bg.addColorStop(.55, '#0b0e14'); bg.addColorStop(1, '#131022');
+  ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+  ctx.strokeStyle = 'rgba(240,185,11,.5)'; ctx.lineWidth = 3; rr(24, 24, W-48, H-48, 28); ctx.stroke();
+  ctx.save(); ctx.rotate(-Math.PI/7); ctx.fillStyle = 'rgba(255,255,255,.028)'; ctx.font = '700 ' + F(54);
+  for(let yy = 0; yy < H * 1.6; yy += 210) for(let xx = -600; xx < W * 1.5; xx += 520) ctx.fillText('bubuaplus.com', xx, yy);
+  ctx.restore();
+  const dateStr = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' }).replace(/-/g, '/');
+  ctx.textAlign = 'left'; ctx.fillStyle = '#f0b90b'; ctx.font = '900 ' + F(72); ctx.fillText('📰 布嬸日報', 70, 138);
+  ctx.fillStyle = '#e8ecf4'; ctx.font = '600 ' + F(30); ctx.fillText('每日盤後 A+ 全型態掃描', 76, 190);
+  ctx.font = '800 ' + F(40);
+  const dw = ctx.measureText(dateStr).width + 52;
+  ctx.fillStyle = 'rgba(240,185,11,.14)'; rr(W-70-dw, 100, dw, 64, 32); ctx.fill();
+  ctx.strokeStyle = 'rgba(240,185,11,.5)'; ctx.lineWidth = 2; rr(W-70-dw, 100, dw, 64, 32); ctx.stroke();
+  ctx.fillStyle = '#f0b90b'; ctx.fillText(dateStr, W-70-dw+26, 146);
+  let y = 250;
+  secs.forEach((s, si) => {
+    ctx.fillStyle = '#f0b90b'; ctx.font = '800 ' + F(38); ctx.fillText(s.t, 70, y + 40); y += 64;
+    s.rows.forEach(rw => {
+      ctx.fillStyle = rw.muted ? '#8a93a6' : '#ffffff'; ctx.font = (rw.muted ? '600 ' : '700 ') + F(32);
+      ctx.fillText(rw.l, 90, y + 34);
+      if(rw.r){ ctx.textAlign = 'right'; ctx.fillStyle = rw.c; ctx.font = '800 ' + F(32); ctx.fillText(rw.r, W - 90, y + 34); ctx.textAlign = 'left'; }
+      y += 50;
+    });
+    if(si < secs.length - 1){ ctx.fillStyle = 'rgba(255,255,255,.08)'; ctx.fillRect(70, y + 12, W - 140, 2); }
+    y += 30;
+  });
+  const bandH = 150, fy = H - 230;
+  ctx.fillStyle = 'rgba(255,255,255,.05)'; rr(70, fy, W-140, bandH, 20); ctx.fill();
+  ctx.strokeStyle = 'rgba(240,185,11,.28)'; ctx.lineWidth = 2; rr(70, fy, W-140, bandH, 20); ctx.stroke();
+  try{
+    const qs = 106, qx = W - 70 - 30 - qs, qy = fy + (bandH - qs) / 2;
+    const n = AP_QR_ROWS.length, cell = qs / n;
+    ctx.fillStyle = '#fff'; rr(qx - 12, qy - 12, qs + 24, qs + 24, 14); ctx.fill();
+    ctx.fillStyle = '#0b0e14';
+    for(let r2 = 0; r2 < n; r2++){ const row = AP_QR_ROWS[r2]; for(let c2 = 0; c2 < n; c2++) if(row[c2] === '1') ctx.fillRect(Math.floor(qx + c2*cell), Math.floor(qy + r2*cell), Math.ceil(cell), Math.ceil(cell)); }
+  }catch(e){}
+  ctx.fillStyle = '#f0b90b'; ctx.font = '900 ' + F(44); ctx.fillText('bubuaplus.com', 104, fy + 62);
+  ctx.fillStyle = '#e8ecf4'; ctx.font = '600 ' + F(27); ctx.fillText('布嬸A+引擎 · 每日盤後自動掃描', 104, fy + 106);
+  ctx.fillStyle = '#5c6478'; ctx.font = '500 ' + F(24); ctx.textAlign = 'center';
+  ctx.fillText('資料僅供參考，非投資建議 · 投資有風險，請自行判斷', W/2, H - 40);
+  ctx.textAlign = 'left';
+}
+$('apDailyBtn').addEventListener('click', async () => {
+  const btn = $('apDailyBtn'); const old = btn.textContent;
+  btn.disabled = true; btn.textContent = '產生中…';
+  try{
+    if(!apLastData){
+      try{
+        const r = await fetch('/api/aplus', { headers: { 'x-member-key': memberKey() } });
+        if(r.ok){ const j = await r.json(); if(j && Array.isArray(j.hits)) apLastData = { date: j.date, hits: j.hits }; }
+      }catch(e){}
+    }
+    const cv = document.createElement('canvas');
+    drawDailyReport(cv);
+    const fname = '布嬸日報-' + new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' }).replace(/-/g, '') + '.png';
+    const blob = await new Promise(res => cv.toBlob(res, 'image/png'));
+    let done = false;
+    if(blob && navigator.canShare && navigator.canShare({ files: [new File([blob], fname, { type: 'image/png' })] })){
+      try{
+        await navigator.share({ files: [new File([blob], fname, { type: 'image/png' })], title: '布嬸日報', text: '每日盤後 A+ 全型態掃描｜bubuaplus.com' });
+        done = true;
+      }catch(err){ if(err && err.name === 'AbortError') return; }
+    }
+    if(!done){
+      const a = document.createElement('a');
+      a.download = fname; a.href = URL.createObjectURL(blob); a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+    }
+    try{
+      const base = 'https://api.counterapi.dev/v1/crypto-scanner-brucelinda/';
+      const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' });
+      fetch(base + 'dlreport-total/up').catch(() => {});
+      fetch(base + 'dlreport-' + today + '/up').catch(() => {});
+    }catch(e){}
+  }catch(e){ console.error('日報產生失敗', e); alert('日報產生失敗，請稍後再試'); }
+  finally{ btn.disabled = false; btn.textContent = old; }
+});
+
+function closeKChart(){ $('kModal').classList.remove('show'); }
+
+async function showKChart(type, code, name, interval){
+  $('kModal').classList.add('show');
+  const _coin1h = (type === 'coin' && interval === '1h');
+  $('kNote').innerHTML = (type === 'fx' ? '1小時 K 棒（近 10 天）' : _coin1h ? '1小時 K 棒（近 7 天）' : '日線 K 棒（近 6 個月）')
+    + '｜<span style="color:#4a8cff">━ MA20</span>　<span style="color:#f0b90b">━ MA60</span>';
+  $('kTitle').textContent = type === 'fx' ? (name || code) + '　1小時'
+    : (type === 'tw' ? code + ' ' + (name || '')
+    : type === 'us' ? code
+    : code.replace('USDT','') + ' / USDT') + (_coin1h ? '　1小時' : '　日線');
+  const cv = $('kCanvas');
+  const ctx0 = cv.getContext('2d');
+  ctx0.clearRect(0, 0, cv.width, cv.height);
+  try{
+    let bars = [];
+    if(type === 'tw' || type === 'us' || type === 'fx'){
+      const syms = type === 'tw' ? [code + '.TW', code + '.TWO'] : [code];
+      const qs = type === 'fx' ? '?range=10d&interval=60m' : '?range=6mo&interval=1d';
+      let res = null;
+      for(const sym of syms){
+        try{
+          const r = await fetch('/yahoo/v8/finance/chart/' + encodeURIComponent(sym) + qs);
+          if(!r.ok) continue;
+          const j = (await r.json()).chart;
+          if(j && j.result && j.result[0] && j.result[0].timestamp){ res = j.result[0]; break; }
+        }catch(e){}
+      }
+      if(!res) throw new Error('no data');
+      const q = res.indicators.quote[0];
+      for(let i = 0; i < res.timestamp.length; i++){
+        if(q.close[i] != null && q.open[i] != null)
+          bars.push({t: res.timestamp[i]*1000, o: q.open[i], h: q.high[i], l: q.low[i], c: q.close[i], v: q.volume[i] || 0});
+      }
+    }else{
+      const _iv = (type === 'coin' && interval === '1h') ? '1h' : '1d';
+      const r = await fetch('https://fapi.binance.com/fapi/v1/klines?symbol=' + code + '&interval=' + _iv + '&limit=' + (_iv === '1h' ? 168 : 130));
+      const k = await r.json();
+      bars = k.map(b => ({t: b[0], o: +b[1], h: +b[2], l: +b[3], c: +b[4], v: +b[5]}));
+    }
+    if(bars.length < 10) throw new Error('no data');
+    drawKChart(cv, bars);
+  }catch(e){
+    console.error('K線載入失敗', e);
+    $('kTitle').textContent += '（資料載入失敗）';
+  }
+}
+
+function drawKChart(cv, bars){
+  const dpr = window.devicePixelRatio || 1;
+  const W = cv.clientWidth, H = cv.clientHeight;
+  cv.width = W * dpr; cv.height = H * dpr;
+  const ctx = cv.getContext('2d');
+  ctx.scale(dpr, dpr);
+  const padL = 6, padR = 56, padT = 12, padB = 22;
+  const iw = W - padL - padR;
+  const fullH = H - padT - padB;
+  const volH = Math.round(fullH * 0.20), gap = 8;   // 底部成交量子面板
+  const ih = fullH - volH - gap;                    // 價格區高度
+  const volTop = padT + ih + gap, volBottom = volTop + volH;
+  const n = bars.length;
+  let lo = Infinity, hi = -Infinity;
+  bars.forEach(b => { if(b.l < lo) lo = b.l; if(b.h > hi) hi = b.h; });
+  const pad = (hi - lo) * 0.05 || 1;
+  lo -= pad; hi += pad;
+  const X = i => padL + iw * (i + 0.5) / n;
+  const Y = v => padT + ih * (1 - (v - lo) / (hi - lo));
+  const cw = Math.max(2, iw / n * 0.65);
+  let vMax = 0;
+  bars.forEach(b => { if((b.v || 0) > vMax) vMax = b.v; });
+  const VY = vol => volBottom - volH * ((vol || 0) / (vMax || 1));
+  const fmtV = x => x >= 1e8 ? (x/1e8).toFixed(1) + '億' : x >= 1e4 ? (x/1e4).toFixed(0) + '萬' : String(Math.round(x));
+
+  ctx.font = '10px sans-serif';
+  for(let g = 0; g <= 4; g++){
+    const v = lo + (hi - lo) * g / 4;
+    const y = Y(v);
+    ctx.strokeStyle = 'rgba(255,255,255,0.07)';
+    ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W - padR, y); ctx.stroke();
+    ctx.fillStyle = '#8a93a6';
+    ctx.textAlign = 'left';
+    ctx.fillText(fmtPx(v), W - padR + 5, y + 3);
+  }
+  bars.forEach((b, i) => {
+    const x = X(i);
+    const up = b.c >= b.o;
+    ctx.fillStyle = up ? 'rgba(234,57,67,0.55)' : 'rgba(22,199,132,0.55)';
+    const vy = VY(b.v);
+    ctx.fillRect(x - cw/2, vy, cw, Math.max(1, volBottom - vy));
+  });
+  if(vMax > 0){
+    ctx.fillStyle = '#8a93a6'; ctx.textAlign = 'left'; ctx.font = '10px sans-serif';
+    ctx.fillText('量 ' + fmtV(vMax), W - padR + 5, volTop + 8);
+  }
+  bars.forEach((b, i) => {
+    const x = X(i);
+    const up = b.c >= b.o;
+    const color = up ? '#ea3943' : '#16c784';
+    ctx.strokeStyle = color; ctx.fillStyle = color;
+    ctx.beginPath(); ctx.moveTo(x, Y(b.h)); ctx.lineTo(x, Y(b.l)); ctx.stroke();
+    const yo = Y(b.o), yc = Y(b.c);
+    const top = Math.min(yo, yc), hgt = Math.max(1, Math.abs(yc - yo));
+    ctx.fillRect(x - cw/2, top, cw, hgt);
+  });
+  const drawMA = (p, color) => {
+    ctx.strokeStyle = color; ctx.lineWidth = 1.3; ctx.beginPath();
+    let started = false;
+    for(let i = p - 1; i < n; i++){
+      let s = 0;
+      for(let k = i - p + 1; k <= i; k++) s += bars[k].c;
+      const y = Y(s / p);
+      if(!started){ ctx.moveTo(X(i), y); started = true; } else ctx.lineTo(X(i), y);
+    }
+    ctx.stroke(); ctx.lineWidth = 1;
+  };
+  if(n >= 20) drawMA(20, '#4a8cff');
+  if(n >= 60) drawMA(60, '#f0b90b');
+  const last = bars[n-1];
+  ctx.fillStyle = last.c >= last.o ? '#ea3943' : '#16c784';
+  ctx.fillRect(W - padR + 1, Y(last.c) - 8, padR - 2, 16);
+  ctx.fillStyle = '#fff'; ctx.textAlign = 'left'; ctx.font = 'bold 10px sans-serif';
+  ctx.fillText(fmtPx(last.c), W - padR + 5, Y(last.c) + 3);
+  ctx.fillStyle = '#8a93a6'; ctx.font = '10px sans-serif';
+  const fd = t => { const d = new Date(t); return (d.getMonth()+1) + '/' + d.getDate(); };
+  ctx.textAlign = 'left';  ctx.fillText(fd(bars[0].t), padL, H - 6);
+  ctx.textAlign = 'center'; ctx.fillText(fd(bars[Math.floor(n/2)].t), padL + iw/2, H - 6);
+  ctx.textAlign = 'right'; ctx.fillText(fd(last.t), W - padR, H - 6);
+}
+
+function memberKey(){ try{ return localStorage.getItem('bu_member_key') || ''; }catch(e){ return ''; } }
+function askMemberKey(after){
+  const k = prompt('請輸入會員碼（訂閱後由布嬸提供）');
+  if(k){ try{ localStorage.setItem('bu_member_key', k.trim()); }catch(e){} if(after) after(); }
+}
+
+const apUsNotify = mkNotifyState();
+
+let apUsLastData = null; // 最近一次 A+美股掃描結果，供「下載收藏」分享卡使用
+async function loadAPlusUS(force){
+  const st = $('apUsStatus'), body = $('apUsBody');
+  try{
+    st.textContent = '掃描中…';
+    body.innerHTML = '<tr><td colspan="5" class="empty">掃描中…</td></tr>';
+    const r = await fetch('/api/aplus-us' + (force ? '?r=' + Date.now() : ''), {headers: {'x-member-key': memberKey()}});
+    if(r.status === 401){
+      st.textContent = '訂閱會員專屬內容';
+      body.innerHTML = '<tr><td colspan="5" class="empty">此內容為訂閱會員專屬｜<a href="#" style="color:var(--yellow)" onclick="askMemberKey(() => loadAPlusUS(true));return false">輸入會員碼解鎖</a></td></tr>';
+      return;
+    }
+    if(!r.ok) throw new Error('scan failed');
+    const j = await r.json();
+    if(j.pending){
+      $('apUsDate').textContent = j.date || '--';
+      st.textContent = '資料同步中';
+      body.innerHTML = '<tr><td colspan="5" class="empty">⏳ 行情資料同步中（來源更新延遲），約10分鐘後自動重試</td></tr>';
+      setTimeout(() => loadAPlusUS(true), 600000);
+      return;
+    }
+    if(j.error || !Array.isArray(j.hits)) throw new Error('scan failed');
+    $('apUsDate').textContent = j.date;
+    apUsLastData = { date: j.date, hits: j.hits };
+    st.textContent = `布嬸A+美股今日 ${j.hits.length} 檔`;
+    body.innerHTML = j.hits.length ? j.hits.map(h => `
+      <tr>
+        <td class="sym sym-click" onclick="showKChart('us','${h.code}')">${h.code}</td>
+        <td>${fmtPx(h.close)}</td>
+        <td class="up">${pctTxt(h.chgPct)}</td>
+        <td>${h.volR.toFixed(2)}</td>
+        <td>${h.dd.toFixed(1)}%</td>
+      </tr>`).join('')
+      : '<tr><td colspan="5" class="empty">☕ 掃描機器人買下午茶，待填飽數據後開工</td></tr>';
+    notifyNewItems(apUsNotify, j.hits.map(h => ({key: h.code, h})),
+      x => '🇺🇸 A+美股新標的：' + x.h.code,
+      x => `收盤 ${fmtPx(x.h.close)}｜漲幅 ${pctTxt(x.h.chgPct)}｜量比 ${x.h.volR.toFixed(2)}`);
+  }catch(e){
+    console.error('A+美股掃描失敗', e);
+    st.textContent = '掃描失敗，請點「重新掃描」再試';
+    body.innerHTML = '<tr><td colspan="5" class="empty">資料載入失敗</td></tr>';
+  }
+}
+$('apUsBtn').addEventListener('click', async () => {
+  const btn = $('apUsBtn');
+  btn.disabled = true; btn.textContent = '掃描中…';
+  await loadAPlusUS(true);
+  btn.disabled = false; btn.textContent = '🔄 重新掃描';
+});
+let lastApUsSlot = '';
+setInterval(() => {
+  const tp = new Date(new Date().toLocaleString('en-US', {timeZone:'Asia/Taipei'}));
+  if(tp.getHours() === 7 && tp.getMinutes() < 5){
+    const slot = tp.toDateString() + '-7';
+    if(lastApUsSlot !== slot){ lastApUsSlot = slot; loadAPlusUS(true); }
+  }
+}, 60000);
+
+const VAPID_PUBLIC = 'BLGvPRa0kMMENeHzhY-p-lfpVLZHKGjqahgON3l1rT3FndLaVFlaSWlbzPXcFQCOKG6X0-0Rb64WvMWCa6_4Mp8';
+function b64ToU8(s){
+  const pad = '='.repeat((4 - s.length % 4) % 4);
+  const raw = atob((s + pad).replace(/-/g, '+').replace(/_/g, '/'));
+  return Uint8Array.from([...raw].map(c => c.charCodeAt(0)));
+}
+function setPushBtn(on){
+  const btn = $('pushBtn');
+  btn.textContent = on ? '🔔 推播：已訂閱' : '🔔 一鍵訂閱推播';
+  btn.style.color = on ? 'var(--yellow)' : '';
+  try{ localStorage.setItem('bu_notify_all', on ? '1' : '0'); }catch(e){}
+}
+async function pushSupported(){
+  return 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
+}
+(async () => {
+  try{
+    if(!(await pushSupported())) return;
+    const reg = await navigator.serviceWorker.ready;
+    const sub = await reg.pushManager.getSubscription();
+    setPushBtn(!!sub);
+  }catch(e){}
+})();
+$('pushBtn').addEventListener('click', async () => {
+  if(!(await pushSupported())){
+    alert('此瀏覽器不支援訂閱推播。\niPhone：需 iOS 16.4 以上，先用 Safari「分享 → 加入主畫面」，再從主畫面開啟本網頁。');
+    return;
+  }
+  const btn = $('pushBtn');
+  btn.disabled = true;
+  try{
+    const reg = await navigator.serviceWorker.ready;
+    let sub = await reg.pushManager.getSubscription();
+    if(sub){
+      await fetch('/api/push', {method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({action:'unsubscribe', endpoint: sub.endpoint})});
+      await sub.unsubscribe();
+      setPushBtn(false);
+    }else{
+      const p = await Notification.requestPermission();
+      if(p !== 'granted'){ alert('瀏覽器未允許通知，請在設定中將本網站的通知設為允許。'); btn.disabled = false; return; }
+      sub = await reg.pushManager.subscribe({userVisibleOnly: true, applicationServerKey: b64ToU8(VAPID_PUBLIC)});
+      const r = await fetch('/api/push', {method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({action:'subscribe', sub: sub.toJSON()})});
+      if(!r.ok) throw new Error('server');
+      setPushBtn(true);
+      showNotify('🔔 推播已全部開啟', '台股/美股名單更新推播（關閉網頁也收得到）＋掃幣/外匯即時通知（需開著網頁）');
+    }
+  }catch(e){
+    console.error('push toggle failed', e);
+    alert('推播設定失敗，請稍後再試。');
+  }
+  btn.disabled = false;
+});
+
+let ptrStartY = 0, ptrPull = 0, ptrActive = false, ptrRefreshing = false;
+
+async function pullRefresh(){
+  const active = document.querySelector('.nav-item.active');
+  const page = active ? active.dataset.page : 'crypto';
+  if(page === 'crypto') await scan();
+  else if(page === 'twus') await Promise.all([loadTW(), loadUS()]);
+  else if(page === 'health') await watchScan();
+  else if(page === 'bu') await Promise.all([loadAPlus(true), loadAPlusUS(true), scan()]);
+}
+
+document.addEventListener('touchstart', e => {
+  if(window.scrollY <= 0 && !ptrRefreshing){
+    ptrStartY = e.touches[0].clientY;
+    ptrActive = true;
+    ptrPull = 0;
+  }
+}, {passive:true});
+
+document.addEventListener('touchmove', e => {
+  if(!ptrActive || ptrRefreshing) return;
+  const dy = e.touches[0].clientY - ptrStartY;
+  if(dy > 5 && window.scrollY <= 0){
+    ptrPull = Math.min(dy * 0.5, 110);
+    const el = $('ptr');
+    el.style.transition = 'none';
+    el.style.transform = `translate(-50%, ${ptrPull}px) rotate(${ptrPull * 3}deg)`;
+    el.style.opacity = Math.min(1, ptrPull / 60);
+    if(e.cancelable) e.preventDefault();
+  }
+}, {passive:false});
+
+document.addEventListener('touchend', async () => {
+  if(!ptrActive) return;
+  ptrActive = false;
+  const el = $('ptr');
+  el.style.transition = '';
+  if(ptrPull >= 70 && !ptrRefreshing){
+    ptrRefreshing = true;
+    el.classList.add('spin');
+    el.style.opacity = 1;
+    try{ await pullRefresh(); }catch(e){}
+    ptrRefreshing = false;
+    el.classList.remove('spin');
+  }
+  el.style.transform = 'translate(-50%, 0)';
+  el.style.opacity = 0;
+  ptrPull = 0;
+});
+
+let timer = null;
+function setAutoRefresh(ms){
+  if(timer) clearInterval(timer);
+  timer = setInterval(scan, ms);
+}
+$('intervalSel').addEventListener('change', e => setAutoRefresh(+e.target.value));
+
+renderCoinCard('BTCUSDT');
+renderCoinCard('ETHUSDT');
+connectWS();
+scan();
+setAutoRefresh(60000);
+
+(async function(){
+  const base = 'https://api.counterapi.dev/v1/crypto-scanner-brucelinda/';
+  const hit = async (key, inc) => {
+    try{
+      const r = await fetch(base + key + (inc ? '/up' : '/'));
+      if(!r.ok) return null;
+      return (await r.json()).count;
+    }catch(e){ return null; }
+  };
+  let seen = false;
+  try{ seen = localStorage.getItem('bu_visited') === '1'; }catch(e){}
+  const [pv, uv] = await Promise.all([hit('pageviews', true), hit('visitors', !seen)]);
+  if(!seen){ try{ localStorage.setItem('bu_visited','1'); }catch(e){} }
+  if(pv != null) $('pvCount').textContent = pv.toLocaleString();
+  if(uv != null) $('uvCount').textContent = uv.toLocaleString();
+  try{
+    const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' });
+    if(localStorage.getItem('bu_dau') !== today){
+      const ok = await hit('dau-' + today, true);
+      if(ok != null) localStorage.setItem('bu_dau', today);
+    }
+  }catch(e){}
+})();
+
+function pruneOldReports(maxDays){
+  const now = Date.now();
+  document.querySelectorAll('#page-value .vs-card').forEach(card => {
+    let ds = card.getAttribute('data-up');
+    if(!ds){ const note = card.querySelector('.vs-trow > .note'); ds = note ? note.textContent : ''; }
+    const m = String(ds).match(/(\d{4})[\/-](\d{1,2})(?:[\/-](\d{1,2}))?/);
+    if(!m) return;
+    const d = new Date(+m[1], +m[2] - 1, +(m[3] || 1));
+    if((now - d.getTime()) / 86400000 > maxDays) card.remove();
+  });
+}
+
+const WKEY = 'bu_watch';
+const wGet = () => { try{ return JSON.parse(localStorage.getItem(WKEY) || '[]'); }catch(e){ return []; } };
+const wSave = l => { try{ localStorage.setItem(WKEY, JSON.stringify(l)); }catch(e){} };
+const wMarket = s => /^\d{4,6}$/.test(s) ? 'tw' : 'us';
+const W_GRADE = {
+  S: '<span class="limitup">🎯 今日 A+ 型態</span>',
+  A: '<b style="color:#ff8a94">🔥 極接近 A+</b>',
+  B: '<span style="color:var(--yellow)">🌤 型態成形中</span>',
+  C: '<span style="color:var(--muted)">💤 型態未成形</span>'
+};
+function rsHtml(rs){
+  if(!rs) return '<span style="color:var(--muted)">--</span>';
+  const c = rs.startsWith('💪') ? '#ff6b78' : rs.startsWith('↘') ? '#16c784' : 'var(--yellow)';
+  return '<span style="color:' + c + ';font-weight:700;white-space:nowrap">' + rs.split('｜').join('</span><br><span style="color:' + c + ';font-weight:700;white-space:nowrap">') + '</span>';
+}
+const wHit = key => fetch('https://api.counterapi.dev/v1/crypto-scanner-brucelinda/' + key + '/up').then(r => r.ok ? r.json() : null).catch(() => null);
+let wSymMap = null;
+async function wNames(){
+  if(wSymMap && Object.keys(wSymMap).length > 100) return wSymMap;
+  try{
+    const j = await (await fetch('/api/symlist?r=' + Date.now())).json();
+    if(j && Object.keys(j).length > 100){
+      Object.keys(j).forEach(k => { j[k] = escN(j[k]); });  // 股名淨化（防注入）
+      wSymMap = j;
+    }
+  }catch(e){}
+  return wSymMap || {};
+}
+async function watchScan(){
+  const list = wGet(), tb = $('watchBody');
+  if(!list.length){ tb.innerHTML = '<tr><td colspan="6" class="empty">尚未加入自選股</td></tr>'; return; }
+  let wprev = {};
+  try{ wprev = JSON.parse(localStorage.getItem('bu_wprev') || '{}'); }catch(e){}
+  const W_RANK = { S: 3, A: 2, B: 1, C: 0 };
+  try{
+    const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' });
+    if(localStorage.getItem('bu_hdau') !== today) wHit('health-' + today).then(j => { if(j) localStorage.setItem('bu_hdau', today); });
+    if(!localStorage.getItem('bu_huser')) wHit('health-users').then(j => { if(j) localStorage.setItem('bu_huser', '1'); });
+  }catch(e){}
+  tb.innerHTML = list.map(s => '<tr id="w-' + s.replace(/[^A-Z0-9]/g,'') + '"><td class="sym">' + s + '</td><td colspan="5" style="color:var(--muted)">健檢中…</td></tr>').join('');
+  const nmap = await wNames();
+  for(const s of list){
+    const tr = document.getElementById('w-' + s.replace(/[^A-Z0-9]/g,''));
+    if(!tr) continue;
+    try{
+      const r = await fetch('/api/check?sym=' + encodeURIComponent(s), { headers: { 'x-member-key': memberKey() } });
+      const j = await r.json();
+      if(j.error || j.locked){
+        tr.innerHTML = '<td class="sym">' + s + '</td><td colspan="4" style="color:var(--muted)">查無資料或暫時無法評估</td><td><button class="ctrl btn" onclick="watchDel(\'' + s + '\')">✕</button></td>';
+        continue;
+      }
+      let arrow = '';
+      const pv = wprev[s];
+      if(pv && pv.g && pv.g !== j.grade)
+        arrow = W_RANK[j.grade] > W_RANK[pv.g]
+          ? ' <span style="color:#ff6b78;font-weight:900" title="評級較前一日提升">↑</span>'
+          : ' <span style="color:#16c784;font-weight:900" title="評級較前一日下降">↓</span>';
+      if(!pv || pv.d !== j.date){ wprev[s] = { g: j.grade, d: j.date, pg: pv ? pv.g : null }; }
+      else if(pv.pg && pv.pg !== j.grade) arrow = W_RANK[j.grade] > W_RANK[pv.pg]
+        ? ' <span style="color:#ff6b78;font-weight:900" title="評級較前一日提升">↑</span>'
+        : ' <span style="color:#16c784;font-weight:900" title="評級較前一日下降">↓</span>';
+      const nm = (wMarket(s) === 'tw' && nmap && nmap[s]) ? nmap[s] : '';
+      tr.innerHTML =
+        '<td class="sym sym-click" onclick="showKChart(\'' + wMarket(s) + '\',\'' + s + '\',\'' + nm + '\')">' + s + (nm ? ' ' + nm : '') + '</td>' +
+        '<td>' + j.close + '</td>' +
+        '<td>' + j.trend + '</td>' +
+        '<td>' + (W_GRADE[j.grade] || W_GRADE.C) + arrow + '</td>' +
+        '<td>' + rsHtml(j.rs) + '</td>' +
+        '<td><button class="ctrl btn" onclick="watchDel(\'' + s + '\')">✕</button></td>';
+    }catch(e){
+      tr.innerHTML = '<td class="sym">' + s + '</td><td colspan="5" style="color:var(--muted)">連線失敗，稍後再試</td>';
+    }
+  }
+  try{ localStorage.setItem('bu_wprev', JSON.stringify(wprev)); }catch(e){}
+}
+window.watchDel = s => { wSave(wGet().filter(x => x !== s)); watchScan(); };
+$('watchAdd').onclick = async () => {
+  let v = $('watchInput').value.trim().toUpperCase();
+  const msg = $('watchMsg');
+  const isTw = /^\d{4,6}$/.test(v);  // 含 ETF（0050、00878…）
+  const isUs = /^[A-Z][A-Z.\-]{0,5}$/.test(v);
+  if(!isTw && !isUs){
+    msg.textContent = '查詢股名中…';
+    const nmap = await wNames();
+    const entries = Object.entries(nmap || {});
+    let hit = entries.find(([c, n]) => n === v);
+    if(!hit){
+      const cands = entries.filter(([c, n]) => n && n.includes(v));
+      if(cands.length === 1) hit = cands[0];
+      else if(cands.length > 1){
+        msg.textContent = '找到多檔：' + cands.slice(0, 5).map(([c, n]) => c + ' ' + n).join('、') + (cands.length > 5 ? '…' : '') + '，請輸入完整股名或代號';
+        return;
+      }
+    }
+    if(hit) v = hit[0];
+    else { msg.textContent = '查無此股名，請輸入台股代號/股名 或 美股代號'; return; }
+  }
+  const l = wGet();
+  if(l.includes(v)){ msg.textContent = '「' + v + '」已在清單中'; return; }
+  if(l.length >= 5){ msg.textContent = '最多 5 檔，請先移除部分標的'; return; }
+  l.push(v); wSave(l);
+  $('watchInput').value = ''; msg.textContent = '';
+  watchScan();
+};
+$('watchInput').addEventListener('keydown', e => { if(e.key === 'Enter') $('watchAdd').click(); });
+$('watchBtn').onclick = watchScan;
+$('watchClear').onclick = () => {
+  wSave([]); watchScan();
+  $('watchInput').value = ''; $('watchMsg').textContent = '已清除自選清單';
+};
+function miniToast(msg){
+  const t = document.createElement('div');
+  t.textContent = msg;
+  t.style.cssText = 'position:fixed;left:50%;bottom:74px;transform:translateX(-50%);background:rgba(20,24,34,.96);border:1px solid var(--border);color:#e6ecf5;padding:10px 16px;border-radius:10px;z-index:2000;font-size:14px;box-shadow:0 6px 20px rgba(0,0,0,.45);max-width:88%;text-align:center';
+  document.body.appendChild(t);
+  setTimeout(() => { t.style.transition = 'opacity .4s'; t.style.opacity = '0'; }, 1800);
+  setTimeout(() => t.remove(), 2300);
+}
+$('watchNotifyBtn').onclick = () => {
+  miniToast('🔔 健檢通知功能開發中，敬請期待！');
+};
+watchScan();
+
+const CMP_COLORS = ['#f0b90b', '#4a8cff', '#ff6b78', '#16c784', '#c4a6ff', '#ff9f43'];
+let cmpList = [];
+try{ cmpList = JSON.parse(localStorage.getItem('bu_cmp') || '[]'); }catch(e){}
+function cmpChips(){
+  $('cmpChips').innerHTML = cmpList.map((s, i) =>
+    '<span style="display:inline-flex;align-items:center;gap:6px;background:var(--card2);border:1px solid ' + CMP_COLORS[i % 6] + ';border-radius:16px;padding:4px 12px;font-size:13px;font-weight:700">'
+    + '<span style="width:9px;height:9px;border-radius:50%;background:' + CMP_COLORS[i % 6] + '"></span>' + s.label
+    + '<span onclick="cmpDel(' + i + ')" style="cursor:pointer;color:var(--muted);font-weight:900">✕</span></span>').join('');
+  try{ localStorage.setItem('bu_cmp', JSON.stringify(cmpList)); }catch(e){}
+}
+let cmpPending = false;
+function cmpAuto(){
+  if($('cmpRun').disabled){ cmpPending = true; return; }  // 比較中又有變動 → 跑完自動補一次
+  if(cmpList.length >= 2) $('cmpRun').click();
+  else { $('cmpChart').style.display = 'none'; $('cmpTbl').style.display = 'none'; }
+}
+window.cmpDel = i => { cmpList.splice(i, 1); cmpChips(); cmpAuto(); };
+$('cmpClear').onclick = () => {
+  cmpList = []; cmpChips();
+  $('cmpChart').style.display = 'none'; $('cmpTbl').style.display = 'none';
+  $('cmpInput').value = ''; $('cmpMsg').textContent = '已清除比較清單';
+};
+async function cmpResolve(raw){
+  let v = raw.trim().toUpperCase();
+  if(!v) return null;
+  if(/^\d{4,6}$/.test(v)){
+    const nmap = await wNames();
+    return { sym: v, mkt: 'tw', label: v + (nmap && nmap[v] ? ' ' + nmap[v] : '') };
+  }
+  if(/^[A-Z][A-Z.\-]{0,5}$/.test(v)) return { sym: v, mkt: 'us', label: v };
+  const nmap = await wNames();
+  const entries = Object.entries(nmap || {});
+  let hit = entries.find(([c, n]) => n === v);
+  if(!hit){
+    const cands = entries.filter(([c, n]) => n && n.includes(v));
+    if(cands.length === 1) hit = cands[0];
+    else if(cands.length > 1){ $('cmpMsg').textContent = '找到多檔：' + cands.slice(0, 5).map(([c, n]) => c + ' ' + n).join('、') + '，請輸入完整股名或代號'; return null; }
+  }
+  if(hit) return { sym: hit[0], mkt: 'tw', label: hit[0] + ' ' + hit[1] };
+  $('cmpMsg').textContent = '查無「' + raw + '」，請輸入台股代號/股名 或 美股代號';
+  return null;
+}
+$('cmpAdd').onclick = async () => {
+  if(cmpList.length >= 6){ $('cmpMsg').textContent = '最多 6 檔'; return; }
+  const r = await cmpResolve($('cmpInput').value);
+  if(!r) return;
+  if(cmpList.some(x => x.sym === r.sym)){ $('cmpMsg').textContent = '「' + r.label + '」已在比較清單'; return; }
+  cmpList.push(r); cmpChips();
+  $('cmpInput').value = ''; $('cmpMsg').textContent = '';
+  cmpAuto();
+};
+$('cmpInput').addEventListener('keydown', e => { if(e.key === 'Enter') $('cmpAdd').click(); });
+$('cmpFromWatch').onclick = async () => {
+  const l = wGet();
+  if(!l.length){ $('cmpMsg').textContent = '自選清單是空的'; return; }
+  const nmap = await wNames();
+  cmpList = l.slice(0, 6).map(s => /^\d{4,6}$/.test(s)
+    ? { sym: s, mkt: 'tw', label: s + (nmap && nmap[s] ? ' ' + nmap[s] : '') }
+    : { sym: s, mkt: 'us', label: s });
+  cmpChips(); $('cmpMsg').textContent = '已帶入 ' + cmpList.length + ' 檔';
+  cmpAuto();
+};
+$('cmpPeriod').onchange = cmpAuto;
+$('cmpRun').onclick = async () => {
+  if(cmpList.length < 2){ $('cmpMsg').textContent = '請至少加入 2 檔標的'; return; }
+  const days = parseInt($('cmpPeriod').value);
+  const btn = $('cmpRun'); btn.disabled = true; const oldT = btn.textContent; btn.textContent = '比較中…';
+  $('cmpMsg').textContent = '抓取行情中…';
+  try{
+    const series = await Promise.all(cmpList.map(async it => {
+      const syms = it.mkt === 'tw' ? [it.sym + '.TW', it.sym + '.TWO'] : [it.sym];
+      for(const sym of syms){
+        try{
+          const res = (await (await fetch('/yahoo/v8/finance/chart/' + encodeURIComponent(sym) + '?range=8mo&interval=1d&includeAdjustedClose=true')).json()).chart.result[0];
+          const q = res.indicators.quote[0];
+          const adj = (res.indicators.adjclose && res.indicators.adjclose[0] && res.indicators.adjclose[0].adjclose) || q.close;
+          const closes = [];
+          for(let i = 0; i < res.timestamp.length; i++)
+            if(adj[i] != null && q.volume[i] !== 0) closes.push({ t: res.timestamp[i], c: adj[i] });
+          if(closes.length > 10) return { ...it, bars: closes };
+        }catch(e){}
+      }
+      return { ...it, bars: [] };
+    }));
+    const ok = series.filter(s => s.bars.length >= 5);
+    if(ok.length < 2){ $('cmpMsg').textContent = '有效資料不足 2 檔，請確認標的'; return; }
+    const retOf = (arr, n) => arr.length > n ? (arr[arr.length - 1].c / arr[arr.length - 1 - n].c - 1) * 100 : null;
+    ok.forEach(s => {
+      s.r1 = retOf(s.bars, 22); s.r3 = retOf(s.bars, 66); s.r6 = retOf(s.bars, 126);
+      const seg = s.bars.slice(-days - 1);
+      const base = seg[0].c;
+      s.pts = seg.map(b => (b.c / base - 1) * 100);
+      s.ret = s.pts[s.pts.length - 1];
+    });
+    drawCmpChart(ok);
+    const ranked = [...ok].sort((a, b) => b.ret - a.ret);   // 由上到下＝所選期間報酬高至低
+    const strength = i => i === 0 ? '<span style="color:#ff6b78;font-weight:800">💪 最強</span>'
+      : i === ranked.length - 1 ? '<span style="color:#16c784;font-weight:800">🐢 最弱</span>'
+      : '<span style="color:var(--muted)">—</span>';
+    const tb = document.querySelector('#cmpTbl tbody');
+    const selKey = days === 22 ? 'r1' : days === 66 ? 'r3' : 'r6';
+    const cell = (v, sel) => '<td class="' + (v == null ? '' : v >= 0 ? 'up' : 'down')
+      + '" style="' + (sel ? 'font-weight:800' : 'opacity:.75') + '">' + (v == null ? '—' : pctTxt(v)) + '</td>';
+    tb.innerHTML = ranked.map((s, i) => {
+      const ci = cmpList.findIndex(x => x.sym === s.sym);
+      const nm2 = s.label.split(' ')[1] || '';
+      return '<tr>'
+        + '<td class="sym sym-click" onclick="showKChart(\'' + s.mkt + '\',\'' + s.sym + '\',\'' + nm2 + '\')" style="color:' + CMP_COLORS[ci % 6] + '">' + s.label + '</td>'
+        + cell(s.r1, selKey === 'r1') + cell(s.r3, selKey === 'r3') + cell(s.r6, selKey === 'r6')
+        + '<td>' + strength(i) + '</td></tr>';
+    }).join('');
+    $('cmpTbl').style.display = '';
+    $('cmpMsg').textContent = '';
+  }catch(e){
+    console.error(e); $('cmpMsg').textContent = '比較失敗，請稍後再試';
+  }finally{
+    btn.disabled = false; btn.textContent = oldT;
+    if(cmpPending){ cmpPending = false; cmpAuto(); }
+  }
+};
+function drawCmpChart(series){
+  const cv = $('cmpChart');
+  cv.style.display = 'block';
+  const dpr = window.devicePixelRatio || 1;
+  const W = cv.clientWidth || 600, H = 280;
+  cv.width = W * dpr; cv.height = H * dpr;
+  const ctx = cv.getContext('2d');
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  const padL = 44, padR = 10, padT = 12, padB = 22;
+  const iw = W - padL - padR, ih = H - padT - padB;
+  const all = series.flatMap(s => s.pts);
+  let lo = Math.min(...all, 0), hi = Math.max(...all, 0);
+  const span = Math.max(hi - lo, 1); lo -= span * .05; hi += span * .05;
+  const maxN = Math.max(...series.map(s => s.pts.length));
+  const X = i => padL + iw * i / (maxN - 1);
+  const Y = v => padT + ih * (1 - (v - lo) / (hi - lo));
+  ctx.font = '10px sans-serif'; ctx.textAlign = 'right';
+  for(let g = 0; g <= 4; g++){
+    const v = lo + (hi - lo) * g / 4, y = Y(v);
+    ctx.strokeStyle = 'rgba(255,255,255,.06)'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W - padR, y); ctx.stroke();
+    ctx.fillStyle = '#8a93a6'; ctx.fillText((v >= 0 ? '+' : '') + v.toFixed(0) + '%', padL - 6, y + 3);
+  }
+  ctx.strokeStyle = '#8a93a6'; ctx.setLineDash([4, 4]);
+  ctx.beginPath(); ctx.moveTo(padL, Y(0)); ctx.lineTo(W - padR, Y(0)); ctx.stroke();
+  ctx.setLineDash([]);
+  series.forEach(s => {
+    const ci = cmpList.findIndex(x => x.sym === s.sym);
+    ctx.strokeStyle = CMP_COLORS[ci % 6]; ctx.lineWidth = 1.4;
+    ctx.beginPath();
+    const off = maxN - s.pts.length;
+    s.pts.forEach((v, i) => i ? ctx.lineTo(X(i + off), Y(v)) : ctx.moveTo(X(off), Y(v)));
+    ctx.stroke();
+  });
+  ctx.font = '700 11px sans-serif'; ctx.textAlign = 'right';
+  series.forEach(s => {
+    const ci = cmpList.findIndex(x => x.sym === s.sym);
+    const txt = s.sym + ' ' + pctTxt(s.ret);
+    const ty = Y(s.pts[s.pts.length - 1]) - 5;
+    const tw = ctx.measureText(txt).width;
+    ctx.fillStyle = 'rgba(11,14,20,.82)';
+    ctx.fillRect(W - padR - 2 - tw - 4, ty - 10, tw + 8, 13);
+    ctx.fillStyle = CMP_COLORS[ci % 6];
+    ctx.fillText(txt, W - padR - 2, ty);
+  });
+  ctx.textAlign = 'left';
+}
+cmpChips();
+
+function coveredSyms(){
+  const set = new Set();
+  document.querySelectorAll('#page-value .vs-name').forEach(el => {
+    const m = (el.getAttribute('onclick') || '').match(/showKChart\('(?:tw|us|coin)','([^']+)'(?:,'([^']*)')?\)/);
+    if(m){
+      if(m[1]) set.add(m[1].trim().toUpperCase());
+      if(m[2]) set.add(m[2].trim().toUpperCase());
+    }
+  });
+  return set;
+}
+async function loadWishes(){
+  try{
+    const r = await fetch('/api/wish?all=1');
+    if(!r.ok) return;
+    const j = await r.json();
+    const el = $('wishList');
+    const covered = (typeof COVERED_SNAPSHOT !== 'undefined' && COVERED_SNAPSHOT.size) ? COVERED_SNAPSHOT : coveredSyms();
+    const isCovered = sym => {
+      const u = String(sym).toUpperCase();
+      return covered.has(u) || u.split(' ').some(tok => tok && covered.has(tok));
+    };
+    const list = (j.list || []).filter(w => !isCovered(w.sym)).slice(0, 10);
+    if(!list.length){ el.innerHTML = '<div class="note">還沒有人許願，搶頭香！</div>'; return; }
+    el.innerHTML = '<div style="overflow-x:auto"><table><thead><tr><th style="text-align:left">排名</th><th style="text-align:left">標的</th><th>票數</th></tr></thead><tbody>' +
+      list.map((w, i) => '<tr><td style="text-align:left">' + (i < 3 ? ['🥇','🥈','🥉'][i] : (i + 1)) + '</td><td style="text-align:left">' + w.sym.replace(/</g,'&lt;') + '</td><td>' + w.count + '</td></tr>').join('') +
+      '</tbody></table></div>';
+  }catch(e){}
+}
+$('wishBtn').onclick = async function(){
+  const inp = $('wishInput'), msg = $('wishMsg');
+  const v = inp.value.trim();
+  if(v.length < 2){ msg.textContent = '請輸入至少2個字的代號或名稱'; return; }
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' });
+  let used = {};
+  try{ used = JSON.parse(localStorage.getItem('bu_wish') || '{}'); }catch(e){}
+  const n = used.d === today ? (used.n || 0) : 0;
+  if(n >= 3){ msg.textContent = '🙏 每天最多許願3次，明天再來吧！'; return; }
+  msg.textContent = '送出中…';
+  this.disabled = true;
+  try{
+    const r = await fetch('/api/wish', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ sym: v }) });
+    const j = await r.json();
+    if(j.ok){
+      msg.textContent = '✅ 已收到！「' + v + '」目前累積 ' + j.count + ' 票';
+      try{ localStorage.setItem('bu_wish', JSON.stringify({ d: today, n: n + 1 })); }catch(e){}
+      inp.value = '';
+      loadWishes();
+    } else msg.textContent = '格式不符，請輸入股票代號或名稱（中英數字）';
+  }catch(e){ msg.textContent = '送出失敗，請稍後再試'; }
+  this.disabled = false;
+};
+const COVERED_SNAPSHOT = coveredSyms();
+pruneOldReports(7);
+loadWishes();
+</script>
+</body>
+</html>
