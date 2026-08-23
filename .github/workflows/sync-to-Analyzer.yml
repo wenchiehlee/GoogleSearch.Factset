@@ -26,7 +26,7 @@ jobs:
       SYNC_PAT_YAHOO: ${{ secrets.REPO_FILE_SYNC_WENCHIEHLEE }}
     # if: github.event.pull_request.merged == true
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Sync up to Analyzer
         if: env.SYNC_PAT_INVESTMENT != ''
