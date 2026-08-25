@@ -20,12 +20,12 @@ OPTIONAL Filters (must explicitly add):
   - Quality filter (--max-quality N): Quarantine files with score <= N
 
 Usage:
-    python quarantine_files.py                        # CSV: inflated quality ONLY
-    python quarantine_files.py --quarantine           # Actually move files
-    python quarantine_files.py --no-csv               # File-based: inflated + inconsistent
-    python quarantine_files.py --days 90              # ADD age filter (>90 days)
-    python quarantine_files.py --max-quality 5        # ADD quality filter (≤5)
-    python quarantine_files.py --days 90 --quarantine # Age filter + quarantine
+    python scripts/quarantine_files.py                        # CSV: inflated quality ONLY
+    python scripts/quarantine_files.py --quarantine           # Actually move files
+    python scripts/quarantine_files.py --no-csv               # File-based: inflated + inconsistent
+    python scripts/quarantine_files.py --days 90              # ADD age filter (>90 days)
+    python scripts/quarantine_files.py --max-quality 5        # ADD quality filter (≤5)
+    python scripts/quarantine_files.py --days 90 --quarantine # Age filter + quarantine
 """
 
 import os
@@ -688,7 +688,7 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 DEFAULT BEHAVIOR (no flags):
-  python quarantine_files.py                 # CSV-based: truly inflated quality ONLY
+  python scripts/quarantine_files.py                 # CSV-based: truly inflated quality ONLY
 
   What it checks:
   - Inflated quality scores (score >= 7.5 BUT missing revenue OR missing EPS)
@@ -700,12 +700,12 @@ DEFAULT BEHAVIOR (no flags):
   - Low quality filtering (no --max-quality flag)
 
 Examples:
-  python quarantine_files.py                 # Dry-run: Check truly inflated quality
-  python quarantine_files.py --quarantine    # Move files: truly inflated quality
-  python quarantine_files.py --no-csv        # File-based: inflated + inconsistent
-  python quarantine_files.py --days 60       # CSV + ADD age filter (>60 days)
-  python quarantine_files.py --max-quality 5 # CSV + ADD quality filter (≤5)
-  python quarantine_files.py --days 180 --quarantine  # Age + quality + move
+  python scripts/quarantine_files.py                 # Dry-run: Check truly inflated quality
+  python scripts/quarantine_files.py --quarantine    # Move files: truly inflated quality
+  python scripts/quarantine_files.py --no-csv        # File-based: inflated + inconsistent
+  python scripts/quarantine_files.py --days 60       # CSV + ADD age filter (>60 days)
+  python scripts/quarantine_files.py --max-quality 5 # CSV + ADD quality filter (≤5)
+  python scripts/quarantine_files.py --days 180 --quarantine  # Age + quality + move
 
 CSV-based detection (DEFAULT):
   - Uses: data/reports/raw_factset_detailed_report.csv

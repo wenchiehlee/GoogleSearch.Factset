@@ -46,7 +46,7 @@ jobs:
           echo "📋 Using: data/reports/factset_detailed_report_latest.csv"
           echo "📌 Criteria: quality_score >= 7.5 AND (missing revenue OR EPS) OR quality_score <= 7.4"
           echo ""
-          python quarantine_files.py --max-quality 7.4 --quarantine --yes
+          python scripts/quarantine_files.py --max-quality 7.4 --quarantine --yes
 
       - name: Count files after quarantine
         run: |

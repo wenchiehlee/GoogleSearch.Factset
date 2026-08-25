@@ -25,7 +25,7 @@ This skill covers the `GoogleSearch.Factset` repo's two-stage FactSet data pipel
 - Watchlist refresh script: `Get觀察名單.py`
 - Search CLI: `search_group/search_cli.py`
 - Process CLI: `process_group/process_cli.py`
-- Quarantine script: `quarantine_files.py`
+- Quarantine script: `scripts/quarantine_files.py`
 - Data exchange (Search → Process): `data/md/*.md` — content-hash filenames `{代號}_{名稱}_factset_{hash}.md`
 - Quarantined files: `data/quarantine/{inflated_quality,low_quality,inconsistent,old}/`
 - Reports: `data/reports/*.csv` (`factset_detailed_report_latest.csv` drives quarantine detection)
@@ -48,7 +48,7 @@ python search_group/search_cli.py status
 
 # Quarantine (between Stage 1 and Stage 2)
 python process_group/process_cli.py generate-csv
-python quarantine_files.py --max-quality 7.4 --quarantine --yes
+python scripts/quarantine_files.py --max-quality 7.4 --quarantine --yes
 
 # Stage 2: Process Group
 python process_group/process_cli.py process
@@ -96,7 +96,7 @@ If a scheduled run produced no commit, that's expected when the source lists did
 ### `Actions-quarantine-files.yaml`
 
 - Triggers on `workflow_run` completion of the Search workflow (any conclusion except cancelled/skipped), or `workflow_dispatch`
-- Runs `process_cli.py generate-csv` → `quarantine_files.py --max-quality 7.4 --quarantine --yes`
+- Runs `process_cli.py generate-csv` → `scripts/quarantine_files.py --max-quality 7.4 --quarantine --yes`
 - Criteria: quarantine if `(quality_score >= 7.5 AND missing revenue/EPS)` OR `quality_score <= 7.4`
 - Commits moved files + `old_files_report.txt` as `chore: Daily quarantine - CSV-based detection`
 - **Opens a GitHub Issue automatically if more than 20 files were quarantined** (labels `data-quality`, `automated`) — see Issue Triage below

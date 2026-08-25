@@ -1,7 +1,7 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-This repository implements a two-stage pipeline. `search_group/` collects data and writes markdown into `data/md/`. `process_group/` reads `data/md/` and generates reports in `data/reports/`. Root watchlists live at `StockID_TWSE_TPEX.csv` and `StockID_TWSE_TPEX_focus.csv`. Utility scripts such as `verify_stocks.py` and `quarantine_files.py` handle validation and cleanup. Configuration artifacts live in `configs/`.
+This repository implements a two-stage pipeline. `search_group/` collects data and writes markdown into `data/md/`. `process_group/` reads `data/md/` and generates reports in `data/reports/`. Root watchlists live at `StockID_TWSE_TPEX.csv` and `StockID_TWSE_TPEX_focus.csv`. Utility scripts such as `verify_stocks.py` and `scripts/quarantine_files.py` handle validation and cleanup. Configuration artifacts live in `configs/`.
 
 ## Build, Test, and Development Commands
 - `pip install -r requirements.txt` installs runtime dependencies.

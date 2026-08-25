@@ -281,13 +281,13 @@ This section documents the efficiency tools created to streamline testing and da
 ### Problem 2: Out-of-Date Data Complexity
 **Issue**: Most MD files can be older than 90 days, slowing down processing and cluttering data.
 
-**Solution**: `quarantine_files.py` - Automatically identifies and quarantines old files.
+**Solution**: `scripts/quarantine_files.py` - Automatically identifies and quarantines old files.
 
 ### Quick Reference
 
 ```bash
 # 1. Quarantine old files (>90 days)
-python quarantine_files.py --days 90 --quarantine
+python scripts/quarantine_files.py --days 90 --quarantine
 
 # 2. Quick verification for specific stocks
 python verify_stocks.py 2330 2357
@@ -319,7 +319,7 @@ python verify_stocks.py 2330 2357 2454
 python verify_stocks.py 2330 2357 --upload
 ```
 
-### Tool 2: Old Files Quarantine (`quarantine_files.py`)
+### Tool 2: Old Files Quarantine (`scripts/quarantine_files.py`)
 
 **Purpose**: Automatically identify and move MD files older than a specified threshold to quarantine.
 
@@ -327,16 +327,16 @@ python verify_stocks.py 2330 2357 --upload
 
 ```bash
 # Scan only (no changes)
-python quarantine_files.py
+python scripts/quarantine_files.py
 
 # Scan with custom threshold (60 days)
-python quarantine_files.py --days 60
+python scripts/quarantine_files.py --days 60
 
 # Actually quarantine files (with confirmation)
-python quarantine_files.py --days 90 --quarantine
+python scripts/quarantine_files.py --days 90 --quarantine
 
 # Auto-confirm quarantine
-echo yes | python quarantine_files.py --days 90 --quarantine
+echo yes | python scripts/quarantine_files.py --days 90 --quarantine
 ```
 
 **Output Structure**:
@@ -360,7 +360,7 @@ python verify_stocks.py 2330 2357
 python process_group/process_cli.py process
 
 # Weekly maintenance
-python quarantine_files.py --days 90 --quarantine
+python scripts/quarantine_files.py --days 90 --quarantine
 python verify_stocks.py 2330 2317 2454 2412 2357
 python process_group/process_cli.py process
 ```
