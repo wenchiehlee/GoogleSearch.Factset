@@ -1503,27 +1503,32 @@ class MDParser:
 
         return stats
 
+    def _find_table_html_near_anchor(self, content: str, anchor: str, max_gap: int = 2000) -> Optional[str]:
+        """定位緊鄰指定標題文字的表格 HTML。
+
+        cnyes.com 等來源會把整篇文章文字（含 "市場預估EPS"/"市場預估營收" 等標題字樣）
+        重複嵌入頁面前段的 JSON-LD structured data（<script type="application/ld+json">）
+        或 meta description 中，早於頁面真正的 <table> 區塊。若只抓「錨點文字後第一個
+        <table>」，第一次出現的錨點（在 JSON-LD 內）與真正表格之間可能相隔數萬字元的
+        無關 HTML/JS，導致抓到錯誤的表格（例如營收表格的錨點誤抓到 EPS 表格，因為 EPS
+        表格在文件中排在前面）。真正緊鄰表格的標題文字與 <table> 之間通常只相隔數百字元
+        （例如廣告版位 placeholder）。因此改為逐一嘗試每個錨點出現位置，只接受與
+        <table> 距離在 max_gap 字元內的那一個，避免誤配到遠處無關的表格。
+        """
+        for anchor_match in re.finditer(re.escape(anchor), content):
+            window = content[anchor_match.end():anchor_match.end() + max_gap]
+            table_match = re.search(r'<table[^>]*>.*?</table>', window, re.DOTALL)
+            if table_match:
+                return table_match.group(0)
+        return None
+
     def _find_eps_table_html(self, content: str) -> Optional[str]:
         """定位市場預估 EPS 表格"""
-        eps_table_match = re.search(
-            r'市場預估EPS.*?<table[^>]*>.*?</table>',
-            content,
-            re.DOTALL
-        )
-        if eps_table_match:
-            return eps_table_match.group(0)
-        return None
+        return self._find_table_html_near_anchor(content, '市場預估EPS')
 
     def _find_revenue_table_html(self, content: str) -> Optional[str]:
         """定位市場預估營收表格"""
-        revenue_table_match = re.search(
-            r'市場預估營收.*?<table[^>]*>.*?</table>',
-            content,
-            re.DOTALL
-        )
-        if revenue_table_match:
-            return revenue_table_match.group(0)
-        return None
+        return self._find_table_html_near_anchor(content, '市場預估營收')
 
     def _parse_numeric_value(self, value: str, min_val: float = 0) -> Optional[float]:
         """解析表格中的數值"""
