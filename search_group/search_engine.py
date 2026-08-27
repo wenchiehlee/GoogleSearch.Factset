@@ -62,6 +62,10 @@ class SearchEngine:
         ]
         
         # Taiwan financial sites patterns (Optimized for minimal API usage - v3.5.2)
+        current_year = datetime.now().year
+        next_year = current_year + 1
+        year_after_next = current_year + 2
+
         self.refined_search_patterns = {
             'factset_direct': [
                 # The single most effective query for recent FactSet reports
@@ -72,10 +76,17 @@ class SearchEngine:
             ],
             'eps_forecast': [
                 # Direct EPS forecast table search
-                '"{name}" "EPS" "預估" "2025" "2026"',
+                f'"{"{name}"}" "EPS" "預估" "{current_year}" "{next_year}"',
                 # Analyst consensus specific
                 '"{symbol}" "分析師" "共識" "目標價"',
                 '"{symbol}" "{name}" "分析師" "FactSet"'
+            ],
+            'multi_year_guidance': [
+                # Dynamic multi-year guidance and consensus (e.g. CHT, TSMC)
+                '"{symbol}" "{name}" "財務預測" "EPS"',
+                f'"{"{name}"}" "EPS" "{current_year}" "{next_year}" "{year_after_next}" "預估"',
+                '"{symbol}" "{name}" "財測" "中位數"',
+                '"{symbol}" "{name}" "遠期" "EPS" "共識"'
             ]
         }
         
