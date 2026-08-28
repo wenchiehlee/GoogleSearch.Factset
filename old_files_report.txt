@@ -1,7 +1,100 @@
 ================================================================================
 QUARANTINE REPORT
-Generated: 2026-08-26 20:37:09
+Generated: 2026-08-28 03:03:27
 Quality threshold: <= 7.4
 ================================================================================
 
-No old files found!
+Total old files found: 9
+
+
+Stock: 2308 (台達電)
+  Old files: 1
+
+  File: 2308_台達電_factset_1792f953.md
+    Date: 2026/08/27
+    Age: 1 days
+    Quality: 10.0
+    Reasons: inflated_quality
+
+
+Stock: 2377 (微星)
+  Old files: 3
+
+  File: 2377_微星_factset_e4cd0237.md
+    Date: 2026/08/21
+    Age: 7 days
+    Quality: 9.5
+    Reasons: inflated_quality
+
+  File: 2377_微星_factset_d6e254bb.md
+    Date: 2026/08/21
+    Age: 7 days
+    Quality: 9.0
+    Reasons: inflated_quality
+
+  File: 2377_微星_factset_5301e4a4.md
+    Date: 2026/08/21
+    Age: 7 days
+    Quality: 9.5
+    Reasons: inflated_quality
+
+
+Stock: 2412 (中華電)
+  Old files: 1
+
+  File: 2412_中華電_factset_b99874ca.md
+    Date: 2026/08/27
+    Age: 1 days
+    Quality: 9.0
+    Reasons: inflated_quality
+
+
+Stock: 2480 (敦陽科)
+  Old files: 1
+
+  File: 2480_敦陽科_factset_7f1345a6.md
+    Date: 2026/08/27
+    Age: 1 days
+    Quality: 9.0
+    Reasons: inflated_quality
+
+
+Stock: 3045 (台灣大)
+  Old files: 1
+
+  File: 3045_台灣大_factset_38367442.md
+    Date: 2026/08/14
+    Age: 14 days
+    Quality: 9.0
+    Reasons: inflated_quality
+
+
+Stock: 4938 (和碩)
+  Old files: 1
+
+  File: 4938_和碩_factset_eb6df679.md
+    Date: 2026/02/13
+    Age: 196 days
+    Quality: 9.0
+    Reasons: inflated_quality
+
+
+Stock: 6214 (精誠)
+  Old files: 1
+
+  File: 6214_精誠_factset_2b2884f8.md
+    Date: 2026/08/27
+    Age: 1 days
+    Quality: 9.0
+    Reasons: inflated_quality
+
+
+================================================================================
+SUMMARY
+================================================================================
+Total stocks affected: 7
+Total files to quarantine: 9
+Average age: 26.1 days
+Low quality files: 0
+Inflated quality scores (high score, no data): 9
+Oldest file: 4938_和碩_factset_eb6df679.md (196 days)
