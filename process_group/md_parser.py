@@ -88,6 +88,7 @@ class MDParser:
         self.analyst_patterns = [
             r'共\s*(\d+)\s*位分析師',
             r'(\d+)\s*位分析師',
+            r'(\d+)\s*位市場分析師',
             r'(\d+)\s*analysts?',
         ]
 
@@ -1535,6 +1536,9 @@ class MDParser:
             if not years:
                 continue
 
+            context = "\n".join(lines[max(0, idx - 4):idx + 1])
+            table_is_eps = bool(re.search(r'EPS|每股盈餘|每股稅後盈餘', context, re.IGNORECASE))
+
             for row in lines[idx + 1:idx + 8]:
                 if not row.lstrip().startswith('|'):
                     break
@@ -1542,7 +1546,8 @@ class MDParser:
                 if not cells or re.fullmatch(r':?-+:?', cells[0] or ''):
                     continue
                 label = cells[0]
-                if not re.search(r'EPS|每股盈餘|每股稅後盈餘', label, re.IGNORECASE):
+                label_key = self._markdown_eps_stat_key(label, table_is_eps)
+                if not label_key:
                     continue
 
                 value_cells = cells[-len(years):]
@@ -1552,13 +1557,22 @@ class MDParser:
                         continue
                     low, high, midpoint = parsed
                     bucket = stats.setdefault(year, {})
-                    bucket['low'] = low
-                    bucket['high'] = high
-                    bucket['avg'] = midpoint
-                    if re.search(r'中位數|median', label, re.IGNORECASE):
+                    if label_key == 'high':
+                        bucket['high'] = high
+                    elif label_key == 'low':
+                        bucket['low'] = low
+                    elif label_key == 'avg':
+                        bucket['avg'] = midpoint
+                    elif label_key == 'median':
                         bucket['median'] = midpoint
-                if stats:
-                    return stats
+                    elif label_key == 'eps_range':
+                        bucket['low'] = low
+                        bucket['high'] = high
+                        bucket['avg'] = midpoint
+                        bucket['median'] = midpoint
+
+            if stats:
+                return stats
 
         return stats
 
@@ -1566,6 +1580,21 @@ class MDParser:
         value = re.sub(r'[*`_]', '', value)
         value = re.sub(r'<[^>]+>', '', value)
         return value.strip()
+
+    def _markdown_eps_stat_key(self, label: str, table_is_eps: bool) -> Optional[str]:
+        if re.search(r'EPS|每股盈餘|每股稅後盈餘', label, re.IGNORECASE):
+            return 'eps_range'
+        if not table_is_eps:
+            return None
+        if re.search(r'最高(?:值|估值)|high', label, re.IGNORECASE):
+            return 'high'
+        if re.search(r'最低(?:值|估值)|low', label, re.IGNORECASE):
+            return 'low'
+        if re.search(r'平均值|average|avg', label, re.IGNORECASE):
+            return 'avg'
+        if re.search(r'中位數|median|consensus', label, re.IGNORECASE):
+            return 'median'
+        return None
 
     def _parse_numeric_range(self, value: str) -> Optional[Tuple[float, float, float]]:
         numbers = [float(item.replace(',', '')) for item in re.findall(r'\d+(?:,\d{3})*(?:\.\d+)?', value)]
