@@ -52,3 +52,4 @@ google-api-python-client
 # This requirements.txt is for FactSet Pipeline v3.3.2
 # Simplified & Observable Architecture
 # All v3.3.1 fixes and optimizations maintained
+pytz>=2024.1

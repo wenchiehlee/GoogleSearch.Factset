@@ -1476,6 +1476,10 @@ class MDParser:
 
     def _extract_eps_table_stats(self, content: str) -> Dict[str, Dict[str, float]]:
         """從 EPS 表格提取統計值 (動態年份)"""
+        markdown_stats = self._extract_markdown_eps_table_stats(content)
+        if markdown_stats:
+            return markdown_stats
+
         table_html = self._find_eps_table_html(content)
         if not table_html:
             return {}
@@ -1502,6 +1506,76 @@ class MDParser:
                     stats.setdefault(year, {})[label_map[label]] = value
 
         return stats
+
+    def _extract_markdown_eps_table_stats(self, content: str) -> Dict[str, Dict[str, float]]:
+        """Extract EPS stats from Markdown tables, including AI-mode range rows.
+
+        Some AI-mode files use rows such as:
+        | **EPS 預估中位數** | 4.92 ~ 5.02 元 | 5.10 ~ 5.25 元 | 5.25 ~ 5.40 元 |
+
+        The range endpoints are kept as low/high. The midpoint is written to
+        avg so downstream consumers have a scalar anchor, while median keeps the
+        same midpoint because the row itself is labelled as median.
+        """
+        stats: Dict[str, Dict[str, float]] = {}
+        lines = content.splitlines()
+
+        for idx, line in enumerate(lines):
+            if not line.lstrip().startswith('|'):
+                continue
+            if not re.search(r'20(?:2[3-9]|30)', line):
+                continue
+
+            header_cells = [self._clean_markdown_cell(cell) for cell in line.strip().strip('|').split('|')]
+            years = []
+            for cell in header_cells:
+                match = re.search(r'(20(?:2[3-9]|30))', cell)
+                if match:
+                    years.append(match.group(1))
+            if not years:
+                continue
+
+            for row in lines[idx + 1:idx + 8]:
+                if not row.lstrip().startswith('|'):
+                    break
+                cells = [self._clean_markdown_cell(cell) for cell in row.strip().strip('|').split('|')]
+                if not cells or re.fullmatch(r':?-+:?', cells[0] or ''):
+                    continue
+                label = cells[0]
+                if not re.search(r'EPS|每股盈餘|每股稅後盈餘', label, re.IGNORECASE):
+                    continue
+
+                value_cells = cells[-len(years):]
+                for year, raw in zip(years, value_cells):
+                    parsed = self._parse_numeric_range(raw)
+                    if not parsed:
+                        continue
+                    low, high, midpoint = parsed
+                    bucket = stats.setdefault(year, {})
+                    bucket['low'] = low
+                    bucket['high'] = high
+                    bucket['avg'] = midpoint
+                    if re.search(r'中位數|median', label, re.IGNORECASE):
+                        bucket['median'] = midpoint
+                if stats:
+                    return stats
+
+        return stats
+
+    def _clean_markdown_cell(self, value: str) -> str:
+        value = re.sub(r'[*`_]', '', value)
+        value = re.sub(r'<[^>]+>', '', value)
+        return value.strip()
+
+    def _parse_numeric_range(self, value: str) -> Optional[Tuple[float, float, float]]:
+        numbers = [float(item.replace(',', '')) for item in re.findall(r'\d+(?:,\d{3})*(?:\.\d+)?', value)]
+        numbers = [number for number in numbers if 0 < number < 1000]
+        if not numbers:
+            return None
+        low = min(numbers)
+        high = max(numbers)
+        midpoint = round((low + high) / 2, 2)
+        return low, high, midpoint
 
     def _find_table_html_near_anchor(self, content: str, anchor: str, max_gap: int = 2000) -> Optional[str]:
         """定位緊鄰指定標題文字的表格 HTML。
