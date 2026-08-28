@@ -1,45 +1,45 @@
 {
   "version": "3.6.1-updated-for-md-date",
   "report_type": "comprehensive_with_md_date_priority",
-  "timestamp": "2026-08-27T22:17:22.278230",
-  "total_companies": 315,
-  "companies_with_data": 284,
-  "success_rate": 90.2,
+  "timestamp": "2026-08-28T03:18:20.898120",
+  "total_companies": 394,
+  "companies_with_data": 394,
+  "success_rate": 100.0,
   "md_date_source_analysis": {
-    "total_files_processed": 315,
-    "md_date_from_search_group": 283,
-    "content_date_from_process_group": 1,
-    "no_date_available": 31,
-    "search_group_coverage_rate": 89.8,
-    "total_date_coverage_rate": 90.2,
+    "total_files_processed": 394,
+    "md_date_from_search_group": 394,
+    "content_date_from_process_group": 0,
+    "no_date_available": 0,
+    "search_group_coverage_rate": 100.0,
+    "total_date_coverage_rate": 100.0,
     "priority_system": "md_date (Search Group) > content_date (Process Group) > empty",
-    "improvement_note": "Search Group \u63d0\u4f9b\u4e86 283 \u500b\u6a94\u6848\u7684 md_date\uff0cProcess Group \u63d0\u4f9b\u4e86 1 \u500b fallback \u65e5\u671f"
+    "improvement_note": "Search Group \u63d0\u4f9b\u4e86 394 \u500b\u6a94\u6848\u7684 md_date\uff0cProcess Group \u63d0\u4f9b\u4e86 0 \u500b fallback \u65e5\u671f"
   },
   "validation_statistics": {
-    "validation_passed": 284,
-    "validation_failed": 31,
+    "validation_passed": 394,
+    "validation_failed": 0,
     "validation_disabled": 0,
-    "validation_success_rate": 90.2,
-    "companies_included_in_report": 284,
-    "inclusion_rate": 90.2,
-    "filtered_out": 31
+    "validation_success_rate": 100.0,
+    "companies_included_in_report": 394,
+    "inclusion_rate": 100.0,
+    "filtered_out": 0
   },
   "quality_analysis": {
-    "average_quality_score": 8.3,
+    "average_quality_score": 9.1,
     "highest_quality_score": 10.0,
-    "lowest_quality_score": 0.0,
-    "files_with_quality_1_or_less": 31,
+    "lowest_quality_score": 7.7,
+    "files_with_quality_1_or_less": 0,
     "quality_distribution": {
-      "excellent_9_10": 161,
-      "good_7_8": 123,
+      "excellent_9_10": 213,
+      "good_7_8": 181,
       "fair_5_6": 0,
       "poor_3_4": 0,
       "very_poor_1_2": 0,
-      "missing_date_or_error_0_1": 31
+      "missing_date_or_error_0_1": 0
     }
   },
   "watchlist_statistics": {
-    "watchlist_companies_in_data": 315,
+    "watchlist_companies_in_data": 394,
     "watchlist_coverage_in_data": 100.0
   }
 }
