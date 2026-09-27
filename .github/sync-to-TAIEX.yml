@@ -1,6 +1,0 @@
-group:
-  - files:
-      - source: data/reports/raw_factset_detailed_report.csv
-        dest:   data/GoogleSearch.Factset/raw_factset_detailed_report.csv
-    repos: |
-      wenchiehlee-money/TAIEX.TW
