@@ -18,7 +18,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  sync-backup-workflow:
+  sync-analyzer-workflow:
     runs-on: ubuntu-latest
     env:
       SYNC_PAT_INVESTMENT: ${{ secrets.REPO_FILE_SYNC_WENCHIEHLEE_INVESTMENT }}
