@@ -29,10 +29,9 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Sync up to Analyzer
-        if: env.SYNC_PAT_INVESTMENT != ''
         uses: BetaHuhn/repo-file-sync-action@latest
         with:
-          GH_PAT: ${{ env.SYNC_PAT_INVESTMENT }}
+          GH_PAT: ${{ secrets.REPO_FILE_SYNC_ZHONGZHENG782_INVESTMENT }}
           CONFIG_PATH: .github/sync-to-Analyzer.yml
           COMMIT_EACH_FILE: false
           PR_LABELS: "automated-sync"
