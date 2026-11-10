@@ -45,7 +45,23 @@ jobs:
           SKIP_PR: true
 
       - name: Sync up to biztrends.TW
+        id: sync_biztrends
+        continue-on-error: true  # retried below on failure (e.g. biztrends.TW ref-lock race)
         if: env.SYNC_PAT_MONEY != ''
+        uses: BetaHuhn/repo-file-sync-action@latest
+        with:
+          GH_PAT: ${{ env.SYNC_PAT_MONEY }}
+          CONFIG_PATH: .github/sync-to-biztrends.yml
+          COMMIT_EACH_FILE: false
+          PR_LABELS: "automated-sync"
+          SKIP_PR: true
+
+      - name: Wait before retrying biztrends.TW sync
+        if: steps.sync_biztrends.outcome == 'failure'
+        run: sleep $((45 + RANDOM % 90))
+
+      - name: Sync up to biztrends.TW (retry)
+        if: steps.sync_biztrends.outcome == 'failure'
         uses: BetaHuhn/repo-file-sync-action@latest
         with:
           GH_PAT: ${{ env.SYNC_PAT_MONEY }}
