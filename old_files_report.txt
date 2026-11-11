@@ -1,7 +1,27 @@
 ================================================================================
 QUARANTINE REPORT
-Generated: 2026-11-10 03:02:55
+Generated: 2026-11-11 01:36:03
 Quality threshold: <= 7.4
 ================================================================================
 
-No old files found!
+Total old files found: 1
+
+
+Stock: 2884 (玉山金)
+  Old files: 1
+
+  File: 2884_玉山金_factset_d1753454.md
+    Date: 2026/11/11
+    Age: 0 days
+    Quality: 6.0
+    Reasons: low_quality
+
+
+================================================================================
+SUMMARY
+================================================================================
+Total stocks affected: 1
+Total files to quarantine: 1
+Average age: 0.0 days
+Low quality files: 1
+Oldest file: 2884_玉山金_factset_d1753454.md (0 days)
