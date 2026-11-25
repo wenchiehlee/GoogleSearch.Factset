@@ -1,7 +1,27 @@
 ================================================================================
 QUARANTINE REPORT
-Generated: 2026-11-24 06:04:56
+Generated: 2026-11-25 03:44:43
 Quality threshold: <= 7.4
 ================================================================================
 
-No old files found!
+Total old files found: 1
+
+
+Stock: 6770 (力積電)
+  Old files: 1
+
+  File: 6770_力積電_factset_7a5edd47.md
+    Date: 2026/03/09
+    Age: 261 days
+    Quality: 6.5
+    Reasons: low_quality
+
+
+================================================================================
+SUMMARY
+================================================================================
+Total stocks affected: 1
+Total files to quarantine: 1
+Average age: 261.0 days
+Low quality files: 1
+Oldest file: 6770_力積電_factset_7a5edd47.md (261 days)
